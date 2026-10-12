@@ -169,7 +169,7 @@ window.MATERIALS = {
       "Przedmioty z pierwszych lat studiów ścisłych i informatycznych. Teoria i zadania z rozwiązaniami pojawiają się tu stopniowo.",
     tasksLabel: "Zadania z rozwiązaniami",
     tasksNote:
-      "Zadania z egzaminu wstępnego na studia magisterskie (MIM UW), część z rachunku prawdopodobieństwa i statystyki. Numeracja jak w zestawie. Najpierw spróbuj samodzielnie, potem otwórz odpowiedź lub rozwiązanie.",
+      "Zadania z rachunku prawdopodobieństwa i statystyki. Najpierw spróbuj samodzielnie, potem otwórz odpowiedź lub rozwiązanie.",
     topics: [
       {
         title: "Wstęp do matematyki",

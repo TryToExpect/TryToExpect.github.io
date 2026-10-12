@@ -2,7 +2,6 @@
   {
     no: 199,
     group: "Przestrzeń probabilistyczna, niezależność, lematy Borela–Cantellego",
-    label: "egzamin wstępny MIM UW",
     tags: ["niezależność", "lemat Borela–Cantellego", "ciąg rzutów monetą"],
     q: String.raw`<p>Rzucamy monetą nieskończenie wiele razy, a kolejne rzuty są niezależne. W każdym rzucie orzeł (O) wypada z prawdopodobieństwem \(p\), gdzie \(0&lt;p&lt;1\), a reszka (R) z prawdopodobieństwem \(1-p\). Wyznacz prawdopodobieństwo, że w tym ciągu rzutów pojawi się seria OOOROORR, czyli osiem kolejnych wyników dokładnie w tej kolejności.</p>`,
     ans: String.raw`\(1\)`,
@@ -19,7 +18,6 @@ Zatem \(P(B)=0\), a szukane prawdopodobieństwo wynosi \(1\).</p>
   {
     no: 200,
     group: "Przestrzeń probabilistyczna, niezależność, lematy Borela–Cantellego",
-    label: "egzamin wstępny MIM UW",
     tags: ["lemat Borela–Cantellego", "szereg harmoniczny", "schemat urnowy"],
     q: String.raw`<p>Na początku w urnie są dwie kule: jedna czarna i jedna biała. W nieskończoność powtarzamy następujący krok: losujemy z urny jedną kulę, sprawdzamy jej kolor, wkładamy ją z powrotem i dodatkowo dorzucamy do urny jedną nową kulę białą. Wyznacz prawdopodobieństwo, że kula czarna zostanie wylosowana nieskończenie wiele razy.</p>`,
     ans: String.raw`\(1\)`,
@@ -36,7 +34,6 @@ Zatem \(P(D_N)=0\) dla każdego \(N\). Zdarzenie „czarna tylko skończenie wie
   {
     no: 201,
     group: "Prawdopodobieństwo warunkowe, wzór Bayesa, kombinatoryka",
-    label: "egzamin wstępny MIM UW",
     tags: ["rozkład dwumianowy", "prawdopodobieństwo warunkowe"],
     q: String.raw`<p>Do dzika strzela trzech myśliwych. Każdy z nich, niezależnie od pozostałych, trafia z prawdopodobieństwem \(0{,}8\).</p>
 <p>(a) Oblicz prawdopodobieństwo, że dzik zostanie trafiony.</p>
@@ -53,7 +50,6 @@ Stąd
   {
     no: 202,
     group: "Prawdopodobieństwo warunkowe, wzór Bayesa, kombinatoryka",
-    label: "egzamin wstępny MIM UW",
     tags: ["wzór Bayesa", "prawdopodobieństwo całkowite"],
     q: String.raw`<p>W szufladzie leży \(100\) monet. Dziewięćdziesiąt z nich jest symetrycznych, czyli orzeł i reszka wypadają na nich z jednakowym prawdopodobieństwem. Pozostałe dziesięć jest niesymetrycznych: orzeł wypada na nich trzy razy częściej niż reszka. Losujemy jedną monetę i rzucamy nią trzykrotnie, a za każdym razem wypada orzeł. Oblicz prawdopodobieństwo, że wylosowana moneta jest niesymetryczna.</p>`,
     ans: String.raw`\(\dfrac3{11}\approx0{,}273\)`,
@@ -68,7 +64,6 @@ Ze wzoru Bayesa:
   {
     no: 203,
     group: "Prawdopodobieństwo warunkowe, wzór Bayesa, kombinatoryka",
-    label: "egzamin wstępny MIM UW",
     tags: ["zasada włączeń i wyłączeń", "zmienne wskaźnikowe", "liczba Stirlinga"],
     q: String.raw`<p>W urnie jest pięć kul w różnych kolorach: białym, czarnym, czerwonym, niebieskim i zielonym. Wykonujemy \(20\) losowań, za każdym razem odkładając wylosowaną kulę z powrotem do urny.</p>
 <p>(a) Oblicz prawdopodobieństwo, że każda z pięciu kul zostanie wylosowana co najmniej raz.</p>
@@ -90,7 +85,6 @@ Z liniowości wartości oczekiwanej (która <b>nie</b> wymaga niezależności, a
   {
     no: 204,
     group: "Prawdopodobieństwo warunkowe, wzór Bayesa, kombinatoryka",
-    label: "egzamin wstępny MIM UW",
     tags: ["zmienne wskaźnikowe", "niezależność zdarzeń", "losowanie bez zwracania"],
     q: String.raw`<p>W klasie jest \(18\) chłopców i \(8\) dziewczynek, a wśród nich Jacek i Agatka. Na każdej lekcji nauczyciel losuje do odpowiedzi dwóch chłopców i jedną dziewczynkę.</p>
 <p>(a) Oblicz prawdopodobieństwo, że w ciągu pierwszych pięciu lekcji zarówno Jacek, jak i Agatka odpowiadają co najmniej raz.</p>
@@ -108,7 +102,6 @@ Zdarzenie \(J\) zależy tylko od losowań chłopców, a \(A\) tylko od losowań 
   {
     no: 205,
     group: "Dystrybuanta i rozkłady zmiennych losowych",
-    label: "egzamin wstępny MIM UW",
     tags: ["dystrybuanta", "rozkład mieszany", "wartość oczekiwana"],
     q: String.raw`<p>Dystrybuanta zmiennej losowej \(X\) jest dana wzorem
 \[F_X(t)=\begin{cases}0, & t&lt;0,\\[2pt] \tfrac17, & 0\le t&lt;\tfrac1{14},\\[2pt] \tfrac27+t, & \tfrac1{14}\le t&lt;\tfrac37,\\[2pt] 1, & t\ge\tfrac37.\end{cases}\]
@@ -135,7 +128,6 @@ Zgadza się to z budową rozkładu: \(\tfrac3{14}+\tfrac5{14}=\tfrac8{14}=\tfrac
   {
     no: 206,
     group: "Dystrybuanta i rozkłady zmiennych losowych",
-    label: "egzamin wstępny MIM UW",
     tags: ["dystrybuanta", "rozkład funkcji zmiennej losowej", "rozkład jednostajny"],
     q: String.raw`<p>(a) Wyznacz wszystkie \(a,b\in\mathbb R\), dla których funkcja
 \[F(t)=\begin{cases}b-\dfrac a{(t+1)^2}, & t\ge-\tfrac12,\\[4pt] 0, & t&lt;-\tfrac12\end{cases}\]
@@ -165,7 +157,6 @@ Ta dystrybuanta jest ciągła i spełnia \(F_Y(y)=\int_{-\infty}^yf_Y(s)\,ds\) d
   {
     no: 207,
     group: "Dystrybuanta i rozkłady zmiennych losowych",
-    label: "egzamin wstępny MIM UW",
     tags: ["dowód", "transformacja przez dystrybuantę", "rozkład jednostajny"],
     q: String.raw`<p>Niech \(X\) będzie zmienną losową o ciągłej dystrybuancie \(F\). Udowodnij, że zmienna losowa \(F(X)\) ma rozkład jednostajny na przedziale \([0,1]\).</p>`,
     sol: String.raw`<p>Niech \(U=F(X)\). Zmienna \(U\) przyjmuje wartości w \([0,1]\), więc wystarczy pokazać, że \(P(U\le u)=u\) dla każdego \(u\in[0,1]\).</p>
@@ -180,7 +171,6 @@ Ta dystrybuanta jest ciągła i spełnia \(F_Y(y)=\int_{-\infty}^yf_Y(s)\,ds\) d
   {
     no: 208,
     group: "Rozkłady funkcji zmiennych losowych, sumy niezależnych zmiennych",
-    label: "egzamin wstępny MIM UW",
     tags: ["prawdopodobieństwo geometryczne", "gęstość", "rozkład jednostajny"],
     q: String.raw`<p>Na odcinku długości \(2\) wybieramy losowo (zgodnie z prawdopodobieństwem geometrycznym) i niezależnie dwa punkty \(X\) i \(Y\). Wyznacz gęstość rozkładu odległości między nimi, czyli zmiennej \(D=|X-Y|\).</p>`,
     ans: String.raw`\(f_D(d)=\left(1-\tfrac d2\right)\mathbf 1_{(0,2)}(d)\)`,
@@ -196,7 +186,6 @@ a \(F_D(d)=0\) dla \(d&lt;0\) i \(F_D(d)=1\) dla \(d>2\). Różniczkując, dosta
   {
     no: 209,
     group: "Rozkłady funkcji zmiennych losowych, sumy niezależnych zmiennych",
-    label: "egzamin wstępny MIM UW",
     tags: ["rozkład normalny", "wzór na prawdopodobieństwo całkowite", "funkcja charakterystyczna"],
     q: String.raw`<p>Zmienne losowe \(X,Y,Z\) są niezależne. Zmienne \(X\) i \(Y\) mają standardowy rozkład normalny \(N(0,1)\), a \(Z\) przyjmuje wartości \(3\) i \(-3\), każdą z prawdopodobieństwem \(\tfrac12\). Udowodnij, że zmienna \(X+YZ\) ma rozkład normalny, i wyznacz jego parametry.</p>`,
     ans: String.raw`\(X+YZ\sim N(0,10)\), czyli \(\mu=0\), \(\sigma^2=10\)`,
@@ -215,7 +204,6 @@ a to jest funkcja charakterystyczna rozkładu \(N(0,10)\).</p>
   {
     no: 210,
     group: "Rozkłady funkcji zmiennych losowych, sumy niezależnych zmiennych",
-    label: "egzamin wstępny MIM UW",
     tags: ["gęstość", "stała normująca", "wariancja"],
     q: String.raw`<p>Zmienna losowa \(X\) ma gęstość \(g(x)=a\,x^2\,\mathbf 1_{(-1,3)}(x)\). Wyznacz stałą \(a\), a następnie wartość oczekiwaną i wariancję zmiennej \(X\).</p>`,
     ans: String.raw`\(a=\tfrac3{28}\), \(\mathbb EX=\tfrac{15}7\approx2{,}143\), \(\operatorname{Var}X=\tfrac{156}{245}\approx0{,}637\)`,
@@ -232,7 +220,6 @@ Stąd
   {
     no: 211,
     group: "Rozkłady funkcji zmiennych losowych, sumy niezależnych zmiennych",
-    label: "egzamin wstępny MIM UW",
     tags: ["splot", "gęstość sumy", "rozkład jednostajny"],
     q: String.raw`<p>Zmienne losowe \(X\) i \(Y\) są niezależne i obie mają rozkład jednostajny na przedziale \((0,1)\). Wyznacz gęstość zmiennej losowej \(2X-Y\).</p>`,
     ans: String.raw`\(f_Z(z)=\tfrac{z+1}2\) dla \(-1&lt;z&lt;0\); \(\tfrac12\) dla \(0\le z\le1\); \(\tfrac{2-z}2\) dla \(1&lt;z&lt;2\); \(0\) poza tym`,
@@ -254,7 +241,6 @@ Kontrola: pole pod wykresem wynosi \(\tfrac14+\tfrac12+\tfrac14=1\). Wykres gęs
   {
     no: 212,
     group: "Rozkłady funkcji zmiennych losowych, sumy niezależnych zmiennych",
-    label: "egzamin wstępny MIM UW",
     tags: ["rozkład normalny", "gęstość funkcji zmiennej losowej", "dystrybuanta"],
     q: String.raw`<p>Zmienna losowa \(X\) ma rozkład normalny o wartości oczekiwanej \(1\) i wariancji \(5\). Wyznacz gęstość zmiennej losowej \(Y=2X^4+5\).</p>`,
     ans: String.raw`\(f_Y(y)=\dfrac1{8\sqrt{10\pi}}\Bigl(\tfrac{y-5}2\Bigr)^{-3/4}\Bigl[e^{-(r-1)^2/10}+e^{-(r+1)^2/10}\Bigr]\) dla \(y>5\), gdzie \(r=\bigl(\tfrac{y-5}2\bigr)^{1/4}\); \(0\) dla \(y\le5\)`,
@@ -273,7 +259,6 @@ Ponieważ \((r\mp1)^2=r^2+1\mp2r\), a \(r^2=\sqrt{(y-5)/2}\), wynik można też 
   {
     no: 213,
     group: "Wartość oczekiwana, wariancja, kowariancja, korelacja",
-    label: "egzamin wstępny MIM UW",
     tags: ["momenty rozkładu normalnego", "całkowanie przez części"],
     q: String.raw`<p>Zmienna losowa \(X\) ma rozkład normalny o wartości oczekiwanej \(a\) i wariancji \(\sigma^2\). Oblicz \(\mathbb EX^4\).</p>`,
     ans: String.raw`\(\mathbb EX^4=a^4+6a^2\sigma^2+3\sigma^4\)`,
@@ -288,7 +273,6 @@ więc \(\mathbb EX^4=a^4+6a^2\sigma^2+3\sigma^4\).</p>
   {
     no: 214,
     group: "Wartość oczekiwana, wariancja, kowariancja, korelacja",
-    label: "egzamin wstępny MIM UW",
     tags: ["rozkład Poissona", "funkcja tworząca momentów", "szereg wykładniczy"],
     q: String.raw`<p>Zmienna losowa \(X\) ma rozkład Poissona z parametrem \(2\). Oblicz wartość oczekiwaną i wariancję zmiennej losowej \(e^{3X}\).</p>`,
     ans: String.raw`\(\mathbb Ee^{3X}=e^{2(e^3-1)}\approx3{,}78\cdot10^{16}\); \(\operatorname{Var}e^{3X}=e^{2(e^6-1)}-e^{4(e^3-1)}\approx3{,}51\cdot10^{349}\)`,
@@ -303,7 +287,6 @@ Przyjmujemy \(\lambda=2\).</p>
   {
     no: 215,
     group: "Wartość oczekiwana, wariancja, kowariancja, korelacja",
-    label: "egzamin wstępny MIM UW",
     tags: ["rozkład geometryczny", "szereg geometryczny", "wariancja"],
     q: String.raw`<p>Rzucamy jednocześnie dwiema kostkami tak długo, aż na co najmniej jednej z nich wypadnie szóstka. Oblicz wartość oczekiwaną i wariancję liczby wykonanych rzutów.</p>`,
     ans: String.raw`\(\mathbb EN=\tfrac{36}{11}\approx3{,}27\), \(\operatorname{Var}N=\tfrac{900}{121}\approx7{,}44\)`,
@@ -320,7 +303,6 @@ więc
   {
     no: 216,
     group: "Wartość oczekiwana, wariancja, kowariancja, korelacja",
-    label: "egzamin wstępny MIM UW",
     tags: ["rozkład łączny", "niezależność", "kowariancja"],
     q: String.raw`<p>Rozkład łączny zmiennych losowych \(X\) i \(Y\) jest dany wzorami
 \[P(X=1,Y=-1)=\tfrac12,\quad P(X=1,Y=3)=\tfrac14,\quad P(X=2,Y=-1)=\tfrac15,\quad P(X=2,Y=3)=\tfrac1{20}.\]</p>
@@ -349,7 +331,6 @@ Do kowariancji potrzebujemy \(\mathbb EXY\), które liczymy z rozkładu łączne
   {
     no: 217,
     group: "Wartość oczekiwana, wariancja, kowariancja, korelacja",
-    label: "egzamin wstępny MIM UW",
     tags: ["korelacja", "dowód", "nierówność Czebyszewa"],
     q: String.raw`<p>(a) Podaj przykład zmiennych losowych, które są nieskorelowane, ale nie są niezależne.</p>
 <p>(b) Udowodnij, że jeśli współczynnik korelacji zmiennych losowych \(X\) i \(Y\) wynosi \(1\), to istnieją liczby \(a>0\) i \(b\) takie, że \(X=aY+b\) prawie na pewno.</p>`,
@@ -369,7 +350,6 @@ Tutaj \(a=\tfrac{\sigma_X}{\sigma_Y}>0\), a \(b=c\sigma_X=\mathbb EX-a\,\mathbb 
   {
     no: 218,
     group: "Rozkłady łączne, niezależność, korelacja",
-    label: "egzamin wstępny MIM UW",
     tags: ["rozkład Poissona", "suma niezależnych zmiennych"],
     q: String.raw`<p>Zmienne losowe \(X\) i \(Y\) są niezależne i obie mają rozkład Poissona z parametrem \(3\). Oblicz:</p>
 <p>(a) \(P(X+Y=7)\);</p>
@@ -392,7 +372,6 @@ a drugi wynosi \(\bigl(3e^{-3}\bigr)^2=9e^{-6}\). Razem:
   {
     no: 219,
     group: "Rozkłady łączne, niezależność, korelacja",
-    label: "egzamin wstępny MIM UW",
     tags: ["rozkład wykładniczy", "brak pamięci", "prawdopodobieństwo całkowite (wersja ciągła)"],
     q: String.raw`<p>Zmienne losowe \(X\) i \(Y\) są niezależne. Zmienna \(X\) ma rozkład wykładniczy z parametrem \(2\), a \(Y\) rozkład wykładniczy z parametrem \(3\). Oblicz:</p>
 <p>(a) \(P(X>Y)\);</p>
@@ -414,7 +393,6 @@ Ostatecznie
   {
     no: 220,
     group: "Rozkłady łączne, niezależność, korelacja",
-    label: "egzamin wstępny MIM UW",
     tags: ["gęstość łączna", "gęstości brzegowe", "kowariancja"],
     q: String.raw`<p>Wektor losowy \((X,Y)\) ma gęstość
 \[f(x,y)=\begin{cases}8xy,&0\le x\le y\le1,\\ 0,&\text{w przeciwnym razie.}\end{cases}\]
@@ -435,7 +413,6 @@ Stąd
   {
     no: 221,
     group: "Rozkłady łączne, niezależność, korelacja",
-    label: "egzamin wstępny MIM UW",
     tags: ["wariancja zerowa", "korelacja", "rozkład jednopunktowy"],
     q: String.raw`<p>O zmiennych losowych \(X\) i \(Y\) wiadomo, że \(\mathbb EX=1\), \(\operatorname{Var}X=2\), \(\mathbb EY=3\), \(\operatorname{Var}Y=2\) oraz \(\mathbb EXY=5\). Czy te informacje wystarczą do wyznaczenia rozkładu zmiennej \(X-Y\)?</p>`,
     ans: String.raw`tak: \(X-Y=-2\) prawie na pewno (rozkład jednopunktowy)`,
@@ -450,7 +427,6 @@ czyli \(X-Y\) ma rozkład jednopunktowy skupiony w \(-2\).</p>
   {
     no: 222,
     group: "Twierdzenia graniczne",
-    label: "egzamin wstępny MIM UW",
     tags: ["centralne twierdzenie graniczne", "de Moivre–Laplace", "poprawka na ciągłość"],
     q: String.raw`<p>Rzucamy symetryczną kostką \(3600\) razy. Oblicz w przybliżeniu prawdopodobieństwo, że szóstka wypadnie co najmniej \(700\) razy. Wynik zapisz przy użyciu dystrybuanty \(\Phi\) standardowego rozkładu normalnego.</p>`,
     ans: String.raw`\(P(S\ge700)\approx1-\Phi\bigl(2\sqrt5\bigr)=1-\Phi(4{,}47)\approx3{,}9\cdot10^{-6}\)`,
@@ -467,7 +443,6 @@ Z centralnego twierdzenia granicznego (twierdzenia de Moivre’a–Laplace’a) 
   {
     no: 223,
     group: "Twierdzenia graniczne",
-    label: "egzamin wstępny MIM UW",
     tags: ["przybliżenie Poissona", "prawdopodobieństwo warunkowe", "suma Poissonów"],
     q: String.raw`<p>W pewnej grze liczbowej losowanie odbywa się raz w tygodniu, a w każdym losowaniu niezależnie od siebie bierze udział \(60\,000\) osób. Każda z nich wygrywa w danym losowaniu z prawdopodobieństwem \(\tfrac1{30\,000}\).</p>
 <p>(a) Oblicz w przybliżeniu prawdopodobieństwo, że w ciągu trzech ustalonych tygodni padną łącznie co najmniej dwie wygrane.</p>
@@ -486,7 +461,6 @@ Zatem
   {
     no: 224,
     group: "Twierdzenia graniczne",
-    label: "egzamin wstępny MIM UW",
     tags: ["mocne prawo wielkich liczb", "zbieżność prawie na pewno", "dowód"],
     q: String.raw`<p>Zmienne losowe \(X_1,X_2,\dots\) są niezależne i mają ten sam rozkład jednostajny na przedziale \((-1,1)\). Udowodnij, że iloczyn \(X_1X_2\cdots X_n\) dąży do zera prawie na pewno.</p>`,
     sol: String.raw`<p>Wystarczy pokazać, że \(|X_1\cdots X_n|=|X_1|\cdots|X_n|\to0\) prawie na pewno. Zmienne \(|X_i|\) są niezależne i mają rozkład jednostajny na \((0,1)\). Z prawdopodobieństwem \(1\) wszystkie \(|X_i|\) są dodatnie, więc możemy logarytmować:
@@ -503,7 +477,6 @@ więc prawie na pewno \(\sum_{i=1}^n\ln|X_i|=n\bigl(-1+o(1)\bigr)\to-\infty\). Z
   {
     no: 225,
     group: "Twierdzenia graniczne",
-    label: "egzamin wstępny MIM UW",
     tags: ["mocne prawo wielkich liczb", "błądzenie losowe z dryfem", "dowód"],
     q: String.raw`<p>Zmienne losowe \(X_1,X_2,\dots\) są niezależne i mają ten sam rozkład: \(P(X_n=1)=\tfrac34\) oraz \(P(X_n=-1)=\tfrac14\). Udowodnij, że \(X_1+\dots+X_n\to+\infty\) prawie na pewno.</p>`,
     sol: String.raw`<p>Niech \(S_n=X_1+\dots+X_n\). Zmienne \(X_i\) są niezależne, mają ten sam rozkład i są ograniczone, więc całkowalne, a
@@ -518,7 +491,6 @@ Zatem \(S_n\to+\infty\) prawie na pewno. \(\blacksquare\)</p>
   {
     no: 226,
     group: "Twierdzenia graniczne",
-    label: "egzamin wstępny MIM UW",
     tags: ["mocne prawo wielkich liczb", "granica ilorazu", "rozkład wykładniczy"],
     q: String.raw`<p>Zmienne losowe \(X_1,X_2,\dots\) są niezależne i mają ten sam rozkład wykładniczy z parametrem \(3\). Udowodnij, że ciąg zmiennych losowych
 \[\frac{X_1+\dots+X_n+3n}{X_1^2+\dots+X_n^2}\]
@@ -537,7 +509,6 @@ prawie na pewno. Część wspólna dwóch zdarzeń o prawdopodobieństwie \(1\) 
   {
     no: 227,
     group: "Dystrybuanta empiryczna i statystyki pozycyjne",
-    label: "egzamin wstępny MIM UW",
     tags: ["dystrybuanta empiryczna", "kowariancja", "estymator nieobciążony"],
     q: String.raw`<p>Niech \(X_1,\dots,X_n\) będą niezależnymi zmiennymi losowymi o tym samym rozkładzie z dystrybuantą \(F\), a \(\hat F_n(t)=\tfrac1n\#\{i\le n:X_i\le t\}\) niech oznacza dystrybuantę empiryczną. Oblicz \(\mathbb E\hat F_n(x)\), \(\operatorname{Var}\hat F_n(x)\) oraz \(\operatorname{Cov}\bigl(\hat F_n(x),\hat F_n(y)\bigr)\).</p>`,
     ans: String.raw`\(\mathbb E\hat F_n(x)=F(x)\), \(\operatorname{Var}\hat F_n(x)=\dfrac{F(x)(1-F(x))}n\), \(\operatorname{Cov}\bigl(\hat F_n(x),\hat F_n(y)\bigr)=\dfrac{F(\min(x,y))-F(x)F(y)}n\)`,
@@ -556,7 +527,6 @@ a w szczególności dla \(x\le y\) jest to \(\tfrac1nF(x)\bigl(1-F(y)\bigr)\). D
   {
     no: 228,
     group: "Dystrybuanta empiryczna i statystyki pozycyjne",
-    label: "egzamin wstępny MIM UW",
     tags: ["centralne twierdzenie graniczne", "dystrybuanta empiryczna", "zbieżność według rozkładu"],
     q: String.raw`<p>Przy oznaczeniach z zadania 227 udowodnij, że ciąg zmiennych losowych \(\sqrt n\bigl(\hat F_n(x)-F(x)\bigr)\) jest zbieżny według rozkładu do rozkładu normalnego, i wyznacz parametry tego rozkładu.</p>`,
     ans: String.raw`\(N\bigl(0,\,F(x)(1-F(x))\bigr)\)`,
@@ -573,7 +543,6 @@ więc
   {
     no: 229,
     group: "Dystrybuanta empiryczna i statystyki pozycyjne",
-    label: "egzamin wstępny MIM UW",
     tags: ["statystyki pozycyjne", "dowód", "rozkład dwumianowy"],
     q: String.raw`<p>Niech \(X_1,\dots,X_n\) będzie próbą z rozkładu o dystrybuancie \(F\), a \(X_{1:n}\le X_{2:n}\le\dots\le X_{n:n}\) jej statystykami pozycyjnymi, czyli wartościami próby uporządkowanymi rosnąco. Udowodnij, że
 \[P(X_{k:n}\le x)=\sum_{i=k}^n\binom ni F(x)^i\bigl(1-F(x)\bigr)^{n-i}.\]</p>`,
@@ -589,7 +558,6 @@ więc
   {
     no: 230,
     group: "Niezależność warunkowa, wzór całkowity i wzór Bayesa",
-    label: "egzamin wstępny MIM UW",
     tags: ["wzór na prawdopodobieństwo całkowite", "wzór Bayesa", "niezależność warunkowa"],
     q: String.raw`<p>Mamy trzy skrzynie z towarem, a zawartość każdej pochodzi z innej z trzech fabryk. Pierwsza fabryka produkuje \(6\%\) wadliwych sztuk, druga \(10\%\), a trzecia \(4\%\). Wybieramy losowo jedną skrzynię (każdą z prawdopodobieństwem \(\tfrac13\)), a z niej losowo jedną sztukę towaru.</p>
 <p>(a) Oblicz prawdopodobieństwo, że wylosowana sztuka jest wadliwa.</p>
@@ -611,7 +579,6 @@ Ten sam wynik daje uśrednienie po skrzyniach z prawdopodobieństwami z części
   {
     no: 231,
     group: "Estymacja punktowa i przedziały ufności",
-    label: "egzamin wstępny MIM UW",
     tags: ["estymator największej wiarogodności", "rozkład wielomianowy"],
     q: String.raw`<p>Samoloty bombowe przelatują przez dwie linie obrony przeciwlotniczej. Każdy samolot, niezależnie od pozostałych, zostaje zestrzelony przez pierwszą linię z prawdopodobieństwem \(\theta\). Jeśli ją przetrwa, zostaje zestrzelony przez drugą linię również z prawdopodobieństwem \(\theta\). Wartość \(\theta\) jest nieznana. Spośród \(n=100\) samolotów pierwsza linia zestrzeliła \(K_1=40\), a druga kolejne \(K_2=20\).</p>
 <p>(a) Wyznacz funkcję wiarogodności dla tych obserwacji, czyli \(P_\theta(K_1=40,K_2=20)\).</p>
@@ -636,7 +603,6 @@ Równanie \(\ell'(\theta)=0\) daje \(60(1-\theta)=100\theta\), czyli \(\theta=\t
   {
     no: 232,
     group: "Estymacja punktowa i przedziały ufności",
-    label: "egzamin wstępny MIM UW",
     tags: ["estymator największej wiarogodności", "rozkład normalny", "obciążenie", "nierówność Jensena"],
     q: String.raw`<p>Niech \(X_1,\dots,X_n\) będzie próbą z rozkładu normalnego \(N(0,\sigma^2)\), czyli o wartości oczekiwanej \(0\) i nieznanej wariancji.</p>
 <p>(a) Wyznacz estymator największej wiarogodności \(\hat\sigma\) odchylenia standardowego \(\sigma\).</p>
@@ -657,7 +623,6 @@ Estymator \(\hat\sigma^2\) jest więc nieobciążony, a jego wariancja dąży do
   {
     no: 233,
     group: "Estymacja punktowa i przedziały ufności",
-    label: "egzamin wstępny MIM UW",
     tags: ["funkcja ryzyka", "błąd średniokwadratowy", "porównanie estymatorów"],
     q: String.raw`<p>Wykonujemy \(n=8\) niezależnych doświadczeń, z których każde kończy się sukcesem z nieznanym prawdopodobieństwem \(\theta\) (schemat Bernoulliego). Niech \(K\) oznacza liczbę sukcesów. Porównujemy dwa estymatory:
 \[\hat\theta_1=\frac Kn=\frac K8,\qquad\hat\theta_2=\frac{K+1}{n+2}=\frac{K+1}{10}.\]
@@ -678,7 +643,6 @@ więc
   {
     no: 234,
     group: "Estymacja punktowa i przedziały ufności",
-    label: "egzamin wstępny MIM UW",
     tags: ["przedział ufności dla mediany", "statystyki pozycyjne", "metoda nieparametryczna"],
     q: String.raw`<p>Niech \(X_1,\dots,X_8\) będzie próbą z nieznanego rozkładu o ciągłej dystrybuancie i jedynej medianie \(m\), a \(X_{1:8}\le\dots\le X_{8:8}\) jej statystykami pozycyjnymi. Za przedział ufności dla \(m\) bierzemy \([X_{4:8},X_{5:8}]\). Oblicz poziom ufności tego przedziału, czyli \(P(X_{4:8}\le m\le X_{5:8})\).</p>`,
     ans: String.raw`\(\dbinom84\dfrac1{2^8}=\dfrac{35}{128}\approx0{,}273\)`,
@@ -692,7 +656,6 @@ więc
   {
     no: 235,
     group: "Estymacja punktowa i przedziały ufności",
-    label: "egzamin wstępny MIM UW",
     tags: ["estymator nieobciążony", "rozkład gamma", "zgodność"],
     q: String.raw`<p>Zmienne losowe \(X_1,\dots,X_n\) są niezależne i mają ten sam rozkład o gęstości
 \[f_\theta(x)=\begin{cases}\dfrac1{120\,\theta^6}\,x^5e^{-x/\theta},&x>0,\\[4pt]0,&\text{w przeciwnym razie,}\end{cases}\]
@@ -710,7 +673,6 @@ Wariancja dąży do zera, gdy \(n\to\infty\), więc \(T\) jest także estymatore
   {
     no: 236,
     group: "Estymacja punktowa i przedziały ufności",
-    label: "egzamin wstępny MIM UW",
     tags: ["przedział ufności dla średniej", "znana wariancja", "kwantyl rozkładu normalnego"],
     q: String.raw`<p>Zważono \(10\) paczek białego sera i otrzymano następujące wyniki:
 \[195,\ 198,\ 201,\ 191,\ 202,\ 194,\ 196,\ 198,\ 197,\ 198.\]</p>
@@ -731,7 +693,6 @@ Przedział dwustronny na poziomie \(0{,}95\) wymaga kwantyla \(\Phi^{-1}(0{,}975
   {
     no: 237,
     group: "Estymacja punktowa i przedziały ufności",
-    label: "egzamin wstępny MIM UW",
     tags: ["wektor gaussowski", "niezależność średniej i wariancji z próby", "dowód"],
     q: String.raw`<p>Zmienne losowe \(X_1,\dots,X_n\) są niezależne i mają ten sam rozkład \(N(\mu,\sigma^2)\). Udowodnij, że statystyki
 \[\bar X=\frac1n\sum_{i=1}^nX_i\qquad\text{oraz}\qquad S^2=\frac1{n-1}\sum_{i=1}^n\bigl(X_i-\bar X\bigr)^2\]
@@ -753,7 +714,6 @@ a to oznacza niezależność \(\bar X\) i \(D\). Ponieważ \(S^2\) jest funkcją
   {
     no: 238,
     group: "Estymacja punktowa i przedziały ufności",
-    label: "egzamin wstępny MIM UW",
     tags: ["estymator największej wiarogodności", "rozkład hipergeometryczny", "metoda Lincolna–Petersena"],
     q: String.raw`<p>W jeziorze żyje nieznana liczba \(N\) ryb. Aby ją oszacować, odłowiono \(m\) ryb, oznakowano je i wypuszczono z powrotem. Po pewnym czasie złowiono \(n\) ryb i okazało się, że \(k\) spośród nich jest oznakowanych. Wyznacz oszacowanie \(N\) metodą największej wiarogodności.</p>`,
     ans: String.raw`\(\hat N=\Bigl\lfloor\dfrac{mn}k\Bigr\rfloor\) (dla \(k\ge1\)); zwykle \(\hat N=\dfrac{mn}k\)`,
@@ -778,7 +738,6 @@ Jest to dopuszczalna wartość, bo \(\dfrac{mn}k-(m+n-k)=\dfrac{(m-k)(n-k)}k\ge0
   {
     no: 239,
     group: "Estymacja punktowa i przedziały ufności",
-    label: "egzamin wstępny MIM UW",
     tags: ["rozkład jednostajny", "estymatory nieobciążone", "porównanie wariancji", "maksimum próby"],
     q: String.raw`<p>Niech \(X_1,\dots,X_n\) będzie próbą z rozkładu jednostajnego na przedziale \((0,\theta)\), gdzie \(\theta>0\). Rozważamy dwa estymatory parametru \(\theta\):
 \[T=\frac{n+1}n\max\{X_1,\dots,X_n\},\qquad S=2\bar X.\]

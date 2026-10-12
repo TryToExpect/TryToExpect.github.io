@@ -1,9 +1,9 @@
 (window.THEORY = window.THEORY || {})['studia-6'] = String.raw`
 <div class="bx ex"><span class="t">O skrypcie</span>
-<p><b>Rachunek prawdopodobieństwa i statystyka</b> – skrypt na egzamin wstępny MIM UW (matematyka, studia drugiego stopnia, część IV zestawu, zadania 199–239). Z tej części pochodzi jedno z siedmiu zadań egzaminu, czyli 10 z 70 punktów.</p>
+<p><b>Rachunek prawdopodobieństwa i statystyka</b> – od aksjomatów Kołmogorowa i zmiennych losowych, przez twierdzenia graniczne, po estymację, przedziały ufności i testowanie hipotez.</p>
 <ul>
 <li>Skrypt zbiera definicje, twierdzenia (z pełnymi założeniami), metody rozwiązywania typowych zadań i standardowe przykłady. W rozdziale 12 zebrano narzędzia z analizy i kombinatoryki, z których korzystają rozwiązania zadań.</li>
-<li>Pod każdą pozycją podano numery zadań zestawu, w których jest ona używana (zakładka „Zadania z rozwiązaniami”). Pozycje bez numerów to standardowy materiał, który nie pojawił się w rozwiązaniach, ale warto go znać. Dopisek „dowodzone tamże” oznacza, że pozycja jest w danym zadaniu przedmiotem dowodu.</li>
+<li>Pod każdą pozycją podano numery zadań, w których jest ona używana (zakładka „Zadania z rozwiązaniami”). Pozycje bez numerów to standardowy materiał, który nie pojawił się w rozwiązaniach, ale warto go znać. Dopisek „dowodzone tamże” oznacza, że pozycja jest w danym zadaniu przedmiotem dowodu.</li>
 <li><b>Rodzaje pozycji</b> (kolor paska po lewej): Definicja, Twierdzenie, Fakt, Wniosek, Metoda, Przykład.</li>
 </ul>
 </div>
@@ -492,7 +492,7 @@ Wynik nie zależy od rozkładu (metoda nieparametryczna).</p>
 </div>
 
 <h3>Dodatek: narzędzia z analizy i kombinatoryki</h3>
-<p>Rozwiązania zadań z tej części korzystają też z kilku faktów z analizy i kombinatoryki. Zebrano je tutaj, aby skrypt był samodzielny; pełniejszy opis jest w skrypcie z analizy.</p>
+<p>Rozwiązania zadań korzystają też z kilku faktów z analizy i kombinatoryki. Zebrano je tutaj, aby skrypt był samodzielny.</p>
 <div class="bx thm"><span class="t">Twierdzenie 12.1 – wzór Newtona–Leibniza i całka niewłaściwa</span>
 <p>Jeśli \(F\) jest funkcją pierwotną funkcji ciągłej \(f\) na \([a,b]\), to \(\displaystyle\int_a^bf=F(b)-F(a)\). Całka niewłaściwa to \(\displaystyle\int_a^\infty f=\lim_{T\to\infty}\int_a^Tf\); jest zbieżna, gdy ta granica jest skończona.</p>
 <p class="use">Użyte w zad. 205, 208, 210, 220, 224, 239.</p>

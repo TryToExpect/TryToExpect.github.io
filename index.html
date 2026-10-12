@@ -10,7 +10,8 @@
 <style>
 /*
   Układ: strona w kratkę jak zeszyt, nagłówek z wykresem funkcji, dwie duże zakładki
-  (matura / studia, każda z własnym kolorem) i działy jako białe kartki w dwóch kolumnach.
+  (matura / studia, każda z własnym kolorem) i działy jako białe kartki w kilku kolumnach
+  (ich liczba zależy od szerokości ekranu, strona wypełnia szerokie monitory).
   Kolory: papier z chłodnym odcieniem, granat jako tusz, niebieski długopis (matura),
   zieleń tablicy (studia), czerwony długopis nauczyciela tylko na znaczniku "nowe".
   Kroje: STIX Two Text (skład naukowy) do nagłówków, IBM Plex Sans do tekstu, IBM Plex Mono do etykiet.
@@ -95,9 +96,9 @@ body {
   --accent-soft: var(--acc-studia-soft);
 }
 .page {
-  max-width: 1120px;
+  max-width: 2400px;
   margin-inline: auto;
-  padding-inline: clamp(16px, 4vw, 32px);
+  padding-inline: clamp(16px, 3.5vw, 56px);
   padding-block: clamp(28px, 6vw, 56px) 40px;
 }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
@@ -117,7 +118,7 @@ h1 {
   letter-spacing: -0.01em; text-wrap: balance;
 }
 .lead { margin: 0; max-width: 52ch; font-size: 1.0625rem; color: var(--ink-2); }
-.plot { flex: 0 1 360px; width: 100%; max-width: 360px; height: auto; }
+.plot { flex: 0 1 clamp(360px, 26vw, 560px); width: 100%; max-width: clamp(360px, 26vw, 560px); height: auto; }
 .plot-axis { fill: none; stroke: var(--ink-2); stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; }
 .plot-curve { fill: none; stroke: var(--accent); stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
 .plot-tangent { stroke: var(--ink); stroke-width: 1.4; stroke-dasharray: 5 4; }
@@ -127,7 +128,8 @@ h1 {
 @media (max-width: 760px) { .plot { display: none; } }
 
 /* zakładki */
-.switch { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-bottom: 20px; }
+.controls { display: flex; flex-wrap: wrap; align-items: center; gap: 20px 28px; margin-bottom: 20px; }
+.switch { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; flex: 1 1 520px; max-width: 880px; min-width: 0; }
 .tab {
   --tab-accent: var(--acc-matura);
   appearance: none; display: flex; align-items: center; gap: 14px; min-width: 0;
@@ -156,8 +158,8 @@ h1 {
 }
 
 /* wyszukiwarka */
-.toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; margin-bottom: 20px; }
-.search { position: relative; flex: 1 1 300px; min-width: 0; }
+.toolbar { display: flex; flex: 1 1 520px; flex-wrap: wrap; align-items: center; gap: 12px 20px; min-width: 0; }
+.search { position: relative; flex: 1 1 300px; max-width: 800px; min-width: 0; }
 .search svg { position: absolute; left: 13px; top: 50%; transform: translateY(-50%); color: var(--ink-2); pointer-events: none; }
 .search input {
   width: 100%; padding: 11px 14px 11px 40px; font: inherit; color: var(--ink);
@@ -195,10 +197,10 @@ h1 {
 .recent-ctx { font-size: 0.8125rem; color: var(--ink-2); overflow-wrap: anywhere; }
 
 /* panele i karty */
-.intro { margin: 8px 0 16px; max-width: 62ch; color: var(--ink-2); }
+.intro { margin: 8px 0 16px; max-width: 90ch; color: var(--ink-2); }
 .grid {
-  display: grid; gap: 16px;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 440px), 1fr));
+  display: grid; gap: clamp(14px, 1.2vw, 22px);
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 400px), 1fr));
 }
 .card {
   display: flex; flex-direction: column; gap: 14px; min-width: 0;
@@ -475,15 +477,17 @@ dialog.has-tabs .tasks-head { border-bottom: 0; padding-bottom: 8px; }
     <svg class="plot" id="plot" viewBox="0 0 360 150" aria-hidden="true" focusable="false"></svg>
   </header>
 
-  <div class="switch" id="tabs" role="tablist" aria-label="Poziom materiałów"></div>
+  <div class="controls">
+    <div class="switch" id="tabs" role="tablist" aria-label="Poziom materiałów"></div>
 
-  <div class="toolbar">
-    <div class="search">
-      <svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="7" cy="7" r="4.25"/><path d="M10.3 10.3L14 14"/></svg>
-      <label class="sr" for="q">Szukaj tematu</label>
-      <input id="q" type="search" placeholder="Szukaj, np. logarytm, macierz" autocomplete="off">
+    <div class="toolbar">
+      <div class="search">
+        <svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="7" cy="7" r="4.25"/><path d="M10.3 10.3L14 14"/></svg>
+        <label class="sr" for="q">Szukaj tematu</label>
+        <input id="q" type="search" placeholder="Szukaj, np. logarytm, macierz" autocomplete="off">
+      </div>
+      <label class="only" id="only-wrap" for="only" hidden><input id="only" type="checkbox"> Tylko z materiałami</label>
     </div>
-    <label class="only" id="only-wrap" for="only" hidden><input id="only" type="checkbox"> Tylko z materiałami</label>
   </div>
 
   <section class="recent" id="recent" aria-labelledby="recent-title" hidden>
@@ -734,13 +738,36 @@ dialog.has-tabs .tasks-head { border-bottom: 0; padding-bottom: 8px; }
     }
   }
 
+  // Siatka kart: liczbę kolumn dobieramy tak, by ostatni rząd nie zostawał prawie pusty, a karty
+  // miały rozsądną szerokość (360-600 px). Poza tym zakresem działa układ z CSS (auto-fill).
+  const gridRO = typeof ResizeObserver === 'function'
+    ? new ResizeObserver((entries) => requestAnimationFrame(() => entries.forEach((e) => balanceGrid(e.target)))) : null;
+  function balanceGrid(grid) {
+    if (!grid || !grid.offsetParent) return;
+    const n = [].filter.call(grid.children, (c) => !c.hidden).length;
+    const gap = parseFloat(getComputedStyle(grid).columnGap) || 0;
+    let best = 0, bestScore = Infinity;
+    for (let c = 1; c <= 8 && n; c++) {
+      const w = (grid.clientWidth - gap * (c - 1)) / c;
+      if (w < 360 || w > 600) continue;
+      const score = ((c - (n % c)) % c) * 1000 + Math.abs(w - 460);
+      if (score < bestScore) { bestScore = score; best = c; }
+    }
+    grid.style.gridTemplateColumns = best ? 'repeat(' + best + ', minmax(0, 1fr))' : '';
+  }
+  function balanceGrids() {
+    for (const id in panelEls) balanceGrid(panelEls[id].querySelector('.grid'));
+  }
+
   function buildPanels() {
     panelsEl.textContent = '';
     panelEls = {};
     registry = [];
     topicIndex = {};
+    if (gridRO) gridRO.disconnect();
     for (const sec of model) {
       const grid = el('div', { class: 'grid' });
+      if (gridRO) gridRO.observe(grid);
       const clear = el('button', { type: 'button', text: 'Wyczyść wyszukiwanie' });
       clear.addEventListener('click', () => {
         qEl.value = ''; onlyEl.checked = false; state.query = ''; state.only = false; applyFilter(); qEl.focus();
@@ -820,6 +847,7 @@ dialog.has-tabs .tasks-head { border-bottom: 0; padding-bottom: 8px; }
       }
     }
     recentEl.hidden = filtering || !hasRecent;
+    balanceGrids();
   }
 
   function select(id, opts) {
@@ -834,6 +862,7 @@ dialog.has-tabs .tasks-head { border-bottom: 0; padding-bottom: 8px; }
       tabEls[sec.id].tabIndex = on ? 0 : -1;
       panelEls[sec.id].hidden = !on;
     }
+    balanceGrids();
     if (opts.updateHash) { try { history.replaceState(null, '', '#' + id); } catch (e) { /* podgląd bez historii */ } }
   }
 
@@ -1083,6 +1112,7 @@ dialog.has-tabs .tasks-head { border-bottom: 0; padding-bottom: 8px; }
     c.hidden = false;
   }
 
+  if (!gridRO) window.addEventListener('resize', balanceGrids);
   qEl.addEventListener('input', () => { state.query = qEl.value; applyFilter(); });
   onlyEl.addEventListener('change', () => { state.only = onlyEl.checked; applyFilter(); });
   tabsEl.addEventListener('keydown', (e) => {
