@@ -80,7 +80,11 @@ window.MATERIALS = {
           "Granica ciągu",
           "Szereg geometryczny i jego suma",
         ],
-        files: [],
+        files: [
+          { type: "teoria", file: "pdf/matura/ciagi-teoria.pdf", title: "Wprowadzenie teoretyczne: ciągi, granice, szereg geometryczny", date: "2026-10-12", pages: 5 },
+          { type: "zadania", file: "pdf/matura/ciagi-zadania-cke.pdf", title: "11 zadań z arkuszy CKE (2018–2026) z odpowiedziami", date: "2026-10-12", pages: 4 },
+          { type: "rozwiazania", file: "pdf/matura/ciagi-rozwiazania-cke.pdf", title: "Rozwiązania i wyjaśnienia zadań z arkuszy CKE", date: "2026-10-12", pages: 5 },
+        ],
       },
       {
         title: "Planimetria",
