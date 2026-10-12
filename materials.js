@@ -15,7 +15,7 @@
 
 window.SITE = {
   title: "JcobMath",
-  lead: "Teoria, zadania i rozwiązania prosto na stronie, bez pobierania plików. Wzory w LaTeX-u, czytelne na telefonie i na komputerze.",
+  lead: "Strona od pasjonata matematyki. Teoria, zadania i rozwiązania krok po kroku, wszystko w jednym miejscu. Wybierz dział i ucz się swoim tempem.",
   contact: "", // np. adres e-mail; pokaże się w stopce, gdy nie jest pusty
 };
 
