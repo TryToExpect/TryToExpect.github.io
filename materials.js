@@ -1,23 +1,21 @@
 /*
-  Treść strony. Tu zmieniasz tytuł, działy i dodajesz PDF-y (patrz README.md).
+  Treść strony. Tu zmieniasz tytuł, działy i listę podtematów.
 
   Temat (topic):
     title    nazwa działu
     formula  wzór w LaTeX-u pokazywany na karcie (opcjonalnie; w tekście JS pamiętaj o podwójnym \\)
     items    lista podtematów: zwykły tekst albo { title, files: [...] }
-    files    PDF-y do całego działu (opcjonalnie)
+    files    PDF-y do całego działu (opcjonalnie; obecnie nieużywane)
 
-  Plik PDF (file):
-    type     "teoria" | "zadania" | "rozwiazania" | "arkusz"
-    file     ścieżka względem index.html, np. "pdf/matura/logarytmy-teoria.pdf"
-    title    własny podpis (opcjonalnie)
-    date     "RRRR-MM-DD" (opcjonalnie; do 14 dni od tej daty plik ma znacznik "nowe")
-    pages    liczba stron (opcjonalnie)
+  Teoria i zadania są osobnymi plikami JS, wczytywanymi w index.html:
+    teoria/<sekcja>-<numer>.js   tekst teorii (HTML + wzory w \( \) i \[ \]), np. teoria/matura-3.js
+    zadania/<sekcja>-<numer>.js  lista zadań z odpowiedziami i rozwiązaniami, np. zadania/matura-3.js
+  Numer to pozycja działu na liście poniżej (zaczynając od 1).
 */
 
 window.SITE = {
   title: "JcobMath",
-  lead: "Notatki, zadania i rozwiązania w PDF. Skład w LaTeX-u, żeby dobrze czytało się je na ekranie i na papierze.",
+  lead: "Teoria, zadania i rozwiązania prosto na stronie, bez pobierania plików. Wzory w LaTeX-u, czytelne na telefonie i na komputerze.",
   contact: "", // np. adres e-mail; pokaże się w stopce, gdy nie jest pusty
 };
 
@@ -28,16 +26,22 @@ window.MATERIALS = {
     unit: "Dział",
     units: ["dział", "działy", "działów"],
     intro:
-      "Wszystkie działy matury rozszerzonej z matematyki. Do każdego dodaję notatki z teorią, zadania i rozwiązania.",
+      "Wszystkie działy matury rozszerzonej z matematyki. Do każdego: teoria z definicjami i własnościami oraz zadania z arkuszy CKE z odpowiedziami i rozwiązaniami.",
+    tasksLabel: "Zadania z arkuszy CKE",
+    tasksNote:
+      "Treści zadań są oddane własnymi słowami, z zachowaniem wszystkich danych; oryginalne sformułowania znajdziesz w arkuszach CKE. Rozwiązania są autorskie. Najpierw spróbuj samodzielnie, potem otwórz odpowiedź lub rozwiązanie.",
     topics: [
       {
         title: "Liczby rzeczywiste i wyrażenia algebraiczne",
         formula: "\\log_a b=\\frac{\\log_c b}{\\log_c a}",
         items: [
-          "Działania na potęgach i pierwiastkach",
+          "Zbiory liczbowe, przedziały, podzielność",
+          "Procenty i procent składany",
+          "Potęgi i pierwiastki",
           "Wartość bezwzględna i jej własności",
           "Logarytmy i ich własności",
-          "Dowody algebraiczne (podzielność, nierówności)",
+          "Wzory skróconego mnożenia i przekształcanie wyrażeń",
+          "Nierówność między średnimi i dowody algebraiczne",
         ],
         files: [],
       },
@@ -45,9 +49,12 @@ window.MATERIALS = {
         title: "Równania i nierówności",
         formula: "W(x)=(x-a)\\,Q(x)+W(a)",
         items: [
-          "Równania i nierówności z wartością bezwzględną oraz z parametrem",
-          "Wielomiany (dzielenie wielomianów, twierdzenie o reszcie, twierdzenie o pierwiastkach wymiernych)",
+          "Równania i nierówności liniowe, układy równań",
+          "Równanie i nierówność kwadratowa, wzory Viète’a",
+          "Równania i nierówności z wartością bezwzględną",
+          "Wielomiany (dzielenie, twierdzenie Bézouta, pierwiastki wymierne)",
           "Równania i nierówności wymierne",
+          "Równania z parametrem i równania niewymierne",
         ],
         files: [],
       },
@@ -55,9 +62,10 @@ window.MATERIALS = {
         title: "Funkcje i ich własności",
         formula: "x_1+x_2=-\\frac{b}{a},\\qquad x_1x_2=\\frac{c}{a}",
         items: [
-          "Pojęcie funkcji, dziedzina, zbiór wartości",
-          "Funkcja kwadratowa (wzory Viète’a, zadania z parametrem)",
-          "Funkcja wykładnicza i logarytmiczna",
+          "Pojęcie funkcji, dziedzina, zbiór wartości, monotoniczność, parzystość",
+          "Funkcja liniowa i kwadratowa (wzory Viète’a, zadania z parametrem)",
+          "Funkcja wymierna (homograficzna)",
+          "Funkcja wykładnicza i logarytmiczna, równania i nierówności",
           "Przekształcenia wykresów funkcji (symetrie, przesunięcia, wartość bezwzględna z funkcji)",
         ],
         files: [],
@@ -66,9 +74,12 @@ window.MATERIALS = {
         title: "Trygonometria",
         formula: "\\sin(\\alpha+\\beta)=\\sin\\alpha\\cos\\beta+\\cos\\alpha\\sin\\beta",
         items: [
-          "Tożsamości i równania trygonometryczne",
-          "Funkcje trygonometryczne sumy i różnicy kątów, wzory na sumę i różnicę funkcji trygonometrycznych",
-          "Wykresy funkcji trygonometrycznych",
+          "Funkcje trygonometryczne kąta, miara łukowa, okrąg jednostkowy",
+          "Wzory redukcyjne i tożsamości trygonometryczne",
+          "Wzory na sumę i różnicę kątów, kąt podwojony, sumy funkcji trygonometrycznych",
+          "Wykresy i własności funkcji trygonometrycznych",
+          "Równania i nierówności trygonometryczne",
+          "Twierdzenie sinusów i cosinusów",
         ],
         files: [],
       },
@@ -76,23 +87,23 @@ window.MATERIALS = {
         title: "Ciągi",
         formula: "S=\\sum_{k=0}^{\\infty}a_1q^{k}=\\frac{a_1}{1-q},\\quad |q|<1",
         items: [
+          "Pojęcie ciągu, monotoniczność, ciągi rekurencyjne",
           "Ciąg arytmetyczny i geometryczny (wersja rozszerzona)",
+          "Procent składany",
           "Granica ciągu",
           "Szereg geometryczny i jego suma",
         ],
-        files: [
-          { type: "teoria", file: "pdf/matura/ciagi-teoria.pdf", title: "Wprowadzenie teoretyczne: ciągi, granice, szereg geometryczny", date: "2026-10-12", pages: 5 },
-          { type: "zadania", file: "pdf/matura/ciagi-zadania-cke.pdf", title: "11 zadań z arkuszy CKE (2018–2026) z odpowiedziami", date: "2026-10-12", pages: 4 },
-          { type: "rozwiazania", file: "pdf/matura/ciagi-rozwiazania-cke.pdf", title: "Rozwiązania i wyjaśnienia zadań z arkuszy CKE", date: "2026-10-12", pages: 5 },
-        ],
+        files: [],
       },
       {
         title: "Planimetria",
         formula: "c^2=a^2+b^2-2ab\\cos\\gamma",
         items: [
-          "Twierdzenie sinusów i cosinusów",
-          "Własności trójkątów, czworokątów i okręgów (kąty wpisane, środkowe, styczne)",
+          "Kąty, trójkąty i ich elementy (twierdzenie Talesa, o dwusiecznej)",
+          "Twierdzenia Pitagorasa, sinusów i cosinusów, pola trójkątów",
           "Podobieństwo i przystawanie figur, pola figur",
+          "Czworokąty i wielokąty foremne",
+          "Okrąg i koło: kąty, styczne, potęga punktu",
           "Dowody geometryczne",
         ],
         files: [],
@@ -101,9 +112,11 @@ window.MATERIALS = {
         title: "Geometria analityczna",
         formula: "d=\\frac{|Ax_0+By_0+C|}{\\sqrt{A^2+B^2}}",
         items: [
-          "Prosta w układzie współrzędnych (równanie ogólne i kierunkowe, odległość punktu od prostej)",
-          "Okrąg w układzie współrzędnych (równanie okręgu, wzajemne położenie prostej i okręgu)",
           "Wektory na płaszczyźnie i ich zastosowania",
+          "Odcinek: długość, środek, podział w danym stosunku",
+          "Prosta (postacie równania, położenie, odległości, kąt)",
+          "Okrąg: równanie, położenie względem prostej i innego okręgu",
+          "Przekształcenia geometryczne i pole figury w układzie współrzędnych",
         ],
         files: [],
       },
@@ -111,9 +124,10 @@ window.MATERIALS = {
         title: "Stereometria",
         formula: "V=\\frac13\\,P_p\\cdot H",
         items: [
-          "Kąty między odcinkami i płaszczyznami w bryłach (graniastosłupy, ostrosłupy, bryły obrotowe)",
-          "Przekroje brył",
-          "Objętości i pola powierzchni brył",
+          "Proste i płaszczyzny w przestrzeni, kąty (w tym kąt dwuścienny)",
+          "Graniastosłupy i ostrosłupy (pola, objętości, kąty)",
+          "Bryły obrotowe: walec, stożek, kula",
+          "Przekroje brył i bryły podobne",
         ],
         files: [],
       },
@@ -121,10 +135,12 @@ window.MATERIALS = {
         title: "Kombinatoryka i prawdopodobieństwo",
         formula: "P(A\\mid B)=\\frac{P(B\\mid A)\\,P(A)}{P(B)}",
         items: [
-          "Reguły mnożenia i dodawania, permutacje, kombinacje, wariacje",
+          "Reguły zliczania, permutacje, wariacje, kombinacje",
+          "Dwumian Newtona i zasada włączeń i wyłączeń",
           "Prawdopodobieństwo klasyczne i geometryczne",
-          "Prawdopodobieństwo warunkowe, wzór na prawdopodobieństwo całkowite oraz wzór Bayesa",
+          "Prawdopodobieństwo warunkowe, całkowite, wzór Bayesa",
           "Schemat Bernoulliego",
+          "Wartość oczekiwana i statystyka opisowa",
         ],
         files: [],
       },
@@ -132,10 +148,12 @@ window.MATERIALS = {
         title: "Rachunek różniczkowy i analiza",
         formula: "f'(x_0)=\\lim_{h\\to0}\\frac{f(x_0+h)-f(x_0)}{h}",
         items: [
-          "Granica funkcji w punkcie",
-          "Pochodna funkcji (obliczanie pochodnych, równanie stycznej do wykresu funkcji)",
-          "Badanie monotoniczności funkcji i wyznaczanie ekstremów lokalnych",
-          "Zadania optymalizacyjne z wykorzystaniem pochodnej",
+          "Granica funkcji i asymptoty",
+          "Ciągłość funkcji",
+          "Pochodna i reguły różniczkowania",
+          "Styczna do wykresu funkcji",
+          "Monotoniczność i ekstrema lokalne",
+          "Zadania optymalizacyjne",
         ],
         files: [],
       },
@@ -148,7 +166,10 @@ window.MATERIALS = {
     unit: "Przedmiot",
     units: ["przedmiot", "przedmioty", "przedmiotów"],
     intro:
-      "Przedmioty z pierwszych lat studiów ścisłych i informatycznych. Notatki z teorią, zbiory zadań i rozwiązania.",
+      "Przedmioty z pierwszych lat studiów ścisłych i informatycznych. Teoria i zadania z rozwiązaniami pojawiają się tu stopniowo.",
+    tasksLabel: "Zadania z rozwiązaniami",
+    tasksNote:
+      "Zadania z egzaminu wstępnego na studia magisterskie (MIM UW), część z rachunku prawdopodobieństwa i statystyki. Numeracja jak w zestawie. Najpierw spróbuj samodzielnie, potem otwórz odpowiedź lub rozwiązanie.",
     topics: [
       {
         title: "Wstęp do matematyki",
@@ -217,12 +238,12 @@ window.MATERIALS = {
         title: "Rachunek prawdopodobieństwa i statystyka",
         formula: "\\operatorname{Var}X=\\mathbb{E}X^2-(\\mathbb{E}X)^2",
         items: [
-          "Przestrzeń probabilistyczna, prawdopodobieństwo warunkowe, niezależność",
-          "Zmienne losowe dyskretne i ciągłe, dystrybuanta, gęstość",
-          "Wartość oczekiwana, wariancja, kowariancja",
-          "Prawa wielkich liczb i centralne twierdzenie graniczne",
-          "Estymacja punktowa i przedziałowa",
-          "Testowanie hipotez statystycznych",
+          "Przestrzeń probabilistyczna, prawdopodobieństwo warunkowe i niezależność",
+          "Zmienne losowe, rozkłady, wektory losowe, sumy niezależnych zmiennych",
+          "Wartość oczekiwana, wariancja, kowariancja, funkcje tworzące",
+          "Nierówności i twierdzenia graniczne (prawa wielkich liczb, CTG)",
+          "Próba, statystyki, estymacja punktowa (metoda największej wiarogodności, metoda momentów)",
+          "Przedziały ufności i testowanie hipotez",
         ],
         files: [],
       },

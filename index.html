@@ -377,6 +377,79 @@ dialog.tasks::backdrop { background: rgba(14, 19, 32, 0.62); }
   .tk-src { margin-left: 0; text-align: left; flex-basis: 100%; }
 }
 
+/* teoria w oknie materiałów */
+:root {
+  --pen-soft: #fdecea; --violet: #6b3fb8; --violet-soft: #efe8fb;
+  --teal: #0b7285; --teal-soft: #e0f3f6; --amber: #a85d0a; --amber-soft: #fcefd9;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --pen-soft: #3a2024; --violet: #c4a3ff; --violet-soft: #2a2145;
+    --teal: #66d0e0; --teal-soft: #11323a; --amber: #f2b45f; --amber-soft: #3a2a12;
+  }
+}
+:root[data-theme="dark"] {
+  --pen-soft: #3a2024; --violet: #c4a3ff; --violet-soft: #2a2145;
+  --teal: #66d0e0; --teal-soft: #11323a; --amber: #f2b45f; --amber-soft: #3a2a12;
+}
+.foot-btns { display: flex; flex-wrap: wrap; gap: 8px; margin-left: auto; }
+.foot-btns .tasks-btn { margin-left: 0; }
+.theory-btn { color: var(--accent); background: var(--surface); }
+.theory-btn:hover { background: var(--accent-soft); filter: none; }
+.tasks-tabs { display: flex; flex-wrap: wrap; gap: 2px; padding: 0 16px; background: var(--surface); border-bottom: 1px solid var(--line); }
+.tasks-tabs[hidden] { display: none; }
+dialog.has-tabs .tasks-head { border-bottom: 0; padding-bottom: 8px; }
+.tasks-tab {
+  appearance: none; margin-bottom: -1px; padding: 10px 14px 9px; cursor: pointer;
+  font: 500 0.875rem/1.2 var(--f-body); color: var(--ink-2); background: none;
+  border: 0; border-bottom: 2px solid transparent;
+}
+.tasks-tab:hover { color: var(--ink); }
+.tasks-tab[aria-selected="true"] { color: var(--accent); border-bottom-color: var(--accent); }
+.tasks-tab:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+.tasks-tab .n { margin-left: 6px; padding: 2px 5px; font: 600 0.6875rem/1 var(--f-mono); color: var(--accent); background: var(--accent-soft); border-radius: 3px; }
+.pane[hidden] { display: none; }
+.th-toc { margin: 4px 0 8px; padding: 10px 16px 12px; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; }
+.th-toc-title { margin: 0 0 6px; font: 500 0.75rem/1 var(--f-mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-2); }
+.th-toc ol { margin: 0; padding-left: 20px; columns: 2 260px; column-gap: 28px; }
+.th-toc li { margin: 0 0 3px; break-inside: avoid; font-size: 0.9375rem; }
+.th-toc a { color: var(--ink); text-decoration: none; cursor: pointer; }
+.th-toc a:hover { color: var(--accent); text-decoration: underline; }
+.th-body { font-size: 1rem; line-height: 1.6; }
+.th-body h3 { margin: 30px 0 10px; font: 600 1.3rem/1.25 var(--f-display); scroll-margin-top: 8px; text-wrap: balance; }
+.th-body h3::before { content: attr(data-n) "."; margin-right: 0.5em; font-style: italic; color: var(--accent); }
+.th-body h4 { margin: 18px 0 6px; font: 600 0.9375rem/1.3 var(--f-body); color: var(--accent); }
+.th-body p { margin: 0 0 9px; }
+.th-body ul, .th-body ol { margin: 0 0 10px; padding-left: 22px; }
+.th-body li { margin-bottom: 4px; }
+.th-body hr { margin: 22px 0; border: 0; border-top: 1px dashed var(--line); }
+.bx { margin: 12px 0; padding: 10px 14px 6px; background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--k, var(--accent)); border-radius: 0 6px 6px 0; }
+.bx > .t { display: block; margin-bottom: 6px; font: 600 0.6875rem/1 var(--f-mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--k, var(--accent)); }
+.bx > :last-child { margin-bottom: 4px; }
+.bx.def { --k: var(--accent); background: var(--accent-soft); }
+.bx.thm { --k: var(--violet); background: var(--violet-soft); }
+.bx.fact { --k: var(--teal); background: var(--teal-soft); }
+.bx.cor { --k: var(--amber); background: var(--amber-soft); }
+.bx.met { --k: var(--acc-studia); background: var(--acc-studia-soft); }
+.bx.ex { --k: var(--ink-2); background: var(--surface); }
+.bx.warn { --k: var(--pen); background: var(--pen-soft); }
+.bx .use { margin: 2px 0 2px; font: 400 0.6875rem/1.4 var(--f-mono); color: var(--ink-2); text-align: right; }
+.tw { margin: 8px 0 12px; overflow-x: auto; }
+.wide { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+.th-body table { width: 100%; margin: 0; border-collapse: collapse; font-size: 0.9375rem; background: var(--surface); }
+.th-body th, .th-body td { padding: 6px 10px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+.th-body thead th { color: var(--accent); background: var(--accent-soft); border-bottom: 2px solid var(--accent); font: 600 0.75rem/1.3 var(--f-mono); letter-spacing: 0.04em; }
+.th-body td.c, .th-body th.c { text-align: center; }
+.th-body .two { display: grid; grid-template-columns: 1fr 1fr; gap: 0 18px; }
+.th-body .two > * { min-width: 0; }
+.th-body mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; margin: 6px 0 !important; }
+.th-body svg.fig { max-width: 100%; height: auto; }
+@media (max-width: 640px) {
+  .th-body .two { grid-template-columns: 1fr; }
+  .tasks-tabs { padding: 0 8px; }
+  .th-toc ol { columns: 1; }
+}
+
 /* stopka */
 .foot {
   display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px;
@@ -422,7 +495,7 @@ dialog.tasks::backdrop { background: rgba(14, 19, 32, 0.62); }
   <noscript><p class="intro">Ta strona wymaga włączonego JavaScriptu.</p></noscript>
 
   <footer class="foot">
-    <p>Materiały są składane w LaTeX-u.</p>
+    <p>Wzory są składane w LaTeX-u (MathJax). Teoria i zadania otwierają się prosto na stronie.</p>
     <p id="contact" hidden></p>
   </footer>
 
@@ -437,6 +510,7 @@ dialog.tasks::backdrop { background: rgba(14, 19, 32, 0.62); }
           <svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M3.5 3.5l9 9M12.5 3.5l-9 9"/></svg>
         </button>
       </header>
+      <div class="tasks-tabs" id="tasks-tabs" role="tablist" aria-label="Rodzaj materiału" hidden></div>
       <div class="tasks-body" id="tasks-body"></div>
     </div>
   </dialog>
@@ -474,6 +548,18 @@ dialog.tasks::backdrop { background: rgba(14, 19, 32, 0.62); }
 <script src="zadania/matura-8.js"></script>
 <script src="zadania/matura-9.js"></script>
 <script src="zadania/matura-10.js"></script>
+<script src="zadania/studia-6.js"></script>
+<script src="teoria/matura-1.js"></script>
+<script src="teoria/matura-2.js"></script>
+<script src="teoria/matura-3.js"></script>
+<script src="teoria/matura-4.js"></script>
+<script src="teoria/matura-5.js"></script>
+<script src="teoria/matura-6.js"></script>
+<script src="teoria/matura-7.js"></script>
+<script src="teoria/matura-8.js"></script>
+<script src="teoria/matura-9.js"></script>
+<script src="teoria/matura-10.js"></script>
+<script src="teoria/studia-6.js"></script>
 <script>
 (function () {
   'use strict';
@@ -485,6 +571,7 @@ dialog.tasks::backdrop { background: rgba(14, 19, 32, 0.62); }
   const ICON = {
     pdf: '<svg ' + SVG_ATTRS + '><path d="M4 1.75h5.2L12.5 5v9.25H4z"/><path d="M9 1.75V5h3.5"/><path d="M6.2 9.4h4M6.2 11.7h2.8"/></svg>',
     pencil: '<svg ' + SVG_ATTRS + '><path d="M2.75 13.25l.65-2.9 7.6-7.6a1.2 1.2 0 0 1 1.7 0l.55.55a1.2 1.2 0 0 1 0 1.7l-7.6 7.6z"/><path d="M9.6 4.2l2.2 2.2"/></svg>',
+    book: '<svg ' + SVG_ATTRS + '><path d="M8 4.2C6.8 3.3 5 3 2.75 3v9.2c2.25 0 4.05.3 5.25 1.2 1.2-.9 3-1.2 5.25-1.2V3C11 3 9.2 3.3 8 4.2z"/><path d="M8 4.2v9.2"/></svg>',
     tasks: '<svg ' + SVG_ATTRS + '><path d="M5.5 2.25h5v2h-5z"/><path d="M4.25 3.5h-.5a1.25 1.25 0 0 0-1.25 1.25v8.5a1.25 1.25 0 0 0 1.25 1.25h8.5a1.25 1.25 0 0 0 1.25-1.25v-8.5a1.25 1.25 0 0 0-1.25-1.25h-.5"/><path d="M5.2 9l1.7 1.7 3.4-3.6"/></svg>'
   };
 
@@ -539,6 +626,7 @@ dialog.tasks::backdrop { background: rgba(14, 19, 32, 0.62); }
         topics: (sec.topics || []).map((t, i) => ({
           n: i + 1, id: id + '-' + (i + 1), title: t.title || '', formula: t.formula || '', files: t.files || [],
           tasks: (window.TASKS && window.TASKS[id + '-' + (i + 1)]) || [],
+          theory: (window.THEORY && window.THEORY[id + '-' + (i + 1)]) || '',
           items: (t.items || []).map((it) => (typeof it === 'string'
             ? { title: it, files: [] }
             : { title: it.title || '', files: it.files || [] }))
@@ -546,6 +634,9 @@ dialog.tasks::backdrop { background: rgba(14, 19, 32, 0.62); }
       };
       out.fileCount = out.topics.reduce((n, t) => n + t.files.length + t.items.reduce((m, it) => m + it.files.length, 0), 0);
       out.taskCount = out.topics.reduce((n, t) => n + t.tasks.length, 0);
+      out.theoryCount = out.topics.reduce((n, t) => n + (t.theory ? 1 : 0), 0);
+      out.tasksLabel = sec.tasksLabel || 'Zadania';
+      out.tasksNote = sec.tasksNote || '';
       return out;
     });
   }
@@ -574,15 +665,24 @@ dialog.tasks::backdrop { background: rgba(14, 19, 32, 0.62); }
     const total = topic.files.length + itemFiles;
 
     const rows = [];
-    if (topic.tasks.length) {
-      const btn = el('button', { class: 'tasks-btn', type: 'button', 'aria-haspopup': 'dialog' },
-        icon('tasks'),
-        el('span', { text: 'Rozwiąż zadania' }),
-        el('span', { class: 'tasks-n', text: String(topic.tasks.length) }));
+    if (topic.theory || topic.tasks.length) {
       topicIndex[topic.id] = { sec: sec, topic: topic };
-      btn.addEventListener('click', () => openTasks(sec, topic));
+      const btns = [];
+      if (topic.theory) {
+        const b = el('button', { class: 'tasks-btn theory-btn', type: 'button', 'aria-haspopup': 'dialog' },
+          icon('book'), el('span', { text: 'Teoria' }));
+        b.addEventListener('click', () => openMaterials(sec, topic, 'theory'));
+        btns.push(b);
+      }
+      if (topic.tasks.length) {
+        const b = el('button', { class: 'tasks-btn', type: 'button', 'aria-haspopup': 'dialog' },
+          icon('tasks'), el('span', { text: 'Zadania' }),
+          el('span', { class: 'tasks-n', text: String(topic.tasks.length) }));
+        b.addEventListener('click', () => openMaterials(sec, topic, 'tasks'));
+        btns.push(b);
+      }
       rows.push(el('div', { class: 'foot-row' },
-        el('span', { class: 'foot-label', text: 'Zadania z arkuszy CKE' }), btn));
+        el('span', { class: 'foot-label', text: 'Na stronie' }), el('div', { class: 'foot-btns' }, btns)));
     }
     if (topic.files.length) {
       rows.push(el('div', { class: 'foot-row' },
@@ -608,8 +708,10 @@ dialog.tasks::backdrop { background: rgba(14, 19, 32, 0.62); }
       foot);
 
     const taskText = topic.tasks.map((t) => (t.group || '') + ' ' + (t.tags || []).join(' ')).join(' ');
+    const theoryText = (topic.theory.match(/<h3[^>]*>[\s\S]*?<\/h3>/g) || []).map((h) => h.replace(/<[^>]*>/g, ' ')).join(' ');
     return {
-      sec: sec.id, el: card, titleN: norm(topic.title + ' ' + taskText), has: total > 0 || topic.tasks.length > 0, itemHas: itemFiles > 0,
+      sec: sec.id, el: card, titleN: norm(topic.title + ' ' + taskText + ' ' + theoryText),
+      has: total > 0 || topic.tasks.length > 0 || !!topic.theory, itemHas: itemFiles > 0,
       items: topic.items.map((it, i) => ({ el: itemEls[i], textN: norm(it.title), has: it.files.length > 0 }))
     };
   }
@@ -744,8 +846,16 @@ dialog.tasks::backdrop { background: rgba(14, 19, 32, 0.62); }
     if (root.classList.contains('math-ready') && window.MathJax && window.MathJax.typesetPromise) fn();
     else document.addEventListener('math-ready', fn, { once: true });
   }
+  // bardzo długi wzór w tekście: akapit dostaje własne przewijanie poziome zamiast poszerzać okno
+  function fitWide(node) {
+    if (!node || node.hidden) return;
+    [].forEach.call(node.querySelectorAll('mjx-container:not([display="true"])'), function (m) {
+      const p = m.closest('p, li, .ans, .tk-panel');
+      if (p && !p.classList.contains('wide') && m.getBoundingClientRect().width > p.clientWidth) p.classList.add('wide');
+    });
+  }
   function typesetIn(node) {
-    whenMath(function () { window.MathJax.typesetPromise([node]).catch(function () {}); });
+    whenMath(function () { window.MathJax.typesetPromise([node]).then(function () { fitWide(node); }).catch(function () {}); });
   }
 
   // spójniki jednoliterowe w treści zadań, z pominięciem wzorów
@@ -771,9 +881,9 @@ dialog.tasks::backdrop { background: rgba(14, 19, 32, 0.62); }
     }
     const kids = [
       el('header', { class: 'tk-head' },
-        el('h3', { class: 'tk-title', text: 'Zadanie ' + (i + 1) }),
+        el('h3', { class: 'tk-title', text: 'Zadanie ' + (t.no || (i + 1)) }),
         t.pts ? el('span', { class: 'pts', text: t.pts + ' pkt' }) : null,
-        t.src ? el('span', { class: 'tk-src', text: 'CKE · matura ' + t.src }) : null),
+        (t.label || t.src) ? el('span', { class: 'tk-src', text: t.label || ('CKE · matura ' + t.src) }) : null),
       q
     ];
     if (t.tags && t.tags.length) {
@@ -796,36 +906,93 @@ dialog.tasks::backdrop { background: rgba(14, 19, 32, 0.62); }
     return el('article', { class: 'tk', id: id }, kids, panels);
   }
 
-  function buildTasks(topic) {
-    dlgBody.textContent = '';
-    dlgBody.append(el('p', {
-      class: 'tasks-note',
-      text: 'Treści zadań są oddane własnymi słowami, z zachowaniem wszystkich danych; oryginalne sformułowania znajdziesz w arkuszach CKE. Rozwiązania są autorskie. Najpierw spróbuj samodzielnie, potem otwórz odpowiedź lub rozwiązanie.'
-    }));
+  function theoryPane(topic) {
+    const pane = el('div', { class: 'pane th', id: 'pane-theory', role: 'tabpanel', hidden: true });
+    const body = el('div', { class: 'th-body' });
+    body.innerHTML = topic.theory;
+    const heads = [].slice.call(body.querySelectorAll('h3'));
+    heads.forEach((h, i) => { h.id = 'th-' + topic.id + '-' + (i + 1); h.setAttribute('data-n', String(i + 1)); });
+    if (heads.length > 2) {
+      const list = el('ol');
+      heads.forEach((h, i) => {
+        const a = el('a', { 'data-th': h.id, text: h.textContent });
+        list.append(el('li', {}, a));
+      });
+      pane.append(el('nav', { class: 'th-toc', 'aria-label': 'Spis treści' }, el('p', { class: 'th-toc-title', text: 'Spis treści' }), list));
+    }
+    pane.append(body);
+    return pane;
+  }
+
+  function tasksPane(sec, topic) {
+    const pane = el('div', { class: 'pane', id: 'pane-tasks', role: 'tabpanel', hidden: true });
+    if (sec.tasksNote) pane.append(el('p', { class: 'tasks-note', text: sec.tasksNote }));
     let group = null;
     topic.tasks.forEach((t, i) => {
-      if (t.group && t.group !== group) { group = t.group; dlgBody.append(el('h4', { class: 'tk-group', text: group })); }
-      dlgBody.append(taskEl(topic, t, i));
+      if (t.group && t.group !== group) { group = t.group; pane.append(el('h4', { class: 'tk-group', text: group })); }
+      pane.append(taskEl(topic, t, i));
     });
+    return pane;
+  }
+
+  function buildMaterials(sec, topic) {
+    dlgBody.textContent = '';
+    const tabsEl2 = $('tasks-tabs');
+    tabsEl2.textContent = '';
+    const kinds = [];
+    if (topic.theory) kinds.push(['theory', 'Teoria', theoryPane(topic)]);
+    if (topic.tasks.length) kinds.push(['tasks', sec.tasksLabel || 'Zadania', tasksPane(sec, topic), topic.tasks.length]);
+    kinds.forEach((k) => {
+      dlgBody.append(k[2]);
+      const b = el('button', { class: 'tasks-tab', type: 'button', role: 'tab', id: 'tab-' + k[0], 'aria-controls': 'pane-' + k[0], 'data-tab': k[0] },
+        k[1], k[3] ? el('span', { class: 'n', text: String(k[3]) }) : null);
+      tabsEl2.append(b);
+    });
+    tabsEl2.hidden = kinds.length < 2;
+    dlg.classList.toggle('has-tabs', kinds.length > 1);
     tidyTree(dlgBody);
   }
 
-  function openTasks(sec, topic, taskNo) {
-    dlgKicker.textContent = sec.unit + ' ' + String(topic.n).padStart(2, '0') + ' · Zadania z arkuszy CKE';
+  function showTab(tab) {
+    const tabsEl2 = $('tasks-tabs');
+    [].forEach.call(tabsEl2.children, (b) => {
+      const on = b.getAttribute('data-tab') === tab;
+      b.setAttribute('aria-selected', on ? 'true' : 'false');
+      b.tabIndex = on ? 0 : -1;
+    });
+    ['theory', 'tasks'].forEach((k) => { const p = $('pane-' + k); if (p) p.hidden = k !== tab; });
+    fitWide($('pane-' + tab));
+  }
+
+  function openMaterials(sec, topic, tab, num) {
+    tab = tab === 'theory' && topic.theory ? 'theory' : (topic.tasks.length ? 'tasks' : 'theory');
+    dlgKicker.textContent = sec.unit + ' ' + String(topic.n).padStart(2, '0') + (tab === 'theory' ? ' · Teoria' : ' · ' + (sec.tasksLabel || 'Zadania'));
     dlgTitle.textContent = tidy(topic.title);
     const fresh = dlgTopic !== topic.id;
-    if (fresh) { buildTasks(topic); dlgTopic = topic.id; }
+    if (fresh) { buildMaterials(sec, topic); dlgTopic = topic.id; }
+    showTab(tab);
     if (!dlg.open) {
       if (typeof dlg.showModal === 'function') dlg.showModal(); else dlg.setAttribute('open', '');
     }
     root.classList.add('dialog-open');
     if (fresh) typesetIn(dlgBody);
-    const target = taskNo ? $('tk-' + topic.id + '-' + taskNo) : null;
+    const target = num ? $(tab === 'theory' ? 'th-' + topic.id + '-' + num : 'tk-' + topic.id + '-' + num) : null;
     if (target) target.scrollIntoView({ block: 'start' }); else dlgBody.scrollTop = 0;
-    try { history.replaceState(null, '', '#' + topic.id + '-zadania' + (taskNo ? '-' + taskNo : '')); } catch (e) { /* podgląd bez historii */ }
+    try { history.replaceState(null, '', '#' + topic.id + '-' + (tab === 'theory' ? 'teoria' : 'zadania') + (num ? '-' + num : '')); } catch (e) { /* podgląd bez historii */ }
   }
 
+  $('tasks-tabs').addEventListener('click', (e) => {
+    const b = e.target.closest ? e.target.closest('.tasks-tab') : null;
+    const hit = dlgTopic && topicIndex[dlgTopic];
+    if (b && hit) openMaterials(hit.sec, hit.topic, b.getAttribute('data-tab'));
+  });
   dlgBody.addEventListener('click', (e) => {
+    const link = e.target.closest ? e.target.closest('a[data-th]') : null;
+    if (link) {
+      const t = $(link.getAttribute('data-th'));
+      if (t) t.scrollIntoView({ block: 'start' });
+      return;
+    }
     const b = e.target.closest ? e.target.closest('.tk-btn') : null;
     if (!b) return;
     const p = $(b.getAttribute('data-panel'));
@@ -833,6 +1000,7 @@ dialog.tasks::backdrop { background: rgba(14, 19, 32, 0.62); }
     const open = p.hidden;
     p.hidden = !open;
     b.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (open) fitWide(p);
   });
   dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
   $('tasks-close').addEventListener('click', () => dlg.close());
@@ -842,7 +1010,7 @@ dialog.tasks::backdrop { background: rgba(14, 19, 32, 0.62); }
   });
 
   function applyHash() {
-    const m = /^#([a-z]+)(?:-(\d+))?(?:-(zadania)(?:-(\d+))?)?$/.exec(location.hash);
+    const m = /^#([a-z]+)(?:-(\d+))?(?:-(zadania|teoria)(?:-(\d+))?)?$/.exec(location.hash);
     if (!m || !panelEls[m[1]]) return false;
     select(m[1]);
     if (m[2]) {
@@ -850,7 +1018,7 @@ dialog.tasks::backdrop { background: rgba(14, 19, 32, 0.62); }
       if (target) target.scrollIntoView({ block: 'start' });
       if (m[3]) {
         const hit = topicIndex[m[1] + '-' + m[2]];
-        if (hit && hit.topic.tasks.length) openTasks(hit.sec, hit.topic, m[4] ? +m[4] : 0);
+        if (hit) openMaterials(hit.sec, hit.topic, m[3] === 'teoria' ? 'theory' : 'tasks', m[4] ? +m[4] : 0);
       }
     }
     return true;
@@ -930,7 +1098,7 @@ dialog.tasks::backdrop { background: rgba(14, 19, 32, 0.62); }
     tabEls[ids[i]].focus();
   });
   window.addEventListener('hashchange', () => {
-    if (dlg.open && !/-zadania/.test(location.hash)) dlg.close();
+    if (dlg.open && !/-(zadania|teoria)/.test(location.hash)) dlg.close();
     applyHash();
   });
 
