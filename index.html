@@ -4,6 +4,24 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>JcobMath</title>
+<meta name="description" content="JcobMath: teoria, zadania i rozwiązania krok po kroku. Matura rozszerzona z matematyki oraz przedmioty z pierwszych lat studiów.">
+<meta name="theme-color" content="#f5f7fb" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1320" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://trytoexpect.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="JcobMath">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:title" content="JcobMath – matematyka krok po kroku">
+<meta property="og:description" content="Teoria, zadania i rozwiązania krok po kroku: matura rozszerzona oraz przedmioty z pierwszych lat studiów.">
+<meta property="og:url" content="https://trytoexpect.github.io/">
+<meta property="og:image" content="https://trytoexpect.github.io/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="JcobMath – teoria, zadania i rozwiązania z matematyki">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=STIX+Two+Text:ital,wght@0,500;0,600;1,500&display=swap">
@@ -237,6 +255,29 @@ html.math-failed .formula { display: none; }
 }
 .foot-label { font: 500 0.75rem/1 var(--f-mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-2); }
 .pending { display: inline-flex; align-items: center; gap: 8px; font-size: 0.875rem; color: var(--ink-2); }
+
+/* działy bez materiałów: znacznik "Wkrótce" i wyciszona karta */
+.soon {
+  flex: none; padding: 5px 8px; font: 600 0.6875rem/1 var(--f-mono); letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--amber); background: var(--amber-soft); border-radius: 4px;
+}
+.card.is-soon { border-style: dashed; box-shadow: none; }
+.card.is-soon .formula { opacity: 0.7; }
+
+/* wyniki wyszukiwania w treści: gdzie dokładnie znaleziono szukane słowa */
+.hits {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; padding: 8px 10px;
+  background: var(--accent-soft); border-radius: 4px;
+}
+.hit-list { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; min-width: 0; }
+.hit {
+  appearance: none; max-width: 100%; padding: 4px 10px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  font: 500 0.8125rem/1.3 var(--f-body); color: var(--accent); background: var(--surface);
+  border: 1px solid var(--accent); border-radius: 999px; cursor: pointer;
+}
+.hit:hover { color: var(--on-accent); background: var(--accent); }
+.hit:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.hit-more { font: 500 0.75rem/1 var(--f-mono); color: var(--ink-2); }
 
 /* pliki PDF */
 .files { display: flex; flex-wrap: wrap; gap: 6px; }
@@ -505,8 +546,8 @@ dialog.has-tabs .tasks-head { border-bottom: 0; padding-bottom: 8px; }
     <div class="toolbar">
       <div class="search">
         <svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="7" cy="7" r="4.25"/><path d="M10.3 10.3L14 14"/></svg>
-        <label class="sr" for="q">Szukaj tematu</label>
-        <input id="q" type="search" placeholder="Szukaj, np. logarytm, macierz" autocomplete="off">
+        <label class="sr" for="q">Szukaj w działach, zadaniach i teorii</label>
+        <input id="q" type="search" placeholder="Szukaj w zadaniach i teorii, np. logarytm, macierz" autocomplete="off">
       </div>
       <label class="only" id="only-wrap" for="only" hidden><input id="only" type="checkbox"> Tylko z materiałami</label>
     </div>
@@ -716,27 +757,34 @@ dialog.has-tabs .tasks-head { border-bottom: 0; padding-bottom: 8px; }
         el('div', { class: 'files' }, topic.files.map(chip))));
     }
     let foot = null;
+    const soon = !rows.length && !total;
     if (rows.length) {
       foot = el('footer', { class: 'card-foot' }, rows);
-    } else if (!total) {
+    } else if (soon) {
       foot = el('footer', { class: 'card-foot' },
         el('span', { class: 'pending' }, icon('pencil'), 'Materiały w przygotowaniu'));
     }
 
-    const card = el('article', { class: 'card', id: topic.id },
+    // wypełniane przez applyFilter: miejsca, w których znaleziono szukane słowa (zadania, teoria)
+    const hitsEl = el('div', { class: 'hits', hidden: true },
+      el('span', { class: 'foot-label', text: 'Znaleziono w' }), el('div', { class: 'hit-list' }));
+
+    const card = el('article', { class: soon ? 'card is-soon' : 'card', id: topic.id },
       el('header', { class: 'card-head' },
         el('div', { class: 'card-id' },
           el('p', { class: 'kicker', text: sec.unit + ' ' + String(topic.n).padStart(2, '0') }),
           el('h2', { class: 'card-title', text: tidy(topic.title) })),
-        total ? el('span', { class: 'count', text: total + ' PDF' }) : null),
+        total ? el('span', { class: 'count', text: total + ' PDF' }) : (soon ? el('span', { class: 'soon', text: 'Wkrótce' }) : null)),
       topic.formula ? el('div', { class: 'formula', 'aria-hidden': 'true', text: '\\(\\displaystyle ' + topic.formula + '\\)' }) : null,
       el('ul', { class: 'items' }, itemEls),
+      hitsEl,
       foot);
 
     const taskText = topic.tasks.map((t) => (t.group || '') + ' ' + (t.tags || []).join(' ')).join(' ');
     const theoryText = (topic.theory.match(/<h3[^>]*>[\s\S]*?<\/h3>/g) || []).map((h) => h.replace(/<[^>]*>/g, ' ')).join(' ');
     return {
-      sec: sec.id, el: card, titleN: norm(topic.title + ' ' + taskText + ' ' + theoryText),
+      sec: sec.id, el: card, topic: topic, hitsEl: hitsEl, idx: null,
+      titleN: norm(topic.title + ' ' + taskText + ' ' + theoryText),
       has: total > 0 || topic.tasks.length > 0 || !!topic.theory, itemHas: itemFiles > 0,
       items: topic.items.map((it, i) => ({ el: itemEls[i], textN: norm(it.title), has: it.files.length > 0 }))
     };
@@ -832,24 +880,100 @@ dialog.has-tabs .tasks-head { border-bottom: 0; padding-bottom: 8px; }
     hasRecent = list.length > 0;
   }
 
+  // ---- wyszukiwanie w treści zadań i teorii ----
+  // Indeks (tekst bez znaczników HTML i bez TeX-a, znormalizowany tak jak tytuły) powstaje w czasie
+  // bezczynności strony albo przy pierwszym zapytaniu. Słowa od 3 liter szukamy jako fragmentów,
+  // dwuliterowe (np. "tg", "ln") tylko jako całe słowa, a jednoliterowych w treści nie szukamy.
+  const plain = (html) => String(html == null ? '' : html)
+    .replace(/<svg[\s\S]*?<\/svg>/g, ' ')
+    .replace(/<[^>]*>/g, ' ')
+    .replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&')
+    .replace(/\\[()[\]]/g, ' ')
+    .replace(/\\([a-zA-Z]+)/g, ' $1 ')
+    .replace(/[{}^_\\]/g, ' ')
+    .replace(/\s+/g, ' ');
+  const wordRe = {};
+  function inBody(text, w) {
+    if (w.length >= 3) return text.includes(w);
+    if (w.length < 2) return false;
+    const re = wordRe[w] || (wordRe[w] = new RegExp('(?:^|[^a-z0-9])' + w.replace(/[^a-z0-9]/g, '\\$&') + '(?:$|[^a-z0-9])'));
+    return re.test(text);
+  }
+  function contentIndex(c) {
+    if (c.idx) return c.idx;
+    const topic = c.topic;
+    const tasks = topic.tasks.map((t, i) => ({
+      n: i + 1, no: t.no || (i + 1),
+      q: norm(plain((t.group || '') + ' ' + (t.tags || []).join(' ') + ' ' + (t.q || ''))),
+      sol: norm(plain((t.sol || '') + ' ' + (t.ans || '')))
+    }));
+    const theory = (topic.theory.match(/<h3[\s\S]*?(?=<h3|$)/g) || []).map((chunk, i) => ({
+      n: i + 1,
+      title: plain((chunk.match(/<h3[^>]*>([\s\S]*?)<\/h3>/) || [])[1]).trim(),
+      textN: norm(plain(chunk))
+    }));
+    c.idx = {
+      tasks: tasks, theory: theory,
+      bodyN: tasks.map((t) => t.q + ' ' + t.sol).concat(theory.map((s) => s.textN)).join(' ')
+    };
+    return c.idx;
+  }
+  function findHits(c, words) {
+    const idx = contentIndex(c), hits = [];
+    for (const t of idx.tasks) {
+      const inQ = words.every((w) => inBody(t.q, w));
+      if (inQ || words.every((w) => inBody(t.q + ' ' + t.sol, w))) hits.push({ kind: 'tasks', n: t.n, label: 'Zadanie ' + t.no, sol: !inQ });
+    }
+    for (const s of idx.theory) {
+      if (words.every((w) => inBody(s.textN, w))) hits.push({ kind: 'theory', n: s.n, label: 'Teoria: ' + s.title });
+    }
+    return hits;
+  }
+  function showHits(c, hits) {
+    const box = c.hitsEl, list = box.querySelector('.hit-list');
+    list.textContent = '';
+    if (!hits.length) { box.hidden = true; return; }
+    const shown = hits.filter((h) => h.kind === 'tasks').slice(0, 6).concat(hits.filter((h) => h.kind === 'theory').slice(0, 3));
+    for (const h of shown) {
+      const b = el('button', { class: 'hit', type: 'button', 'aria-haspopup': 'dialog', title: h.label }, h.label);
+      b.addEventListener('click', () => openHit(c, h));
+      list.append(b);
+    }
+    if (hits.length > shown.length) list.append(el('span', { class: 'hit-more', text: '+' + (hits.length - shown.length) }));
+    box.hidden = false;
+  }
+  // otwiera okno na wybranym zadaniu lub fragmencie teorii; gdy słowa są tylko w rozwiązaniu, rozwija je
+  function openHit(c, h) {
+    const ref = topicIndex[c.topic.id];
+    if (!ref) return;
+    openMaterials(ref.sec, ref.topic, h.kind === 'theory' ? 'theory' : 'tasks', h.n);
+    if (h.kind === 'tasks' && h.sol) {
+      const b = document.querySelector('[data-panel="tk-' + c.topic.id + '-' + h.n + '-s"]');
+      if (b && b.getAttribute('aria-expanded') !== 'true') b.click();
+    }
+  }
+
   function applyFilter() {
     const words = norm(state.query).split(/\s+/).filter(Boolean);
+    const bodyWords = words.filter((w) => w.length >= 2);
     const only = state.only;
     const filtering = words.length > 0 || only;
     const shown = {};
 
     for (const c of registry) {
-      const titleHit = words.length === 0 || words.every((w) => c.titleN.includes(w));
+      const body = words.length ? contentIndex(c).bodyN : '';
+      const hit = words.length === 0 || words.every((w) => c.titleN.includes(w) || inBody(body, w));
       let visibleItems = 0;
       for (const it of c.items) {
-        const q = titleHit || words.every((w) => (c.titleN + ' ' + it.textN).includes(w));
+        const q = hit || words.every((w) => (c.titleN + ' ' + it.textN).includes(w));
         const f = !only || it.has || !c.itemHas;
         it.el.hidden = !(q && f);
         if (!it.el.hidden) visibleItems++;
       }
-      const ok = c.items.length ? visibleItems > 0 : titleHit;
+      const ok = c.items.length ? visibleItems > 0 : hit;
       c.el.hidden = !(ok && (!only || c.has));
       if (!c.el.hidden) shown[c.sec] = (shown[c.sec] || 0) + 1;
+      showHits(c, !c.el.hidden && bodyWords.length ? findHits(c, bodyWords) : []);
     }
 
     for (const sec of model) {
@@ -1124,6 +1248,9 @@ dialog.has-tabs .tasks-head { border-bottom: 0; padding-bottom: 8px; }
     select(panelEls[state.section] ? state.section : model[0].id);
     applyFilter();
     typeset();
+    // indeks wyszukiwania w treści budujemy z wyprzedzeniem, żeby pierwsze zapytanie nie powodowało przycięcia
+    const warm = () => registry.forEach((c) => contentIndex(c));
+    if (window.requestIdleCallback) window.requestIdleCallback(warm, { timeout: 4000 }); else setTimeout(warm, 1500);
   }
 
   document.documentElement.lang = 'pl';
