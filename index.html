@@ -462,16 +462,12 @@ dialog.has-tabs .tasks-head { border-bottom: 0; padding-bottom: 8px; }
   .th-toc ol { columns: 1; }
 }
 
-/* okno na szerokich ekranach: zadania w dwóch kolumnach, teoria ze spisem treści z boku */
+/* okno na szerokich ekranach: szersze okno, każde zadanie w osobnym wierszu na całą szerokość, teoria ze spisem treści z boku */
 @media (min-width: 1400px) {
   dialog.tasks { width: min(1560px, calc(100vw - 64px)); }
   .tasks-head { padding: 18px 28px 16px; }
   .tasks-tabs { padding: 0 24px; }
   .tasks-body { padding: 20px 28px 40px; }
-  #pane-tasks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 24px; align-items: start; }
-  #pane-tasks > .tasks-note, #pane-tasks > .tk-group { grid-column: 1 / -1; }
-  #pane-tasks > .tk-group { margin: 14px 0 0; }
-  #pane-tasks > .tk { margin: 0; }
   .pane.th.has-toc { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 0 36px; align-items: start; }
   .pane.th.has-toc .th-toc { position: sticky; top: 0; margin: 4px 0 0; max-height: calc(94vh - 190px); overflow-y: auto; }
   .pane.th.has-toc .th-toc ol { columns: 1; }
