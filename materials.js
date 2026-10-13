@@ -27,7 +27,7 @@ window.MATERIALS = {
     units: ["dział", "działy", "działów"],
     intro:
       "Wszystkie działy matury rozszerzonej z matematyki. Do każdego: teoria z definicjami i własnościami oraz zadania z arkuszy CKE z odpowiedziami i rozwiązaniami.",
-    tasksLabel: "Zadania z arkuszy CKE",
+    tasksLabel: "Zadania z rozwiązaniami",
     tasksNote:
       "Treści zadań są oddane własnymi słowami, z zachowaniem wszystkich danych; oryginalne sformułowania znajdziesz w arkuszach CKE. Rozwiązania są autorskie. Najpierw spróbuj samodzielnie, potem otwórz odpowiedź lub rozwiązanie.",
     topics: [
