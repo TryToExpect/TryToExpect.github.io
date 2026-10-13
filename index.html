@@ -289,8 +289,8 @@ html.dialog-open { overflow: hidden; }
 dialog.tasks {
   box-sizing: border-box; padding: 0; color: var(--ink); background: var(--bg);
   border: 1px solid var(--line); border-radius: 8px;
-  width: min(880px, calc(100vw - 32px)); max-width: none;
-  height: min(92vh, 1000px); max-height: none; overflow: hidden;
+  width: min(980px, calc(100vw - 32px)); max-width: none;
+  height: min(94vh, 1500px); max-height: none; overflow: hidden;
   box-shadow: 0 24px 64px rgba(14, 19, 32, 0.4);
 }
 dialog.tasks:not([open]) { display: none; }
@@ -363,6 +363,7 @@ dialog.tasks::backdrop { background: rgba(14, 19, 32, 0.62); }
 .fig .p { fill: none; stroke: var(--pen); stroke-width: 1.4; stroke-linejoin: round; stroke-linecap: round; }
 .fig .d { stroke-dasharray: 4 3; }
 .fig .f { fill: var(--accent-soft); }
+.fig .f2 { fill: var(--amber-soft); }
 .fig .dot { fill: var(--ink); stroke: none; }
 .fig text { font: italic 500 13px var(--f-display); fill: var(--ink); }
 .fig text.m { font-style: normal; font-size: 11px; fill: var(--ink-2); }
@@ -446,10 +447,35 @@ dialog.has-tabs .tasks-head { border-bottom: 0; padding-bottom: 8px; }
 .th-body .two > * { min-width: 0; }
 .th-body mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; margin: 6px 0 !important; }
 .th-body svg.fig { max-width: 100%; height: auto; }
+.th-body .note { font-size: 0.875rem; color: var(--ink-2); }
+.th-body .wf { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 330px); gap: 2px 18px; align-items: center; }
+.th-body .wf > * { min-width: 0; }
+.th-body .wf > div > :last-child { margin-bottom: 4px; }
+.th-body .fg { margin: 4px 0 6px; text-align: center; }
+.th-body .fg svg.fig { display: inline-block; vertical-align: middle; }
+.th-body .fgs { display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-end; gap: 2px 22px; margin: 6px 0 8px; }
+.th-body .fgs .fg { margin: 0; }
 @media (max-width: 640px) {
+  .th-body .wf { grid-template-columns: 1fr; }
   .th-body .two { grid-template-columns: 1fr; }
   .tasks-tabs { padding: 0 8px; }
   .th-toc ol { columns: 1; }
+}
+
+/* okno na szerokich ekranach: zadania w dwóch kolumnach, teoria ze spisem treści z boku */
+@media (min-width: 1400px) {
+  dialog.tasks { width: min(1560px, calc(100vw - 64px)); }
+  .tasks-head { padding: 18px 28px 16px; }
+  .tasks-tabs { padding: 0 24px; }
+  .tasks-body { padding: 20px 28px 40px; }
+  #pane-tasks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 24px; align-items: start; }
+  #pane-tasks > .tasks-note, #pane-tasks > .tk-group { grid-column: 1 / -1; }
+  #pane-tasks > .tk-group { margin: 14px 0 0; }
+  #pane-tasks > .tk { margin: 0; }
+  .pane.th.has-toc { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 0 36px; align-items: start; }
+  .pane.th.has-toc .th-toc { position: sticky; top: 0; margin: 4px 0 0; max-height: calc(94vh - 190px); overflow-y: auto; }
+  .pane.th.has-toc .th-toc ol { columns: 1; }
+  .pane.th.has-toc .th-body { max-width: 1080px; }
 }
 
 /* stopka */
@@ -948,6 +974,7 @@ dialog.has-tabs .tasks-head { border-bottom: 0; padding-bottom: 8px; }
         list.append(el('li', {}, a));
       });
       pane.append(el('nav', { class: 'th-toc', 'aria-label': 'Spis treści' }, el('p', { class: 'th-toc-title', text: 'Spis treści' }), list));
+      pane.classList.add('has-toc');
     }
     pane.append(body);
     return pane;
