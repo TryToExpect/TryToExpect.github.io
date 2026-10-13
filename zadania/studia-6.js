@@ -1,6 +1,5 @@
 (window.TASKS = window.TASKS || {})['studia-6'] = [
   {
-    no: 199,
     group: "Przestrzeń probabilistyczna, niezależność, lematy Borela–Cantellego",
     tags: ["niezależność", "lemat Borela–Cantellego", "ciąg rzutów monetą"],
     q: String.raw`<p>Rzucamy monetą nieskończenie wiele razy, a kolejne rzuty są niezależne. W każdym rzucie orzeł (O) wypada z prawdopodobieństwem \(p\), gdzie \(0&lt;p&lt;1\), a reszka (R) z prawdopodobieństwem \(1-p\). Wyznacz prawdopodobieństwo, że w tym ciągu rzutów pojawi się seria OOOROORR, czyli osiem kolejnych wyników dokładnie w tej kolejności.</p>`,
@@ -16,7 +15,6 @@ Zatem \(P(B)=0\), a szukane prawdopodobieństwo wynosi \(1\).</p>
 <p class="note"><b>Uwaga.</b> Ponieważ \(\sum_kP(A_k)=\infty\), a zdarzenia \(A_k\) są niezależne, z drugiego lematu Borela–Cantellego seria wypada z prawdopodobieństwem \(1\) nawet <b>nieskończenie wiele razy</b>. Wynik nie zależy ani od \(p\), ani od konkretnej serii. Istotne jest tylko to, że ma ona dodatnie prawdopodobieństwo.</p>`
   },
   {
-    no: 200,
     group: "Przestrzeń probabilistyczna, niezależność, lematy Borela–Cantellego",
     tags: ["lemat Borela–Cantellego", "szereg harmoniczny", "schemat urnowy"],
     q: String.raw`<p>Na początku w urnie są dwie kule: jedna czarna i jedna biała. W nieskończoność powtarzamy następujący krok: losujemy z urny jedną kulę, sprawdzamy jej kolor, wkładamy ją z powrotem i dodatkowo dorzucamy do urny jedną nową kulę białą. Wyznacz prawdopodobieństwo, że kula czarna zostanie wylosowana nieskończenie wiele razy.</p>`,
@@ -32,7 +30,6 @@ Zatem \(P(D_N)=0\) dla każdego \(N\). Zdarzenie „czarna tylko skończenie wie
 <p class="note"><b>Uwaga.</b> Kluczowa jest rozbieżność szeregu harmonicznego. Gdyby kul białych przybywało tak szybko, że \(\sum P(C_n)&lt;\infty\) (np. \(P(C_n)\sim1/n^2\)), to z pierwszego lematu Borela–Cantellego odpowiedź wynosiłaby \(0\).</p>`
   },
   {
-    no: 201,
     group: "Prawdopodobieństwo warunkowe, wzór Bayesa, kombinatoryka",
     tags: ["rozkład dwumianowy", "prawdopodobieństwo warunkowe"],
     q: String.raw`<p>Do dzika strzela trzech myśliwych. Każdy z nich, niezależnie od pozostałych, trafia z prawdopodobieństwem \(0{,}8\).</p>
@@ -48,7 +45,6 @@ Stąd
 \[P(X\ge2\mid X\ge1)=\frac{P(X\ge2)}{P(X\ge1)}=\frac{0{,}896}{0{,}992}=\frac{896}{992}=\frac{28}{31}\approx0{,}903.\]</p>`
   },
   {
-    no: 202,
     group: "Prawdopodobieństwo warunkowe, wzór Bayesa, kombinatoryka",
     tags: ["wzór Bayesa", "prawdopodobieństwo całkowite"],
     q: String.raw`<p>W szufladzie leży \(100\) monet. Dziewięćdziesiąt z nich jest symetrycznych, czyli orzeł i reszka wypadają na nich z jednakowym prawdopodobieństwem. Pozostałe dziesięć jest niesymetrycznych: orzeł wypada na nich trzy razy częściej niż reszka. Losujemy jedną monetę i rzucamy nią trzykrotnie, a za każdym razem wypada orzeł. Oblicz prawdopodobieństwo, że wylosowana moneta jest niesymetryczna.</p>`,
@@ -62,7 +58,6 @@ Ze wzoru Bayesa:
 <p class="note"><b>Komentarz.</b> Przed rzutami szansa na monetę niesymetryczną wynosiła \(10\%\). Po trzech orłach wzrosła do około \(27\%\).</p>`
   },
   {
-    no: 203,
     group: "Prawdopodobieństwo warunkowe, wzór Bayesa, kombinatoryka",
     tags: ["zasada włączeń i wyłączeń", "zmienne wskaźnikowe", "liczba Stirlinga"],
     q: String.raw`<p>W urnie jest pięć kul w różnych kolorach: białym, czarnym, czerwonym, niebieskim i zielonym. Wykonujemy \(20\) losowań, za każdym razem odkładając wylosowaną kulę z powrotem do urny.</p>
@@ -83,7 +78,6 @@ Z liniowości wartości oczekiwanej (która <b>nie</b> wymaga niezależności, a
 \[\mathbb EX=\sum_{i=1}^5P(A_i^c)=5\left(1-\left(\tfrac45\right)^{20}\right)=5-\frac{4^{20}}{5^{19}}=\frac{94\,267\,920\,012\,849}{19\,073\,486\,328\,125}\approx4{,}9424.\]</p>`
   },
   {
-    no: 204,
     group: "Prawdopodobieństwo warunkowe, wzór Bayesa, kombinatoryka",
     tags: ["zmienne wskaźnikowe", "niezależność zdarzeń", "losowanie bez zwracania"],
     q: String.raw`<p>W klasie jest \(18\) chłopców i \(8\) dziewczynek, a wśród nich Jacek i Agatka. Na każdej lekcji nauczyciel losuje do odpowiedzi dwóch chłopców i jedną dziewczynkę.</p>
@@ -100,7 +94,6 @@ Zdarzenie \(J\) zależy tylko od losowań chłopców, a \(A\) tylko od losowań 
 \[\mathbb EN=18\left(1-\left(\tfrac89\right)^5\right)+8\left(1-\left(\tfrac78\right)^5\right)=\frac{52\,562}{6\,561}+\frac{15\,961}{4\,096}=\frac{320\,014\,073}{26\,873\,856}\approx11{,}91.\]</p>`
   },
   {
-    no: 205,
     group: "Dystrybuanta i rozkłady zmiennych losowych",
     tags: ["dystrybuanta", "rozkład mieszany", "wartość oczekiwana"],
     q: String.raw`<p>Dystrybuanta zmiennej losowej \(X\) jest dana wzorem
@@ -126,7 +119,6 @@ Zgadza się to z budową rozkładu: \(\tfrac3{14}+\tfrac5{14}=\tfrac8{14}=\tfrac
 \[\mathbb EX=\int_0^{1/14}\tfrac67\,dt+\int_{1/14}^{3/7}\Bigl(\tfrac57-t\Bigr)dt=\tfrac3{49}+\tfrac{65}{392}=\tfrac{24}{392}+\tfrac{65}{392}=\tfrac{89}{392}.\]</p>`
   },
   {
-    no: 206,
     group: "Dystrybuanta i rozkłady zmiennych losowych",
     tags: ["dystrybuanta", "rozkład funkcji zmiennej losowej", "rozkład jednostajny"],
     q: String.raw`<p>(a) Wyznacz wszystkie \(a,b\in\mathbb R\), dla których funkcja
@@ -152,10 +144,9 @@ Punkt \(s=\sqrt{2/y}-1\) spełnia \(s>-\tfrac12\) (bo \(y&lt;8\)), a \(F\) jest 
 bo \((s+1)^2=\tfrac2y\). Ostatecznie
 \[F_Y(y)=\begin{cases}0,&y\le0,\\ \tfrac y8,&0&lt;y&lt;8,\\ 1,&y\ge8.\end{cases}\]
 Ta dystrybuanta jest ciągła i spełnia \(F_Y(y)=\int_{-\infty}^yf_Y(s)\,ds\) dla \(f_Y(y)=\tfrac18\mathbf 1_{(0,8)}(y)\). Zatem \(Y\) ma gęstość, a dokładniej rozkład jednostajny na przedziale \((0,8)\).</p>
-<p class="note"><b>Uwaga.</b> To nie przypadek: \(1-F(X)=\dfrac1{4(X+1)^2}=\dfrac Y8\), czyli \(Y=8\bigl(1-F(X)\bigr)\). Z zadania 207 zmienna \(F(X)\) ma rozkład jednostajny na \([0,1]\), więc \(Y\) ma rozkład jednostajny na \([0,8]\).</p>`
+<p class="note"><b>Uwaga.</b> To nie przypadek: \(1-F(X)=\dfrac1{4(X+1)^2}=\dfrac Y8\), czyli \(Y=8\bigl(1-F(X)\bigr)\). Z zadania 9 zmienna \(F(X)\) ma rozkład jednostajny na \([0,1]\), więc \(Y\) ma rozkład jednostajny na \([0,8]\).</p>`
   },
   {
-    no: 207,
     group: "Dystrybuanta i rozkłady zmiennych losowych",
     tags: ["dowód", "transformacja przez dystrybuantę", "rozkład jednostajny"],
     q: String.raw`<p>Niech \(X\) będzie zmienną losową o ciągłej dystrybuancie \(F\). Udowodnij, że zmienna losowa \(F(X)\) ma rozkład jednostajny na przedziale \([0,1]\).</p>`,
@@ -169,7 +160,6 @@ Ta dystrybuanta jest ciągła i spełnia \(F_Y(y)=\int_{-\infty}^yf_Y(s)\,ds\) d
 <p class="note"><b>Uwagi.</b> Ciągłość \(F\) jest konieczna: na przykład dla \(X\equiv c\) mamy \(F(X)\equiv1\). Odwrócenie tego faktu to <b>metoda odwrotnej dystrybuanty</b>: jeśli \(U\) ma rozkład jednostajny na \([0,1]\), to \(F^{-1}(U)\), gdzie \(F^{-1}(u)=\inf\{t:F(t)\ge u\}\), ma dystrybuantę \(F\). W ten sposób generuje się zmienne losowe w symulacjach Monte Carlo.</p>`
   },
   {
-    no: 208,
     group: "Rozkłady funkcji zmiennych losowych, sumy niezależnych zmiennych",
     tags: ["prawdopodobieństwo geometryczne", "gęstość", "rozkład jednostajny"],
     q: String.raw`<p>Na odcinku długości \(2\) wybieramy losowo (zgodnie z prawdopodobieństwem geometrycznym) i niezależnie dwa punkty \(X\) i \(Y\). Wyznacz gęstość rozkładu odległości między nimi, czyli zmiennej \(D=|X-Y|\).</p>`,
@@ -184,7 +174,6 @@ a \(F_D(d)=0\) dla \(d&lt;0\) i \(F_D(d)=1\) dla \(d>2\). Różniczkując, dosta
 <div style="clear:both"></div>`
   },
   {
-    no: 209,
     group: "Rozkłady funkcji zmiennych losowych, sumy niezależnych zmiennych",
     tags: ["rozkład normalny", "wzór na prawdopodobieństwo całkowite", "funkcja charakterystyczna"],
     q: String.raw`<p>Zmienne losowe \(X,Y,Z\) są niezależne. Zmienne \(X\) i \(Y\) mają standardowy rozkład normalny \(N(0,1)\), a \(Z\) przyjmuje wartości \(3\) i \(-3\), każdą z prawdopodobieństwem \(\tfrac12\). Udowodnij, że zmienna \(X+YZ\) ma rozkład normalny, i wyznacz jego parametry.</p>`,
@@ -202,7 +191,6 @@ a to jest funkcja charakterystyczna rozkładu \(N(0,10)\).</p>
 <p class="note"><b>Uwaga.</b> Kluczowe jest to, że \(|Z|\) jest stałe. Gdyby \(Z\) przyjmowała wartości o różnych modułach (np. \(1\) i \(3\)), dostalibyśmy mieszaninę rozkładów normalnych o różnych wariancjach, która nie jest rozkładem normalnym.</p>`
   },
   {
-    no: 210,
     group: "Rozkłady funkcji zmiennych losowych, sumy niezależnych zmiennych",
     tags: ["gęstość", "stała normująca", "wariancja"],
     q: String.raw`<p>Zmienna losowa \(X\) ma gęstość \(g(x)=a\,x^2\,\mathbf 1_{(-1,3)}(x)\). Wyznacz stałą \(a\), a następnie wartość oczekiwaną i wariancję zmiennej \(X\).</p>`,
@@ -218,7 +206,6 @@ Stąd
 \[\operatorname{Var}X=\mathbb EX^2-(\mathbb EX)^2=\tfrac{183}{35}-\tfrac{225}{49}=\tfrac{1281-1125}{245}=\tfrac{156}{245}\approx0{,}637.\]</p>`
   },
   {
-    no: 211,
     group: "Rozkłady funkcji zmiennych losowych, sumy niezależnych zmiennych",
     tags: ["splot", "gęstość sumy", "rozkład jednostajny"],
     q: String.raw`<p>Zmienne losowe \(X\) i \(Y\) są niezależne i obie mają rozkład jednostajny na przedziale \((0,1)\). Wyznacz gęstość zmiennej losowej \(2X-Y\).</p>`,
@@ -239,7 +226,6 @@ gdzie \(|\cdot|\) oznacza długość przedziału. Rozpatrujemy przypadki:</p>
 Kontrola: pole pod wykresem wynosi \(\tfrac14+\tfrac12+\tfrac14=1\). Wykres gęstości ma kształt trapezu.</p>`
   },
   {
-    no: 212,
     group: "Rozkłady funkcji zmiennych losowych, sumy niezależnych zmiennych",
     tags: ["rozkład normalny", "gęstość funkcji zmiennej losowej", "dystrybuanta"],
     q: String.raw`<p>Zmienna losowa \(X\) ma rozkład normalny o wartości oczekiwanej \(1\) i wariancji \(5\). Wyznacz gęstość zmiennej losowej \(Y=2X^4+5\).</p>`,
@@ -257,7 +243,6 @@ Ponieważ \((r\mp1)^2=r^2+1\mp2r\), a \(r^2=\sqrt{(y-5)/2}\), wynik można też 
 <p class="note"><b>Kontrola.</b> Podstawienie \(y=5+2r^4\), \(dy=8r^3\,dr\) daje \(\int_5^\infty f_Y(y)\,dy=\int_0^\infty\bigl[f_X(r)+f_X(-r)\bigr]dr=\int_{-\infty}^\infty f_X(x)\,dx=1\). Przy \(y\to5^+\) gęstość dąży do nieskończoności jak \((y-5)^{-3/4}\), ale wykładnik jest większy od \(-1\), więc gęstość jest całkowalna.</p>`
   },
   {
-    no: 213,
     group: "Wartość oczekiwana, wariancja, kowariancja, korelacja",
     tags: ["momenty rozkładu normalnego", "całkowanie przez części"],
     q: String.raw`<p>Zmienna losowa \(X\) ma rozkład normalny o wartości oczekiwanej \(a\) i wariancji \(\sigma^2\). Oblicz \(\mathbb EX^4\).</p>`,
@@ -268,10 +253,9 @@ Ponieważ \((r\mp1)^2=r^2+1\mp2r\), a \(r^2=\sqrt{(y-5)/2}\), wynik można też 
 <p><b>Rozwinięcie dwumianowe.</b>
 \[\mathbb EX^4=\mathbb E(a+\sigma Z)^4=a^4+4a^3\sigma\,\mathbb EZ+6a^2\sigma^2\,\mathbb EZ^2+4a\sigma^3\,\mathbb EZ^3+\sigma^4\,\mathbb EZ^4,\]
 więc \(\mathbb EX^4=a^4+6a^2\sigma^2+3\sigma^4\).</p>
-<p class="note"><b>Sprawdzenie.</b> Dla \(a=0\) dostajemy znany wzór \(\mathbb EX^4=3\sigma^4\). Dla danych z zadania 212 (\(a=1\), \(\sigma^2=5\)) wychodzi \(\mathbb EX^4=1+30+75=106\), a stąd \(\mathbb E(2X^4+5)=217\).</p>`
+<p class="note"><b>Sprawdzenie.</b> Dla \(a=0\) dostajemy znany wzór \(\mathbb EX^4=3\sigma^4\). Dla danych z zadania 14 (\(a=1\), \(\sigma^2=5\)) wychodzi \(\mathbb EX^4=1+30+75=106\), a stąd \(\mathbb E(2X^4+5)=217\).</p>`
   },
   {
-    no: 214,
     group: "Wartość oczekiwana, wariancja, kowariancja, korelacja",
     tags: ["rozkład Poissona", "funkcja tworząca momentów", "szereg wykładniczy"],
     q: String.raw`<p>Zmienna losowa \(X\) ma rozkład Poissona z parametrem \(2\). Oblicz wartość oczekiwaną i wariancję zmiennej losowej \(e^{3X}\).</p>`,
@@ -285,7 +269,6 @@ Przyjmujemy \(\lambda=2\).</p>
 <p class="note"><b>Komentarz.</b> Liczby są ogromne, bo \(e^{3X}\) rośnie bardzo szybko wraz z \(X\). O wyniku decydują rzadkie, ale duże wartości \(X\): składniki sumy \(\sum_ke^{3k}P(X=k)\) są największe w okolicy \(k\approx2e^3\approx40\), choć typowo \(X\approx2\). Drugi składnik wariancji, \(e^{4(e^3-1)}\approx1{,}43\cdot10^{33}\), jest przy pierwszym zupełnie pomijalny.</p>`
   },
   {
-    no: 215,
     group: "Wartość oczekiwana, wariancja, kowariancja, korelacja",
     tags: ["rozkład geometryczny", "szereg geometryczny", "wariancja"],
     q: String.raw`<p>Rzucamy jednocześnie dwiema kostkami tak długo, aż na co najmniej jednej z nich wypadnie szóstka. Oblicz wartość oczekiwaną i wariancję liczby wykonanych rzutów.</p>`,
@@ -301,7 +284,6 @@ więc
 \[\operatorname{Var}N=\mathbb EN(N-1)+\mathbb EN-(\mathbb EN)^2=\frac{2q}{p^2}+\frac1p-\frac1{p^2}=\frac{2q-(1-p)}{p^2}=\frac q{p^2}=\frac{25/36}{(11/36)^2}=\frac{900}{121}\approx7{,}44.\]</p>`
   },
   {
-    no: 216,
     group: "Wartość oczekiwana, wariancja, kowariancja, korelacja",
     tags: ["rozkład łączny", "niezależność", "kowariancja"],
     q: String.raw`<p>Rozkład łączny zmiennych losowych \(X\) i \(Y\) jest dany wzorami
@@ -329,7 +311,6 @@ Do kowariancji potrzebujemy \(\mathbb EXY\), które liczymy z rozkładu łączne
 <p class="note"><b>Uwaga.</b> Zmienne niezależne mają kowariancję \(0\), więc niezerowa kowariancja to drugi, niezależny dowód odpowiedzi w części (a).</p>`
   },
   {
-    no: 217,
     group: "Wartość oczekiwana, wariancja, kowariancja, korelacja",
     tags: ["korelacja", "dowód", "nierówność Czebyszewa"],
     q: String.raw`<p>(a) Podaj przykład zmiennych losowych, które są nieskorelowane, ale nie są niezależne.</p>
@@ -348,7 +329,6 @@ Tutaj \(a=\tfrac{\sigma_X}{\sigma_Y}>0\), a \(b=c\sigma_X=\mathbb EX-a\,\mathbb 
 <p class="note"><b>Uwaga.</b> Tak samo dla \(\rho=-1\): biorąc \(W=\tfrac X{\sigma_X}+\tfrac Y{\sigma_Y}\), dostajemy \(X=aY+b\) z \(a&lt;0\).</p>`
   },
   {
-    no: 218,
     group: "Rozkłady łączne, niezależność, korelacja",
     tags: ["rozkład Poissona", "suma niezależnych zmiennych"],
     q: String.raw`<p>Zmienne losowe \(X\) i \(Y\) są niezależne i obie mają rozkład Poissona z parametrem \(3\). Oblicz:</p>
@@ -370,7 +350,6 @@ a drugi wynosi \(\bigl(3e^{-3}\bigr)^2=9e^{-6}\). Razem:
 \[P(XY\le1)=2e^{-3}-e^{-6}+9e^{-6}=2e^{-3}+8e^{-6}\approx0{,}1194.\]</p>`
   },
   {
-    no: 219,
     group: "Rozkłady łączne, niezależność, korelacja",
     tags: ["rozkład wykładniczy", "brak pamięci", "prawdopodobieństwo całkowite (wersja ciągła)"],
     q: String.raw`<p>Zmienne losowe \(X\) i \(Y\) są niezależne. Zmienna \(X\) ma rozkład wykładniczy z parametrem \(2\), a \(Y\) rozkład wykładniczy z parametrem \(3\). Oblicz:</p>
@@ -391,7 +370,6 @@ Ostatecznie
 <p class="note"><b>Interpretacja.</b> Pod warunkiem \(X>Y\) nadwyżka \(X-Y\) ma znowu rozkład wykładniczy z parametrem \(2\), czyli taki sam jak \(X\). To skutek braku pamięci rozkładu wykładniczego: skoro wiemy, że \(X\) przekroczyło wartość \(Y\), dalsze oczekiwanie zaczyna się od nowa.</p>`
   },
   {
-    no: 220,
     group: "Rozkłady łączne, niezależność, korelacja",
     tags: ["gęstość łączna", "gęstości brzegowe", "kowariancja"],
     q: String.raw`<p>Wektor losowy \((X,Y)\) ma gęstość
@@ -411,7 +389,6 @@ Stąd
 <p class="note"><b>Uwaga.</b> Zmienne \(X\) i \(Y\) nie są niezależne: na przykład \(f(x,y)=0\) dla \(0&lt;y&lt;x&lt;1\), choć tam \(f_X(x)f_Y(y)>0\). Kowariancja jest dodatnia, bo przy warunku \(X\le Y\) duże wartości \(Y\) dopuszczają duże wartości \(X\).</p>`
   },
   {
-    no: 221,
     group: "Rozkłady łączne, niezależność, korelacja",
     tags: ["wariancja zerowa", "korelacja", "rozkład jednopunktowy"],
     q: String.raw`<p>O zmiennych losowych \(X\) i \(Y\) wiadomo, że \(\mathbb EX=1\), \(\operatorname{Var}X=2\), \(\mathbb EY=3\), \(\operatorname{Var}Y=2\) oraz \(\mathbb EXY=5\). Czy te informacje wystarczą do wyznaczenia rozkładu zmiennej \(X-Y\)?</p>`,
@@ -419,13 +396,12 @@ Stąd
     sol: String.raw`<p>Zwykle kilka momentów nie wyznacza rozkładu, ale tutaj odpowiedź brzmi <b>tak</b>. Policzmy:
 \[\operatorname{Cov}(X,Y)=\mathbb EXY-\mathbb EX\,\mathbb EY=5-1\cdot3=2,\]
 \[\operatorname{Var}(X-Y)=\operatorname{Var}X+\operatorname{Var}Y-2\operatorname{Cov}(X,Y)=2+2-4=0,\qquad\mathbb E(X-Y)=1-3=-2.\]
-Zmienna o zerowej wariancji jest prawie na pewno stała (z nierówności Czebyszewa, jak w zadaniu 217). Zatem
+Zmienna o zerowej wariancji jest prawie na pewno stała (z nierówności Czebyszewa, jak w zadaniu 19). Zatem
 \[X-Y=-2\quad\text{prawie na pewno},\]
 czyli \(X-Y\) ma rozkład jednopunktowy skupiony w \(-2\).</p>
-<p class="note"><b>Uwaga.</b> Współczynnik korelacji wynosi \(\rho=\dfrac{\operatorname{Cov}(X,Y)}{\sqrt{\operatorname{Var}X\operatorname{Var}Y}}=\dfrac22=1\). Zgodnie z zadaniem 217 musi więc zachodzić \(X=aY+b\) z \(a>0\). Tutaj \(a=1\) i \(b=-2\).</p>`
+<p class="note"><b>Uwaga.</b> Współczynnik korelacji wynosi \(\rho=\dfrac{\operatorname{Cov}(X,Y)}{\sqrt{\operatorname{Var}X\operatorname{Var}Y}}=\dfrac22=1\). Zgodnie z zadaniem 19 musi więc zachodzić \(X=aY+b\) z \(a>0\). Tutaj \(a=1\) i \(b=-2\).</p>`
   },
   {
-    no: 222,
     group: "Twierdzenia graniczne",
     tags: ["centralne twierdzenie graniczne", "de Moivre–Laplace", "poprawka na ciągłość"],
     q: String.raw`<p>Rzucamy symetryczną kostką \(3600\) razy. Oblicz w przybliżeniu prawdopodobieństwo, że szóstka wypadnie co najmniej \(700\) razy. Wynik zapisz przy użyciu dystrybuanty \(\Phi\) standardowego rozkładu normalnego.</p>`,
@@ -441,7 +417,6 @@ Z centralnego twierdzenia granicznego (twierdzenia de Moivre’a–Laplace’a) 
 </ul>`
   },
   {
-    no: 223,
     group: "Twierdzenia graniczne",
     tags: ["przybliżenie Poissona", "prawdopodobieństwo warunkowe", "suma Poissonów"],
     q: String.raw`<p>W pewnej grze liczbowej losowanie odbywa się raz w tygodniu, a w każdym losowaniu niezależnie od siebie bierze udział \(60\,000\) osób. Każda z nich wygrywa w danym losowaniu z prawdopodobieństwem \(\tfrac1{30\,000}\).</p>
@@ -459,7 +434,6 @@ Zatem
 <p class="note"><b>Interpretacja.</b> Pod warunkiem \(S=10\) każda z dziesięciu wygranych niezależnie przypada na pierwszy tydzień z prawdopodobieństwem \(\tfrac14\), więc \(W_1\) ma rozkład \(\mathrm{Bin}\bigl(10,\tfrac14\bigr)\). Dokładny rachunek (rozkład hipergeometryczny) daje praktycznie to samo: \(0{,}25029\).</p>`
   },
   {
-    no: 224,
     group: "Twierdzenia graniczne",
     tags: ["mocne prawo wielkich liczb", "zbieżność prawie na pewno", "dowód"],
     q: String.raw`<p>Zmienne losowe \(X_1,X_2,\dots\) są niezależne i mają ten sam rozkład jednostajny na przedziale \((-1,1)\). Udowodnij, że iloczyn \(X_1X_2\cdots X_n\) dąży do zera prawie na pewno.</p>`,
@@ -475,7 +449,6 @@ więc prawie na pewno \(\sum_{i=1}^n\ln|X_i|=n\bigl(-1+o(1)\bigr)\to-\infty\). Z
 <p class="note"><b>Uwaga.</b> Pierwszy sposób mówi więcej: iloczyn maleje wykładniczo, w przybliżeniu jak \(e^{-n}\).</p>`
   },
   {
-    no: 225,
     group: "Twierdzenia graniczne",
     tags: ["mocne prawo wielkich liczb", "błądzenie losowe z dryfem", "dowód"],
     q: String.raw`<p>Zmienne losowe \(X_1,X_2,\dots\) są niezależne i mają ten sam rozkład: \(P(X_n=1)=\tfrac34\) oraz \(P(X_n=-1)=\tfrac14\). Udowodnij, że \(X_1+\dots+X_n\to+\infty\) prawie na pewno.</p>`,
@@ -489,14 +462,13 @@ Zatem \(S_n\to+\infty\) prawie na pewno. \(\blacksquare\)</p>
 <p class="note"><b>Interpretacja.</b> To błądzenie losowe z dryfem: krok w prawo jest bardziej prawdopodobny niż w lewo, więc położenie rośnie średnio o \(\tfrac12\) na krok. Losowe wahania są rzędu \(\sqrt n\), a dryf rzędu \(n\), więc dryf wygrywa.</p>`
   },
   {
-    no: 226,
     group: "Twierdzenia graniczne",
     tags: ["mocne prawo wielkich liczb", "granica ilorazu", "rozkład wykładniczy"],
     q: String.raw`<p>Zmienne losowe \(X_1,X_2,\dots\) są niezależne i mają ten sam rozkład wykładniczy z parametrem \(3\). Udowodnij, że ciąg zmiennych losowych
 \[\frac{X_1+\dots+X_n+3n}{X_1^2+\dots+X_n^2}\]
 jest zbieżny prawie na pewno, i wyznacz jego granicę.</p>`,
     ans: String.raw`\(15\) (prawie na pewno)`,
-    sol: String.raw`<p>Jak w zadaniu 219 przyjmujemy, że parametr oznacza intensywność, czyli gęstość \(3e^{-3x}\) dla \(x>0\). Wtedy
+    sol: String.raw`<p>Jak w zadaniu 21 przyjmujemy, że parametr oznacza intensywność, czyli gęstość \(3e^{-3x}\) dla \(x>0\). Wtedy
 \[\mathbb EX_1=\tfrac13,\qquad\mathbb EX_1^2=\operatorname{Var}X_1+(\mathbb EX_1)^2=\tfrac19+\tfrac19=\tfrac29.\]
 Zmienne \(X_i\) są dodatnie z prawdopodobieństwem \(1\), więc mianownik jest dodatni. Dzielimy licznik i mianownik przez \(n\):
 \[\frac{X_1+\dots+X_n+3n}{X_1^2+\dots+X_n^2}=\frac{\frac1n\sum_{i=1}^nX_i+3}{\frac1n\sum_{i=1}^nX_i^2}.\]
@@ -507,7 +479,6 @@ prawie na pewno. Część wspólna dwóch zdarzeń o prawdopodobieństwie \(1\) 
 <p class="note"><b>Uwaga.</b> Gdyby parametr oznaczał wartość oczekiwaną (\(\mathbb EX_1=3\)), to \(\mathbb EX_1^2=18\) i granica wyniosłaby \(\tfrac{3+3}{18}=\tfrac13\).</p>`
   },
   {
-    no: 227,
     group: "Dystrybuanta empiryczna i statystyki pozycyjne",
     tags: ["dystrybuanta empiryczna", "kowariancja", "estymator nieobciążony"],
     q: String.raw`<p>Niech \(X_1,\dots,X_n\) będą niezależnymi zmiennymi losowymi o tym samym rozkładzie z dystrybuantą \(F\), a \(\hat F_n(t)=\tfrac1n\#\{i\le n:X_i\le t\}\) niech oznacza dystrybuantę empiryczną. Oblicz \(\mathbb E\hat F_n(x)\), \(\operatorname{Var}\hat F_n(x)\) oraz \(\operatorname{Cov}\bigl(\hat F_n(x),\hat F_n(y)\bigr)\).</p>`,
@@ -525,12 +496,11 @@ Zatem
 a w szczególności dla \(x\le y\) jest to \(\tfrac1nF(x)\bigl(1-F(y)\bigr)\). Dla \(x=y\) dostajemy z powrotem wzór na wariancję.</p>`
   },
   {
-    no: 228,
     group: "Dystrybuanta empiryczna i statystyki pozycyjne",
     tags: ["centralne twierdzenie graniczne", "dystrybuanta empiryczna", "zbieżność według rozkładu"],
-    q: String.raw`<p>Przy oznaczeniach z zadania 227 udowodnij, że ciąg zmiennych losowych \(\sqrt n\bigl(\hat F_n(x)-F(x)\bigr)\) jest zbieżny według rozkładu do rozkładu normalnego, i wyznacz parametry tego rozkładu.</p>`,
+    q: String.raw`<p>Przy oznaczeniach z zadania 29 udowodnij, że ciąg zmiennych losowych \(\sqrt n\bigl(\hat F_n(x)-F(x)\bigr)\) jest zbieżny według rozkładu do rozkładu normalnego, i wyznacz parametry tego rozkładu.</p>`,
     ans: String.raw`\(N\bigl(0,\,F(x)(1-F(x))\bigr)\)`,
-    sol: String.raw`<p>Z oznaczeniami z zadania 227:
+    sol: String.raw`<p>Z oznaczeniami z zadania 29:
 \[\sqrt n\bigl(\hat F_n(x)-F(x)\bigr)=\frac{\sum_{i=1}^n\bigl(I_i(x)-F(x)\bigr)}{\sqrt n}.\]
 Zmienne \(I_i(x)\) są niezależne, mają ten sam rozkład, średnią \(F(x)\) i skończoną wariancję \(\sigma^2=F(x)\bigl(1-F(x)\bigr)\).</p>
 <p><b>Przypadek \(0&lt;F(x)&lt;1\).</b> Wtedy \(\sigma^2>0\) i z centralnego twierdzenia granicznego (Lindeberga–Lévy’ego)
@@ -541,12 +511,11 @@ więc
 <p class="note"><b>Uwaga.</b> Wariancja \(F(x)\bigl(1-F(x)\bigr)\) jest największa, gdy \(F(x)=\tfrac12\), czyli w okolicy mediany. W ogonach rozkładu dystrybuanta empiryczna przybliża \(F\) dokładniej.</p>`
   },
   {
-    no: 229,
     group: "Dystrybuanta empiryczna i statystyki pozycyjne",
     tags: ["statystyki pozycyjne", "dowód", "rozkład dwumianowy"],
     q: String.raw`<p>Niech \(X_1,\dots,X_n\) będzie próbą z rozkładu o dystrybuancie \(F\), a \(X_{1:n}\le X_{2:n}\le\dots\le X_{n:n}\) jej statystykami pozycyjnymi, czyli wartościami próby uporządkowanymi rosnąco. Udowodnij, że
 \[P(X_{k:n}\le x)=\sum_{i=k}^n\binom ni F(x)^i\bigl(1-F(x)\bigr)^{n-i}.\]</p>`,
-    sol: String.raw`<p>Ustalmy \(x\) i niech \(N_x=\#\{i\le n:X_i\le x\}\) będzie liczbą obserwacji nie większych od \(x\). Tak jak w zadaniu 227, \(N_x\sim\mathrm{Bin}\bigl(n,F(x)\bigr)\), bo \(N_x\) jest sumą \(n\) niezależnych wskaźników \(\mathbf 1_{\{X_i\le x\}}\), z których każdy jest równy \(1\) z prawdopodobieństwem \(F(x)\).</p>
+    sol: String.raw`<p>Ustalmy \(x\) i niech \(N_x=\#\{i\le n:X_i\le x\}\) będzie liczbą obserwacji nie większych od \(x\). Tak jak w zadaniu 29, \(N_x\sim\mathrm{Bin}\bigl(n,F(x)\bigr)\), bo \(N_x\) jest sumą \(n\) niezależnych wskaźników \(\mathbf 1_{\{X_i\le x\}}\), z których każdy jest równy \(1\) z prawdopodobieństwem \(F(x)\).</p>
 <p>Kluczowa równość zdarzeń:
 \[\{X_{k:n}\le x\}=\{N_x\ge k\}.\]
 (\(\subset\)) Jeśli \(X_{k:n}\le x\), to \(X_{1:n}\le\dots\le X_{k:n}\le x\), więc co najmniej \(k\) obserwacji jest nie większych od \(x\).</p>
@@ -556,7 +525,6 @@ więc
 <p class="note"><b>Szczególne przypadki.</b> Dla maksimum (\(k=n\)) dostajemy \(P(X_{n:n}\le x)=F(x)^n\), a dla minimum (\(k=1\)) \(P(X_{1:n}\le x)=1-\bigl(1-F(x)\bigr)^n\). Dowód nie wymaga ciągłości \(F\), więc remisy w próbie nie przeszkadzają.</p>`
   },
   {
-    no: 230,
     group: "Niezależność warunkowa, wzór całkowity i wzór Bayesa",
     tags: ["wzór na prawdopodobieństwo całkowite", "wzór Bayesa", "niezależność warunkowa"],
     q: String.raw`<p>Mamy trzy skrzynie z towarem, a zawartość każdej pochodzi z innej z trzech fabryk. Pierwsza fabryka produkuje \(6\%\) wadliwych sztuk, druga \(10\%\), a trzecia \(4\%\). Wybieramy losowo jedną skrzynię (każdą z prawdopodobieństwem \(\tfrac13\)), a z niej losowo jedną sztukę towaru.</p>
@@ -577,7 +545,6 @@ Ten sam wynik daje uśrednienie po skrzyniach z prawdopodobieństwami z części
 <p class="note"><b>Uwaga.</b> Wynik \(0{,}076\) jest większy niż \(\tfrac1{15}\approx0{,}067\) z części (a). Pierwsza wadliwa sztuka zwiększa szansę, że trafiliśmy na gorszą skrzynię (z fabryki 2), więc druga wadliwa staje się bardziej prawdopodobna. Losowania są niezależne tylko <b>przy ustalonej</b> skrzyni, a bez tej wiedzy już nie.</p>`
   },
   {
-    no: 231,
     group: "Estymacja punktowa i przedziały ufności",
     tags: ["estymator największej wiarogodności", "rozkład wielomianowy"],
     q: String.raw`<p>Samoloty bombowe przelatują przez dwie linie obrony przeciwlotniczej. Każdy samolot, niezależnie od pozostałych, zostaje zestrzelony przez pierwszą linię z prawdopodobieństwem \(\theta\). Jeśli ją przetrwa, zostaje zestrzelony przez drugą linię również z prawdopodobieństwem \(\theta\). Wartość \(\theta\) jest nieznana. Spośród \(n=100\) samolotów pierwsza linia zestrzeliła \(K_1=40\), a druga kolejne \(K_2=20\).</p>
@@ -601,7 +568,6 @@ Równanie \(\ell'(\theta)=0\) daje \(60(1-\theta)=100\theta\), czyli \(\theta=\t
 <p class="note"><b>Wzór ogólny i interpretacja.</b> Dla dowolnych danych \(L(\theta)\propto\theta^{K_1+K_2}(1-\theta)^{2n-2K_1-K_2}\), więc \(\hat\theta=\dfrac{K_1+K_2}{2n-K_1}\). Mianownik to liczba wszystkich spotkań samolotów z liniami obrony (\(n=100\) samolotów spotyka pierwszą linię, a \(n-K_1=60\) drugą), a licznik to liczba zestrzeleń. Estymator jest więc po prostu częstością zestrzeleń: \(\tfrac{60}{160}\).</p>`
   },
   {
-    no: 232,
     group: "Estymacja punktowa i przedziały ufności",
     tags: ["estymator największej wiarogodności", "rozkład normalny", "obciążenie", "nierówność Jensena"],
     q: String.raw`<p>Niech \(X_1,\dots,X_n\) będzie próbą z rozkładu normalnego \(N(0,\sigma^2)\), czyli o wartości oczekiwanej \(0\) i nieznanej wariancji.</p>
@@ -615,13 +581,12 @@ Logarytm i jego pochodna:
 Równanie \(\ell'(\sigma)=0\) daje \(\sigma^2=\tfrac1n\sum x_i^2\). Pochodna jest dodatnia na lewo od tego punktu i ujemna na prawo, więc jest to maksimum. Zakładamy przy tym, że nie wszystkie \(x_i\) są zerami, co zachodzi z prawdopodobieństwem \(1\). Zatem
 \[\hat\sigma=\sqrt{\frac1n\sum_{i=1}^nX_i^2}.\]
 Dzielimy przez \(n\), a nie przez \(n-1\), bo średnia jest znana i równa \(0\).</p>
-<p><b>b)</b> Mamy \(\hat\sigma^2=\tfrac1n\sum X_i^2\). Ponieważ \(\mathbb EX_i=0\), to \(\mathbb EX_i^2=\operatorname{Var}X_i=\sigma^2\). Z zadania 213 (dla \(a=0\)) \(\mathbb EX_i^4=3\sigma^4\), więc \(\operatorname{Var}X_i^2=3\sigma^4-\sigma^4=2\sigma^4\). Z niezależności:
+<p><b>b)</b> Mamy \(\hat\sigma^2=\tfrac1n\sum X_i^2\). Ponieważ \(\mathbb EX_i=0\), to \(\mathbb EX_i^2=\operatorname{Var}X_i=\sigma^2\). Z zadania 15 (dla \(a=0\)) \(\mathbb EX_i^4=3\sigma^4\), więc \(\operatorname{Var}X_i^2=3\sigma^4-\sigma^4=2\sigma^4\). Z niezależności:
 \[\mathbb E\hat\sigma^2=\sigma^2,\qquad\operatorname{Var}\hat\sigma^2=\frac1{n^2}\cdot n\cdot2\sigma^4=\frac{2\sigma^4}n.\]
 Estymator \(\hat\sigma^2\) jest więc nieobciążony, a jego wariancja dąży do zera, gdy \(n\to\infty\).</p>
 <p class="note"><b>Uwaga.</b> Sam \(\hat\sigma\) jest już obciążony. Z ostrej nierówności Jensena \(\mathbb E\hat\sigma=\mathbb E\sqrt{\hat\sigma^2}&lt;\sqrt{\mathbb E\hat\sigma^2}=\sigma\).</p>`
   },
   {
-    no: 233,
     group: "Estymacja punktowa i przedziały ufności",
     tags: ["funkcja ryzyka", "błąd średniokwadratowy", "porównanie estymatorów"],
     q: String.raw`<p>Wykonujemy \(n=8\) niezależnych doświadczeń, z których każde kończy się sukcesem z nieznanym prawdopodobieństwem \(\theta\) (schemat Bernoulliego). Niech \(K\) oznacza liczbę sukcesów. Porównujemy dwa estymatory:
@@ -641,20 +606,18 @@ więc
 Żaden estymator nie jest więc lepszy dla wszystkich \(\theta\): \(\hat\theta_2\) wygrywa w środku przedziału, a \(\hat\theta_1\) w pobliżu \(0\) i \(1\). Największe ryzyka to \(\max R_1=R_1\bigl(\tfrac12\bigr)=\tfrac1{32}\approx0{,}031\) oraz \(\max R_2=R_2\bigl(\tfrac12\bigr)=0{,}02\), więc w najgorszym przypadku lepszy jest \(\hat\theta_2\).</p>`
   },
   {
-    no: 234,
     group: "Estymacja punktowa i przedziały ufności",
     tags: ["przedział ufności dla mediany", "statystyki pozycyjne", "metoda nieparametryczna"],
     q: String.raw`<p>Niech \(X_1,\dots,X_8\) będzie próbą z nieznanego rozkładu o ciągłej dystrybuancie i jedynej medianie \(m\), a \(X_{1:8}\le\dots\le X_{8:8}\) jej statystykami pozycyjnymi. Za przedział ufności dla \(m\) bierzemy \([X_{4:8},X_{5:8}]\). Oblicz poziom ufności tego przedziału, czyli \(P(X_{4:8}\le m\le X_{5:8})\).</p>`,
     ans: String.raw`\(\dbinom84\dfrac1{2^8}=\dfrac{35}{128}\approx0{,}273\)`,
     sol: String.raw`<p>Dystrybuanta \(F\) jest ciągła, a \(m\) jest medianą, więc \(F(m)=\tfrac12\) i \(P(X_i=m)=0\). Niech \(N=\#\{i\le8:X_i\le m\}\) będzie liczbą obserwacji nie większych od mediany. Wtedy \(N\sim\mathrm{Bin}\bigl(8,\tfrac12\bigr)\).</p>
-<p><b>Lewy koniec.</b> Tak jak w zadaniu 229, \(\{X_{4:8}\le m\}=\{N\ge4\}\).</p>
+<p><b>Lewy koniec.</b> Tak jak w zadaniu 31, \(\{X_{4:8}\le m\}=\{N\ge4\}\).</p>
 <p><b>Prawy koniec.</b> Nierówność \(X_{5:8}&lt;m\) zachodzi wtedy i tylko wtedy, gdy co najmniej \(5\) obserwacji jest mniejszych od \(m\). Z prawdopodobieństwem \(1\) żadna obserwacja nie jest równa \(m\), więc liczba obserwacji mniejszych od \(m\) to \(N\). Stąd \(\{m\le X_{5:8}\}=\{N\le4\}\), z dokładnością do zdarzenia o prawdopodobieństwie \(0\).</p>
 <p>Zatem
 \[P(X_{4:8}\le m\le X_{5:8})=P(N=4)=\binom84\frac1{2^8}=\frac{70}{256}=\frac{35}{128}\approx0{,}273.\]</p>
 <p class="note"><b>Uwaga.</b> To bardzo niski poziom ufności. Ten sam rachunek daje ogólnie \(P(X_{k:8}\le m\le X_{l:8})=\sum_{j=k}^{l-1}\binom8j2^{-8}\). Na przykład przedział \([X_{2:8},X_{7:8}]\) ma poziom ufności \(\tfrac{238}{256}\approx0{,}93\). Wynik nie zależy od rozkładu próby, więc jest to przykład metody nieparametrycznej.</p>`
   },
   {
-    no: 235,
     group: "Estymacja punktowa i przedziały ufności",
     tags: ["estymator nieobciążony", "rozkład gamma", "zgodność"],
     q: String.raw`<p>Zmienne losowe \(X_1,\dots,X_n\) są niezależne i mają ten sam rozkład o gęstości
@@ -671,7 +634,6 @@ Wariancja dąży do zera, gdy \(n\to\infty\), więc \(T\) jest także estymatore
 <p class="note"><b>Uwaga.</b> To rozkład gamma o parametrze kształtu \(6\) i parametrze skali \(\theta\) (stała \(120=5!\)). Stąd biorą się wzory \(\mathbb EX_i=6\theta\) i \(\operatorname{Var}X_i=6\theta^2\).</p>`
   },
   {
-    no: 236,
     group: "Estymacja punktowa i przedziały ufności",
     tags: ["przedział ufności dla średniej", "znana wariancja", "kwantyl rozkładu normalnego"],
     q: String.raw`<p>Zważono \(10\) paczek białego sera i otrzymano następujące wyniki:
@@ -691,7 +653,6 @@ Przedział dwustronny na poziomie \(0{,}95\) wymaga kwantyla \(\Phi^{-1}(0{,}975
 <p class="note"><b>Uwaga.</b> Kwantyl \(1{,}645=\Phi^{-1}(0{,}95)\) byłby właściwy dla przedziału jednostronnego na poziomie \(0{,}95\) albo dwustronnego na poziomie \(0{,}90\). W przedziale dwustronnym na każdy z ogonów przypada \(\tfrac\alpha2=0{,}025\).</p>`
   },
   {
-    no: 237,
     group: "Estymacja punktowa i przedziały ufności",
     tags: ["wektor gaussowski", "niezależność średniej i wariancji z próby", "dowód"],
     q: String.raw`<p>Zmienne losowe \(X_1,\dots,X_n\) są niezależne i mają ten sam rozkład \(N(\mu,\sigma^2)\). Udowodnij, że statystyki
@@ -712,7 +673,6 @@ a to oznacza niezależność \(\bar X\) i \(D\). Ponieważ \(S^2\) jest funkcją
 <p class="note"><b>Uwaga.</b> Założenie normalności jest kluczowe. Na przykład dla próby z rozkładu wykładniczego \(\bar X\) i \(S^2\) są wyraźnie skorelowane: w symulacji dla \(n=5\) współczynnik korelacji wynosi około \(0{,}69\). Niezależność \(\bar X\) i \(S^2\) jest wręcz charakteryzacją rozkładu normalnego.</p>`
   },
   {
-    no: 238,
     group: "Estymacja punktowa i przedziały ufności",
     tags: ["estymator największej wiarogodności", "rozkład hipergeometryczny", "metoda Lincolna–Petersena"],
     q: String.raw`<p>W jeziorze żyje nieznana liczba \(N\) ryb. Aby ją oszacować, odłowiono \(m\) ryb, oznakowano je i wypuszczono z powrotem. Po pewnym czasie złowiono \(n\) ryb i okazało się, że \(k\) spośród nich jest oznakowanych. Wyznacz oszacowanie \(N\) metodą największej wiarogodności.</p>`,
@@ -736,7 +696,6 @@ Jest to dopuszczalna wartość, bo \(\dfrac{mn}k-(m+n-k)=\dfrac{(m-k)(n-k)}k\ge0
 </ul>`
   },
   {
-    no: 239,
     group: "Estymacja punktowa i przedziały ufności",
     tags: ["rozkład jednostajny", "estymatory nieobciążone", "porównanie wariancji", "maksimum próby"],
     q: String.raw`<p>Niech \(X_1,\dots,X_n\) będzie próbą z rozkładu jednostajnego na przedziale \((0,\theta)\), gdzie \(\theta>0\). Rozważamy dwa estymatory parametru \(\theta\):
