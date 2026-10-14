@@ -1,5 +1,6 @@
 (window.TASKS = window.TASKS || {})['matura-5'] = [
   {
+    id: 1,
     group: "Ciąg arytmetyczny i geometryczny",
     src: "maj 2018 · zad. 13",
     pts: 4,
@@ -18,6 +19,7 @@
 <p class="note"><b>Sprawdzenie:</b> \(S_{15}=1-(-2)^{15}=1+32768=32769\). &nbsp;<b>Uwaga:</b> trzeba rozstrzygnąć parzystość \(n\) – dla parzystego \(n\) suma \(1-2^n\) byłaby ujemna i nie mogłaby wynosić \(32769\).</p>`
   },
   {
+    id: 2,
     group: "Ciąg arytmetyczny i geometryczny",
     src: "maj 2026 · zad. 6",
     pts: 4,
@@ -36,6 +38,7 @@
 <p class="note"><b>Sprawdzenie:</b> \(a_2=-1,\ a_3=-3,\ a_6=-9\) – ciąg geometryczny o ilorazie \(3\). Rachunek pomocniczy: \(1012\cdot1014=1013^2-1=1\,026\,168\). &nbsp;<b>Uwaga:</b> założenie „więcej niż 6 wyrazów” sprawdzamy dopiero po policzeniu \(N\).</p>`
   },
   {
+    id: 3,
     group: "Ciąg arytmetyczny i geometryczny",
     src: "maj 2024 · zad. 7",
     pts: 4,
@@ -51,6 +54,7 @@
 <p class="note"><b>Sprawdzenie:</b> \((5,20,80)\) to ciąg geometryczny o ilorazie \(4\), rosnący, suma \(105\). W ciągu arytmetycznym o \(r=15\): \(a_1=5,\ a_2=20,\ a_6=5+5\cdot15=80\). &nbsp;<b>Uwaga:</b> przy dzieleniu przez \(r\) łatwo „zgubić” przypadek \(r=0\); lepiej wyłączyć \(r\) przed nawias, jak wyżej.</p>`
   },
   {
+    id: 4,
     group: "Ciąg arytmetyczny i geometryczny",
     src: "maj 2019 · zad. 12",
     pts: 6,
@@ -71,6 +75,7 @@
 <p class="note"><b>Sprawdzenie:</b> \(\dfrac{1/(9a)}{1/(3a)}=\dfrac13\) ✓. &nbsp;<b>Uwaga:</b> rozwiązanie \(t=-\tfrac92\) odrzucamy z uzasadnieniem „wyrazy dodatnie”. Przy zadaniu za 6 punktów warto zapisać każde takie uzasadnienie.</p>`
   },
   {
+    id: 5,
     group: "Granica ciągu",
     src: "maj 2021 · zad. 5",
     pts: 2,
@@ -86,6 +91,7 @@
     \[\lim\frac{5n^2+16n+3}{4n^2-4n+1}=\lim\frac{5+\frac{16}{n}+\frac{3}{n^2}}{4-\frac4n+\frac1{n^2}}=\frac54=1{,}25 .\]</p>`
   },
   {
+    id: 6,
     group: "Granica ciągu",
     src: "maj 2019 · zad. 5",
     pts: 2,
@@ -100,6 +106,7 @@
 <p class="step"><b>Wynik:</b> \(\dfrac97-\dfrac13=\dfrac{27-7}{21}=\dfrac{20}{21}=0{,}95238\ldots\)</p>`
   },
   {
+    id: 7,
     group: "Granica ciągu",
     src: "maj 2022 · zad. 5",
     pts: 2,
@@ -118,6 +125,7 @@
 <p class="note"><b>Uwaga:</b> założenie \(p&gt;0\) z treści pasuje do wyniku; na maturze warto napisać, że \(\tfrac7{17}\) je spełnia.</p>`
   },
   {
+    id: 8,
     group: "Granica ciągu",
     src: "maj 2026 · zad. 1",
     pts: 2,
@@ -134,6 +142,7 @@
 <p class="note"><b>Uwaga:</b> to samo wynika z reguły „stopnie równe → iloraz współczynników przy najwyższej potędze”: \(\tfrac16\) przy \(n^3\) w liczniku i \(\tfrac12\) w mianowniku.</p>`
   },
   {
+    id: 9,
     group: "Szereg geometryczny",
     src: "maj 2025 · zad. 6",
     pts: 4,
@@ -153,6 +162,7 @@
 <p class="note"><b>Uwaga:</b> polecenie „rozważ wszystkie przypadki” dotyczy tu dwóch znaków \(q\). Wartość \(q=1\) nie wchodzi w grę (dałaby \(a_1=a_3=10\) i \(a_1^2+a_3^2=200\ne328\)); warto o tym wspomnieć, bo ciąg stały jest zbieżny.</p>`
   },
   {
+    id: 10,
     group: "Szereg geometryczny",
     src: "maj 2023 · zad. 10",
     pts: 4,
@@ -171,6 +181,7 @@
 <p class="note"><b>Uwaga:</b> zadanie mówi, że obwody tworzą ciąg geometryczny, ale to \(q\) trzeba policzyć. Warto zapisać warunek \(|q|&lt;1\) i usunąć niewymierność z mianownika.</p>`
   },
   {
+    id: 11,
     group: "Szereg geometryczny",
     src: "maj 2022 · zad. 10",
     pts: 4,

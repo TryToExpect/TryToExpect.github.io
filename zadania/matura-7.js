@@ -1,5 +1,6 @@
 (window.TASKS = window.TASKS || {})['matura-7'] = [
   {
+    id: 1,
     group: "Okręgi i wektory",
     src: "maj 2025 · zad. 8",
     pts: 5,
@@ -28,6 +29,7 @@ Wektory \(\overrightarrow{AM}\) i \(\overrightarrow{BM}\) mają przeciwne zwroty
 <p class="note"><b>Co warto zapamiętać.</b> Wspólne punkty dwóch okręgów znajdziesz, odejmując ich równania: wychodzi prosta (tzw. oś potęgowa), na której leżą oba punkty.</p>`
   },
   {
+    id: 2,
     group: "Okręgi i wektory",
     src: "maj 2026 · zad. 9",
     pts: 5,
@@ -47,6 +49,7 @@ Wektory \(\overrightarrow{AM}\) i \(\overrightarrow{BM}\) mają przeciwne zwroty
 <p class="note"><b>Drugi sposób na punkt \(C\).</b> Punkt na prostej \(x+2y=4\) zapisujemy jako \(C=(4-2y,\ y)\). Warunek \(|CA|^2=|CB|^2\) daje \((3-2y)^2+(y+1)^2=(-2y)^2+y^2\), czyli \(10-10y+5y^2=5y^2\), skąd \(y=1\) i \(C=(2,1)\).</p>`
   },
   {
+    id: 3,
     group: "Styczne do okręgu",
     src: "maj 2024 · zad. 11",
     pts: 5,
@@ -65,6 +68,7 @@ Z \(|AS|^2=50\) mamy \((t-1)^2=25\), czyli \(t-1=5\) lub \(t-1=-5\), skąd \(t=6
 <p class="note"><b>Dlaczego są dwa rozwiązania?</b> Punkt \(A=(1,2)\) też leży na prostej \(y=x+1\) (bo \(2=1+1\)), więc środek \(S\) może leżeć na niej po obu stronach punktu \(A\), w odległości \(5\sqrt2\). Punkty \((6,7)\) i \((-4,-3)\) są symetryczne względem \(A\) (środek odcinka, który je łączy, to \(A\)), więc rysunek drugiego przypadku jest odbiciem pierwszego względem \(A\).</p>`
   },
   {
+    id: 4,
     group: "Parabola, prosta i okrąg",
     src: "maj 2023 · zad. 13",
     pts: 6,

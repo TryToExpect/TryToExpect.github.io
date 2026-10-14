@@ -1,5 +1,6 @@
 (window.TASKS = window.TASKS || {})['matura-10'] = [
   {
+    id: 1,
     group: "Granica funkcji",
     src: "maj 2024 · zad. 2",
     pts: 2,
@@ -12,6 +13,7 @@
 <p class="step"><b>Krok 2.</b> Gdy \(x\to2^-\), licznik dąży do \(2^2+2\cdot2+4=12>0\), a mianownik \(x-2\) dąży do \(0\) przez wartości ujemne (\(x&lt;2\)). Iloraz liczby dodatniej i małej liczby ujemnej jest duży i ujemny, więc granica jest równa \(-\infty\).</p>`
   },
   {
+    id: 2,
     group: "Styczna do wykresu funkcji",
     src: "maj 2023 · zad. 3",
     pts: 3,
@@ -25,6 +27,7 @@
 <p class="step"><b>Krok 3: styczna.</b> \(y-3=-\tfrac8{11}(x+3)\), czyli \(y=-\tfrac8{11}x+\tfrac9{11}\).</p>`
   },
   {
+    id: 3,
     group: "Styczna do wykresu funkcji",
     src: "maj 2024 · zad. 4",
     pts: 3,
@@ -37,6 +40,7 @@
 <p class="step"><b>Krok 3: wyraz wolny.</b> Styczna przechodzi przez \(P\): \(2=\tfrac72\cdot2+b\Rightarrow b=-5\).</p>`
   },
   {
+    id: 4,
     group: "Ekstrema i zadania optymalizacyjne",
     src: "maj 2023 · zad. 12.2",
     pts: 4,
@@ -49,6 +53,7 @@
 <p class="step"><b>Krok 3: minimum.</b> Funkcja maleje na \((0,1]\) i rośnie na \([1,\infty)\), więc najmniejszą wartość przyjmuje dla \(x=1\): \(f(1)=1+1-6=-4\).</p>`
   },
   {
+    id: 5,
     group: "Ekstrema i zadania optymalizacyjne",
     src: "maj 2025 · zad. 12.2",
     pts: 4,
@@ -63,6 +68,7 @@
 <p class="step"><b>Krok 3: wartość.</b> \(V(5\sqrt3)=\dfrac\pi3\cdot\dfrac{25\cdot(5\sqrt3)^3}{75-25}=\dfrac\pi3\cdot\dfrac{25\cdot375\sqrt3}{50}=\dfrac{125\sqrt3}{2}\,\pi\).</p>`
   },
   {
+    id: 6,
     group: "Ekstrema i zadania optymalizacyjne",
     src: "maj 2024 · zad. 13.2",
     pts: 4,

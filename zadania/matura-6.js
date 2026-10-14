@@ -1,5 +1,6 @@
 (window.TASKS = window.TASKS || {})['matura-6'] = [
   {
+    id: 1,
     group: "Trójkąty",
     src: "maj 2025 · zad. 3",
     pts: 3,
@@ -23,6 +24,7 @@ Dzielimy przez \(\sin\varphi\) (jest dodatni, bo \(0^\circ<\varphi<60^\circ\)) i
 <p class="note"><b>Co warto zapamiętać.</b> Gdy dwa trójkąty mają wspólny wierzchołek i równe sąsiednie boki, stosunek ich pól jest stosunkiem sinusów kątów przy tym wierzchołku. Ten sam pomysł działa w wielu zadaniach o punkcie na boku trójkąta.</p>`
   },
   {
+    id: 2,
     group: "Trójkąty",
     src: "maj 2021 · zad. 8",
     pts: 3,
@@ -45,6 +47,7 @@ Pole trójkąta \(ABC\): \(\dfrac{a^2\sqrt3}4=\dfrac{9\sqrt3}4\).</p>
 <p class="note"><b>Sprawdzenie sensowności.</b> Punkt \(P\) powinien leżeć wewnątrz trójkąta: \(0<\tfrac{27}{14}<3\) i \(y_P>0\) ✓. A pole \(DBP\) to około \(4{,}8\%\) pola \(ABC\) (\(\tfrac1{21}\)), co zgadza się z rysunkiem – to mały trójkąt przy wierzchołku \(B\).</p>`
   },
   {
+    id: 3,
     group: "Trójkąty",
     src: "maj 2023 · zad. 5",
     pts: 3,
@@ -65,6 +68,7 @@ Wartość \(\sin75^\circ\) znajdziemy ze wzoru na sinus sumy: \(\sin75^\circ=\si
 <p class="note"><b>Drugi sposób (współrzędne).</b> Przyjmijmy \(B=(0,0)\), \(A=(0,4)\), \(C=(4\sqrt3,0)\) (bo \(|BC|=|AB|\operatorname{tg}60^\circ=4\sqrt3\)), \(K=(0,1)\), \(L=(1,0)\). Prosta \(KL\): \(x+y=1\). Prosta \(AC\) ma współczynnik \(-\tfrac1{\sqrt3}\), więc wysokość \(BD\) (prostopadła do niej) ma współczynnik \(\sqrt3\): \(y=\sqrt3x\). Z \(x+\sqrt3x=1\) mamy \(x_N=\tfrac{\sqrt3-1}2\), a ponieważ \(y=\sqrt3x\), to \(|BN|=2x_N=\sqrt3-1\). Punkt \(D\): z \(\sqrt3x=4-\tfrac{x}{\sqrt3}\) mamy \(x_D=\sqrt3\), \(y_D=3\), \(|BD|=\sqrt{3+9}=2\sqrt3\). Zatem \(|ND|=2\sqrt3-(\sqrt3-1)=\sqrt3+1\).</p>`
   },
   {
+    id: 4,
     group: "Trójkąty",
     src: "maj 2024 · zad. 8",
     pts: 4,
@@ -85,6 +89,7 @@ Czyli \(b^2=a^2+ac\), to znaczy \(|AC|^2=|BC|^2+|AB|\cdot|BC|\). \(\blacksquare\
 <p class="note">Założenie, że trójkąt nie jest równoramienny, nie było nam potrzebne: teza zachodzi w każdym trójkącie, w którym \(\angle B=2\angle A\).</p>`
   },
   {
+    id: 5,
     group: "Czworokąty",
     src: "maj 2025 · zad. 7",
     pts: 4,
@@ -104,6 +109,7 @@ czyli \(\dfrac{|CD|}{|AB|}=\dfrac ba=\dfrac15\). \(\blacksquare\)</p>
 <p class="note"><b>Sprawdzenie na liczbach.</b> Dla \(a=5\), \(b=1\): \(|EF|=3\), \(P_{EFCD}=\tfrac12(1+3)\cdot\tfrac h2=h\), \(P_{ABFE}=\tfrac12(5+3)\cdot\tfrac h2=2h\), a iloraz to \(\tfrac12\) ✓.</p>`
   },
   {
+    id: 6,
     group: "Czworokąty",
     src: "maj 2024 · zad. 9",
     pts: 4,
@@ -123,6 +129,7 @@ czyli \(\dfrac{|CD|}{|AB|}=\dfrac ba=\dfrac15\). \(\blacksquare\)</p>
 <p class="note"><b>Drugi sposób (współrzędne).</b> Układ: \(A=(0,0)\), \(B=(a,0)\), \(C=(a,a)\), \(D=(0,a)\), \(E=\left(\tfrac a2,a\right)\), \(G=\left(\tfrac a2,\tfrac a2\right)\). Prosta \(AE\): \(y=2x\); prosta \(BD\): \(y=a-x\). Z \(2x=a-x\) mamy \(x=\tfrac a3\), więc \(F=\left(\tfrac a3,\tfrac{2a}3\right)\). Pole trójkąta o wierzchołku w początku układu: \(P_{AGF}=\tfrac12\left|x_Gy_F-x_Fy_G\right|=\tfrac12\left|\tfrac a2\cdot\tfrac{2a}3-\tfrac a3\cdot\tfrac a2\right|=\tfrac12\cdot\tfrac{a^2}6=\tfrac{a^2}{12}\) – ten sam wynik.</p>`
   },
   {
+    id: 7,
     group: "Czworokąty",
     src: "maj 2026 · zad. 4",
     pts: 3,
@@ -139,6 +146,7 @@ czyli \(\dfrac{|CD|}{|AB|}=\dfrac ba=\dfrac15\). \(\blacksquare\)</p>
 <p class="note"><b>Drugi sposób na punkt \(M\) (podobieństwo).</b> Skoro \(\angle DKM=90^\circ\), to \(\angle AKD+\angle BKM=90^\circ\), a w trójkącie prostokątnym \(AKD\) mamy \(\angle ADK=90^\circ-\angle AKD\). Zatem \(\angle ADK=\angle BKM\) i trójkąty prostokątne \(AKD\) oraz \(BMK\) są podobne. Stąd \(\dfrac{|BM|}{|BK|}=\dfrac{|AK|}{|AD|}\), czyli \(|BM|=\dfrac{\frac12\cdot\frac12}1=\tfrac14\) – ten sam wynik.</p>`
   },
   {
+    id: 8,
     group: "Czworokąty",
     src: "maj 2023 · zad. 8",
     pts: 4,
@@ -155,6 +163,7 @@ czyli \(\dfrac{|CD|}{|AB|}=\dfrac ba=\dfrac15\). \(\blacksquare\)</p>
 <p class="note"><b>Dlaczego sumy przeciwległych boków są równe?</b> Odcinki stycznych poprowadzonych z jednego punktu do okręgu są równe. Jeśli odcinki od wierzchołków \(A,B,C,D\) do punktów styczności mają długości \(x,y,z,t\), to \(|AB|=x+y\), \(|BC|=y+z\), \(|CD|=z+t\), \(|DA|=t+x\). Obie sumy przeciwległych boków wynoszą wtedy \(x+y+z+t\).</p>`
   },
   {
+    id: 9,
     group: "Czworokąty",
     src: "maj 2026 · zad. 11",
     pts: 6,
