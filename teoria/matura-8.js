@@ -15,6 +15,8 @@
 <li><b>Kąt między prostymi skośnymi:</b> kąt między prostymi do nich równoległymi, przecinającymi się.</li>
 </ul>
 </div>
+<div class="fg"><svg class="fig" viewBox="0 0 280 192" width="280" height="192" role="img" aria-label="Kat nachylenia prostej k do plaszczyzny P: kat miedzy k a jej rzutem prostokatnym k prim"><polygon class="f" points="22,164 216,164 266,122 72,122"/><polygon class="s" points="22,164 216,164 266,122 72,122"/><line class="s d w" x1="84" y1="36" x2="84" y2="142"/><line class="a" x1="170" y1="150" x2="84" y2="36"/><line class="p" x1="170" y1="150" x2="84" y2="142"/><path class="s w" d="M84,134 L92,134.8 L92,142.8"/><path class="a" d="M152,121.2 A34,34 0 0 0 136.1,147"/><circle class="dot" cx="170" cy="150" r="3"/><circle class="dot" cx="84" cy="36" r="3"/><circle class="dot" cx="84" cy="142" r="3"/><text class="ac" x="122" y="112" text-anchor="middle">α</text><text x="77" y="40" text-anchor="end">T</text><text x="78" y="158" text-anchor="end">T′</text><text x="178" y="144" text-anchor="start">O</text><text class="ac" x="118" y="78" text-anchor="end">k</text><text class="pn" x="124" y="168" text-anchor="middle">k′</text><text x="238" y="156" text-anchor="middle">P</text></svg></div>
+<p class="note">Kąt prostej \(k\) z płaszczyzną \(P\) to kąt \(\alpha\) między \(k\) a jej rzutem prostokątnym \(k\prime\) na \(P\) (odcinek \(TT\prime\) jest prostopadły do płaszczyzny).</p>
 <div class="bx met"><span class="t">Metoda</span>
 <p>Prawie każde zadanie z kątem lub odległością sprowadza się do wskazania <b>trójkąta prostokątnego</b> w odpowiedniej płaszczyźnie (przekroju) i użycia twierdzenia Pitagorasa lub funkcji trygonometrycznych. Narysuj ten trójkąt osobno z oznaczonymi długościami.</p>
 </div>
@@ -27,6 +29,12 @@
 <li><b>Prostopadłościan</b> \(a\times b\times c\): \(V=abc\), \(P_c=2(ab+bc+ca)\), przekątna \(d=\sqrt{a^2+b^2+c^2}\). <b>Sześcian:</b> \(V=a^3\), \(P_c=6a^2\), przekątna \(a\sqrt3\), przekątna ściany \(a\sqrt2\).</li>
 </ul>
 </div>
+<div class="fg"><svg class="fig" viewBox="0 0 244 186" width="244" height="186" role="img" aria-label="Prostopadloscian: przekatna bryly d, przekatna podstawy i kat beta nachylenia przekatnej do podstawy"><polygon class="f" points="30,152 180,120 180,38"/><line class="s" x1="30" y1="152" x2="132" y2="152"/><line class="s" x1="132" y1="152" x2="180" y2="120"/><line class="s" x1="30" y1="152" x2="30" y2="70"/><line class="s" x1="132" y1="152" x2="132" y2="70"/><line class="s" x1="180" y1="120" x2="180" y2="38"/><line class="s" x1="30" y1="70" x2="132" y2="70"/><line class="s" x1="132" y1="70" x2="180" y2="38"/><line class="s" x1="180" y1="38" x2="78" y2="38"/><line class="s" x1="78" y1="38" x2="30" y2="70"/><line class="s d w" x1="78" y1="120" x2="30" y2="152"/><line class="s d w" x1="78" y1="120" x2="180" y2="120"/><line class="s d w" x1="78" y1="120" x2="78" y2="38"/><line class="a" x1="30" y1="152" x2="180" y2="38"/><line class="p d" x1="30" y1="152" x2="180" y2="120"/><path class="a" d="M65.2,144.5 A36,36 0 0 0 58.7,130.2"/><text x="24" y="166" text-anchor="end">A</text><text x="136" y="166" text-anchor="start">B</text><text x="187" y="124" text-anchor="start">C</text><text x="186" y="40" text-anchor="start">C′</text><text class="ac" x="80" y="168" text-anchor="middle">a</text><text class="ac" x="168" y="146" text-anchor="start">b</text><text class="ac" x="140" y="114" text-anchor="start">c</text><text class="ac" x="88" y="88" text-anchor="end">d</text><text class="ac" x="82" y="128" text-anchor="middle">β</text></svg></div>
+<p class="note">Kąt \(\beta\) nachylenia przekątnej bryły do podstawy leży w trójkącie prostokątnym \(ACC\prime\): \(\operatorname{tg}\beta=\dfrac{c}{\sqrt{a^2+b^2}}\).</p>
+<div class="bx ex"><span class="t">Przykład</span>
+<p>Prostopadłościan \(3\times4\times12\): przekątna podstawy \(\sqrt{3^2+4^2}=5\), przekątna bryły \(d=\sqrt{3^2+4^2+12^2}=\sqrt{169}=13\), \(\operatorname{tg}\beta=\tfrac{12}5\).</p>
+</div>
+
 <div class="bx thm"><span class="t">Ostrosłup</span>
 <ul>
 <li>\(V=\tfrac13P_p\cdot H\), \(\ P_c=P_p+P_b\). <b>Spodek wysokości</b> ostrosłupa to ten koniec wysokości, który leży w płaszczyźnie podstawy.</li>
@@ -45,6 +53,8 @@
 </tbody></table></div>
 <div class="bx ex"><span class="t">Przykład</span>
 <p>Ostrosłup prawidłowy czworokątny o krawędzi podstawy \(a=6\) i wysokości \(H=4\): \(r=3\), \(R=3\sqrt2\); wysokość ściany bocznej \(h_s=\sqrt{4^2+3^2}=5\); \(P_b=4\cdot\tfrac12\cdot6\cdot5=60\); \(P_c=36+60=96\); \(V=\tfrac13\cdot36\cdot4=48\). Krawędź boczna \(b=\sqrt{16+18}=\sqrt{34}\). Kąt nachylenia ściany do podstawy: \(\operatorname{tg}\beta=\tfrac43\).</p>
+<div class="fg"><svg class="fig" viewBox="0 0 300 252" width="300" height="252" role="img" aria-label="Ostroslup prawidlowy czworokatny: wysokosc H, promien okregu wpisanego r i wysokosc sciany bocznej h_s"><polygon class="f" points="149,93 149,193 115,218"/><line class="s" x1="40" y1="218" x2="190" y2="218"/><line class="s" x1="190" y1="218" x2="258" y2="168"/><line class="s" x1="149" y1="93" x2="40" y2="218"/><line class="s" x1="149" y1="93" x2="190" y2="218"/><line class="s" x1="149" y1="93" x2="258" y2="168"/><line class="s d w" x1="40" y1="218" x2="108" y2="168"/><line class="s d w" x1="108" y1="168" x2="258" y2="168"/><line class="s d w" x1="149" y1="93" x2="108" y2="168"/><line class="a d" x1="149" y1="93" x2="149" y2="193"/><line class="a d" x1="149" y1="193" x2="115" y2="218"/><line class="a" x1="149" y1="93" x2="115" y2="218"/><circle class="dot" cx="149" cy="193" r="2.6"/><text x="149" y="85" text-anchor="middle">S</text><text x="33" y="230" text-anchor="end">A</text><text x="196" y="232" text-anchor="start">B</text><text x="266" y="172" text-anchor="start">C</text><text x="101" y="164" text-anchor="end">D</text><text x="158" y="190" text-anchor="start">O</text><text x="108" y="234" text-anchor="end">M</text><text class="ac" x="156" y="149" text-anchor="start">H</text><text class="ac" x="141" y="213" text-anchor="end">r</text><text class="ac" x="124" y="157.5" text-anchor="end">h<tspan dy="3" font-size="10">s</tspan></text></svg></div>
+<p class="note">Zacieniowany trójkąt \(SOM\) jest prostokątny, z przyprostokątnymi \(H=4\), \(r=3\) i przeciwprostokątną \(h_s=5\); kąt \(\beta\) leży przy wierzchołku \(M\).</p>
 </div>
 
 <h3>Bryły obrotowe: walec, stożek, kula</h3>
@@ -59,8 +69,18 @@
 <li><b>Stożek ścięty</b> (promienie \(R>r\), wysokość \(H\)): \(V=\dfrac{\pi H}3(R^2+Rr+r^2)\).</li>
 </ul>
 </div>
+<div class="fgs"><div class="fg"><svg class="fig" viewBox="0 0 176 152" width="176" height="152" role="img" aria-label="Przekroj osiowy stozka: promien podstawy r, wysokosc H, tworzaca l i kat rozwarcia 2 alfa"><polygon class="f" points="88,14 28,112 148,112"/><polygon class="s" points="88,14 28,112 148,112"/><line class="a d" x1="88" y1="14" x2="88" y2="112"/><path class="s w" d="M96,112 L96,104 L88,104"/><path class="a" d="M73,37.7 A28,28 0 0 0 103,37.7"/><circle class="dot" cx="88" cy="112" r="2.6"/><text class="ac" x="82" y="66" text-anchor="end">H</text><text class="ac" x="118" y="130" text-anchor="middle">r</text><text class="ac" x="132" y="58" text-anchor="start">l</text><text class="ac" x="88" y="56" text-anchor="middle">2α</text><text class="m" x="88" y="148" text-anchor="middle">przekrój osiowy</text></svg></div><div class="fg"><svg class="fig" viewBox="0 0 190 160" width="190" height="160" role="img" aria-label="Rozwiniecie powierzchni bocznej stozka: wycinek kola o promieniu l i luku dlugosci 2 pi r"><path class="s f2" d="M95,36 L11.3,8.8 A88,88 0 1 0 178.7,8.8 Z"/><path class="a" d="M77.9,30.4 A18,18 0 1 0 112.1,30.4"/><text class="ac" x="95" y="80" text-anchor="middle">φ</text><text class="ac" x="49.2" y="15.4" text-anchor="end">l</text><text class="ac" x="95" y="139" text-anchor="middle">łuk 2πr</text><text class="m" x="95" y="156" text-anchor="middle">wycinek koła</text></svg></div></div>
+<p class="note">Rozwinięcie powierzchni bocznej to wycinek koła o promieniu \(l\), którego łuk ma długość \(2\pi r\); kąt wycinka \(\varphi=\dfrac rl\cdot360^\circ\).</p>
+<div class="bx ex"><span class="t">Przykład</span>
+<p>Stożek o promieniu podstawy \(r=3\) i wysokości \(H=4\): \(l=\sqrt{3^2+4^2}=5\), \(V=\tfrac13\pi\cdot9\cdot4=12\pi\), \(P_b=\pi\cdot3\cdot5=15\pi\), \(P_c=\pi\cdot3\cdot(3+5)=24\pi\). Kąt wycinka: \(\varphi=\dfrac35\cdot360^\circ=216^\circ\).</p>
+</div>
+
 <div class="bx thm"><span class="t">Kula (promień \(R\))</span>
 <p>\(V=\tfrac43\pi R^3\), \(\ P=4\pi R^2\). Przekrój kuli płaszczyzną odległą o \(d\) od środka jest kołem o promieniu \(\sqrt{R^2-d^2}\). Kula wpisana w sześcian o krawędzi \(a\): \(R=\tfrac a2\); kula wpisana w walec (możliwa tylko, gdy \(H=2r\)): \(R=r\); kula opisana na sześcianie: \(R=\tfrac{a\sqrt3}2\). Kula wpisana w stożek (promień kuli to promień okręgu wpisanego w przekrój osiowy): \(r_k=\dfrac{rH}{r+l}\).</p>
+</div>
+
+<div class="bx ex"><span class="t">Przykład</span>
+<p>Kula opisana na sześcianie o krawędzi \(a=4\): \(R=\dfrac{4\sqrt3}2=2\sqrt3\), \(V=\tfrac43\pi(2\sqrt3)^3=\tfrac43\pi\cdot24\sqrt3=32\sqrt3\,\pi\), \(P=4\pi\cdot12=48\pi\).</p>
 </div>
 
 <h3>Przekroje brył i bryły podobne</h3>

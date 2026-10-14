@@ -20,12 +20,19 @@
 <li>Użyteczne: \(x^2+y^2=(x+y)^2-2xy\), \(x^3+y^3=(x+y)^3-3xy(x+y)\), \(\dfrac1x+\dfrac1y=\dfrac{x+y}{xy}\).</li>
 </ul>
 
+<div class="bx ex"><span class="t">Przykład – przekształcanie wyrażeń</span>
+<p>Różnica kwadratów: \((2x-3)^2-(x+1)^2=\bigl[(2x-3)-(x+1)\bigr]\bigl[(2x-3)+(x+1)\bigr]=(x-4)(3x-2)\).</p>
+<p>Różnica sześcianów: \(x^3-8=(x-2)(x^2+2x+4)\). Uzupełnianie do kwadratu: \(x^2+6x+2=(x+3)^2-7\).</p>
+</div>
+
 <h3>Nierówność między średnimi i dowody algebraiczne</h3>
 <div class="bx thm"><span class="t">Nierówność między średnimi</span>
 <p>Dla dodatnich liczb \(a,b\):
 \[\frac{2ab}{a+b}\ \le\ \sqrt{ab}\ \le\ \frac{a+b}2\ \le\ \sqrt{\frac{a^2+b^2}2},\]
 (średnia harmoniczna \(\le\) geometryczna \(\le\) arytmetyczna \(\le\) kwadratowa), a równość zachodzi tylko dla \(a=b\). Dla \(n\) liczb dodatnich: \(\sqrt[n]{a_1\cdots a_n}\le\dfrac{a_1+\dots+a_n}n\).</p>
 <p>Wnioski: \(a+\dfrac1a\ge2\) dla \(a>0\); \(a^2+b^2\ge2ab\) dla dowolnych \(a,b\).</p>
+<div class="fg"><svg class="fig" viewBox="0 0 250 176" width="250" height="176" role="img" aria-label="Pol okregu o srednicy a+b: wysokosc CD = pierwiastek z ab nie przekracza promienia (a+b)/2"><path class="s" d="M20,138 A100,100 0 0 1 220,138"/><line class="s" x1="20" y1="138" x2="220" y2="138"/><line class="a" x1="70" y1="138" x2="70" y2="51.4"/><line class="p d" x1="120" y1="138" x2="70" y2="51.4"/><path class="s w" d="M78,138 L78,130 L70,130"/><circle class="dot" cx="70" cy="51.4" r="3"/><circle class="dot" cx="70" cy="138" r="2.6"/><circle class="dot" cx="120" cy="138" r="2.6"/><text x="20" y="156" text-anchor="middle">A</text><text x="70" y="156" text-anchor="middle">C</text><text x="120" y="156" text-anchor="middle">O</text><text x="220" y="156" text-anchor="middle">B</text><text x="63" y="45.4" text-anchor="end">D</text><text class="ac" x="45" y="131" text-anchor="middle">a</text><text class="ac" x="145" y="131" text-anchor="middle">b</text><text class="ac" x="63" y="110" text-anchor="end">√(ab)</text><text class="pn" x="104" y="92" text-anchor="start">(a+b)/2</text><text class="m" x="125" y="172" text-anchor="middle">wysokość CD ≤ promień OD</text></svg></div>
+<p class="note">Geometrycznie: w półokręgu o średnicy \(AB=a+b\) poprowadź z punktu \(C\) (gdzie \(AC=a\), \(CB=b\)) odcinek \(CD\) prostopadły do \(AB\). Trójkąt \(ADB\) jest prostokątny (kąt oparty na średnicy), więc \(CD^2=AC\cdot CB=ab\). Wysokość \(CD\) nie przekracza promienia \(OD=\tfrac{a+b}2\), czyli \(\sqrt{ab}\le\tfrac{a+b}2\).</p>
 </div>
 <div class="bx met"><span class="t">Jak dowodzić nierówności i równości</span>
 <ol>
