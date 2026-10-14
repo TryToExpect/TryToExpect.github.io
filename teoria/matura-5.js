@@ -85,6 +85,7 @@
 <p>Jeśli wielkość \(K_0\) w każdym okresie rośnie o \(p\%\) (odsetki doliczane są do kapitału), to kolejne wartości tworzą ciąg geometryczny o ilorazie \(q=1+\dfrac p{100}\).</p>
 <div class="bx thm"><span class="t">Wzory</span>
 \[K_n=K_0\left(1+\frac p{100}\right)^{n}\qquad\text{(wzrost)},\qquad K_n=K_0\left(1-\frac p{100}\right)^{n}\qquad\text{(spadek)}.\]
+<p>Tu \(K_0\) – kapitał początkowy, \(p\%\) – stopa procentowa w jednym okresie kapitalizacji, \(n\) – liczba okresów kapitalizacji (miesięcy, kwartałów, lat itp.).</p>
 <p>Gdy roczna stopa wynosi \(p\%\), a odsetki dopisuje się \(m\) razy w roku, to po \(t\) latach \(K=K_0\left(1+\dfrac{p}{100\,m}\right)^{mt}\).</p>
 </div>
 <div class="bx ex"><span class="t">Przykład 4</span>
@@ -113,7 +114,7 @@
   <tbody>
     <tr><td>\(\dfrac{1}{n^k}\), gdzie \(k>0\)</td><td>\(0\)</td></tr>
     <tr><td>\(n^k\), gdzie \(k>0\)</td><td>\(+\infty\)</td></tr>
-    <tr><td>\(q^n\)</td><td>\(0\) dla \(|q|<1\); \(+\infty\) dla \(q>1\); brak granicy dla \(q\le -1\)</td></tr>
+    <tr><td>\(q^n\)</td><td>\(0\) dla \(|q|<1\); \(1\) dla \(q=1\); \(+\infty\) dla \(q>1\); brak granicy dla \(q\le -1\)</td></tr>
   </tbody>
 </table></div>
 <p>Symbole nieoznaczone: \(\infty-\infty\), \(\dfrac{\infty}{\infty}\), \(0\cdot\infty\). Wymagają one wcześniejszego przekształcenia wyrażenia. Reguły oznaczone: \(\infty+\infty=\infty\), \(\infty\cdot\infty=\infty\), \(\dfrac{c}{\infty}=0\).</p>
@@ -133,6 +134,9 @@
 </div>
 
 <h3>Suma nieskończonego ciągu geometrycznego (szereg geometryczny)</h3>
+<div class="bx def"><span class="t">Szereg geometryczny</span>
+<p>Wyrażenie \(a_1+a_1q+a_1q^2+a_1q^3+\dots\) nazywamy <b>szeregiem geometrycznym</b>. Gdy ma ono sumę \(S\), mówimy, że szereg jest <b>zbieżny</b>, a \(S\) jest <b>sumą nieskończonego ciągu geometrycznego</b>. Np. szereg \(2+6+18+54+\dots\) nie jest zbieżny, bo \(q=3\notin(-1,1)\).</p>
+</div>
 <div class="bx thm"><span class="t">Twierdzenie</span>
 <p>Suma wszystkich wyrazów nieskończonego ciągu geometrycznego \((a_n)\) istnieje i jest skończona wtedy i tylko wtedy, gdy \(|q|<1\) (lub \(a_1=0\)). Wynosi wtedy
 \[S=a_1+a_1q+a_1q^2+\dots=\frac{a_1}{1-q}.\]</p>
@@ -145,6 +149,7 @@
 <ul>
   <li><b>Ułamki okresowe.</b> \(0{,}(27)=\dfrac{0{,}27}{1-0{,}01}=\dfrac{27}{99}=\dfrac{3}{11}\); \(0{,}1(6)=\dfrac1{10}+\dfrac{0{,}06}{1-0{,}1}=\dfrac1{10}+\dfrac1{15}=\dfrac16\).</li>
   <li><b>Geometria.</b> Figury wpisywane jedna w drugą: długości boków, obwody i pola tworzą ciąg geometryczny. Jeśli kolejne figury są podobne w skali \(k\), to obwody mają iloraz \(k\), a pola \(k^2\).</li>
+  <li><b>Szereg zależny od \(x\).</b> Szereg \(1+2x+4x^2+8x^3+\dots\) ma iloraz \(q=2x\), więc jest zbieżny wtedy i tylko wtedy, gdy \(|2x|&lt;1\), czyli \(x\in\left(-\tfrac12,\tfrac12\right)\). Wtedy jego suma to \(\dfrac1{1-2x}\).</li>
   <li><b>Równania z szeregiem.</b> Np. \(1+x+x^2+\dots=3\). Warunek zbieżności to \(|x|<1\). Wtedy \(\dfrac{1}{1-x}=3\), czyli \(x=\dfrac23\), co spełnia warunek.</li>
 </ul>
 

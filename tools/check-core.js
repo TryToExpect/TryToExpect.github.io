@@ -158,6 +158,9 @@ export function runChecks(site, texCheck) {
   }
 
   // 3. materials.js: działy, tematy i wzory na kartach
+  // klucz działu: pole key, a gdy go nie ma, pozycja na liście ("matura-4"); po nim idą pliki, linki i zaliczenia
+  const topicKey = (sid, t, i) => (t && typeof t.key === 'string' && t.key ? t.key : sid + '-' + (i + 1));
+  const keyMap = new Map();
   if (!MATERIALS || typeof MATERIALS !== 'object') {
     add('error', 'materials.js', 0, 'Brak window.MATERIALS: strona nie pokaże żadnych działów.');
   } else {
@@ -168,6 +171,12 @@ export function runChecks(site, texCheck) {
         stats.topics++;
         const line = (() => { const src = (site.files || {})['materials.js'] || ''; const k = src.indexOf(t && t.title ? JSON.stringify(t.title) : '\u0000'); return k < 0 ? 0 : lineAt(src, k); })();
         if (!t || typeof t.title !== 'string' || !t.title.trim()) add('error', 'materials.js', line, sid + ' dział ' + (i + 1) + ': brak tytułu.');
+        if (t && t.key != null && !(typeof t.key === 'string' && t.key.startsWith(sid + '-') && /^\d+$/.test(t.key.slice(sid.length + 1)))) {
+          add('error', 'materials.js', line, sid + ' dział ' + (i + 1) + ': key musi mieć postać "' + sid + '-<numer>", np. "' + sid + '-13".');
+        }
+        const key = topicKey(sid, t, i);
+        if (keyMap.has(key)) add('error', 'materials.js', line, sid + ' dział ' + (i + 1) + ': klucz "' + key + '" jest już użyty przez dział ' + keyMap.get(key).n + ' (klucze muszą być niepowtarzalne).');
+        else keyMap.set(key, { sec: sid, n: i + 1 });
         if (t && t.formula && texCheck) {
           const msg = texCheck('\\displaystyle ' + t.formula, false);
           if (msg) add('error', 'materials.js', line, sid + ' dział ' + (i + 1) + ': błąd we wzorze na karcie: ' + msg + ' (' + String(t.formula).slice(0, 40) + ').');
@@ -175,11 +184,7 @@ export function runChecks(site, texCheck) {
       });
     }
   }
-  const topicOf = (key) => {
-    const m = /^([a-z]+)-(\d+)$/.exec(key);
-    const sec = m && MATERIALS && MATERIALS[m[1]];
-    return sec && Array.isArray(sec.topics) && sec.topics[+m[2] - 1] ? { sec: m[1], n: +m[2] } : null;
-  };
+  const topicOf = (key) => keyMap.get(key) || null;
 
   // 4. zadania: pola, identyfikatory, treść
   for (const key of Object.keys(TASKS || {})) {
@@ -187,7 +192,7 @@ export function runChecks(site, texCheck) {
     const src = (site.files || {})[file] || '';
     const starts = taskStarts(src);
     const arr = TASKS[key];
-    if (!topicOf(key)) add('error', file, 0, 'Klucz "' + key + '" nie odpowiada żadnemu działowi z materials.js (numer to pozycja działu na liście).');
+    if (!topicOf(key)) add('error', file, 0, 'Klucz "' + key + '" nie odpowiada żadnemu działowi z materials.js (klucz to pole key działu albo jego pozycja na liście).');
     if (!Array.isArray(arr)) { add('error', file, 0, 'window.TASKS["' + key + '"] nie jest tablicą.'); continue; }
     stats.tasks += arr.length;
     const ids = new Map(), groups = new Set();
@@ -252,7 +257,7 @@ export function runChecks(site, texCheck) {
     const src = (site.files || {})[file] || '';
     const text = THEORY[key];
     const tasksCount = Array.isArray((TASKS || {})[key]) ? TASKS[key].length : 0;
-    if (!topicOf(key)) add('error', file, 0, 'Klucz "' + key + '" nie odpowiada żadnemu działowi z materials.js (numer to pozycja działu na liście).');
+    if (!topicOf(key)) add('error', file, 0, 'Klucz "' + key + '" nie odpowiada żadnemu działowi z materials.js (klucz to pole key działu albo jego pozycja na liście).');
     if (typeof text !== 'string' || !text.trim()) { add('error', file, 0, 'window.THEORY["' + key + '"] musi być niepustym tekstem.'); continue; }
     stats.theory++;
     const report = (level, message, snippet) => {
@@ -264,6 +269,30 @@ export function runChecks(site, texCheck) {
     checkHtml(text, report);
     checkMath(text, report, texCheck, cache, stats);
     checkRefs(text, tasksCount, report);
+  }
+
+  // 6. przeniesione zadania (window.MOVED_TASKS): nowy dział istnieje i ma te zadania, a w starym ich już nie ma
+  const moved = data.MOVED_TASKS;
+  if (moved != null) {
+    const msrc = (site.files || {})['materials.js'] || '';
+    const mline = (() => { const k = msrc.indexOf('MOVED_TASKS'); return k < 0 ? 0 : lineAt(msrc, k); })();
+    if (!Array.isArray(moved)) add('error', 'materials.js', mline, 'window.MOVED_TASKS musi być listą.');
+    else {
+      const idsOf = (key) => new Set((Array.isArray((TASKS || {})[key]) ? TASKS[key] : []).map((t) => String(t && t.id)));
+      moved.forEach((mv, i) => {
+        const ref = 'MOVED_TASKS[' + i + ']: ';
+        if (!mv || typeof mv !== 'object' || typeof mv.from !== 'string' || typeof mv.to !== 'string' || !Array.isArray(mv.ids) || !mv.ids.length) {
+          add('error', 'materials.js', mline, ref + 'oczekiwany zapis { from: "matura-1", to: "matura-11", ids: [1, 2] }.');
+          return;
+        }
+        if (!topicOf(mv.to)) add('error', 'materials.js', mline, ref + 'dział docelowy "' + mv.to + '" nie istnieje.');
+        const there = idsOf(mv.to), here = idsOf(mv.from);
+        for (const id of mv.ids) {
+          if (topicOf(mv.to) && !there.has(String(id))) add('error', 'materials.js', mline, ref + 'w dziale "' + mv.to + '" nie ma zadania o id ' + id + '.');
+          if (here.has(String(id))) add('error', 'materials.js', mline, ref + 'zadanie o id ' + id + ' jest jeszcze w dziale "' + mv.from + '" (jest w obu działach); usuń je ze starego albo z listy przeniesionych.');
+        }
+      });
+    }
   }
 
   const order = { error: 0, warning: 1 };

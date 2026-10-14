@@ -42,7 +42,7 @@ o ile granica istnieje i jest skończona (wtedy \(f\) jest <b>różniczkowalna</
 <div class="bx thm"><span class="t">Wzory na pochodne</span>
 <div class="two">
 <div>
-\[(c)'=0,\qquad(x^n)'=nx^{n-1}\]
+\[(c)'=0,\qquad(ax+b)'=a,\qquad(x^n)'=nx^{n-1}\]
 \[(\sqrt x)'=\frac1{2\sqrt x},\qquad\left(\frac1x\right)'=-\frac1{x^2}\]
 \[(\sin x)'=\cos x,\qquad(\cos x)'=-\sin x\]
 </div>
@@ -56,6 +56,7 @@ o ile granica istnieje i jest skończona (wtedy \(f\) jest <b>różniczkowalna</
 </div>
 <div class="bx thm"><span class="t">Reguły</span>
 \[(f\pm g)'=f'\pm g',\quad(c\,f)'=c\,f',\quad(f\cdot g)'=f'g+fg',\quad\left(\frac fg\right)'=\frac{f'g-fg'}{g^2},\quad\bigl(f(g(x))\bigr)'=f'(g(x))\cdot g'(x).\]
+<p>W złożeniu \(f(g(x))\) funkcję \(g\) nazywamy <b>wewnętrzną</b>, a \(f\) – <b>zewnętrzną</b>; pochodną liczymy od zewnętrznej (w punkcie \(g(x)\)) i mnożymy przez pochodną wewnętrznej.</p>
 </div>
 <div class="bx ex"><span class="t">Przykład</span>
 <p>\(f(x)=\dfrac{x^2-1}{x+2}\): \(f'(x)=\dfrac{2x(x+2)-(x^2-1)}{(x+2)^2}=\dfrac{x^2+4x+1}{(x+2)^2}\). \(\ g(x)=(3x-1)^5\): \(g'(x)=5(3x-1)^4\cdot3\). \(\ h(x)=\sqrt{x^2+1}\): \(h'(x)=\dfrac{x}{\sqrt{x^2+1}}\).</p>
@@ -99,7 +100,7 @@ o ile granica istnieje i jest skończona (wtedy \(f\) jest <b>różniczkowalna</
 <li><b>Wybierz niewiadomą</b> \(x\) i wyraź przez nią wielkość, którą optymalizujesz (pole, objętość, koszt, odległość) jako funkcję \(f(x)\); użyj warunku z zadania do wyeliminowania pozostałych zmiennych.</li>
 <li><b>Wyznacz dziedzinę</b> wynikającą z treści (długości dodatnie, ograniczenia geometryczne!).</li>
 <li>Policz \(f'(x)\), znajdź punkty krytyczne w dziedzinie.</li>
-<li><b>Uzasadnij charakter ekstremum:</b> badanie znaku pochodnej lub porównanie wartości na końcach domkniętej dziedziny.</li>
+<li><b>Uzasadnij charakter ekstremum:</b> badanie znaku pochodnej lub porównanie wartości na końcach domkniętej dziedziny. Gdy \(f\) jest funkcją kwadratową, wystarczą własności paraboli: wartość ekstremalna jest w wierzchołku (o ile jego pierwsza współrzędna należy do dziedziny), a ramiona w górę oznaczają minimum, w dół – maksimum.</li>
 <li>Odpowiedz na pytanie z zadania (często potrzebna jest też wartość optymalizowanej wielkości, a nie tylko punkt \(x\)).</li>
 </ol>
 </div>
