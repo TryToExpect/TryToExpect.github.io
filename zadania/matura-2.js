@@ -1,5 +1,6 @@
 (window.TASKS = window.TASKS || {})['matura-2'] = [
   {
+    id: 1,
     group: "Wartość bezwzględna",
     src: "maj 2025 · zad. 5",
     pts: 4,
@@ -15,6 +16,7 @@
 <p class="note"><b>Sprawdzenie:</b> dla \(x=0\): \(2-6=-4&lt;-2\) ✓; dla \(x=-5\): \(7-4=3\not&lt;-2\) ✓ (nie należy do rozwiązania).</p>`
   },
   {
+    id: 2,
     group: "Wartość bezwzględna",
     src: "maj 2023 · zad. 9",
     pts: 4,
@@ -31,6 +33,7 @@
 <p class="note"><b>Interpretacja:</b> \(|x+2|+|x-3|\) to suma odległości punktu \(x\) od liczb \(-2\) i \(3\). Wewnątrz odcinka \([-2,3]\) wynosi ona zawsze \(5\). Na zewnątrz jest równa \(5+2d\), gdzie \(d\) to odległość od najbliższego końca odcinka; warunek \(5+2d&lt;\tfrac{25}3\) daje \(d&lt;\tfrac53\). Rozwiązanie wystaje więc o \(\tfrac53\) poza oba końce: \(\left(-2-\tfrac53,\ 3+\tfrac53\right)\).</p>`
   },
   {
+    id: 3,
     group: "Wartość bezwzględna",
     src: "maj 2026 · zad. 5",
     pts: 4,
@@ -45,6 +48,7 @@
 <p class="step"><b>Wynik</b> (z wyłączeniem \(x=3\)): \(x\in(-\infty,-5)\cup(-1,3)\cup(3,\infty)\).</p>`
   },
   {
+    id: 4,
     group: "Wielomiany",
     src: "maj 2022 · zad. 9",
     pts: 4,
@@ -58,6 +62,7 @@
 <p class="step"><b>Krok 3: nierówność \(W(x)\ge0\).</b> Pierwiastki: \(-1,\ -\tfrac12,\ 3\). Współczynnik przy \(x^3\) jest dodatni, więc znaki wielomianu (od prawej strony): \(+\) dla \(x>3\), \(-\) dla \(-\tfrac12&lt;x&lt;3\), \(+\) dla \(-1&lt;x&lt;-\tfrac12\), \(-\) dla \(x&lt;-1\). Stąd \(W(x)\ge0\) dla \(x\in\left[-1,-\tfrac12\right]\cup[3,\infty)\).</p>`
   },
   {
+    id: 5,
     group: "Wielomiany",
     src: "maj 2019 · zad. 13",
     pts: 6,
@@ -71,6 +76,7 @@
 <p class="step"><b>Nierówność \(W(x)\le0\).</b> Pierwiastki: \(-3,\ -\tfrac12,\ 2\). Współczynnik przy \(x^3\) jest dodatni, więc \(W\le0\) dla \(x\le-3\) oraz dla \(-\tfrac12\le x\le2\).</p>`
   },
   {
+    id: 6,
     group: "Równania wymierne z parametrem",
     src: "maj 2023 · zad. 11",
     pts: 5,

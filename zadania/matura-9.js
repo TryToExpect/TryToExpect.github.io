@@ -1,5 +1,6 @@
 (window.TASKS = window.TASKS || {})['matura-9'] = [
   {
+    id: 1,
     group: "Kombinatoryka",
     src: "maj 2024 · zad. 6",
     pts: 3,
@@ -13,6 +14,7 @@
 <p class="step"><b>Krok 3: wynik.</b> \(100\cdot120-40\cdot24=12000-960=11040\).</p>`
   },
   {
+    id: 2,
     group: "Kombinatoryka",
     src: "maj 2026 · zad. 2",
     pts: 3,
@@ -27,6 +29,7 @@
 <p class="step"><b>Krok 4.</b> \(P(A)=\dfrac{1440}{40320}=\dfrac1{28}\).</p>`
   },
   {
+    id: 3,
     group: "Prawdopodobieństwo warunkowe",
     src: "maj 2025 · zad. 4",
     pts: 3,
@@ -40,6 +43,7 @@
 <p class="step"><b>Krok 3.</b> \(P(A\mid B)=\dfrac{54}{150}=\dfrac9{25}\).</p>`
   },
   {
+    id: 4,
     group: "Prawdopodobieństwo warunkowe",
     src: "maj 2021 · zad. 9",
     pts: 4,
@@ -53,6 +57,7 @@
 <p class="step"><b>Krok 3.</b> \(P=\dfrac{100}{500}=\dfrac15\).</p>`
   },
   {
+    id: 5,
     group: "Schemat Bernoulliego",
     src: "maj 2023 · zad. 2",
     pts: 3,
@@ -65,6 +70,7 @@
 <p class="step"><b>Krok 2.</b> \(P=\tfrac{15}{1024}+\tfrac1{1024}=\tfrac{16}{1024}=\tfrac1{64}\).</p>`
   },
   {
+    id: 6,
     group: "Schemat Bernoulliego",
     src: "maj 2024 · zad. 3",
     pts: 3,

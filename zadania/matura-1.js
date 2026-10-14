@@ -1,5 +1,6 @@
 (window.TASKS = window.TASKS || {})['matura-1'] = [
   {
+    id: 1,
     group: "Logarytmy i potęgi",
     src: "maj 2023 · zad. 12.1",
     pts: 2,
@@ -15,6 +16,7 @@ więc drugi składnik jest równy \(1\cdot x^2=x^2\).</p>
 <p class="step"><b>Wniosek.</b> Całe wyrażenie jest równe \(x^4+x^2-6x\). \(\blacksquare\)</p>`
   },
   {
+    id: 2,
     group: "Logarytmy i potęgi",
     src: "maj 2024 · zad. 5",
     pts: 3,
@@ -27,6 +29,7 @@ więc drugi składnik jest równy \(1\cdot x^2=x^2\).</p>
 \[\log_{12}80=\frac{\ln80}{\ln12}=\frac{4\ln2+\ln5}{2\ln2+\ln3}=\frac{4\ln2+\frac{2\ln2}{a}}{2\ln2+2b\ln2}=\frac{2\ln2\,\bigl(2+\frac1a\bigr)}{2\ln2\,(1+b)}=\frac{\frac{2a+1}{a}}{1+b}=\frac{2a+1}{a\,(1+b)}.\ \blacksquare\]</p>`
   },
   {
+    id: 3,
     group: "Dowody algebraiczne",
     src: "maj 2012 · zad. 7",
     pts: 3,
@@ -40,6 +43,7 @@ więc drugi składnik jest równy \(1\cdot x^2=x^2\).</p>
 <p class="note">Założenie \(a+b\ge0\) jest potrzebne: dla \(a=-2\), \(b=1\) lewa strona wynosi \(-7\), a prawa \(2\). Równość zachodzi, gdy \(a=b\) albo \(a=-b\).</p>`
   },
   {
+    id: 4,
     group: "Dowody algebraiczne",
     src: "maj 2014 · zad. 4",
     pts: 3,
@@ -57,6 +61,7 @@ Stąd
 <p class="note">Skrótem: \(\tfrac xy+\tfrac yx\ge2\) (nierówność między średnimi), a \(\tfrac{x^2}y+\tfrac{y^2}x>0\).</p>`
   },
   {
+    id: 5,
     group: "Dowody algebraiczne",
     src: "maj 2016 · zad. 8",
     pts: 3,
@@ -69,6 +74,7 @@ Stąd
 <p class="note">Równość zachodzi tylko dla \(x=y=1\). Geometrycznie: prosta \(x+y=2\) jest styczna do okręgu \(x^2+y^2=2\) w punkcie \((1,1)\), więc cały okrąg leży po jednej jej stronie. Założenie, że liczby są dodatnie, nie było tu potrzebne.</p>`
   },
   {
+    id: 6,
     group: "Dowody algebraiczne",
     src: "maj 2017 · zad. 7",
     pts: 3,
@@ -82,6 +88,7 @@ Stąd
 <p class="note">Założenie \(x\ne y\) jest istotne: dla \(x=y=\sqrt2\) lewa strona jest równa \(0\), bo wtedy \(xy=2\) i \(x-y=0\).</p>`
   },
   {
+    id: 7,
     group: "Dowody algebraiczne",
     src: "czerwiec 2017 · zad. 7",
     pts: 3,
@@ -95,6 +102,7 @@ Stąd
 <p class="note"><b>Drugi sposób (wyróżnik).</b> Traktujemy lewą stronę jako trójmian zmiennej \(x\) z parametrem \(y\): \(f(x)=5x^2+(6-4y)x+y^2+9\). Współczynnik przy \(x^2\) jest dodatni, więc wystarczy pokazać, że \(\Delta\le0\). Mamy \(\Delta=(6-4y)^2-20(y^2+9)=-4y^2-48y-144=-4(y+6)^2\le0\). Zatem \(f(x)\ge0\) dla każdego \(x\), niezależnie od \(y\). Równość zachodzi dla \(y=-6\) i \(x=-3\).</p>`
   },
   {
+    id: 8,
     group: "Dowody algebraiczne",
     src: "maj 2019 · zad. 8",
     pts: 3,
@@ -108,6 +116,7 @@ Stąd
 <p class="note"><b>Drugi sposób.</b> Dla \(x&lt;y\) i \(a>0\) mamy \(\tfrac{x+a}{y+a}>\tfrac xy\), bo \((x+a)y-x(y+a)=a(y-x)>0\). Stąd \(\tfrac{x+a}{y+a}+\tfrac yx>\tfrac xy+\tfrac yx\ge2\).</p>`
   },
   {
+    id: 9,
     group: "Dowody algebraiczne",
     src: "maj 2022 · zad. 6",
     pts: 3,
@@ -121,6 +130,7 @@ Stąd
 <p class="note">Równość zachodzi dla \(y=-2x\), czyli gdy \(2x+y=0\) (np. \(x=1\), \(y=-2\)). Dlatego w tezie jest znak \(\ge\), a nie \(>\).</p>`
   },
   {
+    id: 10,
     group: "Dowody algebraiczne",
     src: "czerwiec 2022 · zad. 6",
     pts: 3,
@@ -136,6 +146,7 @@ Gdyby \(x^2+y^2=0\), to \(x=y=0\), a to przeczy założeniu \(x\ne y\). Zatem \(
 <p class="note">Bez założenia \(x\ne y\) zostaje nierówność nieostra, a równość zachodzi dla \(x=y\).</p>`
   },
   {
+    id: 11,
     group: "Dowody algebraiczne",
     src: "maj 2023 · zad. 4",
     pts: 3,
@@ -149,6 +160,7 @@ Wykaż, że \(x=2\) oraz \(y=2\).</p>`,
 <p class="step"><b>Wniosek.</b> Z równania \(x+y=4>0\), więc \((x-y)^2\le0\). Kwadrat liczby rzeczywistej nie jest ujemny, zatem \((x-y)^2=0\), czyli \(x=y\). Z \(x+y=4\) otrzymujemy \(x=y=2\). \(\blacksquare\)</p>`
   },
   {
+    id: 12,
     group: "Dowody algebraiczne",
     src: "czerwiec 2024 · zad. 5",
     pts: 3,
@@ -164,6 +176,7 @@ Z nierówności \((a-b)^2\ge0\) mamy \(4ab\le(a+b)^2=1\), czyli \(ab\le\tfrac14\
 <p class="note"><b>Drugi sposób.</b> Dla \(u=2a+b>0\) i \(v=a+2b>0\) zachodzi \((u+v)\left(\tfrac1u+\tfrac1v\right)\ge4\) (po wymnożeniu: \(2+\tfrac uv+\tfrac vu\ge4\)), a \(u+v=3(a+b)=3\). Stąd \(\tfrac1u+\tfrac1v\ge\tfrac43\). Równość zachodzi dla \(a=b=\tfrac12\).</p>`
   },
   {
+    id: 13,
     group: "Dowody algebraiczne",
     src: "maj 2025 · zad. 2",
     pts: 3,
@@ -177,6 +190,7 @@ Z nierówności \((a-b)^2\ge0\) mamy \(4ab\le(a+b)^2=1\), czyli \(ab\le\tfrac14\
 <p class="note">Założenie \(b\ne\tfrac12a\) jest potrzebne: dla \(a=2b\) obie strony są równe.</p>`
   },
   {
+    id: 14,
     group: "Dowody algebraiczne",
     src: "maj 2026 · zad. 3",
     pts: 3,

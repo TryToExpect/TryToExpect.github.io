@@ -1,5 +1,6 @@
 (window.TASKS = window.TASKS || {})['matura-4'] = [
   {
+    id: 1,
     group: "Równania trygonometryczne",
     src: "maj 2023 · zad. 6",
     pts: 3,
@@ -14,6 +15,7 @@
 \[x=-\frac\pi{12}+k\pi\quad\text{lub}\quad x=\frac{7\pi}{12}+k\pi,\qquad k\in\mathbb{Z}.\]</p>`
   },
   {
+    id: 2,
     group: "Równania trygonometryczne",
     src: "maj 2022 · zad. 11",
     pts: 4,
@@ -28,6 +30,7 @@ w przedziale \(\langle0,\pi\rangle\).</p>`,
 <p class="step"><b>Krok 3: \(\cos x=-\tfrac12\).</b> W przedziale \(\langle0,\pi\rangle\) jest to \(x=\tfrac{2\pi}3\).</p>`
   },
   {
+    id: 3,
     group: "Równania trygonometryczne",
     src: "maj 2026 · zad. 7",
     pts: 4,
@@ -42,6 +45,7 @@ w przedziale \(\langle0,\pi\rangle\).</p>`,
 <p class="note"><b>Sprawdzenie:</b> dla \(x=\tfrac{7\pi}{12}\) (\(=\tfrac\pi{12}+\tfrac\pi2\)) mamy \(\sin2x=\sin\tfrac{7\pi}6=-\tfrac12\), więc \(t=-\tfrac12\) ✓.</p>`
   },
   {
+    id: 4,
     group: "Równania trygonometryczne",
     src: "maj 2025 · zad. 9",
     pts: 5,
@@ -56,6 +60,7 @@ w przedziale \([-\pi,\pi]\).</p>`,
 <p class="step"><b>Krok 3.</b> \(2x=-\tfrac\pi3+k\pi\), więc \(x=-\tfrac\pi6+\tfrac{k\pi}2\). Do przedziału \([-\pi,\pi]\) należą: dla \(k=-1\): \(-\tfrac{2\pi}3\); dla \(k=0\): \(-\tfrac\pi6\); dla \(k=1\): \(\tfrac\pi3\); dla \(k=2\): \(\tfrac{5\pi}6\). (Dla \(k=-2\) jest \(-\tfrac{7\pi}6&lt;-\pi\), a dla \(k=3\) jest \(\tfrac{4\pi}3>\pi\).)</p>`
   },
   {
+    id: 5,
     group: "Równania trygonometryczne",
     src: "maj 2024 · zad. 10",
     pts: 5,
@@ -73,6 +78,7 @@ w zbiorze \([0,2\pi]\).</p>`,
 <p class="step"><b>Krok 4: \(\cos^2x=\tfrac34\).</b> \(\cos x=\pm\tfrac{\sqrt3}2\). W \([0,2\pi]\): \(\tfrac\pi6,\ \tfrac{5\pi}6,\ \tfrac{7\pi}6,\ \tfrac{11\pi}6\).</p>`
   },
   {
+    id: 6,
     group: "Równania trygonometryczne",
     tags: ["równanie trygonometryczne", "sinus kąta podwojonego", "rozkład na czynniki", "przedział"],
     q: String.raw`<p>Rozwiąż równanie
@@ -94,6 +100,7 @@ Zatem \(\cos x=-1\) lub \(\sin x=-\tfrac12\).</p>
 <p class="note">Rys. Rozwiązania na okręgu jednostkowym (czerwone punkty). Kąty dodatnie liczymy w lewo od osi \(Ox\), ujemne w prawo.</p>`
   },
   {
+    id: 7,
     group: "Zadania z parametrem",
     tags: ["równanie z parametrem", "iloczyn równy zero", "nierówność trygonometryczna", "liczba rozwiązań"],
     q: String.raw`<p>Wyznacz wszystkie wartości parametru \(\alpha\in\langle0;2\pi\rangle\), dla których równanie
@@ -108,6 +115,7 @@ ma trzy rozwiązania.</p>`,
 <p class="note">Rys. Wykres \(y=\sin2\alpha\). Czerwone fragmenty leżą w pasie \(0&lt;y&lt;1\), a odpowiadające im \(\alpha\) są zaznaczone na osi; puste kółka to punkty wyłączone.</p>`
   },
   {
+    id: 8,
     group: "Zadania z parametrem",
     tags: ["równanie z parametrem", "symetria wykresu", "liczba rozwiązań", "przedział"],
     q: String.raw`<p>Wyznacz wszystkie wartości parametru \(a\), dla których równanie

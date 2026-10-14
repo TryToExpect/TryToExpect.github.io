@@ -11,6 +11,16 @@
     teoria/<sekcja>-<numer>.js   tekst teorii (HTML + wzory w \( \) i \[ \]), np. teoria/matura-3.js
     zadania/<sekcja>-<numer>.js  lista zadań z odpowiedziami i rozwiązaniami, np. zadania/matura-3.js
   Numer to pozycja działu na liście poniżej (zaczynając od 1).
+
+  Zadanie (obiekt w zadania/<sekcja>-<numer>.js):
+    id       stały numer zadania w tym pliku. Nie zmieniaj go i nie używaj ponownie: od niego zależą linki
+             do zadań (#matura-4-zadania-6) oraz zaliczenia zapisane w przeglądarkach uczniów. Nowe zadanie
+             dostaje kolejny wolny numer, także gdy wstawiasz je w środek listy.
+    group    nagłówek grupy (zadania z tą samą grupą trzymaj obok siebie)
+    tags, q, ans, sol   słowa kluczowe, treść, odpowiedź, rozwiązanie (HTML + wzory; znak < we wzorze pisz jako &lt;)
+    fig, pts, src, label   opcjonalnie: rysunek, punkty, źródło
+  Napis "Zadanie N" w oknie to pozycja na liście (od 1 w każdym dziale), więc nie wpisuj pola no.
+  Poprawność plików sprawdza tools/check.mjs (uruchamia go GitHub Actions po każdym pushu).
 */
 
 window.SITE = {

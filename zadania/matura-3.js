@@ -1,5 +1,6 @@
 (window.TASKS = window.TASKS || {})['matura-3'] = [
   {
+    id: 1,
     group: "Funkcja wykładnicza w zastosowaniach",
     src: "maj 2025 · zad. 1",
     pts: 2,
@@ -15,6 +16,7 @@ gdzie \(N_0\) jest liczebnością populacji w chwili \(t=0\), \(k\) – stałą 
 <p class="note"><b>Uwaga:</b> wzrost o \(p\%\) w jednostce czasu odpowiada wzrostowi \(k=1+\tfrac p{100}\) razy. Ogólnie: \(k=1{,}25\Rightarrow p=25\).</p>`
   },
   {
+    id: 2,
     group: "Funkcja wykładnicza w zastosowaniach",
     src: "maj 2023 · zad. 1",
     pts: 2,
@@ -30,6 +32,7 @@ Dla \(t=4\): \(4\cdot0{,}81^4\approx1{,}72>1{,}5\). Dla \(t=5\): \(4\cdot0{,}81^
 <p class="note">Można też rozwiązać nierówność logarytmem: \(t>\dfrac{\log0{,}375}{\log0{,}81}\approx4{,}65\), a najmniejsza całkowita liczba większa od \(4{,}65\) to \(5\).</p>`
   },
   {
+    id: 3,
     group: "Funkcja wykładnicza w zastosowaniach",
     src: "maj 2024 · zad. 1",
     pts: 2,
@@ -47,6 +50,7 @@ Zatem \(T(15)=60\cdot\dfrac{3\sqrt3}8+20=\dfrac{45\sqrt3}2+20\approx38{,}97+20=5
 <p class="step"><b>Krok 3.</b> Po zaokrągleniu do jedności: \(59^\circ\text{C}\).</p>`
   },
   {
+    id: 4,
     group: "Funkcja kwadratowa – zadania z parametrem",
     src: "maj 2026 · zad. 10",
     pts: 5,
@@ -64,6 +68,7 @@ ma dwa różne miejsca zerowe \(x_1\) oraz \(x_2\) należące do przedziału \((
 <p class="note"><b>Sprawdzenie:</b> pierwiastki to \(x=\dfrac{1\pm\sqrt m}{m}\). Dla \(m=4\): \(\tfrac34\) i \(-\tfrac14\), oba w \((-2,2)\). Dla \(m=1\) mamy \(0\) i \(2\) – prawy pierwiastek leży na końcu przedziału, więc \(m=1\) odpada.</p>`
   },
   {
+    id: 5,
     group: "Funkcja kwadratowa – zadania z parametrem",
     src: "maj 2025 · zad. 11",
     pts: 6,
@@ -83,6 +88,7 @@ Wyróżnik \(\Delta'=196\), pierwiastki \(m=\dfrac{38\pm14}{16}\in\left\{\tfrac3
 <p class="step"><b>5) Odpowiedź.</b> Z części wspólnej \((-8,-3)\cup(1,2)\) zostają: cały przedział \((-8,-3)\) oraz \(\left(1,\tfrac32\right]\).</p>`
   },
   {
+    id: 6,
     group: "Funkcja kwadratowa – zadania z parametrem",
     src: "maj 2024 · zad. 12",
     pts: 6,

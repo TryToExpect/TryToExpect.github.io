@@ -389,6 +389,28 @@ dialog.tasks::backdrop { background: rgba(14, 19, 32, 0.62); }
 .tk-btn:hover { background: var(--accent-soft); }
 .tk-btn[aria-expanded="true"] { color: var(--on-accent); background: var(--accent); }
 .tk-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* zaliczanie zadań (zapis w przeglądarce) i kopiowanie linku do zadania */
+.tk-act-r { display: flex; flex-wrap: wrap; gap: 8px; margin-left: auto; }
+.tk-btn.has-ico { display: inline-flex; align-items: center; gap: 6px; }
+.tk-btn.has-ico svg { flex: none; }
+.tk-done-btn { color: var(--acc-studia); border-color: var(--acc-studia); }
+.tk-done-btn:hover { background: var(--acc-studia-soft); }
+.tk-done-btn[aria-pressed="true"] { color: var(--on-accent); background: var(--acc-studia); }
+.tk-done-btn[aria-pressed="true"]:hover { background: var(--acc-studia); filter: brightness(1.08); }
+.tk-done-btn:focus-visible { outline-color: var(--acc-studia); }
+.tk-link-btn[data-state] { color: var(--on-accent); background: var(--accent); }
+.tk-done {
+  display: inline-flex; align-items: center; gap: 4px; padding: 2px 6px;
+  font: 600 0.6875rem/1.3 var(--f-mono); color: var(--acc-studia); background: var(--acc-studia-soft); border-radius: 3px;
+}
+.tk.is-done { border-left: 3px solid var(--acc-studia); }
+.tk-progress { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; margin: 8px 0 0; font-size: 0.8125rem; color: var(--ink-2); }
+.tk-bar { flex: 0 1 220px; min-width: 90px; height: 6px; overflow: hidden; background: var(--line); border-radius: 3px; }
+.tk-bar > span { display: block; height: 100%; background: var(--acc-studia); border-radius: 3px; transition: width 0.2s; }
+.tk-clear { appearance: none; padding: 0; font: inherit; color: var(--accent); background: none; border: 0; text-decoration: underline; cursor: pointer; }
+.tasks-btn.is-complete .tasks-n { color: var(--acc-studia); }
+.tasks-btn.is-complete .tasks-n::before { content: "✓ "; }
 .tk-panel {
   margin: 0 16px 14px; padding: 10px 14px 4px; background: var(--accent-soft);
   border-left: 3px solid var(--accent); border-radius: 0 4px 4px 0;
@@ -579,6 +601,7 @@ dialog.has-tabs .tasks-head { border-bottom: 0; padding-bottom: 8px; }
       </header>
       <div class="tasks-tabs" id="tasks-tabs" role="tablist" aria-label="Rodzaj materiału" hidden></div>
       <div class="tasks-body" id="tasks-body"></div>
+      <div class="sr" id="tk-live" role="status" aria-live="polite"></div>
     </div>
   </dialog>
 </div>
@@ -639,7 +662,9 @@ dialog.has-tabs .tasks-head { border-bottom: 0; padding-bottom: 8px; }
     pdf: '<svg ' + SVG_ATTRS + '><path d="M4 1.75h5.2L12.5 5v9.25H4z"/><path d="M9 1.75V5h3.5"/><path d="M6.2 9.4h4M6.2 11.7h2.8"/></svg>',
     pencil: '<svg ' + SVG_ATTRS + '><path d="M2.75 13.25l.65-2.9 7.6-7.6a1.2 1.2 0 0 1 1.7 0l.55.55a1.2 1.2 0 0 1 0 1.7l-7.6 7.6z"/><path d="M9.6 4.2l2.2 2.2"/></svg>',
     book: '<svg ' + SVG_ATTRS + '><path d="M8 4.2C6.8 3.3 5 3 2.75 3v9.2c2.25 0 4.05.3 5.25 1.2 1.2-.9 3-1.2 5.25-1.2V3C11 3 9.2 3.3 8 4.2z"/><path d="M8 4.2v9.2"/></svg>',
-    tasks: '<svg ' + SVG_ATTRS + '><path d="M5.5 2.25h5v2h-5z"/><path d="M4.25 3.5h-.5a1.25 1.25 0 0 0-1.25 1.25v8.5a1.25 1.25 0 0 0 1.25 1.25h8.5a1.25 1.25 0 0 0 1.25-1.25v-8.5a1.25 1.25 0 0 0-1.25-1.25h-.5"/><path d="M5.2 9l1.7 1.7 3.4-3.6"/></svg>'
+    tasks: '<svg ' + SVG_ATTRS + '><path d="M5.5 2.25h5v2h-5z"/><path d="M4.25 3.5h-.5a1.25 1.25 0 0 0-1.25 1.25v8.5a1.25 1.25 0 0 0 1.25 1.25h8.5a1.25 1.25 0 0 0 1.25-1.25v-8.5a1.25 1.25 0 0 0-1.25-1.25h-.5"/><path d="M5.2 9l1.7 1.7 3.4-3.6"/></svg>',
+    check: '<svg ' + SVG_ATTRS + '><path d="M3.25 8.5l3.2 3.2 6.3-6.9"/></svg>',
+    link: '<svg ' + SVG_ATTRS + '><path d="M6.6 9.4a2.7 2.7 0 0 0 3.8 0l2.2-2.2a2.7 2.7 0 0 0-3.8-3.8l-.7.7"/><path d="M9.4 6.6a2.7 2.7 0 0 0-3.8 0L3.4 8.8a2.7 2.7 0 0 0 3.8 3.8l.7-.7"/></svg>'
   };
 
   const $ = (id) => document.getElementById(id);
@@ -742,10 +767,12 @@ dialog.has-tabs .tasks-head { border-bottom: 0; padding-bottom: 8px; }
         btns.push(b);
       }
       if (topic.tasks.length) {
+        const chipEl = el('span', { class: 'tasks-n', text: String(topic.tasks.length) });
         const b = el('button', { class: 'tasks-btn', type: 'button', 'aria-haspopup': 'dialog' },
-          icon('tasks'), el('span', { text: 'Zadania' }),
-          el('span', { class: 'tasks-n', text: String(topic.tasks.length) }));
+          icon('tasks'), el('span', { text: 'Zadania' }), chipEl);
         b.addEventListener('click', () => openMaterials(sec, topic, 'tasks'));
+        topicIndex[topic.id].chip = chipEl;   // licznik zaliczonych zadań (refreshProgress)
+        topicIndex[topic.id].btn = b;
         btns.push(b);
       }
       rows.push(el('div', { class: 'foot-row' },
@@ -903,7 +930,7 @@ dialog.has-tabs .tasks-head { border-bottom: 0; padding-bottom: 8px; }
     if (c.idx) return c.idx;
     const topic = c.topic;
     const tasks = topic.tasks.map((t, i) => ({
-      n: i + 1, no: t.no || (i + 1),
+      n: i + 1, no: t.no || (i + 1), key: taskKey(t, i),
       q: norm(plain((t.group || '') + ' ' + (t.tags || []).join(' ') + ' ' + (t.q || ''))),
       sol: norm(plain((t.sol || '') + ' ' + (t.ans || '')))
     }));
@@ -922,7 +949,7 @@ dialog.has-tabs .tasks-head { border-bottom: 0; padding-bottom: 8px; }
     const idx = contentIndex(c), hits = [];
     for (const t of idx.tasks) {
       const inQ = words.every((w) => inBody(t.q, w));
-      if (inQ || words.every((w) => inBody(t.q + ' ' + t.sol, w))) hits.push({ kind: 'tasks', n: t.n, label: 'Zadanie ' + t.no, sol: !inQ });
+      if (inQ || words.every((w) => inBody(t.q + ' ' + t.sol, w))) hits.push({ kind: 'tasks', n: t.n, key: t.key, label: 'Zadanie ' + t.no, sol: !inQ });
     }
     for (const s of idx.theory) {
       if (words.every((w) => inBody(s.textN, w))) hits.push({ kind: 'theory', n: s.n, label: 'Teoria: ' + s.title });
@@ -946,9 +973,9 @@ dialog.has-tabs .tasks-head { border-bottom: 0; padding-bottom: 8px; }
   function openHit(c, h) {
     const ref = topicIndex[c.topic.id];
     if (!ref) return;
-    openMaterials(ref.sec, ref.topic, h.kind === 'theory' ? 'theory' : 'tasks', h.n);
+    openMaterials(ref.sec, ref.topic, h.kind === 'theory' ? 'theory' : 'tasks', h.kind === 'theory' ? h.n : h.key);
     if (h.kind === 'tasks' && h.sol) {
-      const b = document.querySelector('[data-panel="tk-' + c.topic.id + '-' + h.n + '-s"]');
+      const b = document.querySelector('[data-panel="' + ('tk-' + c.topic.id + '-' + h.key + '-s').replace(/["\\]/g, '\\$&') + '"]');
       if (b && b.getAttribute('aria-expanded') !== 'true') b.click();
     }
   }
@@ -1017,6 +1044,85 @@ dialog.has-tabs .tasks-head { border-bottom: 0; padding-bottom: 8px; }
   const root = document.documentElement;
   let dlgTopic = null;
 
+  // ---- zaliczone zadania (zapis w tej przeglądarce) ----
+  // Zadanie rozpoznajemy po stałym polu id (zob. materials.js); bez id używamy pozycji ("p3"), więc
+  // taki wpis traci zaliczenie po przestawieniu zadań. Stan: { "matura-4": { "6": 1, "7": 1 }, ... }.
+  const DONE_KEY = 'jcobmath.done.v1';
+  const taskKey = (t, i) => (t.id != null && t.id !== '' ? String(t.id) : 'p' + (i + 1));
+  const readDone = () => {
+    try { const v = JSON.parse(localStorage.getItem(DONE_KEY) || '{}'); return v && typeof v === 'object' ? v : {}; } catch (e) { return {}; }
+  };
+  let done = readDone();
+  const saveDone = () => { try { localStorage.setItem(DONE_KEY, JSON.stringify(done)); } catch (e) { /* tryb prywatny: stan zostaje do zamknięcia karty */ } };
+  const isDone = (topic, key) => !!(done[topic.id] && done[topic.id][key]);
+  function setDone(topic, key, on) {
+    const m = done[topic.id] || (done[topic.id] = {});
+    if (on) m[key] = 1; else delete m[key];
+    if (!Object.keys(m).length) delete done[topic.id];
+    saveDone();
+  }
+  const doneCount = (topic) => topic.tasks.reduce((n, t, i) => n + (isDone(topic, taskKey(t, i)) ? 1 : 0), 0);
+
+  // licznik na karcie działu ("3/14") oraz pasek postępu w otwartym oknie zadań
+  function refreshProgress(topic) {
+    const n = doneCount(topic), total = topic.tasks.length, ref = topicIndex[topic.id];
+    if (ref && ref.chip) {
+      ref.chip.textContent = n ? n + '/' + total : String(total);
+      ref.btn.classList.toggle('is-complete', total > 0 && n === total);
+      ref.btn.setAttribute('aria-label', n ? 'Zadania, zaliczone ' + n + ' z ' + total : 'Zadania: ' + total);
+    }
+    const bar = dlgTopic === topic.id ? $('tk-progress') : null;
+    if (bar) {
+      bar.querySelector('.tk-progress-text').textContent = 'Zaliczone: ' + n + ' z ' + total;
+      bar.querySelector('.tk-bar > span').style.width = (total ? Math.round(100 * n / total) : 0) + '%';
+      bar.querySelector('.tk-clear').hidden = !n;
+    }
+  }
+  function paintTask(article, on) {
+    article.classList.toggle('is-done', on);
+    const btn = article.querySelector('.tk-done-btn'), badge = article.querySelector('.tk-done');
+    if (btn) btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    if (badge) badge.hidden = !on;
+  }
+  function syncDialogTasks() {
+    const ref = dlgTopic && topicIndex[dlgTopic];
+    if (!ref) return;
+    ref.topic.tasks.forEach((t, i) => {
+      const key = taskKey(t, i), a = $('tk-' + ref.topic.id + '-' + key);
+      if (a) paintTask(a, isDone(ref.topic, key));
+    });
+    refreshProgress(ref.topic);
+  }
+  const refreshAllProgress = () => model.forEach((sec) => sec.topics.forEach((t) => { if (t.tasks.length) refreshProgress(t); }));
+  // zmiana zaliczeń w innej karcie przeglądarki
+  window.addEventListener('storage', (e) => {
+    if (e.key !== DONE_KEY && e.key !== null) return;
+    done = readDone();
+    refreshAllProgress();
+    syncDialogTasks();
+  });
+
+  // ---- link do zadania ----
+  const taskUrl = (topic, key) => location.href.split('#')[0].split('?')[0] + '#' + topic.id + '-zadania-' + key;
+  function copyText(text) {
+    if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(text);
+    return new Promise((resolve, reject) => {
+      const ta = el('textarea', { readonly: true, 'aria-hidden': 'true', style: 'position:fixed;left:-9999px;top:0' });
+      ta.value = text;
+      dlg.append(ta);   // w oknie modalnym kopiować można tylko z elementu wewnątrz okna
+      ta.select();
+      try { if (document.execCommand('copy')) resolve(); else reject(new Error('copy')); } catch (err) { reject(err); } finally { ta.remove(); }
+    });
+  }
+  function flashLink(btn, ok, num) {
+    const lbl = btn.querySelector('.lbl');
+    lbl.textContent = ok ? 'Skopiowano' : 'Nie udało się';
+    btn.dataset.state = ok ? 'copied' : 'error';
+    $('tk-live').textContent = ok ? 'Skopiowano link do zadania ' + num : 'Nie udało się skopiować linku';
+    clearTimeout(btn._t);
+    btn._t = setTimeout(() => { lbl.textContent = 'Link'; delete btn.dataset.state; }, 1800);
+  }
+
   function whenMath(fn) {
     if (root.classList.contains('math-ready') && window.MathJax && window.MathJax.typesetPromise) fn();
     else document.addEventListener('math-ready', fn, { once: true });
@@ -1046,7 +1152,8 @@ dialog.has-tabs .tasks-head { border-bottom: 0; padding-bottom: 8px; }
   }
 
   function taskEl(topic, t, i) {
-    const id = 'tk-' + topic.id + '-' + (i + 1);
+    const key = taskKey(t, i);
+    const id = 'tk-' + topic.id + '-' + key;
     const q = el('div', { class: 'tk-q' });
     q.innerHTML = t.q || '';
     if (t.fig) {
@@ -1058,6 +1165,7 @@ dialog.has-tabs .tasks-head { border-bottom: 0; padding-bottom: 8px; }
       el('header', { class: 'tk-head' },
         el('h3', { class: 'tk-title', text: 'Zadanie ' + (t.no || (i + 1)) }),
         t.pts ? el('span', { class: 'pts', text: t.pts + ' pkt' }) : null,
+        el('span', { class: 'tk-done', hidden: true }, icon('check'), 'Zaliczone'),
         (t.label || t.src) ? el('span', { class: 'tk-src', text: t.label || ('CKE · matura ' + t.src) }) : null),
       q
     ];
@@ -1077,8 +1185,26 @@ dialog.has-tabs .tasks-head { border-bottom: 0; padding-bottom: 8px; }
     };
     add('a', 'Odpowiedź', t.ans);
     add('s', 'Rozwiązanie', t.sol ? t.sol + (t.ans ? '<div class="ans"><span class="l">Odpowiedź</span>' + t.ans + '</div>' : '') : '');
-    if (actions.children.length) kids.push(actions);
-    return el('article', { class: 'tk', id: id }, kids, panels);
+    const doneBtn = el('button', {
+      class: 'tk-btn tk-done-btn has-ico', type: 'button', 'aria-pressed': 'false',
+      title: 'Zaznacz zadanie jako zaliczone (zapisane w tej przeglądarce)'
+    }, icon('check'), el('span', { text: 'Zalicz' }));
+    const linkBtn = el('button', { class: 'tk-btn tk-link-btn has-ico', type: 'button', title: 'Skopiuj link do tego zadania' },
+      icon('link'), el('span', { class: 'lbl', text: 'Link' }));
+    actions.append(el('span', { class: 'tk-act-r' }, doneBtn, linkBtn));
+    kids.push(actions);
+    const article = el('article', { class: 'tk', id: id }, kids, panels);
+    doneBtn.addEventListener('click', () => {
+      const on = doneBtn.getAttribute('aria-pressed') !== 'true';
+      setDone(topic, key, on);
+      paintTask(article, on);
+      refreshProgress(topic);
+    });
+    linkBtn.addEventListener('click', () => {
+      copyText(taskUrl(topic, key)).then(() => flashLink(linkBtn, true, t.no || (i + 1)), () => flashLink(linkBtn, false));
+    });
+    paintTask(article, isDone(topic, key));
+    return article;
   }
 
   function theoryPane(topic) {
@@ -1103,6 +1229,24 @@ dialog.has-tabs .tasks-head { border-bottom: 0; padding-bottom: 8px; }
   function tasksPane(sec, topic) {
     const pane = el('div', { class: 'pane', id: 'pane-tasks', role: 'tabpanel', hidden: true });
     if (sec.tasksNote) pane.append(el('p', { class: 'tasks-note', text: sec.tasksNote }));
+    // pasek postępu: ile zadań z tego działu zaliczono; "Wyczyść" wymaga drugiego kliknięcia
+    const clearBtn = el('button', { class: 'tk-clear', type: 'button', text: 'Wyczyść zaliczenia', hidden: true });
+    let armed = null;
+    const disarm = () => { clearTimeout(armed); delete clearBtn.dataset.armed; clearBtn.textContent = 'Wyczyść zaliczenia'; };
+    clearBtn.addEventListener('click', () => {
+      if (!clearBtn.dataset.armed) {
+        clearBtn.dataset.armed = '1';
+        clearBtn.textContent = 'Na pewno? Kliknij ponownie';
+        armed = setTimeout(disarm, 4000);
+        return;
+      }
+      disarm();
+      delete done[topic.id];
+      saveDone();
+      syncDialogTasks();
+    });
+    pane.append(el('div', { class: 'tk-progress', id: 'tk-progress' },
+      el('span', { class: 'tk-progress-text' }), el('span', { class: 'tk-bar', 'aria-hidden': 'true' }, el('span')), clearBtn));
     let group = null;
     topic.tasks.forEach((t, i) => {
       if (t.group && t.group !== group) { group = t.group; pane.append(el('h4', { class: 'tk-group', text: group })); }
@@ -1145,7 +1289,7 @@ dialog.has-tabs .tasks-head { border-bottom: 0; padding-bottom: 8px; }
     dlgKicker.textContent = sec.unit + ' ' + String(topic.n).padStart(2, '0') + (tab === 'theory' ? ' · Teoria' : ' · ' + (sec.tasksLabel || 'Zadania'));
     dlgTitle.textContent = tidy(topic.title);
     const fresh = dlgTopic !== topic.id;
-    if (fresh) { buildMaterials(sec, topic); dlgTopic = topic.id; }
+    if (fresh) { buildMaterials(sec, topic); dlgTopic = topic.id; refreshProgress(topic); }
     showTab(tab);
     if (!dlg.open) {
       if (typeof dlg.showModal === 'function') dlg.showModal(); else dlg.setAttribute('open', '');
@@ -1186,7 +1330,7 @@ dialog.has-tabs .tasks-head { border-bottom: 0; padding-bottom: 8px; }
   });
 
   function applyHash() {
-    const m = /^#([a-z]+)(?:-(\d+))?(?:-(zadania|teoria)(?:-(\d+))?)?$/.exec(location.hash);
+    const m = /^#([a-z]+)(?:-(\d+))?(?:-(zadania|teoria)(?:-([\w.-]+))?)?$/.exec(location.hash);
     if (!m || !panelEls[m[1]]) return false;
     select(m[1]);
     if (m[2]) {
@@ -1194,10 +1338,18 @@ dialog.has-tabs .tasks-head { border-bottom: 0; padding-bottom: 8px; }
       if (target) target.scrollIntoView({ block: 'start' });
       if (m[3]) {
         const hit = topicIndex[m[1] + '-' + m[2]];
-        if (hit) openMaterials(hit.sec, hit.topic, m[3] === 'teoria' ? 'theory' : 'tasks', m[4] ? +m[4] : 0);
+        const theory = m[3] === 'teoria';
+        if (hit) openMaterials(hit.sec, hit.topic, theory ? 'theory' : 'tasks', theory ? (+m[4] || 0) : resolveTaskKey(hit.topic, m[4]));
       }
     }
     return true;
+  }
+  // w adresie jest stały id zadania; starsze linki z numerem pozycji (#matura-4-zadania-6) też działają
+  function resolveTaskKey(topic, s) {
+    if (!s) return '';
+    for (let i = 0; i < topic.tasks.length; i++) if (taskKey(topic.tasks[i], i) === s) return s;
+    const pos = /^\d+$/.test(s) ? +s : 0;
+    return pos >= 1 && pos <= topic.tasks.length ? taskKey(topic.tasks[pos - 1], pos - 1) : '';
   }
 
   function typeset() {
@@ -1236,6 +1388,7 @@ dialog.has-tabs .tasks-head { border-bottom: 0; padding-bottom: 8px; }
   }
 
   function render() {
+    dlgTopic = null;   // zawartość okna zadań budowana jest od nowa z odświeżonych danych
     model = normalise();
     buildTabs();
     buildPanels();
@@ -1247,6 +1400,7 @@ dialog.has-tabs .tasks-head { border-bottom: 0; padding-bottom: 8px; }
     onlyWrap.hidden = !model.some((s) => s.fileCount > 0 || s.taskCount > 0);
     select(panelEls[state.section] ? state.section : model[0].id);
     applyFilter();
+    refreshAllProgress();
     typeset();
     // indeks wyszukiwania w treści budujemy z wyprzedzeniem, żeby pierwsze zapytanie nie powodowało przycięcia
     const warm = () => registry.forEach((c) => contentIndex(c));

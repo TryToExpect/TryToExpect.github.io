@@ -1,5 +1,6 @@
 (window.TASKS = window.TASKS || {})['matura-8'] = [
   {
+    id: 1,
     group: "Stożek i graniastosłup – wzory na pola i objętości",
     src: "maj 2025 · zad. 12.1",
     pts: 2,
@@ -13,6 +14,7 @@
 <p class="step"><b>Krok 3.</b> \(V=\tfrac13\pi r^2h=\dfrac\pi3\cdot\dfrac{25h^3}{h^2-25}\). \(\blacksquare\)</p>`
   },
   {
+    id: 2,
     group: "Stożek i graniastosłup – wzory na pola i objętości",
     src: "maj 2024 · zad. 13.1",
     pts: 2,
@@ -27,6 +29,7 @@
 (w ostatnim kroku \(\dfrac{41472}{\sqrt3}=\dfrac{41472\sqrt3}{3}=13824\sqrt3\)).</p>`
   },
   {
+    id: 3,
     group: "Przekroje i kąty w ostrosłupach i sześcianie",
     src: "maj 2023 · zad. 7",
     pts: 4,
@@ -43,6 +46,7 @@
 <p class="note"><b>Bez wektorów:</b> twierdzenie cosinusów w trójkącie \(SBH\) daje \(\cos\angle SHB=\dfrac{|SH|^2+|BH|^2-|SB|^2}{2|SH||BH|}=\dfrac{18+108-54}{2\cdot3\sqrt2\cdot6\sqrt3}=\dfrac2{\sqrt6}\), więc \(\sin\angle SHB=\dfrac1{\sqrt3}\), a wysokość z \(S\) to \(|SH|\sin\angle SHB=3\sqrt2\cdot\dfrac1{\sqrt3}=\sqrt6\).</p>`
   },
   {
+    id: 4,
     group: "Przekroje i kąty w ostrosłupach i sześcianie",
     src: "maj 2026 · zad. 8",
     pts: 4,
@@ -59,6 +63,7 @@
 \[\cos\varphi=\frac{2h^2-a^2}{2h^2}=\frac{84-54}{84}=\frac5{14}.\]</p>`
   },
   {
+    id: 5,
     group: "Przekroje i kąty w ostrosłupach i sześcianie",
     src: "maj 2025 · zad. 10",
     pts: 5,
