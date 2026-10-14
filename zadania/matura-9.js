@@ -15,7 +15,7 @@
   },
   {
     id: 2,
-    group: "Kombinatoryka",
+    group: "Prawdopodobieństwo klasyczne",
     src: "maj 2026 · zad. 2",
     pts: 3,
     tags: ["permutacje", "podzielność przez 3", "prawdopodobieństwo klasyczne"],

@@ -77,7 +77,7 @@
   },
   {
     id: 6,
-    group: "Równania wymierne z parametrem",
+    group: "Równanie kwadratowe z parametrem (wzory Viète'a)",
     src: "maj 2023 · zad. 11",
     pts: 5,
     tags: ["parametr", "wzory Viète'a", "równanie wymierne"],
