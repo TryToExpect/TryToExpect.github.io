@@ -1,0 +1,12 @@
+{
+  "name": "jcobmath-tools",
+  "private": true,
+  "type": "module",
+  "description": "Kontrola treści strony JcobMath (uruchamiana w GitHub Actions)",
+  "scripts": {
+    "check": "node check.mjs"
+  },
+  "devDependencies": {
+    "mathjax-full": "3.2.2"
+  }
+}

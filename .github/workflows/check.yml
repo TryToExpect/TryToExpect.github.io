@@ -1,0 +1,24 @@
+name: Kontrola treści
+
+# Po każdym pushu sprawdza pliki strony (składnia, id i numeracja zadań, HTML, wzory TeX).
+# Czerwony krzyżyk przy commicie oznacza błąd do poprawienia; szczegóły są w adnotacjach przy plikach.
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+      - name: Instalacja MathJax (do sprawdzania wzorów)
+        run: npm install --prefix tools --no-audit --no-fund
+      - name: Kontrola plików strony
+        run: node tools/check.mjs
