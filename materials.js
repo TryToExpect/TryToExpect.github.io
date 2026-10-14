@@ -2,6 +2,7 @@
   Treść strony. Tu zmieniasz tytuł, działy i listę podtematów.
 
   Temat (topic):
+    key      stały klucz działu, np. "matura-11" (opcjonalny; zob. niżej)
     title    nazwa działu
     formula  wzór w LaTeX-u pokazywany na karcie (opcjonalnie; w tekście JS pamiętaj o podwójnym \\)
     items    lista podtematów: zwykły tekst albo { title, files: [...] }
@@ -10,7 +11,11 @@
   Teoria i zadania są osobnymi plikami JS, wczytywanymi w index.html:
     teoria/<sekcja>-<numer>.js   tekst teorii (HTML + wzory w \( \) i \[ \]), np. teoria/matura-3.js
     zadania/<sekcja>-<numer>.js  lista zadań z odpowiedziami i rozwiązaniami, np. zadania/matura-3.js
-  Numer to pozycja działu na liście poniżej (zaczynając od 1).
+  <sekcja>-<numer> to klucz działu: pole key, a gdy go nie ma, pozycja działu na liście poniżej (od 1, tak jest w „Studiach”).
+  Klucz jest częścią nazw plików, adresu linku (#matura-4-zadania-6) i zapisu zaliczeń w przeglądarkach uczniów.
+  Działy matury mają stałe klucze, więc kolejność na liście można zmieniać, a działy dzielić i dodawać bez psucia linków
+  i zaliczeń. Nowy dział dostaje nowy, nieużywany numer (prefiks jak sekcja, np. "matura-13"); klucza nie zmieniaj.
+  Gdy przenosisz zadanie do innego działu, dopisz je w window.MOVED_TASKS na końcu pliku.
 
   Zadanie (obiekt w zadania/<sekcja>-<numer>.js):
     id       stały numer zadania w tym pliku. Nie zmieniaj go i nie używaj ponownie: od niego zależą linki
@@ -42,20 +47,30 @@ window.MATERIALS = {
       "Treści zadań są oddane własnymi słowami, z zachowaniem wszystkich danych; oryginalne sformułowania znajdziesz w arkuszach CKE. Rozwiązania są autorskie. Najpierw spróbuj samodzielnie, potem otwórz odpowiedź lub rozwiązanie.",
     topics: [
       {
-        title: "Liczby rzeczywiste i wyrażenia algebraiczne",
+        key: "matura-11",
+        title: "Liczby rzeczywiste, procenty, potęgi i logarytmy",
         formula: "\\log_a b=\\frac{\\log_c b}{\\log_c a}",
         items: [
           "Zbiory liczbowe, przedziały, podzielność",
-          "Procenty i procent składany",
-          "Potęgi i pierwiastki",
+          "Procenty, promile i procent składany",
+          "Potęgi i pierwiastki, notacja wykładnicza",
           "Wartość bezwzględna i jej własności",
           "Logarytmy i ich własności",
+        ],
+        files: [],
+      },
+      {
+        key: "matura-1",
+        title: "Wyrażenia algebraiczne i dowody",
+        formula: "\\frac{a+b}{2}\\ge\\sqrt{ab}\\quad(a,b\\ge0)",
+        items: [
           "Wzory skróconego mnożenia i przekształcanie wyrażeń",
           "Nierówność między średnimi i dowody algebraiczne",
         ],
         files: [],
       },
       {
+        key: "matura-2",
         title: "Równania i nierówności",
         formula: "W(x)=(x-a)\\,Q(x)+W(a)",
         items: [
@@ -69,18 +84,31 @@ window.MATERIALS = {
         files: [],
       },
       {
-        title: "Funkcje i ich własności",
-        formula: "x_1+x_2=-\\frac{b}{a},\\qquad x_1x_2=\\frac{c}{a}",
+        key: "matura-3",
+        title: "Własności funkcji, funkcja liniowa, kwadratowa i wymierna",
+        formula: "f(x)=a(x-p)^2+q,\\quad p=-\\frac{b}{2a},\\ q=-\\frac{\\Delta}{4a}",
         items: [
           "Pojęcie funkcji, dziedzina, zbiór wartości, monotoniczność, parzystość",
           "Funkcja liniowa i kwadratowa (wzory Viète’a, zadania z parametrem)",
           "Funkcja wymierna (homograficzna)",
-          "Funkcja wykładnicza i logarytmiczna, równania i nierówności",
           "Przekształcenia wykresów funkcji (symetrie, przesunięcia, wartość bezwzględna z funkcji)",
         ],
         files: [],
       },
       {
+        key: "matura-12",
+        title: "Funkcja wykładnicza i logarytmiczna",
+        formula: "a^x=b\\iff x=\\log_a b\\quad(a>0,\\ a\\ne1,\\ b>0)",
+        items: [
+          "Funkcja wykładnicza i jej własności",
+          "Funkcja logarytmiczna i jej własności",
+          "Równania i nierówności wykładnicze i logarytmiczne",
+          "Zastosowania: wzrost wykładniczy, rozpad, stygnięcie",
+        ],
+        files: [],
+      },
+      {
+        key: "matura-4",
         title: "Trygonometria",
         formula: "\\sin(\\alpha+\\beta)=\\sin\\alpha\\cos\\beta+\\cos\\alpha\\sin\\beta",
         items: [
@@ -89,11 +117,11 @@ window.MATERIALS = {
           "Wzory na sumę i różnicę kątów, kąt podwojony, sumy funkcji trygonometrycznych",
           "Wykresy i własności funkcji trygonometrycznych",
           "Równania i nierówności trygonometryczne",
-          "Twierdzenie sinusów i cosinusów",
         ],
         files: [],
       },
       {
+        key: "matura-5",
         title: "Ciągi",
         formula: "S=\\sum_{k=0}^{\\infty}a_1q^{k}=\\frac{a_1}{1-q},\\quad |q|<1",
         items: [
@@ -106,6 +134,7 @@ window.MATERIALS = {
         files: [],
       },
       {
+        key: "matura-6",
         title: "Planimetria",
         formula: "c^2=a^2+b^2-2ab\\cos\\gamma",
         items: [
@@ -123,6 +152,7 @@ window.MATERIALS = {
         files: [],
       },
       {
+        key: "matura-7",
         title: "Geometria analityczna",
         formula: "d=\\frac{|Ax_0+By_0+C|}{\\sqrt{A^2+B^2}}",
         items: [
@@ -135,6 +165,7 @@ window.MATERIALS = {
         files: [],
       },
       {
+        key: "matura-8",
         title: "Stereometria",
         formula: "V=\\frac13\\,P_p\\cdot H",
         items: [
@@ -146,6 +177,7 @@ window.MATERIALS = {
         files: [],
       },
       {
+        key: "matura-9",
         title: "Kombinatoryka i prawdopodobieństwo",
         formula: "P(A\\mid B)=\\frac{P(B\\mid A)\\,P(A)}{P(B)}",
         items: [
@@ -159,6 +191,7 @@ window.MATERIALS = {
         files: [],
       },
       {
+        key: "matura-10",
         title: "Rachunek różniczkowy i analiza",
         formula: "f'(x_0)=\\lim_{h\\to0}\\frac{f(x_0+h)-f(x_0)}{h}",
         items: [
@@ -264,3 +297,10 @@ window.MATERIALS = {
     ],
   },
 };
+
+// Zadania przeniesione z jednego działu do drugiego (id zadania zostaje takie samo). Dzięki temu zaliczenia uczniów
+// i stare linki (np. #matura-1-zadania-2) nadal działają. from – klucz dawnego działu, to – klucz nowego, ids – id zadań.
+window.MOVED_TASKS = [
+  { from: "matura-1", to: "matura-11", ids: [1, 2] },
+  { from: "matura-3", to: "matura-12", ids: [1, 2, 3] },
+];

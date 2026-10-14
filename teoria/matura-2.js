@@ -41,7 +41,7 @@ Gdy \(W\ne0\): jedno rozwiązanie \(x=\tfrac{W_x}W,\ y=\tfrac{W_y}W\) (proste pr
 <div class="bx ex"><span class="t">Przykład</span>
 <p>\(|x-1|&lt;|x+3|\iff(x-1)^2&lt;(x+3)^2\iff-2x+1&lt;6x+9\iff x>-1\). To zbiór punktów bliższych \(1\) niż \(-3\).</p>
 </div>
-<p><b>Z parametrem:</b> liczba rozwiązań równania \(|f(x)|=m\) odpowiada liczbie punktów wspólnych wykresu \(y=|f(x)|\) z poziomą prostą \(y=m\) (dla \(m<0\) brak rozwiązań).</p>
+<p><b>Z parametrem:</b> liczba rozwiązań równania \(|f(x)|=m\) odpowiada liczbie punktów wspólnych wykresu \(y=|f(x)|\) z poziomą prostą \(y=m\) (dla \(m&lt;0\) brak rozwiązań).</p>
 
 <h3>Wielomiany</h3>
 <div class="bx def"><span class="t">Definicje</span>
@@ -52,6 +52,7 @@ Gdy \(W\ne0\): jedno rozwiązanie \(x=\tfrac{W_x}W,\ y=\tfrac{W_y}W\) (proste pr
 <li><b>Dzielenie z resztą:</b> \(W(x)=P(x)\,Q(x)+R(x)\), przy czym stopień \(R\) jest mniejszy od stopnia \(P\).</li>
 <li><b>Twierdzenie o reszcie (Bézouta):</b> reszta z dzielenia \(W(x)\) przez \((x-a)\) jest równa \(W(a)\). Zatem \(a\) jest pierwiastkiem \(\iff\) \((x-a)\mid W(x)\).</li>
 <li>Wielomian stopnia \(n\) ma co najwyżej \(n\) pierwiastków rzeczywistych. Wielomian nieparzystego stopnia ma co najmniej jeden pierwiastek.</li>
+<li>Jeśli wielomian \(W\) stopnia \(n\) ma \(n\) pierwiastków \(x_1,\dots,x_n\) (liczonych z krotnościami), to \(W(x)=a_n(x-x_1)(x-x_2)\cdots(x-x_n)\). Np. gdy liczby \(-3,\ 1,\ 7\) są pierwiastkami wielomianu \(W(x)=5x^3+bx^2+cx+d\), to \(W(x)=5(x+3)(x-1)(x-7)\).</li>
 <li><b>Schemat Hornera</b> ułatwia dzielenie przez \(x-a\) i liczenie \(W(a)\).</li>
 </ul>
 </div>

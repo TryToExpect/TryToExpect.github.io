@@ -638,6 +638,8 @@ dialog.has-tabs .tasks-head { border-bottom: 0; padding-bottom: 8px; }
 <script src="zadania/matura-8.js"></script>
 <script src="zadania/matura-9.js"></script>
 <script src="zadania/matura-10.js"></script>
+<script src="zadania/matura-11.js"></script>
+<script src="zadania/matura-12.js"></script>
 <script src="zadania/studia-6.js"></script>
 <script src="teoria/matura-1.js"></script>
 <script src="teoria/matura-2.js"></script>
@@ -649,6 +651,8 @@ dialog.has-tabs .tasks-head { border-bottom: 0; padding-bottom: 8px; }
 <script src="teoria/matura-8.js"></script>
 <script src="teoria/matura-9.js"></script>
 <script src="teoria/matura-10.js"></script>
+<script src="teoria/matura-11.js"></script>
+<script src="teoria/matura-12.js"></script>
 <script src="teoria/studia-6.js"></script>
 <script>
 (function () {
@@ -715,14 +719,18 @@ dialog.has-tabs .tasks-head { border-bottom: 0; padding-bottom: 8px; }
       const out = {
         id: id, name: sec.name || id, glyph: sec.glyph || '', unit: sec.unit || 'Dział',
         units: sec.units || ['dział', 'działy', 'działów'], intro: sec.intro || '',
-        topics: (sec.topics || []).map((t, i) => ({
-          n: i + 1, id: id + '-' + (i + 1), title: t.title || '', formula: t.formula || '', files: t.files || [],
-          tasks: (window.TASKS && window.TASKS[id + '-' + (i + 1)]) || [],
-          theory: (window.THEORY && window.THEORY[id + '-' + (i + 1)]) || '',
-          items: (t.items || []).map((it) => (typeof it === 'string'
-            ? { title: it, files: [] }
-            : { title: it.title || '', files: it.files || [] }))
-        }))
+        topics: (sec.topics || []).map((t, i) => {
+          // stały klucz działu (pole key w materials.js) albo pozycja na liście; po nim znajdują się pliki, linki i zaliczenia
+          const tid = t.key || (id + '-' + (i + 1));
+          return {
+            n: i + 1, id: tid, title: t.title || '', formula: t.formula || '', files: t.files || [],
+            tasks: (window.TASKS && window.TASKS[tid]) || [],
+            theory: (window.THEORY && window.THEORY[tid]) || '',
+            items: (t.items || []).map((it) => (typeof it === 'string'
+              ? { title: it, files: [] }
+              : { title: it.title || '', files: it.files || [] }))
+          };
+        })
       };
       out.fileCount = out.topics.reduce((n, t) => n + t.files.length + t.items.reduce((m, it) => m + it.files.length, 0), 0);
       out.taskCount = out.topics.reduce((n, t) => n + t.tasks.length, 0);
@@ -1054,6 +1062,32 @@ dialog.has-tabs .tasks-head { border-bottom: 0; padding-bottom: 8px; }
   };
   let done = readDone();
   const saveDone = () => { try { localStorage.setItem(DONE_KEY, JSON.stringify(done)); } catch (e) { /* tryb prywatny: stan zostaje do zamknięcia karty */ } };
+
+  // Zadania przeniesione do innego działu (window.MOVED_TASKS w materials.js): zaliczenia zapisane pod starym
+  // działem przenosimy pod nowy, a stare linki do tych zadań przekierowujemy.
+  const MOVED = Array.isArray(window.MOVED_TASKS) ? window.MOVED_TASKS : [];
+  const movedTo = (topicId, taskId) => {
+    const mv = MOVED.find((m) => m.from === topicId && (m.ids || []).map(String).includes(String(taskId)));
+    return mv ? mv.to : null;
+  };
+  function migrateDone(d) {
+    let changed = false;
+    for (const mv of MOVED) {
+      const from = d[mv.from];
+      if (!from) continue;
+      for (const id of mv.ids || []) {
+        const k = String(id);
+        if (!from[k]) continue;
+        (d[mv.to] || (d[mv.to] = {}))[k] = 1;
+        delete from[k];
+        changed = true;
+      }
+      if (!Object.keys(from).length) delete d[mv.from];
+    }
+    return changed;
+  }
+  if (migrateDone(done)) saveDone();
+
   const isDone = (topic, key) => !!(done[topic.id] && done[topic.id][key]);
   function setDone(topic, key, on) {
     const m = done[topic.id] || (done[topic.id] = {});
@@ -1098,6 +1132,7 @@ dialog.has-tabs .tasks-head { border-bottom: 0; padding-bottom: 8px; }
   window.addEventListener('storage', (e) => {
     if (e.key !== DONE_KEY && e.key !== null) return;
     done = readDone();
+    if (migrateDone(done)) saveDone();
     refreshAllProgress();
     syncDialogTasks();
   });
@@ -1334,10 +1369,13 @@ dialog.has-tabs .tasks-head { border-bottom: 0; padding-bottom: 8px; }
     if (!m || !panelEls[m[1]]) return false;
     select(m[1]);
     if (m[2]) {
-      const target = document.getElementById(m[1] + '-' + m[2]);
+      // stary link do przeniesionego zadania prowadzi do jego nowego działu
+      const moved = m[3] === 'zadania' && m[4] ? movedTo(m[1] + '-' + m[2], m[4]) : null;
+      const topicId = moved || (m[1] + '-' + m[2]);
+      const target = document.getElementById(topicId);
       if (target) target.scrollIntoView({ block: 'start' });
       if (m[3]) {
-        const hit = topicIndex[m[1] + '-' + m[2]];
+        const hit = topicIndex[topicId];
         const theory = m[3] === 'teoria';
         if (hit) openMaterials(hit.sec, hit.topic, theory ? 'theory' : 'tasks', theory ? (+m[4] || 0) : resolveTaskKey(hit.topic, m[4]));
       }
