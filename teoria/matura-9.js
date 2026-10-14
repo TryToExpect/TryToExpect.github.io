@@ -14,8 +14,8 @@
 <tr><td><b>Permutacje</b> \(n\) różnych elementów (kolejność)</td><td>\(P_n=n!=1\cdot2\cdots n\) (\(0!=1\))</td></tr>
 <tr><td>Permutacje z powtórzeniami (\(k_1,\dots,k_r\) jednakowych, \(\sum k_i=n\))</td><td>\(\dfrac{n!}{k_1!\,k_2!\cdots k_r!}\)</td></tr>
 <tr><td><b>Wariacje bez powtórzeń</b> – \(k\) z \(n\), kolejność ważna</td><td>\(V_n^k=\dfrac{n!}{(n-k)!}=n(n-1)\cdots(n-k+1)\)</td></tr>
-<tr><td><b>Wariacje z powtórzeniami</b></td><td>\(n^k\)</td></tr>
-<tr><td><b>Kombinacje</b> – \(k\)-elementowe podzbiory \(n\)-elementowego zbioru</td><td>\(\dbinom nk=\dfrac{n!}{k!\,(n-k)!}\)</td></tr>
+<tr><td><b>Wariacje z powtórzeniami</b> – \(k\)-wyrazowe ciągi o wyrazach z \(n\)-elementowego zbioru</td><td>\(W_n^k=n^k\)</td></tr>
+<tr><td><b>Kombinacje</b> – \(k\)-elementowe podzbiory \(n\)-elementowego zbioru</td><td>\(C_n^k=\dbinom nk=\dfrac{n!}{k!\,(n-k)!}\), \(\ 0\le k\le n\)</td></tr>
 </tbody></table></div>
 </div>
 <div class="bx thm"><span class="t">Własności symbolu Newtona</span>
@@ -83,8 +83,9 @@
 
 <h3>Schemat Bernoulliego</h3>
 <div class="bx thm"><span class="t">Wzór</span>
-<p>Powtarzamy \(n\) niezależnych prób; w każdej „sukces” z prawdopodobieństwem \(p\), „porażka” z \(q=1-p\). Prawdopodobieństwo dokładnie \(k\) sukcesów:
+<p>Powtarzamy \(n\) niezależnych prób (próby Bernoulliego); w każdej „sukces” z prawdopodobieństwem \(p\), „porażka” z \(q=1-p\). Prawdopodobieństwo dokładnie \(k\) sukcesów:
 \[P_n(k)=\binom nk\,p^k\,q^{\,n-k},\qquad k=0,1,\dots,n.\]
+Zdarzenie „dokładnie \(k\) sukcesów w \(n\) próbach” zapisuje się też jako \(S_n=k\) (\(S_n\) – liczba sukcesów), czyli \(P(S_n=k)=P_n(k)\).
 </p>
 <ul>
 <li>\(P(\text{co najmniej }k)=\sum_{j\ge k}P_n(j)\); „co najmniej jeden sukces” \(=1-q^n\).</li>
