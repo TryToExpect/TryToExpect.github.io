@@ -380,6 +380,8 @@ dialog.tasks::backdrop { background: rgba(14, 19, 32, 0.62); }
 .tk-tags { display: flex; flex-wrap: wrap; gap: 4px 6px; padding: 2px 16px 8px; }
 .tk-tag { font: 400 0.6875rem/1.4 var(--f-mono); color: var(--ink-2); }
 .tk-tag + .tk-tag::before { content: "·"; margin-right: 6px; }
+.tk-req { font: 500 0.6875rem/1.4 var(--f-mono); color: var(--accent); }
+.tk-tag + .tk-req::before, .tk-req + .tk-req::before { content: "·"; margin-right: 6px; color: var(--ink-2); }
 .tk-actions { display: flex; flex-wrap: wrap; gap: 8px; padding: 2px 16px 14px; }
 .tk-btn {
   appearance: none; padding: 6px 12px; font: 500 0.8125rem/1.2 var(--f-body);
@@ -515,6 +517,22 @@ dialog.has-tabs .tasks-head { border-bottom: 0; padding-bottom: 8px; }
 .bx.met { --k: var(--acc-studia); background: var(--acc-studia-soft); }
 .bx.ex { --k: var(--ink-2); background: var(--surface); }
 .bx.warn { --k: var(--pen); background: var(--pen-soft); }
+.bx.pf { --k: var(--teal); background: var(--surface); }
+.bx.pf > .t::after { content: " · z listy podstawy"; letter-spacing: 0.04em; text-transform: none; font-weight: 400; color: var(--ink-2); }
+details.opt { margin: 16px 0; background: var(--surface); border: 1px dashed var(--line); border-radius: 6px; }
+details.opt > summary {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; padding: 9px 14px;
+  font: 600 1.0625rem/1.35 var(--f-body); color: var(--ink); cursor: pointer; list-style: none;
+}
+details.opt > summary::-webkit-details-marker { display: none; }
+details.opt > summary::before { content: "▸"; flex: none; color: var(--ink-2); transition: transform 0.15s; }
+details.opt[open] > summary::before { transform: rotate(90deg); }
+details.opt > summary:hover { background: var(--accent-soft); }
+details.opt > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+details.opt > .opt-body { padding: 4px 14px 6px; border-top: 1px dashed var(--line); }
+.optb { padding: 2px 7px; font: 600 0.6875rem/1.3 var(--f-mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--amber); background: var(--amber-soft); border-radius: 3px; }
+.optb.pro { color: var(--violet); background: var(--violet-soft); }
+@media (prefers-reduced-motion: reduce) { details.opt > summary::before { transition: none; } }
 .bx .use { margin: 2px 0 2px; font: 400 0.6875rem/1.4 var(--f-mono); color: var(--ink-2); text-align: right; }
 .tw { margin: 8px 0 12px; overflow-x: auto; }
 .wide { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
@@ -656,6 +674,7 @@ dialog.has-tabs .tasks-head { border-bottom: 0; padding-bottom: 8px; }
 <script src="zadania/matura-10.js"></script>
 <script src="zadania/matura-11.js"></script>
 <script src="zadania/matura-12.js"></script>
+<script src="zadania/matura-13.js"></script>
 <script src="zadania/studia-6.js"></script>
 <script src="teoria/matura-1.js"></script>
 <script src="teoria/matura-2.js"></script>
@@ -669,12 +688,15 @@ dialog.has-tabs .tasks-head { border-bottom: 0; padding-bottom: 8px; }
 <script src="teoria/matura-10.js"></script>
 <script src="teoria/matura-11.js"></script>
 <script src="teoria/matura-12.js"></script>
+<script src="teoria/matura-13.js"></script>
+<script src="teoria/matura-14.js"></script>
 <script src="teoria/studia-6.js"></script>
 <script>
 (function () {
   'use strict';
 
   const SITE = window.SITE || {};
+  const REQS = window.REQS || {};
   const TYPE_LABEL = { teoria: 'Teoria', zadania: 'Zadania', rozwiazania: 'Rozwiązania', arkusz: 'Arkusz' };
   const NEW_DAYS = 14;
   const SVG_ATTRS = 'viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"';
@@ -732,6 +754,7 @@ dialog.has-tabs .tasks-head { border-bottom: 0; padding-bottom: 8px; }
     const data = window.MATERIALS || {};
     return Object.keys(data).map((id) => {
       const sec = data[id] || {};
+      let num = 0;   // numer działu na karcie; działy informacyjne (info: true) nie są numerowane
       const out = {
         id: id, name: sec.name || id, glyph: sec.glyph || '', unit: sec.unit || 'Dział',
         units: sec.units || ['dział', 'działy', 'działów'], intro: sec.intro || '',
@@ -739,7 +762,7 @@ dialog.has-tabs .tasks-head { border-bottom: 0; padding-bottom: 8px; }
           // stały klucz działu (pole key w materials.js) albo pozycja na liście; po nim znajdują się pliki, linki i zaliczenia
           const tid = t.key || (id + '-' + (i + 1));
           return {
-            n: i + 1, id: tid, title: t.title || '', formula: t.formula || '', files: t.files || [],
+            n: t.info ? 0 : ++num, info: !!t.info, kicker: t.kicker || '', id: tid, title: t.title || '', formula: t.formula || '', files: t.files || [],
             tasks: (window.TASKS && window.TASKS[tid]) || [],
             theory: (window.THEORY && window.THEORY[tid]) || '',
             items: (t.items || []).map((it) => (typeof it === 'string'
@@ -756,6 +779,9 @@ dialog.has-tabs .tasks-head { border-bottom: 0; padding-bottom: 8px; }
       return out;
     });
   }
+
+  // podpis nad nazwą działu: "Dział 03" albo, dla działów informacyjnych, własny podpis (pole kicker)
+  const kickerOf = (sec, topic) => topic.kicker || (topic.info ? 'Poradnik' : sec.unit + ' ' + String(topic.n).padStart(2, '0'));
 
   function chip(f) {
     return el('a', {
@@ -823,7 +849,7 @@ dialog.has-tabs .tasks-head { border-bottom: 0; padding-bottom: 8px; }
     const card = el('article', { class: soon ? 'card is-soon' : 'card', id: topic.id },
       el('header', { class: 'card-head' },
         el('div', { class: 'card-id' },
-          el('p', { class: 'kicker', text: sec.unit + ' ' + String(topic.n).padStart(2, '0') }),
+          el('p', { class: 'kicker', text: kickerOf(sec, topic) }),
           el('h2', { class: 'card-title', text: tidy(topic.title) })),
         total ? el('span', { class: 'count', text: total + ' PDF' }) : (soon ? el('span', { class: 'soon', text: 'Wkrótce' }) : null)),
       topic.formula ? el('div', { class: 'formula', 'aria-hidden': 'true', text: '\\(\\displaystyle ' + topic.formula + '\\)' }) : null,
@@ -1029,9 +1055,10 @@ dialog.has-tabs .tasks-head { border-bottom: 0; padding-bottom: 8px; }
 
     for (const sec of model) {
       const n = shown[sec.id] || 0, total = sec.topics.length;
+      const numbered = sec.topics.filter((t) => !t.info).length;   // działy informacyjne (poradnik) nie liczą się jako działy
       tabEls[sec.id].querySelector('[data-role="sub"]').textContent = filtering
         ? 'Pasuje: ' + n + ' z ' + total
-        : total + ' ' + plural(total, sec.units) + (sec.fileCount ? ' · ' + sec.fileCount + ' PDF' : '')
+        : numbered + ' ' + plural(numbered, sec.units) + (sec.fileCount ? ' · ' + sec.fileCount + ' PDF' : '')
           + (sec.taskCount ? ' · ' + sec.taskCount + ' ' + plural(sec.taskCount, ['zadanie', 'zadania', 'zadań']) : '');
       const empty = panelEls[sec.id].querySelector('.empty');
       empty.hidden = !(filtering && n === 0);
@@ -1082,9 +1109,19 @@ dialog.has-tabs .tasks-head { border-bottom: 0; padding-bottom: 8px; }
   // Zadania przeniesione do innego działu (window.MOVED_TASKS w materials.js): zaliczenia zapisane pod starym
   // działem przenosimy pod nowy, a stare linki do tych zadań przekierowujemy.
   const MOVED = Array.isArray(window.MOVED_TASKS) ? window.MOVED_TASKS : [];
+  // as: { staryId: nowyId } – gdy zadanie w nowym dziale dostało inne id
+  const newId = (mv, k) => (mv.as && mv.as[k] != null ? String(mv.as[k]) : k);
+  // zadanie mogło być przenoszone kilka razy (kolejne wpisy w MOVED_TASKS), więc idziemy za całym łańcuchem
   const movedTo = (topicId, taskId) => {
-    const mv = MOVED.find((m) => m.from === topicId && (m.ids || []).map(String).includes(String(taskId)));
-    return mv ? mv.to : null;
+    let at = topicId, k = String(taskId), hit = null;
+    for (let guard = 0; guard < 10; guard++) {
+      const mv = MOVED.find((m) => m.from === at && (m.ids || []).map(String).includes(k));
+      if (!mv) break;
+      hit = { to: mv.to, id: newId(mv, k) };
+      at = hit.to;
+      k = hit.id;
+    }
+    return hit;
   };
   function migrateDone(d) {
     let changed = false;
@@ -1094,7 +1131,7 @@ dialog.has-tabs .tasks-head { border-bottom: 0; padding-bottom: 8px; }
       for (const id of mv.ids || []) {
         const k = String(id);
         if (!from[k]) continue;
-        (d[mv.to] || (d[mv.to] = {}))[k] = 1;
+        (d[mv.to] || (d[mv.to] = {}))[newId(mv, k)] = 1;
         delete from[k];
         changed = true;
       }
@@ -1220,8 +1257,11 @@ dialog.has-tabs .tasks-head { border-bottom: 0; padding-bottom: 8px; }
         (t.label || t.src) ? el('span', { class: 'tk-src', text: t.label || ('CKE · matura ' + t.src) }) : null),
       q
     ];
-    if (t.tags && t.tags.length) {
-      kids.push(el('div', { class: 'tk-tags' }, t.tags.map((x) => el('span', { class: 'tk-tag', text: x }))));
+    const reqs = Array.isArray(t.req) ? t.req : (t.req ? [t.req] : []);
+    if ((t.tags && t.tags.length) || reqs.length) {
+      kids.push(el('div', { class: 'tk-tags' },
+        (t.tags || []).map((x) => el('span', { class: 'tk-tag', text: x })),
+        reqs.map((c) => el('span', { class: 'tk-req', title: 'Wymaganie z podstawy programowej', text: c + (REQS[c] ? ' – ' + REQS[c] : '') }))));
     }
     const actions = el('div', { class: 'tk-actions' }), panels = [];
     const add = (key, label, html) => {
@@ -1337,7 +1377,7 @@ dialog.has-tabs .tasks-head { border-bottom: 0; padding-bottom: 8px; }
 
   function openMaterials(sec, topic, tab, num) {
     tab = tab === 'theory' && topic.theory ? 'theory' : (topic.tasks.length ? 'tasks' : 'theory');
-    dlgKicker.textContent = sec.unit + ' ' + String(topic.n).padStart(2, '0') + (tab === 'theory' ? ' · Teoria' : ' · ' + (sec.tasksLabel || 'Zadania'));
+    dlgKicker.textContent = kickerOf(sec, topic) + (tab === 'theory' ? ' · Teoria' : ' · ' + (sec.tasksLabel || 'Zadania'));
     dlgTitle.textContent = tidy(topic.title);
     const fresh = dlgTopic !== topic.id;
     if (fresh) { buildMaterials(sec, topic); dlgTopic = topic.id; refreshProgress(topic); }
@@ -1373,6 +1413,8 @@ dialog.has-tabs .tasks-head { border-bottom: 0; padding-bottom: 8px; }
     b.setAttribute('aria-expanded', open ? 'true' : 'false');
     if (open) fitWide(p);
   });
+  // <details> nie bąbelkuje zdarzenia toggle, więc nasłuch w fazie przechwytywania
+  dlgBody.addEventListener('toggle', (e) => { if (e.target && e.target.open) fitWide(e.target); }, true);
   dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
   $('tasks-close').addEventListener('click', () => dlg.close());
   dlg.addEventListener('close', () => {
@@ -1387,13 +1429,13 @@ dialog.has-tabs .tasks-head { border-bottom: 0; padding-bottom: 8px; }
     if (m[2]) {
       // stary link do przeniesionego zadania prowadzi do jego nowego działu
       const moved = m[3] === 'zadania' && m[4] ? movedTo(m[1] + '-' + m[2], m[4]) : null;
-      const topicId = moved || (m[1] + '-' + m[2]);
+      const topicId = moved ? moved.to : (m[1] + '-' + m[2]);
       const target = document.getElementById(topicId);
       if (target) target.scrollIntoView({ block: 'start' });
       if (m[3]) {
         const hit = topicIndex[topicId];
         const theory = m[3] === 'teoria';
-        if (hit) openMaterials(hit.sec, hit.topic, theory ? 'theory' : 'tasks', theory ? (+m[4] || 0) : resolveTaskKey(hit.topic, m[4]));
+        if (hit) openMaterials(hit.sec, hit.topic, theory ? 'theory' : 'tasks', theory ? (+m[4] || 0) : resolveTaskKey(hit.topic, moved ? moved.id : m[4]));
       }
     }
     return true;

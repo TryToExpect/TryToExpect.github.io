@@ -5,6 +5,7 @@
     src: "maj 2025 · zad. 3",
     pts: 3,
     tags: ["trójkąt równoboczny", "pole trójkąta", "sinus różnicy kątów"],
+    req: ["ZP VII.3", "ZP VIII.12"],
     q: String.raw`<p>W trójkącie równobocznym \(ABC\) punkt \(D\) leży na boku \(BC\). Stosunek pola trójkąta \(ABD\) do pola trójkąta \(ADC\) jest równy \(\dfrac{\sqrt3-1}{2}\).</p>
 <p>Oblicz miarę kąta \(DAC\).</p>`,
     ans: String.raw`\(\angle DAC=45^\circ\)`,
@@ -29,6 +30,7 @@ Dzielimy przez \(\sin\varphi\) (jest dodatni, bo \(0^\circ<\varphi<60^\circ\)) i
     src: "maj 2021 · zad. 8",
     pts: 3,
     tags: ["trójkąt równoboczny", "pole", "geometria analityczna jako narzędzie"],
+    req: ["ZP VIII.12", "ZP VIII.8"],
     q: String.raw`<p>Dany jest trójkąt równoboczny \(ABC\). Na bokach \(AB\) i \(AC\) wybrano punkty – odpowiednio – \(D\) i \(E\) takie, że \(|BD|=|AE|=\tfrac13|AB|\). Odcinki \(CD\) i \(BE\) przecinają się w punkcie \(P\) (zobacz rysunek).</p>
 <p>Wykaż, że pole trójkąta \(DBP\) jest \(21\) razy mniejsze od pola trójkąta \(ABC\).</p>`,
     fig: String.raw`<svg class="fig" viewBox="0 0 330 272" width="270" height="223" role="img" aria-label="Trójkąt równoboczny ABC z odcinkami CD i BE"><polygon class="f" points="204,246 292,246 197.7,213.3"/><polygon class="s" points="28,246 292,246 160,17.4"/><line class="a" x1="160" y1="17.4" x2="204" y2="246"/><line class="a" x1="292" y1="246" x2="72" y2="169.8"/><circle class="dot" cx="204" cy="246" r="2.4"/><circle class="dot" cx="72" cy="169.8" r="2.4"/><circle class="dot" cx="197.7" cy="213.3" r="2.4"/><text x="12" y="262">A</text><text x="297" y="262">B</text><text x="156" y="12">C</text><text x="200" y="264">D</text><text x="54" y="172">E</text><text x="184" y="206">P</text></svg>`,
@@ -52,6 +54,7 @@ Pole trójkąta \(ABC\): \(\dfrac{a^2\sqrt3}4=\dfrac{9\sqrt3}4\).</p>
     src: "maj 2023 · zad. 5",
     pts: 3,
     tags: ["trójkąt prostokątny", "twierdzenie sinusów", "dowód"],
+    req: ["ZP VII.3", "ZR VII.7"],
     q: String.raw`<p>Dany jest trójkąt prostokątny \(ABC\), w którym \(|\angle ABC|=90^\circ\) oraz \(|\angle CAB|=60^\circ\). Punkty \(K\) i \(L\) leżą na bokach – odpowiednio – \(AB\) i \(BC\) tak, że \(|BK|=|BL|=1\) (zobacz rysunek). Odcinek \(KL\) przecina wysokość \(BD\) tego trójkąta w punkcie \(N\), a ponadto \(|AD|=2\).</p>
 <p>Wykaż, że \(|ND|=\sqrt3+1\).</p>`,
     fig: String.raw`<svg class="fig" viewBox="0 0 356 220" width="314" height="194" role="img" aria-label="Trójkąt prostokątny ABC z punktami K, L, D, N"><polygon class="s" points="24,20 24,196 328.8,196"/><line class="a" x1="24" y1="196" x2="100.2" y2="64"/><line class="p" x1="24" y1="152" x2="68" y2="196"/><path class="s" d="M24,188h8v8"/><circle class="dot" cx="24" cy="152" r="2.4"/><circle class="dot" cx="68" cy="196" r="2.4"/><circle class="dot" cx="100.2" cy="64" r="2.4"/><circle class="dot" cx="40.1" cy="168.1" r="2.4"/><text x="8" y="22">A</text><text x="8" y="214">B</text><text x="335" y="214">C</text><text x="8" y="156">K</text><text x="65" y="214">L</text><text x="106" y="60">D</text><text x="45" y="163">N</text></svg>`,
@@ -73,6 +76,7 @@ Wartość \(\sin75^\circ\) znajdziemy ze wzoru na sinus sumy: \(\sin75^\circ=\si
     src: "maj 2024 · zad. 8",
     pts: 4,
     tags: ["dwusieczna", "podobieństwo trójkątów", "twierdzenie sinusów", "dowód"],
+    req: ["ZR VII.7", "ZP VIII.8"],
     q: String.raw`<p>Dany jest trójkąt \(ABC\), który nie jest równoramienny. W tym trójkącie miara kąta \(ABC\) jest dwa razy większa od miary kąta \(BAC\).</p>
 <p>Wykaż, że długości boków tego trójkąta spełniają warunek
 \[|AC|^2=|BC|^2+|AB|\cdot|BC|.\]</p>`,
@@ -89,11 +93,39 @@ Czyli \(b^2=a^2+ac\), to znaczy \(|AC|^2=|BC|^2+|AB|\cdot|BC|\). \(\blacksquare\
 <p class="note">Założenie, że trójkąt nie jest równoramienny, nie było nam potrzebne: teza zachodzi w każdym trójkącie, w którym \(\angle B=2\angle A\).</p>`
   },
   {
+    id: 10,
+    group: "Trójkąty",
+    label: "autorskie",
+    pts: 3,
+    tags: ["rodzaj trójkąta", "twierdzenie cosinusów", "pole trójkąta"],
+    req: ["ZP VIII.2", "ZP VII.3"],
+    q: String.raw`<p>Boki trójkąta mają długości \(5\), \(6\) i \(7\). Rozstrzygnij, czy trójkąt jest ostrokątny, prostokątny czy rozwartokątny, oblicz cosinus jego największego kąta i pole trójkąta.</p>`,
+    ans: String.raw`ostrokątny; \(\cos\gamma=\dfrac15\); pole \(6\sqrt6\)`,
+    sol: String.raw`<p class="step"><b>Rodzaj.</b> Największy kąt \(\gamma\) leży naprzeciw najdłuższego boku \(7\). Porównujemy \(7^2=49\) z \(5^2+6^2=61\): \(49&lt;61\), więc \(\gamma\) jest ostry i trójkąt jest ostrokątny.</p>
+<p class="step"><b>Cosinus.</b> Z twierdzenia cosinusów \(\cos\gamma=\dfrac{5^2+6^2-7^2}{2\cdot5\cdot6}=\dfrac{12}{60}=\dfrac15\).</p>
+<p class="step"><b>Pole.</b> \(\sin\gamma=\sqrt{1-\tfrac1{25}}=\dfrac{2\sqrt6}5\), więc \(P=\tfrac12\cdot5\cdot6\cdot\dfrac{2\sqrt6}5=6\sqrt6\).</p>`
+  },
+  {
+    id: 12,
+    group: "Trójkąty",
+    label: "autorskie",
+    pts: 4,
+    tags: ["rozwiązywanie trójkąta", "twierdzenie cosinusów", "twierdzenie sinusów", "pole"],
+    req: ["ZR VII.8", "ZR VII.7", "ZP VII.3"],
+    q: String.raw`<p>W trójkącie \(ABC\) dane są: \(|BC|=7\), \(|AC|=5\) oraz \(|\angle ACB|=60^\circ\). Oblicz długość boku \(AB\), sinus kąta \(BAC\) oraz pole trójkąta.</p>`,
+    ans: String.raw`\(|AB|=\sqrt{39}\); \(\sin\angle BAC=\dfrac{7\sqrt{13}}{26}\); pole \(\dfrac{35\sqrt3}4\)`,
+    sol: String.raw`<p class="step"><b>Bok \(AB\).</b> Znamy dwa boki i kąt między nimi, więc stosujemy twierdzenie cosinusów: \(|AB|^2=7^2+5^2-2\cdot7\cdot5\cos60^\circ=49+25-35=39\), czyli \(|AB|=\sqrt{39}\).</p>
+<p class="step"><b>Sinus kąta \(A\).</b> Z twierdzenia sinusów \(\dfrac{|BC|}{\sin\angle BAC}=\dfrac{|AB|}{\sin60^\circ}\), więc \(\sin\angle BAC=\dfrac{7\cdot\frac{\sqrt3}2}{\sqrt{39}}=\dfrac{7}{2\sqrt{13}}=\dfrac{7\sqrt{13}}{26}\approx0{,}971\).</p>
+<p class="step"><b>Pole.</b> \(P=\tfrac12\cdot7\cdot5\cdot\sin60^\circ=\dfrac{35\sqrt3}4\).</p>
+<p class="note">Kąt \(BAC\) leży naprzeciw najdłuższego boku, ale jest ostry, bo \(7^2=49&lt;39+25=64\); dlatego sinus wyznacza go jednoznacznie.</p>`
+  },
+  {
     id: 5,
     group: "Czworokąty",
     src: "maj 2025 · zad. 7",
     pts: 4,
     tags: ["trapez", "pole trapezu", "odcinek łączący środki ramion", "dowód"],
+    req: ["ZP VIII.4", "ZP VIII.9"],
     q: String.raw`<p>W trapezie \(ABCD\) o podstawach \(AB\) i \(CD\) punkt \(E\) jest środkiem ramienia \(AD\), a punkt \(F\) jest środkiem ramienia \(BC\) trapezu. Stosunek pola trapezu \(EFCD\) do pola trapezu \(ABFE\) jest równy \(\tfrac12\).</p>
 <p>Wykaż, że \(\dfrac{|CD|}{|AB|}=\dfrac15\).</p>`,
     sol: String.raw`<p class="step"><b>Pomysł.</b> Pola obu trapezów policzymy ze wzoru \(P=\dfrac{a+b}2\cdot h\), więc potrzebujemy długości podstaw i wysokości. Pomaga twierdzenie o odcinku łączącym środki ramion trapezu: jest równoległy do podstaw, a jego długość to średnia arytmetyczna długości podstaw.</p>
@@ -114,6 +146,7 @@ czyli \(\dfrac{|CD|}{|AB|}=\dfrac ba=\dfrac15\). \(\blacksquare\)</p>
     src: "maj 2024 · zad. 9",
     pts: 4,
     tags: ["kwadrat", "pola figur", "podobieństwo trójkątów", "współrzędne"],
+    req: ["ZP VIII.8", "ZP VIII.9"],
     q: String.raw`<p>Dany jest kwadrat \(ABCD\) o boku długości \(a\). Punkt \(E\) jest środkiem boku \(CD\). Punkt \(F\) jest punktem wspólnym odcinków \(AE\) i \(BD\), a punkt \(G\) – punktem wspólnym odcinków \(AC\) i \(BD\). Przekątna \(BD\) dzieli trójkąt \(ACE\) na dwie figury: \(AGF\) oraz \(CEFG\) (zobacz rysunek).</p>
 <p>Oblicz pola figur \(AGF\) oraz \(CEFG\).</p>`,
     fig: String.raw`<svg class="fig" viewBox="0 0 240 224" width="230" height="214" role="img" aria-label="Kwadrat ABCD z odcinkiem AE i przekątnymi AC, BD"><polygon class="f" points="30,200 118,112 88.7,82.7"/><polygon class="f2" points="206,24 118,24 88.7,82.7 118,112"/><polygon class="s" points="30,200 206,200 206,24 30,24"/><line class="a" x1="30" y1="200" x2="206" y2="24"/><line class="a" x1="206" y1="200" x2="30" y2="24"/><line class="p" x1="30" y1="200" x2="118" y2="24"/><circle class="dot" cx="118" cy="24" r="2.4"/><circle class="dot" cx="88.7" cy="82.7" r="2.4"/><circle class="dot" cx="118" cy="112" r="2.4"/><text x="12" y="216">A</text><text x="214" y="216">B</text><text x="214" y="18">C</text><text x="12" y="18">D</text><text x="115" y="14">E</text><text x="71" y="85">F</text><text x="124" y="126">G</text><text class="m" x="114" y="216">a</text></svg>`,
@@ -134,6 +167,7 @@ czyli \(\dfrac{|CD|}{|AB|}=\dfrac ba=\dfrac15\). \(\blacksquare\)</p>
     src: "maj 2026 · zad. 4",
     pts: 3,
     tags: ["kwadrat", "prostopadłość", "współrzędne", "dowód"],
+    req: ["ZP VIII.11", "ZP IX.3"],
     q: String.raw`<p>Punkty \(K\) i \(L\) są środkami – odpowiednio – boków \(AB\) i \(BC\) kwadratu \(ABCD\) o boku długości \(a\). Punkt \(M\) jest takim punktem na boku \(BC\), że odcinki \(DK\) i \(KM\) są prostopadłe. Odcinek \(AL\) przecina odcinki \(DK\) oraz \(DM\) w punktach – odpowiednio – \(P\) oraz \(Q\) (zobacz rysunek).</p>
 <p>Wykaż, że \(|PQ|=\dfrac{\sqrt5}{5}\,a\).</p>`,
     fig: String.raw`<svg class="fig" viewBox="0 0 250 224" width="230" height="206" role="img" aria-label="Kwadrat ABCD z punktami K, L, M oraz P, Q"><polygon class="s" points="30,200 206,200 206,24 30,24"/><line class="a" x1="30" y1="24" x2="118" y2="200"/><line class="a" x1="118" y1="200" x2="206" y2="156"/><line class="p" x1="30" y1="200" x2="206" y2="112"/><line class="a" x1="30" y1="24" x2="206" y2="156"/><path class="s" d="M110,200v-8h8"/><circle class="dot" cx="118" cy="200" r="2.4"/><circle class="dot" cx="206" cy="112" r="2.4"/><circle class="dot" cx="206" cy="156" r="2.4"/><circle class="dot" cx="100.4" cy="164.8" r="2.4"/><circle class="dot" cx="170.8" cy="129.6" r="2.4"/><text x="12" y="216">A</text><text x="214" y="216">B</text><text x="214" y="18">C</text><text x="12" y="18">D</text><text x="114" y="216">K</text><text x="212" y="116">L</text><text x="212" y="161">M</text><text x="86" y="161">P</text><text x="157" y="126">Q</text></svg>`,
@@ -151,6 +185,7 @@ czyli \(\dfrac{|CD|}{|AB|}=\dfrac ba=\dfrac15\). \(\blacksquare\)</p>
     src: "maj 2023 · zad. 8",
     pts: 4,
     tags: ["czworokąt opisany na okręgu", "twierdzenie sinusów", "obwód"],
+    req: ["ZR VIII.1", "ZR VII.7"],
     q: String.raw`<p>Czworokąt \(ABCD\), w którym \(|BC|=4\) i \(|CD|=5\), jest opisany na okręgu. Przekątna \(AC\) tego czworokąta tworzy z bokiem \(BC\) kąt o mierze \(60^\circ\), natomiast z bokiem \(AB\) – kąt ostry, którego sinus jest równy \(\tfrac14\).</p>
 <p>Oblicz obwód czworokąta \(ABCD\).</p>`,
     ans: String.raw`\(10+16\sqrt3\)`,
@@ -168,6 +203,7 @@ czyli \(\dfrac{|CD|}{|AB|}=\dfrac ba=\dfrac15\). \(\blacksquare\)</p>
     src: "maj 2026 · zad. 11",
     pts: 6,
     tags: ["czworokąt wpisany i opisany", "twierdzenie cosinusów", "pole"],
+    req: ["ZR VIII.1", "ZP VII.3"],
     q: String.raw`<p>W czworokącie \(ABCD\) są dane: \(|AB|=9\), \(|AD|=10\) oraz \(|\angle BAD|=60^\circ\). W ten czworokąt wpisano okrąg oraz na tym czworokącie opisano okrąg.</p>
 <p>Oblicz długości boków \(BC\) i \(CD\) oraz pole czworokąta \(ABCD\).</p>`,
     ans: String.raw`\(|BC|=5\), \(|CD|=6\), \(P=30\sqrt3\)`,
@@ -183,5 +219,31 @@ Zatem \(3x^2+3x-90=0\), czyli \(x^2+x-30=0\), \((x-5)(x+6)=0\). Długość jest 
 <p class="step"><b>Krok 5: pole.</b> Dzielimy czworokąt przekątną \(BD\) na dwa trójkąty i liczymy pola wzorem \(\tfrac12ab\sin\gamma\):
 \[P=\tfrac12\cdot9\cdot10\cdot\sin60^\circ+\tfrac12\cdot5\cdot6\cdot\sin120^\circ=\tfrac{45\sqrt3}2+\tfrac{15\sqrt3}2=30\sqrt3.\]</p>
 <p class="note"><b>Kontrola wzorem Brahmagupty</b> (dla czworokąta wpisanego w okrąg): półobwód \(p=15\), \(P=\sqrt{(p-9)(p-5)(p-6)(p-10)}=\sqrt{6\cdot10\cdot9\cdot5}=\sqrt{2700}=30\sqrt3\) ✓. Przy okazji, z wzoru \(P=r\cdot p\) dla czworokąta opisanego wychodzi promień okręgu wpisanego \(r=\dfrac{30\sqrt3}{15}=2\sqrt3\).</p>`
+  },
+  {
+    id: 11,
+    group: "Dowody geometryczne",
+    label: "autorskie",
+    pts: 4,
+    tags: ["równoległobok", "twierdzenie cosinusów", "dowód", "przekątne"],
+    req: ["ZP VIII.11", "ZP VII.3"],
+    q: String.raw`<p>Wykaż, że w równoległoboku suma kwadratów długości przekątnych jest równa sumie kwadratów długości wszystkich czterech boków.</p>`,
+    sol: String.raw`<p class="step"><b>Oznaczenia.</b> Niech \(ABCD\) będzie równoległobokiem, \(|AB|=a\), \(|AD|=|BC|=b\), \(\alpha=\angle DAB\). Wtedy \(\angle ABC=180^\circ-\alpha\).</p>
+<p class="step"><b>Przekątna \(BD\).</b> Z twierdzenia cosinusów w trójkącie \(ABD\): \(|BD|^2=a^2+b^2-2ab\cos\alpha\).</p>
+<p class="step"><b>Przekątna \(AC\).</b> W trójkącie \(ABC\) kąt przy \(B\) ma miarę \(180^\circ-\alpha\), więc \(|AC|^2=a^2+b^2-2ab\cos(180^\circ-\alpha)=a^2+b^2+2ab\cos\alpha\).</p>
+<p class="step"><b>Suma.</b> \(|AC|^2+|BD|^2=2a^2+2b^2=a^2+b^2+a^2+b^2\), a to jest suma kwadratów długości czterech boków (\(a,b,a,b\)). \(\blacksquare\)</p>`
+  },
+  {
+    id: 13,
+    group: "Twierdzenie odwrotne do twierdzenia Talesa",
+    label: "autorskie",
+    pts: 3,
+    tags: ["twierdzenie odwrotne do twierdzenia Talesa", "podobieństwo", "równoległość"],
+    req: ["ZR VIII.2", "ZP VIII.8"],
+    q: String.raw`<p>Na bokach \(AB\) i \(AC\) trójkąta \(ABC\) wybrano punkty \(D\) i \(E\) takie, że \(|AD|=6\), \(|DB|=4\), \(|AE|=9\), \(|EC|=6\). Wiadomo, że \(|BC|=15\). Wykaż, że \(DE\parallel BC\), i oblicz \(|DE|\).</p>`,
+    ans: String.raw`\(|DE|=9\)`,
+    sol: String.raw`<p class="step"><b>Równoległość.</b> \(\dfrac{|AD|}{|DB|}=\dfrac64=\dfrac32\) oraz \(\dfrac{|AE|}{|EC|}=\dfrac96=\dfrac32\). Proporcje są równe, więc z twierdzenia odwrotnego do twierdzenia Talesa proste \(DE\) i \(BC\) są równoległe. \(\blacksquare\)</p>
+<p class="step"><b>Podobieństwo.</b> Trójkąty \(ADE\) i \(ABC\) mają wspólny kąt \(A\) oraz równe kąty odpowiadające przy \(D\) i \(B\), więc są podobne w skali \(\dfrac{|AD|}{|AB|}=\dfrac6{10}=\dfrac35\).</p>
+<p class="step"><b>Długość.</b> \(|DE|=\dfrac35\cdot|BC|=\dfrac35\cdot15=9\).</p>`
   }
 ];

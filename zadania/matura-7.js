@@ -5,6 +5,7 @@
     src: "maj 2025 · zad. 8",
     pts: 5,
     tags: ["okręgi", "oś potęgowa", "wektory", "punkty przecięcia"],
+    req: ["ZR IX.2", "ZR IX.3"],
     q: String.raw`<p>W kartezjańskim układzie współrzędnych \((x,y)\) dane są okręgi \(O_1\) oraz \(O_2\) o równaniach:</p>
 <ul>
 <li>\(O_1:\ (x-1)^2+(y+3)^2=5\),</li>
@@ -34,6 +35,7 @@ Wektory \(\overrightarrow{AM}\) i \(\overrightarrow{BM}\) mają przeciwne zwroty
     src: "maj 2026 · zad. 9",
     pts: 5,
     tags: ["trójkąt równoramienny", "symetralna odcinka", "równanie okręgu", "podział odcinka"],
+    req: ["ZP IX.2", "ZP IX.4"],
     q: String.raw`<p>W kartezjańskim układzie współrzędnych \((x,y)\) punkty \(A=(1,-1)\) oraz \(B=(4,0)\) są wierzchołkami trójkąta \(ABC\), w którym \(|CA|=|CB|\). Jedno z ramion trójkąta \(ABC\) zawiera się w prostej o równaniu \(x+2y-4=0\). Na boku \(AC\) tego trójkąta obrano taki punkt \(M\), że \(|AM|:|MC|=1:4\).</p>
 <p>Wyznacz równanie okręgu, który ma środek w punkcie \(M\) i przechodzi przez punkt \(C\).</p>`,
     ans: String.raw`\(\left(x-\tfrac65\right)^2+\left(y+\tfrac35\right)^2=\tfrac{16}5\)`,
@@ -54,6 +56,7 @@ Wektory \(\overrightarrow{AM}\) i \(\overrightarrow{BM}\) mają przeciwne zwroty
     src: "maj 2024 · zad. 11",
     pts: 5,
     tags: ["styczne do okręgu", "pole czworokąta", "rozważ wszystkie przypadki"],
+    req: ["ZR IX.1", "ZR IX.4"],
     q: String.raw`<p>W kartezjańskim układzie współrzędnych \((x,y)\) środek \(S\) okręgu o promieniu \(\sqrt5\) leży na prostej o równaniu \(y=x+1\). Przez punkt \(A=(1,2)\), którego odległość od punktu \(S\) jest większa od \(\sqrt5\), poprowadzono dwie proste styczne do tego okręgu w punktach – odpowiednio – \(B\) i \(C\). Pole czworokąta \(ABSC\) jest równe \(15\).</p>
 <p>Oblicz współrzędne punktu \(S\). Rozważ wszystkie przypadki.</p>`,
     ans: String.raw`\(S=(6,7)\) lub \(S=(-4,-3)\)`,
@@ -68,11 +71,27 @@ Z \(|AS|^2=50\) mamy \((t-1)^2=25\), czyli \(t-1=5\) lub \(t-1=-5\), skąd \(t=6
 <p class="note"><b>Dlaczego są dwa rozwiązania?</b> Punkt \(A=(1,2)\) też leży na prostej \(y=x+1\) (bo \(2=1+1\)), więc środek \(S\) może leżeć na niej po obu stronach punktu \(A\), w odległości \(5\sqrt2\). Punkty \((6,7)\) i \((-4,-3)\) są symetryczne względem \(A\) (środek odcinka, który je łączy, to \(A\)), więc rysunek drugiego przypadku jest odbiciem pierwszego względem \(A\).</p>`
   },
   {
+    id: 5,
+    group: "Styczne do okręgu",
+    label: "autorskie",
+    pts: 5,
+    tags: ["styczna do okręgu", "odległość punktu od prostej", "punkt styczności"],
+    req: ["ZR IX.1", "ZR IX.4"],
+    q: String.raw`<p>Okrąg o środku \(S=(2,1)\) jest styczny do prostej \(k:\ 3x-4y+13=0\).</p>
+<p>a) Wyznacz równanie tego okręgu i współrzędne punktu styczności.<br>
+b) Wyznacz równanie drugiej stycznej do tego okręgu, równoległej do prostej \(k\).</p>`,
+    ans: String.raw`a) \((x-2)^2+(y-1)^2=9\), punkt styczności \(\left(\tfrac15,\tfrac{17}5\right)\); b) \(3x-4y-17=0\)`,
+    sol: String.raw`<p class="step"><b>a) Promień.</b> Jest równy odległości środka od stycznej: \(r=\dfrac{|3\cdot2-4\cdot1+13|}{\sqrt{3^2+4^2}}=\dfrac{15}5=3\). Okrąg: \((x-2)^2+(y-1)^2=9\).</p>
+<p class="step"><b>Punkt styczności</b> to rzut środka na prostą \(k\). Prosta prostopadła do \(k\) przez \(S\) ma kierunek wektora normalnego \([3,-4]\): \((x,y)=(2+3s,\ 1-4s)\). Wstawiamy do równania \(k\): \(3(2+3s)-4(1-4s)+13=0\), czyli \(25s+15=0\) i \(s=-\tfrac35\). Stąd \(\left(2-\tfrac95,\ 1+\tfrac{12}5\right)=\left(\tfrac15,\tfrac{17}5\right)\).</p>
+<p class="step"><b>b) Druga styczna.</b> Ma równanie \(3x-4y+C=0\) i leży w odległości \(3\) od \(S\): \(\dfrac{|2+C|}5=3\), czyli \(C=13\) (to prosta \(k\)) lub \(C=-17\). Druga styczna: \(3x-4y-17=0\).</p>`
+  },
+  {
     id: 4,
     group: "Parabola, prosta i okrąg",
     src: "maj 2023 · zad. 13",
     pts: 6,
     tags: ["parabola", "okrąg na średnicy", "tangens kąta", "kąt wpisany"],
+    req: ["ZR IX.1", "ZP IX.4"],
     q: String.raw`<p>W kartezjańskim układzie współrzędnych \((x,y)\) prosta \(l\) o równaniu \(x-y-2=0\) przecina parabolę o równaniu \(y=4x^2-7x+1\) w punktach \(A\) oraz \(B\). Odcinek \(AB\) jest średnicą okręgu \(\mathcal{O}\). Punkt \(C\) leży na okręgu \(\mathcal{O}\) nad prostą \(l\), a kąt \(BAC\) jest ostry i ma miarę \(\alpha\) taką, że \(\operatorname{tg}\alpha=\tfrac13\) (zobacz rysunek).</p>
 <p>Oblicz współrzędne punktu \(C\).</p>`,
     fig: String.raw`<svg class="fig" viewBox="0 0 280 335" width="250" height="299" role="img" aria-label="Parabola, prosta l, okrąg o średnicy AB i punkt C"><path class="s" d="M14,125H268M262,121l6,4-6,4M70,330V8M66,14l4-6 4,6"/><path class="a" d="M67.5 23.1L71.7 52.6L75.9 80.5L80.1 106.7L84.3 131.2L88.5 154.1L92.7 175.3L96.9 194.8L101.1 212.6L105.3 228.7L109.5 243.1L113.7 255.9L117.9 267L122.1 276.4L126.3 284.1L130.5 290.2L134.7 294.5L138.9 297.2L143.1 298.2L147.3 297.6L151.5 295.2L155.7 291.2L159.9 285.5L164.1 278.1L168.3 269L172.5 258.3L176.7 245.8L180.9 231.7L185.1 215.9L189.3 198.4L193.5 179.3L197.7 158.5L201.9 136L206.1 111.8L210.3 85.9L214.5 58.3L218.7 29.1L219.9 20"/><line class="s" x1="53.2" y1="309.8" x2="246.4" y2="116.6"/><circle class="p" cx="154" cy="209" r="59.4"/><polyline class="p" points="112,251 162.4,150.2 196,167"/><path class="s" d="M127.6,235.4 A22,22 0 0 0 121.8,231.3"/><circle class="dot" cx="112" cy="251" r="2.6"/><circle class="dot" cx="196" cy="167" r="2.6"/><circle class="dot" cx="162.4" cy="150.2" r="2.6"/><text x="96" y="263">A</text><text x="204" y="170">B</text><text x="160" y="142">C</text><text x="138" y="237">α</text><text x="262" y="141">x</text><text x="76" y="14">y</text><text x="234" y="108">l</text><text class="m" x="151" y="140">1</text></svg>`,
@@ -88,5 +107,36 @@ Prosta \(AC\) ma więc współczynnik kierunkowy \(2\) i wektor kierunkowy \([1,
 \[C=\left(\tfrac12,-\tfrac32\right)+\left(\tfrac35,\tfrac65\right)=\left(\tfrac{11}{10},-\tfrac3{10}\right).\]</p>
 <p class="step"><b>Sprawdzenie.</b> Środek okręgu to \(S=(1,-1)\), a \(r^2=\tfrac12\). Dla \(C=(1{,}1;\,-0{,}3)\): \(|SC|^2=0{,}1^2+0{,}7^2=0{,}5=r^2\) ✓. Punkt \(C\) leży nad prostą \(l\), bo \(y_C=-0{,}3>x_C-2=-0{,}9\) ✓. Kąt \(\alpha\) między prostymi o współczynnikach \(1\) i \(2\): \(\operatorname{tg}\alpha=\left|\dfrac{2-1}{1+2\cdot1}\right|=\tfrac13\) ✓.</p>
 <p class="note"><b>Drugi sposób na punkt \(C\).</b> Prosta \(AC\): \(y=2\left(x-\tfrac12\right)-\tfrac32=2x-\tfrac52\). Wstawiamy do równania okręgu \((x-1)^2+(y+1)^2=\tfrac12\): \((x-1)^2+\left(2x-\tfrac32\right)^2=\tfrac12\), czyli \(20x^2-32x+11=0\). Wyróżnik \(\Delta=144\), \(x=\tfrac12\) (to punkt \(A\)) lub \(x=\tfrac{11}{10}\), a stąd \(y=-\tfrac3{10}\).</p>`
+  },
+  {
+    id: 6,
+    group: "Wektory i równoległobok",
+    label: "autorskie",
+    pts: 4,
+    tags: ["wektory", "równoległobok", "romb", "pole"],
+    req: ["ZR IX.3", "ZP IX.3"],
+    q: String.raw`<p>Dane są punkty \(A=(-1,2)\), \(B=(5,0)\), \(C=(3,6)\).</p>
+<p>a) Wyznacz współrzędne punktu \(D\) takiego, że czworokąt \(ABCD\) jest równoległobokiem.<br>
+b) Oblicz pole tego równoległoboku i długości jego przekątnych.<br>
+c) Wykaż, że \(ABCD\) jest rombem.</p>`,
+    ans: String.raw`a) \(D=(-3,8)\); b) pole \(32\), przekątne \(4\sqrt2\) i \(8\sqrt2\)`,
+    sol: String.raw`<p class="step"><b>a)</b> W równoległoboku \(ABCD\) mamy \(\overrightarrow{AB}=\overrightarrow{DC}\), więc \(D=A+C-B=(-1+3-5,\ 2+6-0)=(-3,8)\).</p>
+<p class="step"><b>b)</b> \(\overrightarrow{AB}=[6,-2]\), \(\overrightarrow{AD}=[-2,6]\). Pole równoległoboku \(=|6\cdot6-(-2)(-2)|=32\). Przekątne: \(\overrightarrow{AC}=[4,4]\), \(|AC|=4\sqrt2\); \(\overrightarrow{BD}=[-8,8]\), \(|BD|=8\sqrt2\).</p>
+<p class="step"><b>c)</b> \(|AB|=\sqrt{36+4}=\sqrt{40}\) i \(|AD|=\sqrt{4+36}=\sqrt{40}\), więc sąsiednie boki są równe, a równoległobok o równych sąsiednich bokach jest rombem. \(\blacksquare\)</p>`
+  },
+  {
+    id: 7,
+    group: "Okrąg opisany na trójkącie",
+    label: "autorskie",
+    pts: 4,
+    tags: ["okrąg opisany", "symetralna odcinka", "równanie okręgu"],
+    req: ["ZP IX.2", "ZP IX.4"],
+    q: String.raw`<p>Wyznacz równanie okręgu opisanego na trójkącie o wierzchołkach \(A=(0,0)\), \(B=(4,0)\), \(C=(1,3)\).</p>`,
+    ans: String.raw`\((x-2)^2+(y-1)^2=5\)`,
+    sol: String.raw`<p class="step"><b>Pomysł.</b> Środek okręgu opisanego leży na symetralnych boków.</p>
+<p class="step"><b>Symetralna \(AB\).</b> Odcinek \(AB\) jest poziomy o środku \((2,0)\), więc symetralna to \(x=2\).</p>
+<p class="step"><b>Symetralna \(AC\).</b> Środek \(AC\) to \(\left(\tfrac12,\tfrac32\right)\), wektor \(\overrightarrow{AC}=[1,3]\) jest prostopadły do symetralnej: \(1\cdot\left(x-\tfrac12\right)+3\left(y-\tfrac32\right)=0\), czyli \(x+3y-5=0\).</p>
+<p class="step"><b>Środek.</b> Dla \(x=2\): \(3y=3\), \(y=1\), więc \(S=(2,1)\). Promień: \(r^2=|SA|^2=4+1=5\).</p>
+<p class="step"><b>Sprawdzenie.</b> \(|SB|^2=4+1=5\), \(|SC|^2=1+4=5\) ✓. Okrąg: \((x-2)^2+(y-1)^2=5\).</p>`
   }
 ];
