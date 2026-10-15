@@ -5,6 +5,7 @@
     src: "maj 2018 · zad. 13",
     pts: 4,
     tags: ["ciąg geometryczny","układ równań","suma n początkowych wyrazów"],
+    req: ["ZP VI.6"],
     q: String.raw`<p>Wyrazy ciągu geometrycznego \((a_n)\), określonego dla \(n\ge1\), spełniają układ równań
     \[\begin{cases}a_3+a_6=-84\\ a_4+a_7=168\end{cases}\]
     Wyznacz liczbę \(n\) początkowych wyrazów tego ciągu, których suma \(S_n\) jest równa \(32769\).</p>`,
@@ -24,6 +25,7 @@
     src: "maj 2026 · zad. 6",
     pts: 4,
     tags: ["ciąg arytmetyczny","warunek geometryczności","suma"],
+    req: ["ZP VI.5", "ZP VI.7"],
     q: String.raw`<p>Dany jest skończony ciąg arytmetyczny \((a_n)\), który ma więcej niż \(6\) wyrazów. Pierwszy wyraz tego ciągu jest równy \(1\), a ostatni jest równy \(-2025\). Drugi, trzeci i szósty wyraz tego ciągu tworzą – w podanej kolejności – ciąg geometryczny.</p>
     <p>Oblicz sumę wszystkich wyrazów ciągu \((a_n)\).</p>`,
     ans: String.raw`\(-1\,026\,168\)`,
@@ -43,6 +45,7 @@
     src: "maj 2024 · zad. 7",
     pts: 4,
     tags: ["ciąg arytmetyczny i geometryczny razem","własność średniej"],
+    req: ["ZP VI.7"],
     q: String.raw`<p>Trzywyrazowy ciąg \((x,y,z)\) jest geometryczny i rosnący, a suma jego wyrazów jest równa \(105\). Liczby \(x\), \(y\) oraz \(z\) są – odpowiednio – pierwszym, drugim oraz szóstym wyrazem pewnego ciągu arytmetycznego \((a_n)\), określonego dla każdej liczby naturalnej \(n\ge1\).</p>
     <p>Oblicz \(x\), \(y\) oraz \(z\).</p>`,
     ans: String.raw`\(x=5,\quad y=20,\quad z=80\)`,
@@ -59,6 +62,7 @@
     src: "maj 2019 · zad. 12",
     pts: 6,
     tags: ["ciąg arytmetyczny","ciąg geometryczny","równanie kwadratowe"],
+    req: ["ZP VI.7", "ZP VI.5"],
     q: String.raw`<p>Trzywyrazowy ciąg \((a,b,c)\) o wyrazach dodatnich jest arytmetyczny, a ciąg
     \[\left(\frac1a,\ \frac{2}{3b},\ \frac{1}{2a+2b+c}\right)\]
     jest geometryczny. Oblicz iloraz ciągu geometrycznego.</p>`,
@@ -75,11 +79,25 @@
 <p class="note"><b>Sprawdzenie:</b> \(\dfrac{1/(9a)}{1/(3a)}=\dfrac13\) ✓. &nbsp;<b>Uwaga:</b> rozwiązanie \(t=-\tfrac92\) odrzucamy z uzasadnieniem „wyrazy dodatnie”. Przy zadaniu za 6 punktów warto zapisać każde takie uzasadnienie.</p>`
   },
   {
+    id: 12,
+    group: "Ciąg arytmetyczny i geometryczny",
+    label: "autorskie",
+    pts: 3,
+    tags: ["ciąg arytmetyczny", "suma", "zadanie praktyczne", "nierówność kwadratowa"],
+    req: ["ZP VI.5", "ZP VI.7"],
+    q: String.raw`<p>Pani Maria odkłada pieniądze na wakacje: w pierwszym miesiącu odłożyła \(200\) zł, a w każdym następnym o \(30\) zł więcej niż w poprzednim. Po ilu miesiącach łączna odłożona kwota po raz pierwszy przekroczy \(5000\) zł?</p>`,
+    ans: String.raw`po \(14\) miesiącach`,
+    sol: String.raw`<p class="step"><b>Model.</b> Kwoty tworzą ciąg arytmetyczny: \(a_1=200\), \(r=30\). Suma po \(n\) miesiącach: \(S_n=\dfrac{2\cdot200+(n-1)\cdot30}2\cdot n=15n^2+185n\).</p>
+<p class="step"><b>Nierówność.</b> \(15n^2+185n>5000\iff3n^2+37n-1000>0\). Pierwiastek dodatni równania: \(n=\dfrac{-37+\sqrt{13369}}6\approx13{,}1\), więc nierówność zachodzi dla \(n\ge14\) (dla naturalnych \(n\)).</p>
+<p class="step"><b>Sprawdzenie.</b> \(S_{13}=15\cdot169+185\cdot13=4940&lt;5000\), \(S_{14}=15\cdot196+185\cdot14=5530>5000\). Odpowiedź: po \(14\) miesiącach.</p>`
+  },
+  {
     id: 5,
     group: "Granica ciągu",
     src: "maj 2021 · zad. 5",
     pts: 2,
     tags: ["granica ciągu wymiernego"],
+    req: ["ZR VI.1"],
     q: String.raw`<p>Oblicz granicę
     \[\lim_{n\to\infty}\frac{(3n+2)^2-(1-2n)^2}{(2n-1)^2}.\]
     Wpisz – od lewej do prawej – cyfrę jedności i pierwsze dwie cyfry po przecinku skończonego rozwinięcia dziesiętnego otrzymanego wyniku.</p>`,
@@ -96,6 +114,7 @@
     src: "maj 2019 · zad. 5",
     pts: 2,
     tags: ["granica różnicy ułamków"],
+    req: ["ZR VI.1"],
     q: String.raw`<p>Oblicz granicę
     \[\lim_{n\to\infty}\left(\frac{9n^3+11n^2}{7n^3+5n^2+3n+1}-\frac{n^2}{3n^2+1}\right).\]
     Wpisz – od lewej do prawej – trzy kolejne cyfry po przecinku rozwinięcia dziesiętnego otrzymanego wyniku.</p>`,
@@ -111,6 +130,7 @@
     src: "maj 2022 · zad. 5",
     pts: 2,
     tags: ["granica z parametrem"],
+    req: ["ZR VI.1", "ZR III.5"],
     q: String.raw`<p>Ciąg \((a_n)\) jest określony dla każdej liczby naturalnej \(n\ge1\) wzorem
     \[a_n=\frac{(7p-1)n^3+5pn-3}{(p+1)n^3+n^2+p},\]
     gdzie \(p\) jest liczbą rzeczywistą dodatnią. Oblicz wartość \(p\), dla której granica ciągu \((a_n)\) jest równa \(\dfrac43\).</p>
@@ -130,6 +150,7 @@
     src: "maj 2026 · zad. 1",
     pts: 2,
     tags: ["granica","symbol Newtona"],
+    req: ["ZR VI.1", "ZR XI.2"],
     q: String.raw`<p>Oblicz granicę
     \[\lim_{n\to\infty}\frac{\dbinom{n+2}{n-1}}{\frac12\,n^3-4n+7}.\]
     </p>`,
@@ -147,6 +168,7 @@
     src: "maj 2025 · zad. 6",
     pts: 4,
     tags: ["ciąg zbieżny","warunek zbieżności szeregu","wiele przypadków"],
+    req: ["ZR VI.2"],
     q: String.raw`<p>Ciąg \((a_n)\), określony dla każdej liczby naturalnej \(n\ge1\), jest geometryczny i zbieżny. W tym ciągu \(a_1+a_3=20\) oraz \(a_1^2+a_3^2=328\).</p>
     <p>Oblicz sumę wszystkich wyrazów tego ciągu. Rozważ wszystkie przypadki.</p>`,
     ans: String.raw`\(27\) (dla \(q=\tfrac13\)) lub \(\dfrac{27}{2}\) (dla \(q=-\tfrac13\))`,
@@ -167,6 +189,7 @@
     src: "maj 2023 · zad. 10",
     pts: 4,
     tags: ["figury wpisywane","twierdzenie Pitagorasa","suma szeregu"],
+    req: ["ZR VI.2"],
     q: String.raw`<p>Określamy kwadraty \(K_1,K_2,K_3,\dots\) następująco: \(K_1\) jest kwadratem o boku długości \(a\), a dla każdego \(n\ge2\) kwadrat \(K_n\) ma każdy wierzchołek na innym boku kwadratu \(K_{n-1}\) i dzieli ten bok w stosunku \(1:3\). Obwody wszystkich tych kwadratów tworzą nieskończony ciąg geometryczny.</p>
     
     <p>Oblicz sumę wszystkich wyrazów tego nieskończonego ciągu.</p>`,
@@ -186,6 +209,7 @@
     src: "maj 2022 · zad. 10",
     pts: 4,
     tags: ["szereg geometryczny","ciąg arytmetyczny","równanie kwadratowe"],
+    req: ["ZR VI.2", "ZP VI.5"],
     q: String.raw`<p>Ciąg \((a_n)\), określony dla każdej liczby naturalnej \(n\ge1\), jest geometryczny i ma wszystkie wyrazy dodatnie. Ponadto \(a_1=675\) oraz
     \[a_{22}=\frac54\,a_{23}+\frac15\,a_{21}.\]
     Ciąg \((b_n)\), określony dla każdej liczby naturalnej \(n\ge1\), jest arytmetyczny. Suma wszystkich wyrazów ciągu \((a_n)\) jest równa sumie dwudziestu pięciu początkowych kolejnych wyrazów ciągu \((b_n)\). Ponadto \(a_3=b_4\).</p>
