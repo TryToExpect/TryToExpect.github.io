@@ -47,8 +47,9 @@
 <tr><td>Funkcja wykładnicza i logarytmiczna</td><td class="c">6</td><td class="c">3,1%</td><td class="c">3</td></tr>
 <tr><td>Liczby, procenty, potęgi i logarytmy</td><td class="c">5</td><td class="c">2,6%</td><td class="c">2</td></tr>
 <tr><td>Własności funkcji, funkcja liniowa i wymierna</td><td class="c">0</td><td class="c">0,0%</td><td class="c">0</td></tr>
+<tr><td>Wielomiany</td><td class="c">0</td><td class="c">0,0%</td><td class="c">0</td></tr>
 </tbody></table></div>
-<p class="note">Wagi policzono z 193 punktów z zadań dostępnych na stronie, więc są orientacyjne. Dział „Własności funkcji, funkcja liniowa i wymierna” nie ma własnych zadań z arkuszy, bo własności funkcji pojawiają się w zadaniach z funkcją kwadratową, wykładniczą i w całym arkuszu; ćwiczą je zadania autorskie w tym dziale.</p>
+<p class="note">Wagi policzono z 193 punktów z zadań dostępnych na stronie, więc są orientacyjne. Działy „Własności funkcji, funkcja liniowa i wymierna” oraz „Wielomiany” nie mają własnych zadań z arkuszy 2023–2026: własności funkcji pojawiają się w zadaniach z funkcją kwadratową, wykładniczą i w całym arkuszu, a wielomiany – w starszych arkuszach (np. 2019, 2022) i jako element innych zadań (nierówności, podzielność). Ćwiczą je zadania w tych działach.</p>
 
 <h3>Jak pisać rozwiązanie, żeby dostać punkty</h3>
 <div class="bx met"><span class="t">Zasady zapisu</span>
@@ -83,17 +84,17 @@
 <thead><tr><th>Kod</th><th>Wymaganie (zakres rozszerzony)</th><th class="c">Zadań na stronie</th></tr></thead>
 <tbody>
 <tr><td>ZR I.1</td><td>zamiana podstawy logarytmu</td><td class="c">4</td></tr>
-<tr><td>ZR II.1</td><td>dzielenie wielomianu przez x−a</td><td class="c">3</td></tr>
-<tr><td>ZR II.2</td><td>rozkład wielomianu na czynniki (wyłączanie, grupowanie)</td><td class="c">1</td></tr>
-<tr><td>ZR II.3</td><td>pierwiastki całkowite wielomianu o współczynnikach całkowitych</td><td class="c">2</td></tr>
+<tr><td>ZR II.1</td><td>dzielenie wielomianu przez x−a</td><td class="c">5</td></tr>
+<tr><td>ZR II.2</td><td>rozkład wielomianu na czynniki (wyłączanie, grupowanie)</td><td class="c">2</td></tr>
+<tr><td>ZR II.3</td><td>pierwiastki całkowite wielomianu o współczynnikach całkowitych</td><td class="c">4</td></tr>
 <tr><td>ZR II.4</td><td>trójkąt Pascala i symbol Newtona</td><td class="c">1</td></tr>
 <tr><td>ZR II.5</td><td>wzory na a³±b³ oraz (a±b)ⁿ</td><td class="c">3</td></tr>
 <tr><td>ZR II.6</td><td>dodawanie i odejmowanie wyrażeń wymiernych</td><td class="c">3</td></tr>
-<tr><td>ZR III.1</td><td>równania i nierówności wielomianowe</td><td class="c">3</td></tr>
+<tr><td>ZR III.1</td><td>równania i nierówności wielomianowe</td><td class="c">5</td></tr>
 <tr><td>ZR III.2</td><td>równania i nierówności wymierne</td><td class="c">2</td></tr>
 <tr><td>ZR III.3</td><td>wzory Viète’a</td><td class="c">7</td></tr>
 <tr><td>ZR III.4</td><td>równania i nierówności z wartością bezwzględną</td><td class="c">5</td></tr>
-<tr><td>ZR III.5</td><td>równania i nierówności z parametrem</td><td class="c">13</td></tr>
+<tr><td>ZR III.5</td><td>równania i nierówności z parametrem</td><td class="c">14</td></tr>
 <tr><td>ZR III.6</td><td>równania wielomianowe sprowadzalne do kwadratowych (dwukwadratowe)</td><td class="c">1</td></tr>
 <tr><td>ZR III.7</td><td>równania wymierne W(x)/V(x)=0</td><td class="c">1</td></tr>
 <tr><td>ZR IV</td><td>układy równań liniowych i kwadratowych z dwiema niewiadomymi</td><td class="c">2</td></tr>
