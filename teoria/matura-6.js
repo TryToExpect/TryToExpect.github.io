@@ -33,7 +33,7 @@
 <div class="bx ex"><span class="t">Przykład</span>
 <p>Dla \(m\parallel n\) i \(|OA|=3\), \(|AB|=2\), \(|OC|=4{,}5\) mamy \(\dfrac3{4{,}5}=\dfrac2{|CD|}\), czyli \(|CD|=3\).</p>
 </div>
-<div class="bx thm"><span class="t">Twierdzenie o dwusiecznej kąta w trójkącie</span>
+<div class="bx thm" data-pf="zp8"><span class="t">Twierdzenie o dwusiecznej kąta w trójkącie</span>
 <div class="wf"><div>
 <p>Dwusieczna kąta trójkąta dzieli przeciwległy bok na odcinki, których stosunek jest równy stosunkowi długości pozostałych boków. Dla dwusiecznej kąta \(C\) z rysunku:
 \[\frac{|AD|}{|DB|}=\frac{|AC|}{|BC|},\qquad\text{czyli}\qquad\frac xy=\frac ba.\]</p>
@@ -54,7 +54,7 @@
 </div><div class="fg"><svg class="fig" viewBox="0 0 300 190" width="300" height="190" role="img" aria-label="Trójkąt prostokątny o przyprostokątnych a, b i przeciwprostokątnej c; kąty ostre α i β"><polygon class="s" points="30,160 262,160 30,36"/><path class="s" d="M39,160L39,151L30,151"/><path class="a" d="M234,160A28,28 0 0 1 237.3,146.8"/><text x="221.3" y="154.3" text-anchor="middle">α</text><path class="p" d="M30,58A22,22 0 0 0 49.4,46.4"/><text x="48.5" y="71.4" text-anchor="middle">β</text><text x="146" y="174" text-anchor="middle">a</text><text x="23" y="102.5" text-anchor="end">b</text><text x="156" y="91">c</text></svg></div></div>
 <p class="note">Skąd \(r=\tfrac{a+b-c}2\): od wierzchołka kąta prostego do punktów styczności okręgu wpisanego są odcinki długości \(r\), więc na przyprostokątnych zostają odcinki \(a-r\) i \(b-r\). Odcinki stycznych poprowadzonych z jednego punktu są równe, zatem \(c=(a-r)+(b-r)\).</p>
 </div>
-<div class="bx thm"><span class="t">Wysokość opuszczona na przeciwprostokątną</span>
+<div class="bx thm" data-pf="zp7"><span class="t">Wysokość opuszczona na przeciwprostokątną</span>
 <div class="wf"><div>
 <p>Wysokość \(h\) poprowadzona z wierzchołka kąta prostego dzieli przeciwprostokątną na odcinki \(x=|AH|\) i \(y=|HB|\) (\(x+y=c\)). Wtedy
 \[h^2=x\cdot y,\qquad b^2=x\cdot c,\qquad a^2=y\cdot c,\qquad h=\frac{ab}c.\]</p>
@@ -93,19 +93,55 @@
 <li>Pamiętaj, że \(\alpha+\beta+\gamma=180^\circ\), więc \(\sin(\alpha+\beta)=\sin\gamma\). Sinus nie wyznacza kąta jednoznacznie (\(\sin\alpha=\sin(180^\circ-\alpha)\)), więc gdy kąt może być rozwarty, bezpieczniej użyć twierdzenia cosinusów.</li>
 </ul>
 </div>
+<div class="bx pf" data-pf="zp10"><span class="t">Dowód twierdzenia cosinusów i twierdzenia odwrotnego do twierdzenia Pitagorasa</span>
+<div class="wf"><div>
+<p>Poprowadźmy w trójkącie \(ABC\) wysokość \(BD\) na bok \(AC\) (rysunek). Z trójkąta prostokątnego \(BCD\): \(|CD|=a\cos\gamma\) i \(|BD|=a\sin\gamma\), więc \(|AD|=b-a\cos\gamma\). Z twierdzenia Pitagorasa w trójkącie \(ABD\):
+\[\begin{aligned}c^2&=|BD|^2+|AD|^2\\&=a^2\sin^2\gamma+(b-a\cos\gamma)^2\\&=a^2+b^2-2ab\cos\gamma,\end{aligned}\]
+bo \(\sin^2\gamma+\cos^2\gamma=1\). \(\blacksquare\)</p>
+<p class="note">Gdy kąt \(\gamma\) jest rozwarty, punkt \(D\) leży na przedłużeniu boku \(AC\) poza \(C\): wtedy \(|CD|=a\cos(180^\circ-\gamma)=-a\cos\gamma\), \(|AD|=b+|CD|=b-a\cos\gamma\) i rachunek jest taki sam. Dla \(\gamma=90^\circ\) wysokością jest bok \(BC\).</p>
+</div><div class="fg"><svg class="fig" viewBox="0 0 290 186" width="290" height="186" role="img" aria-label="Trójkąt ABC z wysokością BD opuszczoną na bok AC: |CD| = a·cos γ, |BD| = a·sin γ, |AD| = b − a·cos γ"><polygon class="s" points="34,148 196,42 254,148"/><line class="p d" x1="196" y1="42" x2="196" y2="148"/><path class="s w" d="M188,148 L188,140 L196,140"/><path class="a" d="M241.5,125.2 A26,26 0 0 0 228,148"/><text x="30" y="163" text-anchor="end">A</text><text x="200" y="36" text-anchor="start">B</text><text x="259" y="163" text-anchor="start">C</text><text x="196" y="165" text-anchor="middle">D</text><text class="b" x="223" y="88" text-anchor="start">a</text><text class="b" x="104" y="82" text-anchor="end">c</text><text class="ac" x="231" y="134" text-anchor="middle">γ</text><text class="m" x="188" y="98" text-anchor="end">a·sin γ</text><text class="m" x="115" y="168" text-anchor="middle">b − a·cos γ</text><text class="m" x="225" y="168" text-anchor="middle">a·cos γ</text></svg></div></div>
+<p><b>Twierdzenie odwrotne do twierdzenia Pitagorasa.</b> Jeśli \(a^2+b^2=c^2\), to z twierdzenia cosinusów \(2ab\cos\gamma=a^2+b^2-c^2=0\), więc \(\cos\gamma=0\) i \(\gamma=90^\circ\). \(\blacksquare\)</p>
+</div>
+<div class="bx pf" data-pf="zr6"><span class="t">Dowód twierdzenia sinusów</span>
+<div class="wf"><div>
+<p>Niech \(R\) będzie promieniem okręgu opisanego na trójkącie \(ABC\), a \(BD\) jego średnicą (\(|BD|=2R\)). Kąt \(BCD\) jest oparty na średnicy, więc jest prosty. Kąty \(BAC\) i \(BDC\) są wpisane i oparte na tym samym łuku \(BC\), więc (gdy \(A\) i \(D\) leżą po tej samej stronie prostej \(BC\), jak na rysunku) \(\angle BDC=\alpha\). Z trójkąta prostokątnego \(BCD\):
+\[\sin\alpha=\frac{|BC|}{|BD|}=\frac a{2R},\qquad\text{czyli}\qquad\frac a{\sin\alpha}=2R.\]</p>
+<p class="note">Gdy \(\alpha\) jest rozwarty, punkty \(A\) i \(D\) leżą po różnych stronach prostej \(BC\) i \(\angle BDC=180^\circ-\alpha\), ale \(\sin(180^\circ-\alpha)=\sin\alpha\), więc wynik jest ten sam (dla \(\alpha=90^\circ\) bok \(BC\) jest średnicą).</p>
+<p>Tak samo dla pozostałych kątów, zatem \(\dfrac a{\sin\alpha}=\dfrac b{\sin\beta}=\dfrac c{\sin\gamma}=2R\). \(\blacksquare\)</p>
+</div><div class="fg"><svg class="fig" viewBox="0 0 290 224" width="290" height="224" role="img" aria-label="Okrąg opisany na trójkącie ABC o środku O i promieniu R; BD jest średnicą, więc trójkąt BCD jest prostokątny, a kąt BDC jest równy kątowi BAC"><circle class="s" cx="145" cy="112" r="88"/><polygon class="a" points="129.7,25.3 72.9,162.5 217.1,162.5"/><line class="p d" x1="72.9" y1="162.5" x2="217.1" y2="61.5"/><line class="p" x1="217.1" y1="162.5" x2="217.1" y2="61.5"/><circle class="dot" cx="145" cy="112" r="2.4"/><path class="s w" d="M208.1,162.5 L208.1,153.5 L217.1,153.5"/><text x="127.7" y="17.3" text-anchor="middle">A</text><text x="66.9" y="176.5" text-anchor="end">B</text><text x="221.1" y="178.5" text-anchor="start">C</text><text x="225.1" y="57.5" text-anchor="start">D</text><text x="136" y="108" text-anchor="end">O</text><text class="b" x="145" y="184.5" text-anchor="middle">a</text><text class="pn" x="169" y="134" text-anchor="start">2R</text><text class="ac" x="131.7" y="55.3" text-anchor="middle">α</text><text class="ac" x="211.1" y="87.5" text-anchor="end">α</text></svg></div></div>
+</div>
 <div class="bx thm"><span class="t">Nierówność trójkąta</span>
 <p>Jeżeli boki trójkąta mają długości \(a\le b\le c\), to \(c&lt;a+b\). Z trzech odcinków można zbudować trójkąt wtedy i tylko wtedy, gdy najdłuższy z nich jest krótszy od sumy dwóch pozostałych. Naprzeciw dłuższego boku leży większy kąt.</p>
 </div>
-<div class="bx thm"><span class="t">Wzory na pole trójkąta</span>
-\[P=\tfrac12ah_a=\tfrac12ab\sin\gamma=r\cdot p=\frac{abc}{4R}=\sqrt{p(p-a)(p-b)(p-c)}\qquad\left(p=\tfrac{a+b+c}2\right).\]
+<div class="bx thm"><span class="t">Rodzaj trójkąta a długości boków</span>
+<p>Niech \(c\) będzie najdłuższym bokiem trójkąta o bokach \(a,b,c\); naprzeciw niego leży największy kąt \(\gamma\). Z twierdzenia cosinusów \(\cos\gamma=\dfrac{a^2+b^2-c^2}{2ab}\), więc o rodzaju trójkąta decyduje znak liczby \(a^2+b^2-c^2\):</p>
 <ul>
-<li>\(\tfrac12ah_a\) – podstawa i wysokość; \(\tfrac12ab\sin\gamma\) – dwa boki i kąt między nimi; \(r\cdot p\) – gdy znamy promień okręgu wpisanego; \(\tfrac{abc}{4R}\) – gdy znamy promień okręgu opisanego; ostatni (wzór Herona) – gdy znamy tylko boki.</li>
-<li>Stąd \(r=\dfrac Pp\) oraz \(R=\dfrac{abc}{4P}=\dfrac a{2\sin\alpha}\).</li>
+<li>\(c^2&lt;a^2+b^2\) – trójkąt <b>ostrokątny</b> (największy kąt jest ostry, więc wszystkie są ostre);</li>
+<li>\(c^2=a^2+b^2\) – trójkąt <b>prostokątny</b> (kąt prosty leży naprzeciw \(c\));</li>
+<li>\(c^2>a^2+b^2\) – trójkąt <b>rozwartokątny</b> (kąt rozwarty leży naprzeciw \(c\)).</li>
 </ul>
 </div>
 <div class="bx ex"><span class="t">Przykład</span>
-<p>W trójkącie o bokach \(13,14,15\): \(p=21\), \(P=\sqrt{21\cdot8\cdot7\cdot6}=84\), \(r=\tfrac{84}{21}=4\), \(R=\tfrac{13\cdot14\cdot15}{4\cdot84}=\tfrac{65}8\), wysokość na bok \(14\): \(h=\tfrac{2\cdot84}{14}=12\).</p>
+<p>Boki \(5,6,7\): \(7^2=49&lt;25+36=61\), więc trójkąt jest ostrokątny. Boki \(4,5,7\): \(49>16+25=41\) – rozwartokątny (najpierw sprawdź nierówność trójkąta: \(4+5>7\)). Boki \(5,12,13\): \(169=25+144\) – prostokątny.</p>
 </div>
+<div class="bx thm"><span class="t">Wzory na pole trójkąta</span>
+\[P=\tfrac12ah_a=\tfrac12ab\sin\gamma=r\cdot p=\frac{abc}{4R}\qquad\left(p=\tfrac{a+b+c}2\right).\]
+<ul>
+<li>\(\tfrac12ah_a\) – podstawa i wysokość; \(\tfrac12ab\sin\gamma\) – dwa boki i kąt między nimi; \(r\cdot p\) – gdy znamy promień okręgu wpisanego; \(\tfrac{abc}{4R}\) – gdy znamy promień okręgu opisanego.</li>
+<li>Stąd \(r=\dfrac Pp\) oraz \(R=\dfrac{abc}{4P}=\dfrac a{2\sin\alpha}\).</li>
+</ul>
+</div>
+<div class="bx pf" data-pf="zp9"><span class="t">Dowód wzoru \(P=\tfrac12ab\sin\gamma\)</span>
+<p>Niech \(h\) będzie wysokością trójkąta \(ABC\) poprowadzoną z wierzchołka \(A\) na prostą \(BC\), a \(D\) – jej spodkiem. Gdy \(\gamma\) jest ostry, w trójkącie prostokątnym \(ACD\) przeciwprostokątna \(|AC|=b\) tworzy z podstawą kąt \(\gamma\), więc \(h=b\sin\gamma\). Gdy \(\gamma\) jest rozwarty, spodek \(D\) leży na przedłużeniu \(BC\) poza \(C\), kąt \(ACD\) ma miarę \(180^\circ-\gamma\) i \(h=b\sin(180^\circ-\gamma)=b\sin\gamma\); dla \(\gamma=90^\circ\) jest \(h=b=b\sin\gamma\). Zatem
+\[P=\tfrac12\cdot|BC|\cdot h=\tfrac12\,ab\sin\gamma.\ \blacksquare\]</p>
+</div>
+<div class="bx ex"><span class="t">Przykład</span>
+<p>W trójkącie o bokach \(13,14,15\) poprowadźmy wysokość na bok \(14\); dzieli go na odcinki \(x\) i \(14-x\), a z twierdzenia Pitagorasa \(13^2-x^2=15^2-(14-x)^2\), skąd \(x=5\) i \(h=\sqrt{169-25}=12\). Pole \(P=\tfrac12\cdot14\cdot12=84\), \(p=21\), więc \(r=\tfrac{84}{21}=4\) i \(R=\tfrac{13\cdot14\cdot15}{4\cdot84}=\tfrac{65}8\).</p>
+</div>
+<details class="opt"><summary><span class="optb">Poza wymaganiami</span>Wzór Herona</summary>
+<div class="opt-body">
+<p>\(P=\sqrt{p(p-a)(p-b)(p-c)}\), gdzie \(p=\tfrac{a+b+c}2\). Dla boków \(13,14,15\): \(p=21\), \(P=\sqrt{21\cdot8\cdot7\cdot6}=\sqrt{7056}=84\).</p>
+</div></details>
 
 <h3>Środkowe, symetralne i okręgi wpisany i opisany</h3>
 <div class="bx def"><span class="t">Linie w trójkącie</span>
@@ -118,9 +154,13 @@
 <div class="bx thm"><span class="t">Twierdzenie o środkowych trójkąta</span>
 <div class="wf"><div>
 <p>Środkowe trójkąta przecinają się w jednym punkcie \(G\) (<b>środek ciężkości</b>), który dzieli każdą środkową w stosunku \(2:1\), licząc od wierzchołka: \(|CG|=2\,|GF|\) i tak samo dla pozostałych.</p>
-<p>Długość środkowej: \(m_a=\tfrac12\sqrt{2b^2+2c^2-a^2}\). Środkowe dzielą trójkąt na sześć trójkątów o równych polach.</p>
+<p>Środkowe dzielą trójkąt na sześć trójkątów o równych polach (dowód – w ostatniej sekcji działu).</p>
 </div><div class="fg"><svg class="fig" viewBox="0 0 300 190" width="300" height="190" role="img" aria-label="Środkowe trójkąta przecinają się w środku ciężkości G i dzielą się w stosunku 2:1"><polygon class="s" points="26,166 276,166 100,26"/><line class="a" x1="26" y1="166" x2="188" y2="96"/><line class="a" x1="276" y1="166" x2="63" y2="96"/><line class="a" x1="100" y1="26" x2="151" y2="166"/><line class="s" x1="88.5" y1="170" x2="88.5" y2="162"/><line class="s" x1="213.5" y1="170" x2="213.5" y2="162"/><line class="s" x1="236.1" y1="129.1" x2="231.1" y2="135.4"/><line class="s" x1="232.9" y1="126.6" x2="227.9" y2="132.9"/><line class="s" x1="148.1" y1="59.1" x2="143.1" y2="65.4"/><line class="s" x1="144.9" y1="56.6" x2="139.9" y2="62.9"/><line class="s" x1="79.8" y1="55.6" x2="86.9" y2="59.3"/><line class="s" x1="78" y1="59.1" x2="85" y2="62.9"/><line class="s" x1="76.1" y1="62.7" x2="83.2" y2="66.4"/><line class="s" x1="42.8" y1="125.6" x2="49.9" y2="129.3"/><line class="s" x1="41" y1="129.1" x2="48" y2="132.9"/><line class="s" x1="39.1" y1="132.7" x2="46.2" y2="136.4"/><circle class="dot" cx="134" cy="119.3" r="2.4"/><circle class="dot" cx="188" cy="96" r="2.4"/><circle class="dot" cx="63" cy="96" r="2.4"/><circle class="dot" cx="151" cy="166" r="2.4"/><text x="20" y="179" text-anchor="end">A</text><text x="282" y="179">B</text><text x="100" y="19" text-anchor="middle">C</text><text x="194" y="91">D</text><text x="57" y="91" text-anchor="end">E</text><text x="151" y="180" text-anchor="middle">F</text><text x="144" y="134.3">G</text><text x="107" y="77.2" text-anchor="end">2k</text><text x="154.5" y="147.2">k</text></svg></div></div>
 </div>
+<details class="opt"><summary><span class="optb">Poza wymaganiami</span>Długość środkowej</summary>
+<div class="opt-body">
+<p>Środkowa poprowadzona do boku \(a\): \(m_a=\tfrac12\sqrt{2b^2+2c^2-a^2}\). Przykład: w trójkącie o bokach \(6,8,10\) środkowa do przeciwprostokątnej \(a=10\) ma długość \(\tfrac12\sqrt{2\cdot36+2\cdot64-100}=\tfrac12\sqrt{100}=5\), czyli połowę przeciwprostokątnej.</p>
+</div></details>
 <div class="bx thm"><span class="t">Okrąg wpisany i opisany na trójkącie</span>
 <ul>
 <li><b>Dwusieczne</b> kątów (wewnętrznych) przecinają się w jednym punkcie – środku okręgu wpisanego w trójkąt (jest on równo oddalony od boków).</li>
@@ -134,6 +174,16 @@
 <p>Odcinek łączący środki dwóch boków trójkąta jest równoległy do trzeciego boku i ma długość równą jego połowie: \(DE\parallel AB\) oraz \(|DE|=\tfrac12|AB|\).</p>
 </div><div class="fg"><svg class="fig" viewBox="0 0 300 180" width="300" height="180" role="img" aria-label="Odcinek łączący środki dwóch boków trójkąta jest równoległy do trzeciego boku i dwa razy krótszy"><polygon class="s" points="24,158 276,158 112,24"/><line class="p" x1="68" y1="91" x2="194" y2="91"/><line class="s" x1="49.3" y1="126.7" x2="42.7" y2="122.3"/><line class="s" x1="93.3" y1="59.7" x2="86.7" y2="55.3"/><line class="s" x1="239.1" y1="122.7" x2="234" y2="128.9"/><line class="s" x1="236" y1="120.1" x2="230.9" y2="126.3"/><line class="s" x1="157.1" y1="55.7" x2="152" y2="61.9"/><line class="s" x1="154" y1="53.1" x2="148.9" y2="59.3"/><circle class="dot" cx="68" cy="91" r="2.4"/><circle class="dot" cx="194" cy="91" r="2.4"/><text x="18" y="171" text-anchor="end">A</text><text x="282" y="171">B</text><text x="112" y="17" text-anchor="middle">C</text><text x="61" y="95.5" text-anchor="end">D</text><text x="201" y="95.5">E</text><text x="150" y="172" text-anchor="middle">c</text><text x="131" y="82" text-anchor="middle">½c</text></svg></div></div>
 <p class="note">Skąd to wynika: trójkąty \(CDE\) i \(CAB\) mają wspólny kąt przy \(C\) i proporcjonalne boki \(\dfrac{|CD|}{|CA|}=\dfrac{|CE|}{|CB|}=\tfrac12\), więc są podobne w skali \(\tfrac12\) (cecha bkb). Stąd równoległość (równe kąty odpowiadające) i \(|DE|=\tfrac12|AB|\).</p>
+</div>
+<div class="bx pf" data-pf="zr7a"><span class="t">Dowód: symetralne boków i wysokości przecinają się w jednym punkcie</span>
+<div class="wf"><div>
+<p><b>Symetralne.</b> Symetralne boków \(AB\) i \(BC\) nie są równoległe (bo proste \(AB\) i \(BC\) się przecinają), więc przecinają się w punkcie \(O\). Punkt leżący na symetralnej odcinka jest równo oddalony od jego końców, zatem \(|OA|=|OB|\) i \(|OB|=|OC|\). Stąd \(|OA|=|OC|\), czyli \(O\) leży także na symetralnej boku \(AC\). Trzy symetralne przecinają się więc w jednym punkcie – środku okręgu opisanego.</p>
+<p><b>Wysokości.</b> Przez każdy wierzchołek poprowadźmy prostą równoległą do przeciwległego boku; powstaje trójkąt \(A'B'C'\) (rysunek). Czworokąty \(ABCB'\) i \(ACBC'\) są równoległobokami, więc \(|B'A|=|BC|=|AC'|\) i punkt \(A\) jest środkiem boku \(B'C'\). Tak samo \(B\) i \(C\) są środkami boków \(A'C'\) i \(A'B'\). Wysokość trójkąta \(ABC\) opuszczona z \(A\) jest prostopadła do \(BC\), a więc i do \(B'C'\) (bo \(B'C'\parallel BC\)), i przechodzi przez środek \(A\) boku \(B'C'\): jest symetralną tego boku. Wysokości trójkąta \(ABC\) są więc symetralnymi boków trójkąta \(A'B'C'\) i na mocy pierwszej części przecinają się w jednym punkcie. \(\blacksquare\)</p>
+</div><div class="fg"><svg class="fig" viewBox="0 0 380 300" width="380" height="300" role="img" aria-label="Wysokości trójkąta ABC są symetralnymi boków trójkąta A'B'C', którego środkami boków są A, B, C"><polygon class="s d" points="211.9,257.1 354,69.1 26,42.9"/><polygon class="s" points="190,56 118.9,150 282.9,163.1"/><line class="p" x1="190" y1="56" x2="182.1" y2="155.1"/><line class="p" x1="118.9" y1="150" x2="206" y2="74.5"/><line class="p" x1="282.9" y1="163.1" x2="172.2" y2="79.5"/><circle class="dotp" cx="187.2" cy="90.8" r="3.2"/><text class="pn" x="195.2" y="105.8" text-anchor="start">H</text><text x="192" y="49" text-anchor="start">A</text><text x="113.9" y="163" text-anchor="end">B</text><text x="288.9" y="176.1" text-anchor="start">C</text><text x="211.9" y="273.1" text-anchor="middle">A'</text><text x="360" y="66.1" text-anchor="start">B'</text><text x="20" y="39.9" text-anchor="end">C'</text></svg></div></div>
+</div>
+<div class="bx pf" data-pf="zr7b"><span class="t">Dowód: środkowe przecinają się w jednym punkcie</span>
+<p>Niech \(D,E,F\) będą środkami boków \(BC,CA,AB\), a \(G\) punktem przecięcia środkowych \(AD\) i \(BE\) (dwie środkowe zawsze przecinają się wewnątrz trójkąta). Odcinek \(DE\) łączy środki boków, więc \(DE\parallel AB\) i \(|DE|=\tfrac12|AB|\). Trójkąty \(ABG\) i \(DEG\) mają równe kąty (wierzchołkowe przy \(G\) oraz naprzemianległe przy równoległych \(AB\) i \(DE\)), więc są podobne w skali \(2\): \(|AG|=2|GD|\) i \(|BG|=2|GE|\). Zatem punkt przecięcia dwóch środkowych dzieli każdą z nich w stosunku \(2:1\), licząc od wierzchołka.</p>
+<p>To samo rozumowanie dla środkowych \(AD\) i \(CF\) pokazuje, że ich punkt przecięcia \(G'\) leży na odcinku \(AD\) w odległości \(\tfrac23|AD|\) od \(A\). Taki punkt na \(AD\) jest tylko jeden, więc \(G'=G\) i wszystkie trzy środkowe przechodzą przez \(G\). \(\blacksquare\)</p>
 </div>
 
 <h3>Podobieństwo i przystawanie figur</h3>
@@ -229,28 +279,57 @@
 </ul>
 <div class="fgs"><div class="fg"><svg class="fig" viewBox="0 0 190 170" width="190" height="170" role="img" aria-label="Kąt wpisany ACB ma miarę α, a kąt środkowy ASB oparty na tym samym łuku ma miarę 2α"><circle class="s" cx="95" cy="84" r="64"/><line class="p" x1="95" y1="84" x2="39.6" y2="116"/><line class="p" x1="95" y1="84" x2="150.4" y2="116"/><line class="a" x1="95" y1="20" x2="39.6" y2="116"/><line class="a" x1="95" y1="20" x2="150.4" y2="116"/><path class="p" d="M77.7,94A20,20 0 0 0 112.3,94"/><text x="95" y="122.5" text-anchor="middle">2α</text><path class="a" d="M83,40.8A24,24 0 0 0 107,40.8"/><text x="95" y="61.5" text-anchor="middle">α</text><circle class="dot" cx="95" cy="84" r="2.4"/><circle class="dot" cx="39.6" cy="116" r="2.4"/><circle class="dot" cx="150.4" cy="116" r="2.4"/><circle class="dot" cx="95" cy="20" r="2.4"/><text x="33.6" y="129" text-anchor="end">A</text><text x="156.4" y="129">B</text><text x="95" y="13" text-anchor="middle">C</text><text x="102" y="88.5">S</text></svg></div><div class="fg"><svg class="fig" viewBox="0 0 190 170" width="190" height="170" role="img" aria-label="Kąty wpisane oparte na tym samym łuku są równe"><circle class="s" cx="95" cy="90" r="62"/><line class="a" x1="130.6" y1="39.2" x2="56.8" y2="138.9"/><line class="a" x1="130.6" y1="39.2" x2="133.2" y2="138.9"/><line class="a d" x1="59.4" y1="39.2" x2="56.8" y2="138.9"/><line class="a d" x1="59.4" y1="39.2" x2="133.2" y2="138.9"/><path class="a" d="M117.5,56.9A22,22 0 0 0 131.1,61.2"/><text x="120" y="77.1" text-anchor="middle">α</text><path class="a" d="M58.9,61.2A22,22 0 0 0 72.5,56.9"/><text x="70" y="77.1" text-anchor="middle">α</text><circle class="dot" cx="56.8" cy="138.9" r="2.4"/><circle class="dot" cx="133.2" cy="138.9" r="2.4"/><circle class="dot" cx="130.6" cy="39.2" r="2.4"/><circle class="dot" cx="59.4" cy="39.2" r="2.4"/><text x="50.8" y="151.9" text-anchor="end">A</text><text x="139.2" y="151.9">B</text><text x="136.6" y="34.2">C</text><text x="53.4" y="34.2" text-anchor="end">D</text></svg></div><div class="fg"><svg class="fig" viewBox="0 0 190 150" width="190" height="150" role="img" aria-label="Kąt wpisany oparty na średnicy jest kątem prostym"><circle class="s" cx="95" cy="78" r="66"/><line class="a" x1="29" y1="78" x2="161" y2="78"/><line class="s" x1="29" y1="78" x2="126" y2="19.7"/><line class="s" x1="126" y1="19.7" x2="161" y2="78"/><path class="s" d="M119.1,23.8L123.2,30.7L130.1,26.6"/><circle class="dot" cx="95" cy="78" r="2.4"/><circle class="dot" cx="29" cy="78" r="2.4"/><circle class="dot" cx="161" cy="78" r="2.4"/><circle class="dot" cx="126" cy="19.7" r="2.4"/><text x="22" y="82.5" text-anchor="end">A</text><text x="168" y="82.5">B</text><text x="126" y="12.7" text-anchor="middle">C</text><text x="95" y="94" text-anchor="middle">S</text></svg></div><div class="fg"><svg class="fig" viewBox="0 0 210 170" width="210" height="170" role="img" aria-label="Kąt między styczną a cięciwą jest równy kątowi wpisanemu opartemu na tej cięciwie"><circle class="s" cx="105" cy="80" r="56"/><line class="p" x1="35" y1="136" x2="183" y2="136"/><line class="a" x1="105" y1="136" x2="153.5" y2="52"/><line class="a d" x1="69" y1="37.1" x2="105" y2="136"/><line class="a d" x1="69" y1="37.1" x2="153.5" y2="52"/><path class="p" d="M127,136A22,22 0 0 0 116,116.9"/><text x="135.3" y="123" text-anchor="middle">α</text><path class="a" d="M76.5,57.8A22,22 0 0 0 90.7,40.9"/><text x="95.8" y="64.1" text-anchor="middle">α</text><circle class="dot" cx="105" cy="136" r="2.4"/><circle class="dot" cx="153.5" cy="52" r="2.4"/><circle class="dot" cx="69" cy="37.1" r="2.4"/><text x="99" y="149" text-anchor="end">A</text><text x="159.5" y="47">B</text><text x="63" y="32.1" text-anchor="end">C</text></svg></div></div>
 </div>
+<div class="bx pf" data-pf="zp6"><span class="t">Dowód twierdzenia o kątach w okręgu</span>
+<div class="wf"><div>
+<p><b>(1) Kąt wpisany jest równy połowie kąta środkowego opartego na tym samym łuku.</b> Niech \(\angle ACB\) będzie kątem wpisanym w okrąg o środku \(S\).</p>
+<ul>
+<li><i>Jedno ramię jest średnicą</i> (\(S\) leży na \(CB\)). Trójkąt \(ASC\) jest równoramienny (\(|SA|=|SC|\)), więc \(\angle SAC=\angle SCA=\alpha\). Kąt \(ASB\) jest kątem zewnętrznym tego trójkąta, więc \(\angle ASB=\alpha+\alpha=2\alpha\).</li>
+<li><i>Środek leży wewnątrz kąta \(ACB\)</i> (rysunek). Poprowadźmy średnicę \(CD\). Z poprzedniego przypadku \(\angle ASD=2\alpha_1\) i \(\angle DSB=2\alpha_2\), więc \(\angle ASB=2\alpha_1+2\alpha_2=2\angle ACB\).</li>
+<li><i>Środek leży poza kątem \(ACB\).</i> Tak samo, tylko kąty się odejmują: \(\angle ASB=2\alpha_1-2\alpha_2=2\angle ACB\).</li>
+</ul>
+<p><b>(2) Kąty wpisane w ten sam okrąg są równe wtedy i tylko wtedy, gdy są oparte na równych łukach.</b> Z części (1) miara kąta wpisanego jest połową miary łuku, na którym jest oparty (miara łuku to miara odpowiadającego mu kąta środkowego). Równe łuki dają więc równe kąty wpisane, a z równych kątów wpisanych wynikają równe łuki. \(\blacksquare\)</p>
+</div><div class="fg"><svg class="fig" viewBox="0 0 290 224" width="290" height="224" role="img" aria-label="Dowód twierdzenia o kątach w okręgu: średnica CD dzieli kąt wpisany ACB na kąty α₁ i α₂, a kąt środkowy ASB na kąty 2α₁ i 2α₂"><circle class="s" cx="145" cy="112" r="84"/><line class="s" x1="145" y1="196" x2="63.9" y2="90.3"/><line class="s" x1="145" y1="196" x2="217.7" y2="70"/><line class="p d" x1="145" y1="196" x2="145" y2="28"/><line class="a" x1="145" y1="112" x2="63.9" y2="90.3"/><line class="a" x1="145" y1="112" x2="217.7" y2="70"/><circle class="dot" cx="145" cy="112" r="2.4"/><path class="p" d="M145,166 A30,30 0 0 0 126.7,172.2"/><path class="p" d="M164,163.1 A38,38 0 0 0 145,158"/><path class="a" d="M145,86 A26,26 0 0 0 119.9,105.3"/><path class="a" d="M167.5,99 A26,26 0 0 0 145,86"/><text x="56.9" y="93.3" text-anchor="end">A</text><text x="224.7" y="73" text-anchor="start">B</text><text x="145" y="213" text-anchor="middle">C</text><text x="145" y="21" text-anchor="middle">D</text><text x="153" y="128" text-anchor="start">S</text><text class="pn" x="115" y="162" text-anchor="middle">α₁</text><text class="pn" x="181" y="156" text-anchor="middle">α₂</text><text class="ac" x="105" y="92" text-anchor="middle">2α₁</text><text class="ac" x="185" y="92" text-anchor="middle">2α₂</text></svg></div></div>
+</div>
 <div class="bx thm"><span class="t">Dwa okręgi</span>
 <p>Dwa okręgi o promieniach \(r_1,r_2\) i odległości środków \(d\) są: styczne zewnętrznie, gdy \(d=r_1+r_2\); styczne wewnętrznie, gdy \(d=|r_1-r_2|\); przecinają się w dwóch punktach, gdy \(|r_1-r_2|&lt;d&lt;r_1+r_2\); rozłączne, gdy \(d>r_1+r_2\) (lub jeden leży wewnątrz drugiego, gdy \(d&lt;|r_1-r_2|\)).</p>
 <div class="fgs"><div class="fg"><svg class="fig" viewBox="0 0 340 100" width="340" height="100" role="img" aria-label="Położenie dwóch okręgów: styczne zewnętrznie, przecinające się, styczne wewnętrznie"><circle class="a" cx="32" cy="44" r="22"/><circle class="p" cx="80" cy="44" r="26"/><circle class="dot" cx="32" cy="44" r="2.4"/><circle class="dot" cx="80" cy="44" r="2.4"/><circle class="a" cx="158" cy="44" r="28"/><circle class="p" cx="198" cy="44" r="26"/><circle class="dot" cx="158" cy="44" r="2.4"/><circle class="dot" cx="198" cy="44" r="2.4"/><circle class="a" cx="278" cy="44" r="36"/><circle class="p" cx="296" cy="44" r="18"/><circle class="dot" cx="278" cy="44" r="2.4"/><circle class="dot" cx="296" cy="44" r="2.4"/><text x="56" y="96.5" text-anchor="middle" class="m">d = r₁ + r₂</text><text x="178" y="96.5" text-anchor="middle" class="m">|r₁ − r₂| &lt; d &lt; r₁ + r₂</text><text x="290" y="96.5" text-anchor="middle" class="m">d = |r₁ − r₂|</text></svg></div></div>
 </div>
 
-<h3>Czworokąty wpisane i opisane, potęga punktu, wielokąty foremne</h3>
+<h3>Czworokąty wpisane i opisane, wielokąty foremne</h3>
 <div class="bx thm"><span class="t">Czworokąt opisany na okręgu</span>
 <div class="wf"><div>
 <p>W czworokąt można wpisać okrąg \(\iff\) sumy długości przeciwległych boków są równe: \(a+c=b+d\). Wtedy pole \(P=r\cdot p\), gdzie \(p\) – połowa obwodu.</p>
 </div><div class="fg"><svg class="fig" viewBox="0 0 250 196" width="250" height="196" role="img" aria-label="Czworokąt opisany na okręgu: a + c = b + d"><circle class="a" cx="118" cy="96" r="50"/><polygon class="s" points="173.3,121.8 158.6,38.1 60.1,55.4 81.2,175"/><text x="179.3" y="134.8">A</text><text x="164.6" y="33.1">B</text><text x="54.1" y="50.4" text-anchor="end">C</text><text x="75.2" y="188" text-anchor="end">D</text><text x="178.9" y="84.4">a</text><text x="109.3" y="37.8" text-anchor="middle">b</text><text x="57.6" y="119.7" text-anchor="end">c</text><text x="137.2" y="167.4">d</text></svg></div></div>
 <p class="note">Skąd \(a+c=b+d\): odcinki stycznych poprowadzonych z jednego wierzchołka są równe. Jeśli odcinki przy kolejnych wierzchołkach mają długości \(x,y,z,t\), to boki wynoszą \(x+y\), \(y+z\), \(z+t\), \(t+x\) – a obie sumy przeciwległych boków są równe \(x+y+z+t\).</p>
 </div>
+<div class="bx pf" data-pf="zr9"><span class="t">Dowód warunku wpisania okręgu w czworokąt</span>
+<p><b>(⇒)</b> Dowodzi tego uwaga „Skąd \(a+c=b+d\)” powyżej: odcinki stycznych poprowadzonych z jednego wierzchołka są równe, więc obie sumy przeciwległych boków są równe \(x+y+z+t\).</p>
+<p><b>(⇐)</b> Niech w czworokącie wypukłym \(ABCD\) będzie \(|AB|+|CD|=|BC|+|DA|\). Jeśli \(|AB|=|BC|\), to także \(|CD|=|DA|\) i czworokąt jest deltoidem symetrycznym względem \(BD\); punkt przecięcia dwusiecznej kąta \(A\) z osią \(BD\) jest równo oddalony od prostych \(AB\), \(AD\), a z symetrii także od \(CB\), \(CD\). Niech więc \(|AB|>|BC|\); wtedy \(|DA|>|CD|\). Wybierzmy \(P\) na \(AB\) tak, by \(|BP|=|BC|\), i \(Q\) na \(AD\) tak, by \(|DQ|=|DC|\). Wtedy \(|AP|=|AB|-|BC|=|DA|-|CD|=|AQ|\).</p>
+<p>Trójkąty \(BPC\), \(DQC\) i \(APQ\) są równoramienne, więc dwusieczne kątów \(B\), \(D\), \(A\) czworokąta są symetralnymi odcinków \(PC\), \(QC\), \(PQ\) trójkąta \(PQC\). Symetralne boków trójkąta przecinają się w jednym punkcie \(O\). Punkt leżący na dwusiecznej kąta jest równo oddalony od jego ramion, zatem \(O\) jest tak samo daleko od \(AB\) i \(BC\) (dwusieczna \(B\)), od \(AB\) i \(AD\) (dwusieczna \(A\)) oraz od \(AD\) i \(DC\) (dwusieczna \(D\)). Odległości od wszystkich czterech boków są więc równe, a okrąg o środku \(O\) i takim promieniu jest styczny do każdego z nich. \(\blacksquare\)</p>
+</div>
 <div class="bx thm"><span class="t">Czworokąt wpisany w okrąg</span>
 <div class="wf"><div>
 <ul>
 <li>Na czworokącie można opisać okrąg \(\iff\) sumy miar przeciwległych kątów są równe i wynoszą \(180^\circ\): \(\alpha+\gamma=\beta+\delta=180^\circ\).</li>
-<li><b>Twierdzenie Ptolemeusza:</b> \(|AC|\cdot|BD|=|AB|\cdot|CD|+|BC|\cdot|AD|\).</li>
-<li><b>Wzór Brahmagupty:</b> \(P=\sqrt{(p-a)(p-b)(p-c)(p-d)}\) (\(p\) – połowa obwodu).</li>
 </ul>
 </div><div class="fg"><svg class="fig" viewBox="0 0 240 190" width="240" height="190" role="img" aria-label="Czworokąt wpisany w okrąg: α + γ = β + δ = 180°"><circle class="a" cx="120" cy="94" r="66"/><polygon class="s" points="82.1,148.1 172,134.6 169,49.8 75.8,45"/><path class="p" d="M99.9,145.4A18,18 0 0 0 81,130.1"/><text x="101.7" y="128.5" text-anchor="middle">α</text><path class="p" d="M171.4,116.6A18,18 0 0 0 154.2,137.3"/><text x="148.2" y="119.3" text-anchor="middle">β</text><path class="p" d="M151.1,48.9A18,18 0 0 0 169.7,67.8"/><text x="146.9" y="76.1" text-anchor="middle">γ</text><path class="p" d="M76.9,62.9A18,18 0 0 0 93.8,45.9"/><text x="97.9" y="71.3" text-anchor="middle">δ</text><text x="76.1" y="161.1" text-anchor="end">A</text><text x="178" y="147.6">B</text><text x="175" y="44.8">C</text><text x="69.8" y="40" text-anchor="end">D</text></svg></div></div>
 <p class="note">Skąd \(\alpha+\gamma=180^\circ\): kąty \(\alpha\) i \(\gamma\) są wpisane i oparte na dwóch łukach, które razem tworzą cały okrąg (\(360^\circ\)); a każdy kąt wpisany jest połową swojego łuku.</p>
 </div>
+<div class="bx pf" data-pf="zr8"><span class="t">Dowód warunku wpisania czworokąta w okrąg</span>
+<p><b>(⇒)</b> Dowodzi tego uwaga „Skąd \(\alpha+\gamma=180^\circ\)” powyżej: kąty \(\alpha\) i \(\gamma\) są wpisane i oparte na łukach, które razem tworzą cały okrąg (\(360^\circ\)), a każdy kąt wpisany jest połową swojego łuku.</p>
+<p><b>(⇐)</b> Niech w czworokącie wypukłym \(ABCD\) będzie \(\alpha+\gamma=180^\circ\), i niech \(\omega\) będzie okręgiem opisanym na trójkącie \(ABD\). Punkt \(X\) leżący na łuku \(BD\) tego okręgu, po przeciwnej stronie prostej \(BD\) niż \(A\), widzi odcinek \(BD\) pod kątem \(180^\circ-\alpha=\gamma\) (z części (⇒)). Punkt \(C\) leży po tej samej stronie \(BD\) co \(X\) i też widzi \(BD\) pod kątem \(\gamma\). Przypuśćmy, że \(C\notin\omega\).</p>
+<ul>
+<li>Jeśli \(C\) leży wewnątrz \(\omega\), przedłużmy \(DC\) do przecięcia z \(\omega\) w punkcie \(X\). Kąt \(BCD\) jest zewnętrznym kątem trójkąta \(BCX\), więc \(\gamma=\angle BCD=\angle BXD+\angle CBX>\angle BXD=\gamma\) – sprzeczność.</li>
+<li>Jeśli \(C\) leży na zewnątrz \(\omega\), odcinek \(DC\) przecina \(\omega\) w punkcie \(X\). Kąt \(BXD\) jest zewnętrznym kątem trójkąta \(BXC\), więc \(\gamma=\angle BXD=\angle BCD+\angle XBC>\angle BCD=\gamma\) – sprzeczność.</li>
+</ul>
+<p>Zatem \(C\in\omega\), czyli czworokąt \(ABCD\) jest wpisany w okrąg. \(\blacksquare\)</p>
+</div>
+<details class="opt"><summary><span class="optb">Poza wymaganiami</span>Twierdzenie Ptolemeusza i wzór Brahmagupty</summary>
+<div class="opt-body">
+<p>Dla czworokąta \(ABCD\) wpisanego w okrąg: \(|AC|\cdot|BD|=|AB|\cdot|CD|+|BC|\cdot|AD|\) (twierdzenie Ptolemeusza) oraz \(P=\sqrt{(p-a)(p-b)(p-c)(p-d)}\), gdzie \(a,b,c,d\) to boki, a \(p\) – połowa obwodu (wzór Brahmagupty).</p>
+</div></details>
+<details class="opt"><summary><span class="optb">Poza wymaganiami</span>Potęga punktu względem okręgu</summary>
+<div class="opt-body">
 <div class="bx thm"><span class="t">Potęga punktu względem okręgu</span>
 <ul>
 <li>Cięciwy \(AB\) i \(CD\) przecinają się w punkcie \(P\): \(|PA|\cdot|PB|=|PC|\cdot|PD|\).</li>
@@ -259,6 +338,7 @@
 <div class="fgs"><div class="fg"><svg class="fig" viewBox="0 0 210 170" width="210" height="170" role="img" aria-label="Cięciwy AB i CD przecinają się w punkcie P: |PA|·|PB| = |PC|·|PD|"><circle class="s" cx="105" cy="85" r="64"/><line class="a" x1="43.2" y1="101.6" x2="161.5" y2="55"/><line class="p" x1="75" y1="28.5" x2="141.7" y2="137.4"/><circle class="dot" cx="43.2" cy="101.6" r="2.4"/><circle class="dot" cx="161.5" cy="55" r="2.4"/><circle class="dot" cx="75" cy="28.5" r="2.4"/><circle class="dot" cx="141.7" cy="137.4" r="2.4"/><circle class="dot" cx="104.8" cy="77.3" r="2.4"/><text x="36.2" y="106.1" text-anchor="end">A</text><text x="168.5" y="59.5">B</text><text x="75" y="21.5" text-anchor="middle">C</text><text x="141.7" y="151.4" text-anchor="middle">D</text><text x="110.8" y="90.3">P</text></svg></div><div class="fg"><svg class="fig" viewBox="0 0 290 176" width="290" height="176" role="img" aria-label="Z punktu P poprowadzono styczną PT i sieczną przecinającą okrąg w A i B: |PT|² = |PA|·|PB|"><circle class="s" cx="190" cy="90" r="56"/><line class="a" x1="24" y1="130" x2="159.8" y2="42.9"/><line class="p" x1="24" y1="130" x2="213.8" y2="39.3"/><line class="s d" x1="190" y1="90" x2="159.8" y2="42.9"/><path class="s" d="M163.5,48.8L157.6,52.5L153.9,46.7"/><circle class="dot" cx="24" cy="130" r="2.4"/><circle class="dot" cx="159.8" cy="42.9" r="2.4"/><circle class="dot" cx="135.6" cy="76.6" r="2.4"/><circle class="dot" cx="213.8" cy="39.3" r="2.4"/><text x="17" y="134.5" text-anchor="end">P</text><text x="159.8" y="35.9" text-anchor="middle">T</text><text x="129.6" y="89.6" text-anchor="end">A</text><text x="219.8" y="34.3">B</text><text x="197" y="94.5">S</text><circle class="dot" cx="190" cy="90" r="2.4"/></svg></div></div>
 <p class="note">Skąd (cięciwy): trójkąty \(PAC\) i \(PDB\) mają równe kąty wpisane oparte na tych samych łukach i równe kąty wierzchołkowe przy \(P\), więc są podobne, a stąd \(\dfrac{|PA|}{|PD|}=\dfrac{|PC|}{|PB|}\).</p>
 </div>
+</div></details>
 <div class="bx thm"><span class="t">Wielokąty foremne</span>
 <div class="wf"><div>
 <ul>
@@ -270,6 +350,7 @@
 </div>
 
 <h3>Dowody geometryczne</h3>
+<p class="note">Dowody twierdzeń z listy podstawy programowej (kąty w okręgu, twierdzenie cosinusów i sinusów, pole trójkąta, punkty szczególne trójkąta, czworokąty wpisane i opisane, twierdzenia o dwusiecznej i o odcinkach w trójkącie prostokątnym) są w ramkach „z listy podstawy” w tym dziale; spis – <a href="#matura-1-teoria-4">Lista dowodów</a>.</p>
 <div class="bx met"><span class="t">Jak podejść do dowodu</span>
 <ol>
 <li><b>Narysuj dokładny rysunek</b> i zapisz, co jest dane, a co masz wykazać. Oznacz kąty literami \(\alpha,\beta\) – często wszystko wyraża się przez dwa kąty.</li>

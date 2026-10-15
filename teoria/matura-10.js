@@ -6,7 +6,7 @@
 <div class="bx thm"><span class="t">Twierdzenia i granice, które trzeba znać</span>
 <ul>
 <li><b>Działania:</b> jeśli granice \(f\) i \(g\) istnieją i są skończone, to \(\lim(f\pm g)\), \(\lim(f\cdot g)\), \(\lim\tfrac fg\) (dla \(\lim g\ne0\)) są równe odpowiednio sumie, różnicy, iloczynowi, ilorazowi granic. Granica funkcji ciągłej: \(\lim\limits_{x\to x_0}f(x)=f(x_0)\).</li>
-<li>\(\lim\limits_{x\to\pm\infty}\dfrac1{x^n}=0\); \(\ \lim\limits_{x\to0^+}\dfrac1x=+\infty\), \(\ \lim\limits_{x\to0^-}\dfrac1x=-\infty\); \(\ \lim\limits_{x\to0}\dfrac{\sin x}x=1\).</li>
+<li>\(\lim\limits_{x\to\pm\infty}\dfrac1{x^n}=0\); \(\ \lim\limits_{x\to0^+}\dfrac1x=+\infty\), \(\ \lim\limits_{x\to0^-}\dfrac1x=-\infty\); \(\ \lim\limits_{x\to0}\dfrac{\sin x}x=1\) (to ostatnie jest poza wymaganiami, ale często się przydaje).</li>
 <li><b>Funkcja wymierna w \(\pm\infty\):</b> dzielimy licznik i mianownik przez najwyższą potęgę \(x\) – jak dla ciągów (granica to iloraz współczynników przy najwyższych potęgach, gdy stopnie równe; \(0\), gdy licznik niższego stopnia; \(\pm\infty\) – gdy wyższego).</li>
 <li><b>Symbol \(\tfrac00\)</b> (np. \(\lim\limits_{x\to a}\dfrac{W(x)}{V(x)}\) z \(W(a)=V(a)=0\)): rozłóż licznik i mianownik na czynniki, skróć \((x-a)\) i policz granicę ponownie. Dla pierwiastków: pomnóż przez sprzężenie.</li>
 <li>\(\dfrac c0\) dla \(c\ne0\): granica jest \(\pm\infty\) albo nie istnieje – zbadaj granice jednostronne i znak mianownika.</li>
@@ -15,12 +15,26 @@
 <div class="bx def"><span class="t">Asymptoty</span>
 <ul>
 <li><b>Pionowa</b> \(x=a\): gdy \(\lim\limits_{x\to a^\pm}f(x)=\pm\infty\) (przynajmniej jedna granica jednostronna).</li>
-<li><b>Pozioma</b> \(y=b\): gdy \(\lim\limits_{x\to+\infty}f(x)=b\) lub \(\lim\limits_{x\to-\infty}f(x)=b\). <b>Ukośna</b> \(y=ax+b\): gdy \(\lim(f(x)-(ax+b))=0\) w \(\pm\infty\); \(a=\lim\tfrac{f(x)}x\), \(b=\lim(f(x)-ax)\).</li>
+<li><b>Pozioma</b> \(y=b\): gdy \(\lim\limits_{x\to+\infty}f(x)=b\) lub \(\lim\limits_{x\to-\infty}f(x)=b\).</li>
 </ul>
 </div>
 <div class="bx ex"><span class="t">Przykład</span>
-<p>\(\lim\limits_{x\to2}\dfrac{x^2-4}{x^2-5x+6}=\lim\limits_{x\to2}\dfrac{(x-2)(x+2)}{(x-2)(x-3)}=\dfrac4{-1}=-4\). \(\ \lim\limits_{x\to\infty}\dfrac{3x^2+1}{x^2-x}=3\). Funkcja \(\dfrac{x^2+1}{x}=x+\dfrac1x\) ma asymptotę pionową \(x=0\) i ukośną \(y=x\).</p>
+<p>\(\lim\limits_{x\to2}\dfrac{x^2-4}{x^2-5x+6}=\lim\limits_{x\to2}\dfrac{(x-2)(x+2)}{(x-2)(x-3)}=\dfrac4{-1}=-4\). \(\ \lim\limits_{x\to\infty}\dfrac{3x^2+1}{x^2-x}=3\). Funkcja \(\dfrac{x+1}{x-2}\) ma asymptotę pionową \(x=2\) i poziomą \(y=1\).</p>
 </div>
+<div class="bx met"><span class="t">Granice z funkcją wykładniczą</span>
+<ul>
+<li>Dla \(a>1\): \(a^x\to+\infty\) przy \(x\to+\infty\) oraz \(a^x\to0\) przy \(x\to-\infty\). Dla \(0&lt;a&lt;1\) jest odwrotnie.</li>
+<li>W ilorazach dzielimy licznik i mianownik przez składnik, który <b>rośnie najszybciej</b> (przy \(x\to+\infty\) – przez potęgę o największej podstawie), i korzystamy z tego, że \(c^x\to0\) dla \(0&lt;c&lt;1\), gdy \(x\to+\infty\).</li>
+</ul>
+</div>
+<div class="bx ex"><span class="t">Przykłady – granice z funkcją wykładniczą</span>
+<p>\(\displaystyle\lim_{x\to+\infty}\frac{3\cdot2^x-5}{2^x+1}=\lim_{x\to+\infty}\frac{3-5\cdot2^{-x}}{1+2^{-x}}=3\), natomiast \(\displaystyle\lim_{x\to-\infty}\frac{3\cdot2^x-5}{2^x+1}=\frac{3\cdot0-5}{0+1}=-5\) (bo \(2^x\to0\) przy \(x\to-\infty\)).</p>
+<p>\(\displaystyle\lim_{x\to+\infty}\frac{2^x-3^x}{2^x+3^x}=\lim_{x\to+\infty}\frac{\left(\frac23\right)^x-1}{\left(\frac23\right)^x+1}=\frac{0-1}{0+1}=-1\).</p>
+</div>
+<details class="opt"><summary><span class="optb">Poza wymaganiami</span>Asymptota ukośna</summary>
+<div class="opt-body">
+<p>Prosta \(y=ax+b\) jest asymptotą ukośną wykresu \(f\) w \(\pm\infty\), gdy \(\lim(f(x)-(ax+b))=0\); wtedy \(a=\lim\dfrac{f(x)}x\) i \(b=\lim(f(x)-ax)\). Przykład: \(f(x)=\dfrac{x^2+1}{x}=x+\dfrac1x\) ma asymptotę ukośną \(y=x\) (bo \(f(x)-x=\tfrac1x\to0\)) oraz pionową \(x=0\).</p>
+</div></details>
 
 <h3>Ciągłość funkcji</h3>
 <div class="bx def"><span class="t">Definicja</span>
@@ -31,10 +45,25 @@
 <div class="bx thm"><span class="t">Twierdzenia</span>
 <ul>
 <li><b>Własność Darboux:</b> funkcja ciągła w \([a,b]\) przyjmuje każdą wartość pośrednią między \(f(a)\) i \(f(b)\). W szczególności, gdy \(f(a)\cdot f(b)&lt;0\), równanie \(f(x)=0\) ma rozwiązanie w \((a,b)\).</li>
-<li><b>Twierdzenie Weierstrassa:</b> funkcja ciągła w przedziale domkniętym \([a,b]\) przyjmuje w nim wartość najmniejszą i największą.</li>
 <li>Zadania z parametrem: dobór parametru tak, aby funkcja określona „kawałkami” była ciągła w punkcie sklejenia – przyrównaj granice jednostronne i wartość funkcji.</li>
 </ul>
 </div>
+<div class="bx met"><span class="t">Jak użyć własności Darboux (istnienie rozwiązania)</span>
+<ol>
+<li>Zapisz równanie w postaci \(f(x)=0\) i uzasadnij, że \(f\) jest ciągła w przedziale \([a,b]\) (np. jest sumą funkcji elementarnych).</li>
+<li>Policz \(f(a)\) i \(f(b)\) i pokaż, że mają przeciwne znaki.</li>
+<li>Zapisz wniosek: istnieje \(x_0\in(a,b)\), dla którego \(f(x_0)=0\).</li>
+</ol>
+</div>
+<div class="bx ex"><span class="t">Przykład</span>
+<p>Wykaż, że równanie \(2^x+x=4\) ma rozwiązanie w przedziale \((1,2)\). Niech \(f(x)=2^x+x-4\); jest ciągła jako suma funkcji ciągłych. Mamy \(f(1)=2+1-4=-1&lt;0\) i \(f(2)=4+2-4=2>0\). Z własności Darboux istnieje \(x_0\in(1,2)\), dla którego \(f(x_0)=0\), czyli \(2^{x_0}+x_0=4\).</p>
+<p>Podobnie równanie \(x^3-3x+1=0\) ma rozwiązanie w \((0,1)\), bo \(f(0)=1>0\) i \(f(1)=-1&lt;0\).</p>
+<p class="note">Własność Darboux gwarantuje istnienie rozwiązania, ale nie mówi, ile ich jest ani ile wynosi.</p>
+</div>
+<details class="opt"><summary><span class="optb">Poza wymaganiami</span>Twierdzenie Weierstrassa</summary>
+<div class="opt-body">
+<p>Funkcja ciągła w przedziale domkniętym \([a,b]\) przyjmuje w nim wartość najmniejszą i największą. Dlatego w zadaniach z przedziałem domkniętym wartości ekstremalne zawsze istnieją; w przedziale otwartym lub nieograniczonym mogą nie istnieć.</p>
+</div></details>
 
 <h3>Pochodna i reguły różniczkowania</h3>
 <div class="bx def"><span class="t">Definicja pochodnej</span>
@@ -42,20 +71,23 @@
 o ile granica istnieje i jest skończona (wtedy \(f\) jest <b>różniczkowalna</b> w \(x_0\); różniczkowalność pociąga ciągłość, a nie odwrotnie – np. \(|x|\) w zerze). <b>Interpretacja geometryczna:</b> \(f'(x_0)\) to współczynnik kierunkowy stycznej do wykresu w punkcie \((x_0,f(x_0))\), czyli \(\operatorname{tg}\alpha\). <b>Fizyczna:</b> chwilowa prędkość zmiany (prędkość, gdy \(f\) to droga).</p>
 </div>
 <div class="bx thm"><span class="t">Wzory na pochodne</span>
+\[(c)'=0,\qquad(ax+b)'=a,\qquad(x^{\alpha})'=\alpha x^{\alpha-1}\quad(\alpha\in\mathbb R,\ x>0).\]
+<p>Dla \(\alpha\) całkowitego wzór zachodzi też dla innych \(x\), o ile wyrażenia mają sens. Ważne przypadki szczególne:
+\[(\sqrt x)'=\frac1{2\sqrt x}\ \ (\alpha=\tfrac12),\qquad\left(\frac1x\right)'=-\frac1{x^2}\ \ (\alpha=-1),\qquad(x^3)'=3x^2.\]</p>
+</div>
+<details class="opt"><summary><span class="optb">Poza wymaganiami</span>Pochodne funkcji trygonometrycznych, wykładniczej i logarytmicznej</summary>
+<div class="opt-body">
 <div class="two">
 <div>
-\[(c)'=0,\qquad(ax+b)'=a,\qquad(x^n)'=nx^{n-1}\]
-\[(\sqrt x)'=\frac1{2\sqrt x},\qquad\left(\frac1x\right)'=-\frac1{x^2}\]
 \[(\sin x)'=\cos x,\qquad(\cos x)'=-\sin x\]
+\[(\operatorname{tg}x)'=\frac1{\cos^2x}\]
 </div>
 <div>
-\[(\operatorname{tg}x)'=\frac1{\cos^2x}\]
 \[(e^x)'=e^x,\qquad(a^x)'=a^x\ln a\]
 \[(\ln x)'=\frac1x,\qquad(\log_ax)'=\frac1{x\ln a}\]
 </div>
 </div>
-<p>(Pochodne funkcji wykładniczej, logarytmicznej i trygonometrycznych wykraczają poza wymagania matury rozszerzonej, ale pojawiają się na studiach.)</p>
-</div>
+</div></details>
 <div class="bx thm"><span class="t">Reguły</span>
 \[(f\pm g)'=f'\pm g',\quad(c\,f)'=c\,f',\quad(f\cdot g)'=f'g+fg',\quad\left(\frac fg\right)'=\frac{f'g-fg'}{g^2},\quad\bigl(f(g(x))\bigr)'=f'(g(x))\cdot g'(x).\]
 <p>W złożeniu \(f(g(x))\) funkcję \(g\) nazywamy <b>wewnętrzną</b>, a \(f\) – <b>zewnętrzną</b>; pochodną liczymy od zewnętrznej (w punkcie \(g(x)\)) i mnożymy przez pochodną wewnętrznej.</p>
@@ -120,11 +152,18 @@ o ile granica istnieje i jest skończona (wtedy \(f\) jest <b>różniczkowalna</
 </div>
 
 <h3>Badanie przebiegu zmienności funkcji (schemat)</h3>
+<p>Szkic wykresu funkcji (np. w zadaniach o liczbie rozwiązań równania z parametrem) łączy wszystko z tego działu:</p>
 <ol>
-<li>Dziedzina; parzystość/nieparzystość; punkty przecięcia z osiami.</li>
-<li>Granice na końcach dziedziny i asymptoty (pionowe, poziome, ukośne).</li>
+<li>Dziedzina; punkty przecięcia z osiami.</li>
+<li>Granice na końcach dziedziny i asymptoty (pionowe i poziome).</li>
 <li>Pochodna: monotoniczność i ekstrema lokalne (tabelka znaków \(f'\)).</li>
-<li>Druga pochodna (rozszerzenie): \(f''>0\) – funkcja wypukła (krzywa „ku górze”), \(f''&lt;0\) – wklęsła; zmiana znaku \(f''\) – punkt przegięcia.</li>
 <li>Zbiór wartości i szkic wykresu; liczba rozwiązań równania \(f(x)=m\) odczytana z wykresu.</li>
 </ol>
+<details class="opt"><summary><span class="optb">Poza wymaganiami</span>Parzystość, druga pochodna, wypukłość i punkty przegięcia</summary>
+<div class="opt-body">
+<ul>
+<li>Parzystość lub nieparzystość funkcji skraca badanie o połowę (wykres symetryczny względem \(Oy\) albo względem początku układu).</li>
+<li>Druga pochodna: \(f''>0\) – funkcja wypukła (krzywa „ku górze”), \(f''&lt;0\) – wklęsła; zmiana znaku \(f''\) oznacza punkt przegięcia. Asymptoty ukośne – patrz wyżej.</li>
+</ul>
+</div></details>
 `;
