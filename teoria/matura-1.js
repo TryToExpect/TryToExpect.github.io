@@ -112,7 +112,7 @@ Po odjęciu stronami skracają się wszystkie składniki z wyjątkiem pierwszego
 <tr><td><span class="note">podst.</span> Twierdzenie cosinusów i twierdzenie odwrotne do twierdzenia Pitagorasa</td><td><a href="#matura-6-teoria-4" data-pf-link="zp10">Planimetria, sekcja 4</a></td></tr>
 <tr><td><span class="note">rozsz.</span> Tożsamość \(\binom nk=\binom{n-1}{k-1}+\binom{n-1}k\) (dowód kombinatoryczny)</td><td><a href="#matura-9-teoria-1" data-pf-link="zr1">Kombinatoryka i prawdopodobieństwo, sekcja 1</a></td></tr>
 <tr><td><span class="note">rozsz.</span> Wzór dwumianowy Newtona; wzór na \(a^n-b^n\) i podzielność \(a-b\mid a^n-b^n\)</td><td><a href="#matura-9-teoria-2" data-pf-link="zr2a">Kombinatoryka i prawdopodobieństwo, sekcja 2</a>, <a href="#matura-1-teoria-3" data-pf-link="zr2b">Wyrażenia i dowody, sekcja 3</a></td></tr>
-<tr><td><span class="note">rozsz.</span> Dzielenie wielomianu z resztą przez \(x-a\), schemat Hornera</td><td><a href="#matura-2-teoria-4" data-pf-link="zr3">Równania i nierówności, sekcja 4</a></td></tr>
+<tr><td><span class="note">rozsz.</span> Dzielenie wielomianu z resztą przez \(x-a\), schemat Hornera</td><td><a href="#matura-15-teoria-2" data-pf-link="zr3">Wielomiany, sekcja 2</a></td></tr>
 <tr><td><span class="note">rozsz.</span> Wzory Viète’a</td><td><a href="#matura-2-teoria-2" data-pf-link="zr4">Równania i nierówności, sekcja 2</a></td></tr>
 <tr><td><span class="note">rozsz.</span> Wzory na sinus i cosinus sumy oraz różnicy kątów</td><td><a href="#matura-4-teoria-3" data-pf-link="zr5">Trygonometria, sekcja 3</a></td></tr>
 <tr><td><span class="note">rozsz.</span> Twierdzenie sinusów</td><td><a href="#matura-6-teoria-4" data-pf-link="zr6">Planimetria, sekcja 4</a></td></tr>
