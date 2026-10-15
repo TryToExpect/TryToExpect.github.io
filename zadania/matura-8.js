@@ -1,39 +1,11 @@
 (window.TASKS = window.TASKS || {})['matura-8'] = [
   {
-    id: 1,
-    group: "Stożek i graniastosłup – wzory na pola i objętości",
-    src: "maj 2025 · zad. 12.1",
-    pts: 2,
-    tags: ["stożek", "objętość", "odległość od tworzącej"],
-    q: String.raw`<p>Rozważamy wszystkie stożki, których wysokość jest większa od \(5\), a odległość środka podstawy od tworzącej jest równa \(5\).</p>
-<p>Wykaż, że objętość \(V\) stożka, jako funkcja wysokości \(h\) stożka, wyraża się wzorem
-\[V(h)=\frac\pi3\cdot\frac{25h^3}{h^2-25}.\]</p>`,
-    sol: String.raw`<p class="step"><b>Pomysł.</b> Odległość środka podstawy od tworzącej to wysokość trójkąta prostokątnego o przyprostokątnych \(r\) (promień podstawy) i \(h\) (wysokość stożka), opuszczona na przeciwprostokątną – tworzącą \(l=\sqrt{r^2+h^2}\).</p>
-<p class="step"><b>Krok 1.</b> Pole tego trójkąta liczymy na dwa sposoby: \(\tfrac12rh=\tfrac12\,l\cdot5\), więc \(rh=5\sqrt{r^2+h^2}\). Podnosimy do kwadratu: \(r^2h^2=25(r^2+h^2)\).</p>
-<p class="step"><b>Krok 2.</b> Stąd \(r^2(h^2-25)=25h^2\), a ponieważ \(h>5\), możemy podzielić: \(r^2=\dfrac{25h^2}{h^2-25}\).</p>
-<p class="step"><b>Krok 3.</b> \(V=\tfrac13\pi r^2h=\dfrac\pi3\cdot\dfrac{25h^3}{h^2-25}\). \(\blacksquare\)</p>`
-  },
-  {
-    id: 2,
-    group: "Stożek i graniastosłup – wzory na pola i objętości",
-    src: "maj 2024 · zad. 13.1",
-    pts: 2,
-    tags: ["graniastosłup prawidłowy trójkątny", "pole powierzchni całkowitej", "objętość"],
-    q: String.raw`<p>Rozważamy wszystkie graniastosłupy prawidłowe trójkątne o objętości \(3456\), których krawędź podstawy ma długość nie większą niż \(8\sqrt3\).</p>
-<p>Wykaż, że pole \(P\) powierzchni całkowitej graniastosłupa w zależności od długości \(a\) krawędzi podstawy graniastosłupa jest określone wzorem
-\[P(a)=\frac{a^2\cdot\sqrt3}{2}+\frac{13824\sqrt3}{a}.\]</p>`,
-    sol: String.raw`<p class="step"><b>Pomysł.</b> Z objętości wyrazimy wysokość graniastosłupa przez \(a\), a potem podstawimy do pola całkowitego \(P=2P_p+P_b\).</p>
-<p class="step"><b>Krok 1: wysokość.</b> Pole podstawy (trójkąta równobocznego o boku \(a\)): \(P_p=\dfrac{a^2\sqrt3}4\). Z \(V=P_p\cdot H=3456\) mamy \(H=\dfrac{3456}{\frac{a^2\sqrt3}4}=\dfrac{13824}{a^2\sqrt3}\).</p>
-<p class="step"><b>Krok 2: pole całkowite.</b> Powierzchnia boczna to trzy prostokąty \(a\times H\):
-\[P(a)=2\cdot\frac{a^2\sqrt3}4+3aH=\frac{a^2\sqrt3}2+3a\cdot\frac{13824}{a^2\sqrt3}=\frac{a^2\sqrt3}2+\frac{41472}{a\sqrt3}=\frac{a^2\sqrt3}2+\frac{13824\sqrt3}{a}.\ \blacksquare\]
-(w ostatnim kroku \(\dfrac{41472}{\sqrt3}=\dfrac{41472\sqrt3}{3}=13824\sqrt3\)).</p>`
-  },
-  {
     id: 3,
     group: "Przekroje i kąty w ostrosłupach i sześcianie",
     src: "maj 2023 · zad. 7",
     pts: 4,
     tags: ["sześcian", "odległość punktu od prostej", "współrzędne w przestrzeni"],
+    req: ["ZP X.3", "ZR X.2"],
     q: String.raw`<p>Dany jest sześcian \(ABCDEFGH\) o krawędzi długości \(6\). Punkt \(S\) jest punktem przecięcia przekątnych \(AH\) i \(DE\) ściany bocznej \(ADHE\) (zobacz rysunek).</p>
 <p>Oblicz wysokość trójkąta \(SBH\) poprowadzoną z punktu \(S\) na bok \(BH\) tego trójkąta.</p>`,
     fig: String.raw`<svg class="fig" viewBox="0 0 230 205" width="250" height="223" role="img" aria-label="Sześcian ABCDEFGH z punktem S w środku ściany ADHE"><polygon class="s" points="30,176 130,176 130,76 30,76"/><polyline class="s" points="30,76 76,30 176,30 130,76"/><line class="s" x1="130" y1="176" x2="176" y2="130"/><line class="s" x1="176" y1="130" x2="176" y2="30"/><line class="s d" x1="30" y1="176" x2="76" y2="130"/><line class="s d" x1="76" y1="130" x2="176" y2="130"/><line class="s d" x1="76" y1="130" x2="76" y2="30"/><line class="s d" x1="30" y1="176" x2="76" y2="30"/><line class="s d" x1="76" y1="130" x2="30" y2="76"/><polygon class="a" points="53,103 130,176 76,30"/><circle class="dot" cx="53" cy="103" r="2.4"/><text x="14" y="190">A</text><text x="134" y="190">B</text><text x="182" y="134">C</text><text x="74" y="144">D</text><text x="14" y="74">E</text><text x="134" y="68">F</text><text x="182" y="32">G</text><text x="70" y="24">H</text><text x="58" y="117">S</text><text class="m" x="76" y="192">6</text></svg>`,
@@ -51,6 +23,7 @@
     src: "maj 2026 · zad. 8",
     pts: 4,
     tags: ["ostrosłup prawidłowy trójkątny", "kąt dwuścienny", "twierdzenie cosinusów"],
+    req: ["ZP X.2", "ZP X.5"],
     q: String.raw`<p>W ostrosłupie prawidłowym trójkątnym \(ABCS\) podstawa \(ABC\) jest trójkątem równobocznym. Długość okręgu opisanego na podstawie \(ABC\) jest równa \(6\sqrt2\pi\), a cosinus kąta między krawędziami bocznymi \(SB\) i \(SC\) jest równy \(\tfrac59\).</p>
 <p>Oblicz długość krawędzi podstawy \(ABC\) oraz cosinus kąta między ścianami bocznymi \(SAC\) i \(SBC\) tego ostrosłupa.</p>`,
     ans: String.raw`krawędź podstawy \(3\sqrt6\); cosinus kąta między ścianami \(\dfrac5{14}\)`,
@@ -68,6 +41,7 @@
     src: "maj 2025 · zad. 10",
     pts: 5,
     tags: ["ostrosłup prawidłowy czworokątny", "kąt dwuścienny", "pole powierzchni bocznej"],
+    req: ["ZP X.2", "ZP X.5"],
     q: String.raw`<p>Podstawą ostrosłupa \(ABCDS\) jest kwadrat \(ABCD\). Krawędź boczna \(SA\) jest wysokością ostrosłupa, natomiast krawędź podstawy ma długość \(3\sqrt{34}\). Cosinus kąta \(\beta\) między ścianami bocznymi \(CDS\) i \(BCS\) tego ostrosłupa jest równy \(-\tfrac9{25}\).</p>
 <p>Oblicz pole powierzchni bocznej tego ostrosłupa.</p>`,
     ans: String.raw`\(P_b=918\)`,
@@ -79,5 +53,58 @@ Z danych: \(\dfrac{a^2}{a^2+h^2}=\dfrac9{25}\Rightarrow25a^2=9a^2+9h^2\Rightarro
 <p class="step"><b>Krok 3: pole powierzchni bocznej.</b> Ściany \(SAB\) i \(SAD\) to trójkąty prostokątne o przyprostokątnych \(a\) i \(h\), każda o polu \(\tfrac12ah\). Ściany \(SBC\) i \(SDC\): \(BC\perp AB\) oraz \(BC\perp SA\), więc \(BC\perp SB\) – trójkąt prostokątny o przyprostokątnych \(a\) i \(|SB|=\sqrt{a^2+h^2}=\tfrac53a\), każda o polu \(\tfrac12a\cdot\tfrac53a\). Razem
 \[P_b=2\cdot\tfrac12a\cdot\tfrac43a+2\cdot\tfrac12a\cdot\tfrac53a=\tfrac43a^2+\tfrac53a^2=3a^2=3\cdot306=918.\]</p>
 <p class="note"><b>Sprawdzenie:</b> \(a^2=9\cdot34=306\), więc \(h^2=\tfrac{16}9\cdot306=544\) i \(\dfrac{a^2}{a^2+h^2}=\dfrac{306}{850}=\dfrac9{25}\) ✓.</p>`
+  },
+  {
+    id: 6,
+    group: "Przekroje i kąty w ostrosłupach i sześcianie",
+    label: "autorskie",
+    pts: 4,
+    tags: ["przekrój sześcianu", "sześciokąt foremny", "pole przekroju"],
+    req: ["ZR X.2"],
+    q: String.raw`<p>Dany jest sześcian \(ABCDEFGH\) o krawędzi długości \(6\). Płaszczyzna przechodzi przez środki sześciu krawędzi: \(BC\), \(CD\), \(DH\), \(HE\), \(EF\), \(FB\). Wykaż, że przekrój sześcianu tą płaszczyzną jest sześciokątem foremnym, i oblicz jego pole.</p>`,
+    ans: String.raw`pole \(27\sqrt3\)`,
+    sol: String.raw`<p class="step"><b>Układ współrzędnych.</b> Przyjmijmy \(A=(0,0,0)\), \(B=(6,0,0)\), \(C=(6,6,0)\), \(D=(0,6,0)\), \(E=(0,0,6)\), \(F=(6,0,6)\), \(G=(6,6,6)\), \(H=(0,6,6)\). Środki wskazanych krawędzi: \((6,3,0)\), \((3,6,0)\), \((0,6,3)\), \((0,3,6)\), \((3,0,6)\), \((6,0,3)\). Suma współrzędnych każdego z nich jest równa \(9\), więc wszystkie leżą w jednej płaszczyźnie \(x+y+z=9\) (prostopadłej do przekątnej \(AG\), przechodzącej przez środek sześcianu \(O=(3,3,3)\)).</p>
+<p class="step"><b>Foremność.</b> Każdy z sześciu punktów jest oddalony od \(O\) o \(\sqrt{3^2+0+3^2}=3\sqrt2\) (na przykład \(|O(6,3,0)|=\sqrt{9+0+9}\)), czyli leżą na okręgu o środku \(O\) i promieniu \(3\sqrt2\). Kolejne punkty są od siebie oddalone o \(\sqrt{9+9+0}=3\sqrt2\), czyli o promień okręgu, więc każdy bok sześciokąta wpisanego w okrąg jest równy promieniu. Sześciokąt o sześciu bokach równych promieniowi opisanego okręgu jest foremny. \(\blacksquare\)</p>
+<p class="step"><b>Pole.</b> Sześciokąt foremny o boku \(3\sqrt2\): \(P=\dfrac{3\sqrt3}2\cdot(3\sqrt2)^2=\dfrac{3\sqrt3}2\cdot18=27\sqrt3\).</p>`
+  },
+  {
+    id: 7,
+    group: "Przekroje i kąty w ostrosłupach i sześcianie",
+    label: "autorskie",
+    pts: 4,
+    tags: ["przekrój ostrosłupa", "ostrosłup prawidłowy czworokątny", "kąt w przekroju"],
+    req: ["ZR X.2", "ZP VII.3"],
+    q: String.raw`<p>Podstawą ostrosłupa prawidłowego \(ABCDS\) jest kwadrat o boku \(6\), a wysokość ostrosłupa jest równa \(4\). Punkty \(M\) i \(N\) są środkami przeciwległych krawędzi podstawy \(AB\) i \(CD\). Oblicz pole przekroju ostrosłupa płaszczyzną \(SMN\) oraz cosinus kąta \(MSN\).</p>`,
+    ans: String.raw`pole \(12\); \(\cos\angle MSN=\dfrac7{25}\)`,
+    sol: String.raw`<p class="step"><b>Przekrój.</b> Płaszczyzna \(SMN\) przechodzi przez wierzchołek \(S\) i dzieli ostrosłup na dwie przystające części; przekrojem jest trójkąt \(SMN\). Odcinek \(MN\) łączy środki przeciwległych boków kwadratu, więc \(|MN|=6\) i przechodzi przez środek \(O\) podstawy, a \(SO\perp MN\).</p>
+<p class="step"><b>Boki.</b> \(|SO|=H=4\), \(|OM|=|ON|=3\), więc \(|SM|=|SN|=\sqrt{4^2+3^2}=5\) (to wysokości ścian bocznych). Trójkąt \(SMN\) jest równoramienny z podstawą \(6\) i wysokością \(SO=4\).</p>
+<p class="step"><b>Pole.</b> \(P=\tfrac12\cdot6\cdot4=12\).</p>
+<p class="step"><b>Kąt.</b> Z twierdzenia cosinusów w trójkącie \(SMN\): \(6^2=5^2+5^2-2\cdot5\cdot5\cos\angle MSN\), czyli \(36=50-50\cos\angle MSN\) i \(\cos\angle MSN=\dfrac{14}{50}=\dfrac7{25}\).</p>`
+  },
+  {
+    id: 8,
+    group: "Bryły podobne i obrotowe",
+    label: "autorskie",
+    pts: 4,
+    tags: ["stożek ścięty", "bryły podobne", "skala podobieństwa", "pole powierzchni bocznej"],
+    req: ["ZP X.5", "ZP X.6"],
+    q: String.raw`<p>Stożek ma wysokość \(12\) i promień podstawy \(5\). Płaszczyzna równoległa do podstawy, oddalona od niej o \(4\), odcina od stożka mniejszy stożek. Oblicz objętość i pole powierzchni bocznej bryły, która została po odcięciu (stożka ściętego). Wynik podaj w postaci \(k\pi\).</p>`,
+    ans: String.raw`objętość \(\dfrac{1900\pi}{27}\); pole powierzchni bocznej \(\dfrac{325\pi}9\)`,
+    sol: String.raw`<p class="step"><b>Dane stożka.</b> Tworząca \(l=\sqrt{5^2+12^2}=13\), objętość \(V=\tfrac13\pi\cdot25\cdot12=100\pi\), pole powierzchni bocznej \(P_b=\pi\cdot5\cdot13=65\pi\).</p>
+<p class="step"><b>Skala.</b> Odcięty stożek ma wysokość \(12-4=8\), więc jest podobny do danego w skali \(k=\tfrac8{12}=\tfrac23\). Objętości mnożą się przez \(k^3=\tfrac8{27}\), pola przez \(k^2=\tfrac49\).</p>
+<p class="step"><b>Objętość ściętego.</b> \(V-V'=100\pi\left(1-\tfrac8{27}\right)=100\pi\cdot\tfrac{19}{27}=\dfrac{1900\pi}{27}\).</p>
+<p class="step"><b>Powierzchnia boczna ściętego.</b> \(P_b-P_b'=65\pi\left(1-\tfrac49\right)=65\pi\cdot\tfrac59=\dfrac{325\pi}9\).</p>`
+  },
+  {
+    id: 9,
+    group: "Prostopadłość w przestrzeni",
+    label: "autorskie",
+    pts: 3,
+    tags: ["prosta prostopadła do płaszczyzny", "ostrosłup prawidłowy", "dowód"],
+    req: ["ZR X.1"],
+    q: String.raw`<p>Podstawą ostrosłupa prawidłowego czworokątnego \(ABCDS\) jest kwadrat \(ABCD\). Wykaż, że krawędź boczna \(SC\) jest prostopadła do przekątnej \(BD\) podstawy.</p>`,
+    sol: String.raw`<p class="step"><b>Pomysł.</b> Pokażemy, że prosta \(BD\) jest prostopadła do płaszczyzny \(SAC\), a wtedy jest prostopadła do każdej prostej tej płaszczyzny, w tym do \(SC\).</p>
+<p class="step"><b>Dwie proste prostopadłe do \(BD\).</b> Niech \(O\) będzie środkiem kwadratu. Przekątne kwadratu są prostopadłe: \(BD\perp AC\). Ostrosłup jest prawidłowy, więc \(SO\) jest wysokością, czyli \(SO\perp\) płaszczyzna podstawy, a stąd \(SO\perp BD\).</p>
+<p class="step"><b>Wniosek.</b> Proste \(AC\) i \(SO\) leżą w płaszczyźnie \(SAC\), przecinają się w punkcie \(O\) i obie są prostopadłe do \(BD\). Z twierdzenia o prostej prostopadłej do płaszczyzny \(BD\perp\) płaszczyzna \(SAC\), więc \(BD\perp SC\). \(\blacksquare\)</p>`
   }
 ];

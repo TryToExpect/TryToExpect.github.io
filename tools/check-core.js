@@ -10,16 +10,16 @@
 //     loadErrors: [{ file, line, message }] błędy składni lub wykonania przy wczytywaniu skryptów
 //   }
 
-const TASK_FIELDS = ['id', 'group', 'src', 'label', 'pts', 'tags', 'q', 'ans', 'sol', 'fig'];
+const TASK_FIELDS = ['id', 'group', 'src', 'label', 'pts', 'tags', 'req', 'q', 'ans', 'sol', 'fig'];
 const TASK_REQUIRED = ['id', 'group', 'q', 'sol'];
 const HTML_TAGS = new Set([
   'p', 'b', 'i', 'em', 'strong', 'u', 'sub', 'sup', 'br', 'hr', 'a', 'code', 'pre', 'blockquote',
-  'ul', 'ol', 'li', 'div', 'span', 'table', 'thead', 'tbody', 'tfoot', 'tr', 'th', 'td', 'caption', 'h3', 'h4',
+  'ul', 'ol', 'li', 'div', 'span', 'details', 'summary', 'table', 'thead', 'tbody', 'tfoot', 'tr', 'th', 'td', 'caption', 'h3', 'h4',
   'svg', 'g', 'line', 'path', 'circle', 'ellipse', 'polygon', 'polyline', 'rect', 'text', 'tspan', 'title', 'desc', 'defs', 'marker', 'use'
 ]);
 const VOID_TAGS = new Set(['br', 'hr']);
-const BLOCK_TAGS = new Set(['p', 'div', 'ul', 'ol', 'table', 'h3', 'h4', 'blockquote', 'pre', 'hr']);
-const BX_KINDS = new Set(['def', 'thm', 'fact', 'cor', 'met', 'ex', 'warn']);
+const BLOCK_TAGS = new Set(['p', 'div', 'details', 'ul', 'ol', 'table', 'h3', 'h4', 'blockquote', 'pre', 'hr']);
+const BX_KINDS = new Set(['def', 'thm', 'fact', 'cor', 'met', 'ex', 'warn', 'pf']);
 
 // ---- HTML: znaczniki muszą być znane, domknięte i poprawnie zagnieżdżone ----
 function checkHtml(text, report) {
@@ -130,6 +130,7 @@ export function runChecks(site, texCheck) {
   const cache = new Map();
   const data = site.data || {};
   const { MATERIALS, TASKS, THEORY } = data;
+  const REQS = data.REQS && typeof data.REQS === 'object' ? data.REQS : null;
 
   // 1. błędy składni i wykonania skryptów (taki plik w ogóle się nie wczyta)
   for (const e of site.loadErrors || []) add('error', e.file, e.line, 'Błąd w pliku, strona nie wczyta jego treści: ' + e.message);
@@ -222,6 +223,11 @@ export function runChecks(site, texCheck) {
       }
       for (const f of ['group', 'q', 'sol', 'ans', 'fig', 'src', 'label']) if (t[f] != null && typeof t[f] !== 'string') at('error', 'pole ' + f + ' musi być tekstem.', f + ':');
       if (t.pts != null && !(Number.isInteger(t.pts) && t.pts > 0)) at('error', 'pts musi być dodatnią liczbą całkowitą.', 'pts:');
+      if (t.req != null) {
+        const list = Array.isArray(t.req) ? t.req : [t.req];
+        if (!list.length || list.some((x) => typeof x !== 'string')) at('error', 'req musi być listą kodów wymagań, np. ["ZR XIII.6"].', 'req:');
+        else if (REQS) for (const code of list) if (!(code in REQS)) at('error', 'kod wymagania "' + code + '" nie występuje w window.REQS (materials.js).', 'req:');
+      }
       if (t.tags == null) at('warning', 'brak pola tags (słowa kluczowe do wyszukiwarki).', '');
       else if (!Array.isArray(t.tags) || t.tags.some((x) => typeof x !== 'string')) at('error', 'tags musi być listą tekstów.', 'tags:');
       if (typeof t.group === 'string' && t.group !== prevGroup) {
@@ -269,6 +275,19 @@ export function runChecks(site, texCheck) {
     checkHtml(text, report);
     checkMath(text, report, texCheck, cache, stats);
     checkRefs(text, tasksCount, report);
+    for (const m of text.matchAll(/<details\b[^>]*>(?!\s*<summary\b)/g)) report('error', 'Element <details> musi zaczynać się od <summary>.', m[0]);
+    for (const m of text.matchAll(/<a\b[^>]*\bhref="#([a-z]+-\d+)-(teoria|zadania)(?:-([\w.-]+))?"/g)) {
+      const target = topicOf(m[1]);
+      if (!target) { report('error', 'Odnośnik ' + m[0].slice(m[0].indexOf('#')) + ' wskazuje nieistniejący dział.', m[0]); continue; }
+      if (m[2] === 'teoria') {
+        const th = (THEORY || {})[m[1]];
+        const count = typeof th === 'string' ? (th.match(/<h3[\s>]/g) || []).length : 0;
+        if (m[3] && !(+m[3] >= 1 && +m[3] <= count)) report('error', 'Odnośnik #' + m[1] + '-teoria-' + m[3] + ': dział ma ' + count + ' sekcji teorii.', m[0]);
+      } else {
+        const ok = m[3] && Array.isArray((TASKS || {})[m[1]]) && TASKS[m[1]].some((t) => String(t && t.id) === m[3]);
+        if (!ok) report('error', 'Odnośnik #' + m[1] + '-zadania-' + m[3] + ' wskazuje nieistniejące zadanie.', m[0]);
+      }
+    }
   }
 
   // 6. przeniesione zadania (window.MOVED_TASKS): nowy dział istnieje i ma te zadania, a w starym ich już nie ma
@@ -279,20 +298,38 @@ export function runChecks(site, texCheck) {
     if (!Array.isArray(moved)) add('error', 'materials.js', mline, 'window.MOVED_TASKS musi być listą.');
     else {
       const idsOf = (key) => new Set((Array.isArray((TASKS || {})[key]) ? TASKS[key] : []).map((t) => String(t && t.id)));
+      // zadanie mogło być przenoszone kilka razy: sprawdzamy dział, w którym ostatecznie wylądowało
+      const finalOf = (i0, id0) => {
+        let at = moved[i0].to, id = String(moved[i0].as && moved[i0].as[id0] != null ? moved[i0].as[id0] : id0);
+        for (let j = i0 + 1; j < moved.length; j++) {
+          const n = moved[j];
+          if (n && n.from === at && Array.isArray(n.ids) && n.ids.map(String).includes(id)) {
+            id = String(n.as && n.as[id] != null ? n.as[id] : id);
+            at = n.to;
+          }
+        }
+        return { at, id };
+      };
       moved.forEach((mv, i) => {
         const ref = 'MOVED_TASKS[' + i + ']: ';
         if (!mv || typeof mv !== 'object' || typeof mv.from !== 'string' || typeof mv.to !== 'string' || !Array.isArray(mv.ids) || !mv.ids.length) {
-          add('error', 'materials.js', mline, ref + 'oczekiwany zapis { from: "matura-1", to: "matura-11", ids: [1, 2] }.');
+          add('error', 'materials.js', mline, ref + 'oczekiwany zapis { from: "matura-1", to: "matura-11", ids: [1, 2] } (opcjonalnie as: { staryId: nowyId }).');
           return;
         }
         if (!topicOf(mv.to)) add('error', 'materials.js', mline, ref + 'dział docelowy "' + mv.to + '" nie istnieje.');
-        const there = idsOf(mv.to), here = idsOf(mv.from);
+        const here = idsOf(mv.from);
+        if (mv.as != null && (typeof mv.as !== 'object' || Array.isArray(mv.as))) add('error', 'materials.js', mline, ref + 'as musi być obiektem { staryId: nowyId }.');
         for (const id of mv.ids) {
-          if (topicOf(mv.to) && !there.has(String(id))) add('error', 'materials.js', mline, ref + 'w dziale "' + mv.to + '" nie ma zadania o id ' + id + '.');
+          const fin = finalOf(i, id);
+          if (topicOf(fin.at) && !idsOf(fin.at).has(fin.id)) add('error', 'materials.js', mline, ref + 'w dziale "' + fin.at + '" nie ma zadania o id ' + fin.id + '.');
           if (here.has(String(id))) add('error', 'materials.js', mline, ref + 'zadanie o id ' + id + ' jest jeszcze w dziale "' + mv.from + '" (jest w obu działach); usuń je ze starego albo z listy przeniesionych.');
         }
       });
     }
+  }
+
+  if (REQS) {
+    for (const code of Object.keys(REQS)) if (typeof REQS[code] !== 'string' || !REQS[code].trim()) add('error', 'materials.js', 0, 'window.REQS["' + code + '"] musi być niepustym opisem.');
   }
 
   const order = { error: 0, warning: 1 };

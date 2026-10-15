@@ -30,13 +30,17 @@
 </ul>
 </div><div class="fg"><svg class="fig" viewBox="0 0 300 140" width="300" height="140" role="img" aria-label="Suma wektorów v i u: koniec pierwszego jest początkiem drugiego, suma biegnie od początku pierwszego do końca drugiego"><line class="a" x1="24" y1="112" x2="174" y2="90"/><path class="a" d="M166.6,87.6L174,90L167.6,94.5"/><line class="p" x1="174" y1="90" x2="266" y2="30"/><path class="p" d="M258.2,30.9L266,30L262,36.8"/><line class="s" x1="24" y1="112" x2="266" y2="30"/><path class="s" d="M258.2,28.9L266,30L260.5,35.6"/><text x="99" y="115" text-anchor="middle">v</text><text x="99" y="104" text-anchor="middle" class="m">→</text><text x="233" y="66.5">u</text><text x="236.7" y="55.5" text-anchor="middle" class="m">→</text><text x="134" y="63" text-anchor="end">w</text><text x="130.3" y="52" text-anchor="middle" class="m">→</text><circle class="dot" cx="24" cy="112" r="2.4"/><circle class="dot" cx="174" cy="90" r="2.4"/><circle class="dot" cx="266" cy="30" r="2.4"/></svg></div></div>
 </div>
-<div class="bx thm"><span class="t">Równoległość, prostopadłość i kąt między wektorami</span>
+<div class="bx thm"><span class="t">Równoległość wektorów i przesunięcie</span>
 <ul>
 <li><b>Równoległość:</b> \(\vec u\parallel\vec v\iff u_Xv_Y-u_Yv_X=0\) (czyli \(\vec v=k\vec u\) dla pewnego \(k\)).</li>
-<li><b>Iloczyn skalarny</b> (dodatkowe, ale wygodne narzędzie): \(\vec u\cdot\vec v=u_Xv_X+u_Yv_Y=|\vec u||\vec v|\cos\varphi\). Stąd \(\cos\varphi=\dfrac{\vec u\cdot\vec v}{|\vec u||\vec v|}\) oraz \(\vec u\perp\vec v\iff\vec u\cdot\vec v=0\).</li>
 <li><b>Przesunięcie o wektor</b> \(\vec v\): \(P\mapsto P+\vec v\). Warunek typu \(\overrightarrow{AM}=k\,\overrightarrow{BM}\) zapisujemy współrzędnymi i dostajemy równania na \(M\); np. \(\overrightarrow{AM}=-2\overrightarrow{BM}\Rightarrow M-A=-2(M-B)\Rightarrow M=\tfrac13(A+2B)\).</li>
 </ul>
 </div>
+<details class="opt"><summary><span class="optb">Poza wymaganiami</span>Iloczyn skalarny, prostopadłość i kąt między wektorami</summary>
+<div class="opt-body">
+<p>\(\vec u\cdot\vec v=u_Xv_X+u_Yv_Y=|\vec u||\vec v|\cos\varphi\), gdzie \(\varphi\) to kąt między wektorami. Stąd \(\cos\varphi=\dfrac{\vec u\cdot\vec v}{|\vec u||\vec v|}\) oraz \(\vec u\perp\vec v\iff\vec u\cdot\vec v=0\).</p>
+<p><i>Przykłady.</i> Wektory \([1,2]\) i \([-4,2]\) są prostopadłe, bo \(1\cdot(-4)+2\cdot2=0\). Dla \([1,0]\) i \([1,1]\): \(\cos\varphi=\dfrac1{1\cdot\sqrt2}=\dfrac{\sqrt2}2\), czyli \(\varphi=45^\circ\).</p>
+</div></details>
 
 <h3>Odcinek i trójkąt: długość, środek, pole</h3>
 <div class="bx thm"><span class="t">Długość i środek odcinka, podział w stosunku</span>
@@ -86,7 +90,7 @@
 <div class="bx thm"><span class="t">Wektor prostopadły do prostej</span>
 <div class="wf"><div>
 <p>Dla dowolnej liczby \(C\) prosta \(Ax+By+C=0\) jest prostopadła do wektora \(\vec w=[A,B]\) (wektor normalny). Wektor \([-B,A]\) jest do niej równoległy (wektor kierunkowy).</p>
-<p class="note">Skąd to wynika: dla dwóch punktów \(P_1,P_2\) tej prostej mamy \(Ax_1+By_1+C=0\) i \(Ax_2+By_2+C=0\). Po odjęciu: \(A(x_2-x_1)+B(y_2-y_1)=0\), czyli iloczyn skalarny \([A,B]\cdot\overrightarrow{P_1P_2}\) jest równy zero.</p>
+<p class="note">Skąd to wynika: dla dwóch punktów \(P_1,P_2\) tej prostej mamy \(Ax_1+By_1+C=0\) i \(Ax_2+By_2+C=0\). Po odjęciu: \(A(x_2-x_1)+B(y_2-y_1)=0\), czyli wektor \([A,B]\) jest prostopadły do wektora \(\overrightarrow{P_1P_2}\) (ich iloczyn skalarny jest równy zero).</p>
 </div><div class="fg"><svg class="fig" viewBox="0 0 300 200" width="300" height="200" role="img" aria-label="Prosta Ax + By + C = 0 jest prostopadła do wektora [A, B]"><line class="s" x1="46" y1="170" x2="284" y2="170"/><path class="s" d="M278,167L284,170L278,173"/><line class="s" x1="60" y1="180" x2="60" y2="16"/><path class="s" d="M57,22L60,16L63,22"/><text x="290" y="183">x</text><text x="66" y="11">y</text><line class="a" x1="54.6" y1="15.2" x2="141" y2="188"/><line class="p" x1="96" y1="98" x2="136" y2="78"/><path class="p" d="M128.2,78L136,78L131.3,84.3"/><line class="s" x1="96" y1="98" x2="76" y2="58"/><path class="s" d="M76,65.8L76,58L82.3,62.7"/><path class="s" d="M103.2,94.4L99.6,87.3L92.4,90.8"/><circle class="dot" cx="96" cy="98" r="2.4"/><text x="146" y="82.5">[A, B]</text><text x="87" y="58.5">[−B, A]</text><text x="151" y="190.5">Ax + By + C = 0</text><text x="54" y="183" text-anchor="end">O</text></svg></div></div>
 </div>
 <div class="bx thm"><span class="t">Odległość punktu od prostej</span>
@@ -96,13 +100,16 @@
 <p>Odległość prostych równoległych \(Ax+By+C_1=0\) i \(Ax+By+C_2=0\) wynosi \(\dfrac{|C_1-C_2|}{\sqrt{A^2+B^2}}\) (wystarczy wziąć punkt jednej prostej i policzyć jego odległość od drugiej).</p>
 </div><div class="fg"><svg class="fig" viewBox="0 0 300 170" width="300" height="170" role="img" aria-label="Odległość punktu P od prostej l to długość odcinka PH prostopadłego do l"><line class="a" x1="22" y1="128" x2="278" y2="60"/><line class="p" x1="150" y1="24" x2="167.4" y2="89.4"/><path class="p" d="M165.3,81.7L173,79.6L175.1,87.3"/><circle class="dot" cx="150" cy="24" r="2.4"/><circle class="dot" cx="167.4" cy="89.4" r="2.4"/><text x="156" y="19">P</text><text x="173.4" y="102.4">H</text><text x="169.7" y="61.2">d</text><text x="16" y="123" text-anchor="end">l</text></svg></div></div>
 </div>
-<div class="bx thm"><span class="t">Kąt między prostymi, symetralna, rzut punktu</span>
+<div class="bx thm"><span class="t">Symetralna odcinka i rzut punktu na prostą</span>
 <ul>
-<li><b>Kąt ostry \(\varphi\) między prostymi</b> \(y=a_1x+b_1\) i \(y=a_2x+b_2\): \(\operatorname{tg}\varphi=\left|\dfrac{a_1-a_2}{1+a_1a_2}\right|\), gdy \(a_1a_2\ne-1\) (gdy \(a_1a_2=-1\), proste są prostopadłe).</li>
 <li><b>Symetralna odcinka \(AB\)</b> to zbiór punktów równo oddalonych od \(A\) i \(B\): prosta prostopadła do \(AB\), przechodząca przez środek odcinka. Jej równanie dostajemy też z warunku \(|PA|=|PB|\).</li>
 <li><b>Rzut punktu na prostą</b> to punkt przecięcia tej prostej z prostą do niej prostopadłą, przechodzącą przez dany punkt. Punkt symetryczny względem prostej: \(P'=2\cdot\text{rzut}-P\).</li>
 </ul>
 </div>
+<details class="opt"><summary><span class="optb">Poza wymaganiami</span>Kąt między prostymi</summary>
+<div class="opt-body">
+<p>Kąt ostry \(\varphi\) między prostymi \(y=a_1x+b_1\) i \(y=a_2x+b_2\): \(\operatorname{tg}\varphi=\left|\dfrac{a_1-a_2}{1+a_1a_2}\right|\), gdy \(a_1a_2\ne-1\) (gdy \(a_1a_2=-1\), proste są prostopadłe). Przykład: dla \(y=x\) i \(y=2x\) mamy \(\operatorname{tg}\varphi=\left|\dfrac{1-2}{1+2}\right|=\dfrac13\).</p>
+</div></details>
 <div class="bx ex"><span class="t">Przykład</span>
 <p>Odległość punktu \((2,1)\) od prostej \(3x-4y+5=0\): \(d=\dfrac{|6-4+5|}{5}=\dfrac75\).</p>
 </div>
@@ -135,11 +142,18 @@
 <div class="bx thm"><span class="t">Przekształcenia</span>
 <ul>
 <li><b>Przesunięcie o wektor</b> \([p,q]\): \((x,y)\mapsto(x+p,y+q)\); wykres funkcji \(y=f(x)\) przechodzi w \(y-q=f(x-p)\).</li>
-<li><b>Symetria osiowa:</b> względem osi \(Ox\): \((x,y)\mapsto(x,-y)\); względem \(Oy\): \((-x,y)\); względem prostej \(y=x\): \((y,x)\); względem prostej \(y=c\): \((x,2c-y)\); względem \(x=c\): \((2c-x,y)\).</li>
-<li><b>Symetria środkowa</b> względem punktu \(S\): \(P\mapsto2S-P\) (w tym punkcie przekątne równoległoboku dzielą się na połowy).</li>
-<li><b>Jednokładność</b> o środku \(S\) i skali \(k\): \(P\mapsto S+k\cdot\overrightarrow{SP}\); długości zmieniają się \(|k|\) razy, pola \(k^2\) razy. Okrąg \((x-a)^2+(y-b)^2=r^2\) przechodzi w okrąg o promieniu \(|k|r\).</li>
+<li><b>Symetria osiowa</b> względem osi układu: względem osi \(Ox\): \((x,y)\mapsto(x,-y)\); względem osi \(Oy\): \((x,y)\mapsto(-x,y)\).</li>
+<li><b>Symetria środkowa</b> względem początku układu: \((x,y)\mapsto(-x,-y)\) (w tym punkcie przekątne równoległoboku dzielą się na połowy).</li>
 </ul>
 </div>
+<details class="opt"><summary><span class="optb">Poza wymaganiami</span>Inne symetrie i jednokładność</summary>
+<div class="opt-body">
+<ul>
+<li><b>Symetria osiowa</b> względem prostej \(y=x\): \((x,y)\mapsto(y,x)\); względem prostej \(y=c\): \((x,y)\mapsto(x,2c-y)\); względem prostej \(x=c\): \((x,y)\mapsto(2c-x,y)\).</li>
+<li><b>Symetria środkowa</b> względem dowolnego punktu \(S\): \(P\mapsto2S-P\).</li>
+<li><b>Jednokładność</b> o środku \(S\) i skali \(k\): \(P\mapsto S+k\cdot\overrightarrow{SP}\); długości zmieniają się \(|k|\) razy, pola \(k^2\) razy. Okrąg \((x-a)^2+(y-b)^2=r^2\) przechodzi w okrąg o promieniu \(|k|r\).</li>
+</ul>
+</div></details>
 <div class="bx met"><span class="t">Typowe zadania</span>
 <ul>
 <li><b>Trójkąt równoramienny:</b> wierzchołek przy ramionach leży na symetralnej podstawy (warunek \(|CA|=|CB|\)). <b>Równoległobok</b> z trzech wierzchołków: \(D=A+C-B\) (dla kolejności \(ABCD\)). <b>Prostokąt:</b> prostopadłość boków (iloczyn skalarny równy \(0\) albo iloczyn współczynników kierunkowych \(-1\)).</li>

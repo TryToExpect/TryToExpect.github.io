@@ -1,10 +1,40 @@
 (window.TASKS = window.TASKS || {})['matura-4'] = [
   {
+    id: 9,
+    group: "Funkcje trygonometryczne i wzory redukcyjne",
+    label: "autorskie",
+    pts: 3,
+    tags: ["miara łukowa", "wzory redukcyjne", "okresowość", "wartości funkcji"],
+    req: ["ZR VII.1", "ZR VII.3", "ZR VII.4"],
+    q: String.raw`<p>a) Zamień na radiany: \(150^\circ\) i \(-45^\circ\); zamień na stopnie: \(\dfrac{5\pi}{12}\).<br>
+b) Oblicz wartość wyrażenia \(\sin\dfrac{7\pi}6\cdot\cos\left(-\dfrac\pi3\right)+\operatorname{tg}\dfrac{5\pi}4\).</p>`,
+    ans: String.raw`a) \(\dfrac{5\pi}6\), \(-\dfrac\pi4\), \(75^\circ\); b) \(\dfrac34\)`,
+    sol: String.raw`<p class="step"><b>a)</b> Mnożymy przez \(\tfrac\pi{180^\circ}\): \(150^\circ=\tfrac{5\pi}6\), \(-45^\circ=-\tfrac\pi4\). Z radianów na stopnie mnożymy przez \(\tfrac{180^\circ}\pi\): \(\tfrac{5\pi}{12}=75^\circ\).</p>
+<p class="step"><b>b)</b> \(\sin\dfrac{7\pi}6=\sin\left(\pi+\dfrac\pi6\right)=-\sin\dfrac\pi6=-\dfrac12\). \(\ \cos\left(-\dfrac\pi3\right)=\cos\dfrac\pi3=\dfrac12\). \(\ \operatorname{tg}\dfrac{5\pi}4=\operatorname{tg}\left(\pi+\dfrac\pi4\right)=\operatorname{tg}\dfrac\pi4=1\) (okres tangensa to \(\pi\)).</p>
+<p class="step"><b>Wynik.</b> \(-\dfrac12\cdot\dfrac12+1=\dfrac34\).</p>`
+  },
+  {
+    id: 10,
+    group: "Wykres funkcji trygonometrycznej",
+    label: "autorskie",
+    pts: 4,
+    tags: ["wykres sinusa", "amplituda", "okres", "miejsca zerowe"],
+    req: ["ZR VII.2", "ZR VII.3", "ZR VII.6"],
+    q: String.raw`<p>Dana jest funkcja \(f(x)=2\sin(3x)+1\).</p>
+<p>a) Podaj okres podstawowy funkcji \(f\) i jej zbiór wartości.<br>
+b) Oblicz liczbę miejsc zerowych funkcji \(f\) w przedziale \([0,2\pi]\) i podaj je.</p>`,
+    ans: String.raw`a) okres \(\dfrac{2\pi}3\), zbiór wartości \([-1,3]\); b) \(6\) miejsc zerowych: \(\dfrac{7\pi}{18},\ \dfrac{11\pi}{18},\ \dfrac{19\pi}{18},\ \dfrac{23\pi}{18},\ \dfrac{31\pi}{18},\ \dfrac{35\pi}{18}\)`,
+    sol: String.raw`<p class="step"><b>a)</b> Dla \(y=A\sin(\omega x)+B\) okres to \(\tfrac{2\pi}{\omega}\), więc \(T=\tfrac{2\pi}3\). Funkcja \(\sin\) przyjmuje wartości \([-1,1]\), więc \(2\sin(3x)+1\) przyjmuje \([-2+1,\,2+1]=[-1,3]\).</p>
+<p class="step"><b>b)</b> \(2\sin3x+1=0\iff\sin3x=-\tfrac12\iff3x=\tfrac{7\pi}6+2k\pi\) lub \(3x=\tfrac{11\pi}6+2k\pi\). Stąd \(x=\tfrac{7\pi}{18}+\tfrac{2k\pi}3\) lub \(x=\tfrac{11\pi}{18}+\tfrac{2k\pi}3\).</p>
+<p class="step">W przedziale \([0,2\pi]=\left[0,\tfrac{36\pi}{18}\right]\) dla \(k=0,1,2\) otrzymujemy z każdej serii po trzy rozwiązania: \(\tfrac{7\pi}{18},\tfrac{19\pi}{18},\tfrac{31\pi}{18}\) oraz \(\tfrac{11\pi}{18},\tfrac{23\pi}{18},\tfrac{35\pi}{18}\); dla \(k=3\) wychodzimy poza przedział. Razem \(6\) miejsc zerowych (w każdym okresie długości \(\tfrac{2\pi}3\) są dwa, a w \([0,2\pi]\) mieści się dokładnie trzy okresy).</p>`
+  },
+  {
     id: 1,
     group: "Równania trygonometryczne",
     src: "maj 2023 · zad. 6",
     pts: 3,
     tags: ["równanie trygonometryczne", "iloczyn na sumę"],
+    req: ["ZR VII.5", "ZR VII.6"],
     q: String.raw`<p>Rozwiąż równanie
 \[4\sin(4x)\cos(6x)=2\sin(10x)+1.\]</p>`,
     ans: String.raw`\(x=-\tfrac{\pi}{12}+k\pi\) lub \(x=\tfrac{7\pi}{12}+k\pi\), \(k\in\mathbb{Z}\)`,
@@ -20,6 +50,7 @@
     src: "maj 2022 · zad. 11",
     pts: 4,
     tags: ["równanie trygonometryczne", "suma sinusów", "przedział"],
+    req: ["ZR VII.6"],
     q: String.raw`<p>Rozwiąż równanie
 \[\sin x+\sin2x+\sin3x=0\]
 w przedziale \(\langle0,\pi\rangle\).</p>`,
@@ -35,6 +66,7 @@ w przedziale \(\langle0,\pi\rangle\).</p>`,
     src: "maj 2026 · zad. 7",
     pts: 4,
     tags: ["równanie trygonometryczne", "sinus potrójnego kąta"],
+    req: ["ZR VII.6"],
     q: String.raw`<p>Rozwiąż równanie
 \[\sin(6x)-2\sin(2x)=0.\]</p>`,
     ans: String.raw`\(x=\tfrac{k\pi}{2}\) lub \(x=\pm\tfrac{\pi}{12}+\tfrac{k\pi}{2}\), \(k\in\mathbb{Z}\)`,
@@ -50,6 +82,7 @@ w przedziale \(\langle0,\pi\rangle\).</p>`,
     src: "maj 2025 · zad. 9",
     pts: 5,
     tags: ["równanie trygonometryczne", "kąt podwojony", "przedział"],
+    req: ["ZR VII.5", "ZR VII.6"],
     q: String.raw`<p>Rozwiąż równanie
 \[3\cos^2x+\sqrt3\sin(2x)-3\sin^2x=0\]
 w przedziale \([-\pi,\pi]\).</p>`,
@@ -65,6 +98,7 @@ w przedziale \([-\pi,\pi]\).</p>`,
     src: "maj 2024 · zad. 10",
     pts: 5,
     tags: ["równanie trygonometryczne", "wzory na cos3x i różnicę sinusów", "przedział"],
+    req: ["ZR VII.5", "ZR VII.6"],
     q: String.raw`<p>Rozwiąż równanie
 \[\sin(4x)-\sin(2x)=4\cos^2x-3\]
 w zbiorze \([0,2\pi]\).</p>`,
@@ -81,6 +115,7 @@ w zbiorze \([0,2\pi]\).</p>`,
     id: 6,
     group: "Równania trygonometryczne",
     tags: ["równanie trygonometryczne", "sinus kąta podwojonego", "rozkład na czynniki", "przedział"],
+    req: ["ZR VII.5", "ZR VII.6"],
     q: String.raw`<p>Rozwiąż równanie
 \[\sin2x+2\sin x+\cos x+1=0\]
 dla \(x\in\langle-\pi,\pi\rangle\).</p>`,
@@ -103,6 +138,7 @@ Zatem \(\cos x=-1\) lub \(\sin x=-\tfrac12\).</p>
     id: 7,
     group: "Zadania z parametrem",
     tags: ["równanie z parametrem", "iloczyn równy zero", "nierówność trygonometryczna", "liczba rozwiązań"],
+    req: ["ZR VII.6", "ZR III.5"],
     q: String.raw`<p>Wyznacz wszystkie wartości parametru \(\alpha\in\langle0;2\pi\rangle\), dla których równanie
 \[(x^2-\sin2\alpha)(x-1)=0\]
 ma trzy rozwiązania.</p>`,
@@ -118,6 +154,7 @@ ma trzy rozwiązania.</p>`,
     id: 8,
     group: "Zadania z parametrem",
     tags: ["równanie z parametrem", "symetria wykresu", "liczba rozwiązań", "przedział"],
+    req: ["ZR VII.6", "ZR III.5"],
     q: String.raw`<p>Wyznacz wszystkie wartości parametru \(a\), dla których równanie
 \[(\cos x+a)\cdot(\sin^2x-a)=0\]
 ma w przedziale \(\langle0,2\pi\rangle\) dokładnie trzy różne rozwiązania.</p>`,

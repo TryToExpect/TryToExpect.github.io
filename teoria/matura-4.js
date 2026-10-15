@@ -58,12 +58,22 @@
 <p>\(\sin150^\circ=\sin(180^\circ-30^\circ)=\sin30^\circ=\tfrac12\). \(\ \cos240^\circ=\cos(180^\circ+60^\circ)=-\cos60^\circ=-\tfrac12\). \(\ \operatorname{tg}315^\circ=\operatorname{tg}(360^\circ-45^\circ)=-\operatorname{tg}45^\circ=-1\). \(\ \sin\tfrac{7\pi}6=\sin\left(\pi+\tfrac\pi6\right)=-\sin\tfrac\pi6=-\tfrac12\).</p>
 </div>
 
-<h3>Wzory na sumę i różnicę kątów, kąt podwojony, sumy funkcji trygonometrycznych</h3>
+<h3>Wzory na sumę i różnicę kątów, kąt podwojony</h3>
 <div class="bx thm"><span class="t">Suma i różnica kątów</span>
 \[\sin(\alpha\pm\beta)=\sin\alpha\cos\beta\pm\cos\alpha\sin\beta,\qquad\cos(\alpha\pm\beta)=\cos\alpha\cos\beta\mp\sin\alpha\sin\beta,\]
 \[\operatorname{tg}(\alpha\pm\beta)=\frac{\operatorname{tg}\alpha\pm\operatorname{tg}\beta}{1\mp\operatorname{tg}\alpha\operatorname{tg}\beta}.\]
 </div>
-<div class="bx thm"><span class="t">Kąt podwojony, potrojony i połowiony</span>
+<div class="bx pf" data-pf="zr5"><span class="t">Dowód wzorów na sinus i cosinus sumy i różnicy kątów</span>
+<p><b>Krok 1: \(\cos(\alpha-\beta)\).</b> Punkty \(A=(\cos\alpha,\sin\alpha)\) i \(B=(\cos\beta,\sin\beta)\) leżą na okręgu jednostkowym. Ze wzoru na odległość
+\[|AB|^2=(\cos\alpha-\cos\beta)^2+(\sin\alpha-\sin\beta)^2=2-2(\cos\alpha\cos\beta+\sin\alpha\sin\beta).\]
+Obrót wokół początku układu o kąt \(-\beta\) nie zmienia odległości; przeprowadza \(B\) na \((1,0)\), a \(A\) na \((\cos(\alpha-\beta),\sin(\alpha-\beta))\). Zatem także
+\[|AB|^2=(\cos(\alpha-\beta)-1)^2+\sin^2(\alpha-\beta)=2-2\cos(\alpha-\beta).\]
+Porównanie obu wyrażeń daje \(\cos(\alpha-\beta)=\cos\alpha\cos\beta+\sin\alpha\sin\beta\).</p>
+<p><b>Krok 2: pozostałe wzory.</b> Zastępując \(\beta\) przez \(-\beta\) (przy czym \(\cos(-\beta)=\cos\beta\) i \(\sin(-\beta)=-\sin\beta\)) dostajemy \(\cos(\alpha+\beta)=\cos\alpha\cos\beta-\sin\alpha\sin\beta\). Ze wzoru redukcyjnego \(\sin x=\cos\left(\tfrac\pi2-x\right)\):
+\[\sin(\alpha+\beta)=\cos\Bigl(\bigl(\tfrac\pi2-\alpha\bigr)-\beta\Bigr)=\sin\alpha\cos\beta+\cos\alpha\sin\beta,\]
+a po zamianie \(\beta\) na \(-\beta\): \(\sin(\alpha-\beta)=\sin\alpha\cos\beta-\cos\alpha\sin\beta\). \(\blacksquare\)</p>
+</div>
+<div class="bx thm"><span class="t">Kąt podwojony</span>
 <div class="two">
 <div>
 \[\sin2\alpha=2\sin\alpha\cos\alpha\]
@@ -71,13 +81,18 @@
 \[\operatorname{tg}2\alpha=\frac{2\operatorname{tg}\alpha}{1-\operatorname{tg}^2\alpha}\]
 </div>
 <div>
-\[\sin3\alpha=3\sin\alpha-4\sin^3\alpha\]
-\[\cos3\alpha=4\cos^3\alpha-3\cos\alpha\]
+<p>Z dwóch ostatnich postaci \(\cos2\alpha\) wynikają wzory na obniżanie potęgi:</p>
 \[\sin^2\alpha=\frac{1-\cos2\alpha}2,\quad\cos^2\alpha=\frac{1+\cos2\alpha}2\]
 </div>
 </div>
 </div>
-<div class="bx thm"><span class="t">Zamiana sum na iloczyny i odwrotnie</span>
+<details class="opt"><summary><span class="optb">Poza wymaganiami</span>Kąt potrojony</summary>
+<div class="opt-body">
+\[\sin3\alpha=3\sin\alpha-4\sin^3\alpha,\qquad\cos3\alpha=4\cos^3\alpha-3\cos\alpha.\]
+</div></details>
+<details class="opt"><summary><span class="optb">Poza wymaganiami</span>Zamiana sum na iloczyny i odwrotnie</summary>
+<div class="opt-body">
+<p class="note">Wzorów tego typu używa się w zadaniach z arkuszy z maja 2023 i maja 2024 (patrz dział zadań), więc warto je znać albo umieć wyprowadzić ze wzorów na sumę i różnicę kątów.</p>
 <div class="two">
 <div>
 \[\sin\alpha+\sin\beta=2\sin\tfrac{\alpha+\beta}2\cos\tfrac{\alpha-\beta}2\]
@@ -91,7 +106,7 @@
 \[2\sin\alpha\sin\beta=\cos(\alpha-\beta)-\cos(\alpha+\beta)\]
 </div>
 </div>
-</div>
+</div></details>
 <div class="bx ex"><span class="t">Przykład</span>
 <p>\(\sin15^\circ=\sin(45^\circ-30^\circ)=\tfrac{\sqrt2}2\cdot\tfrac{\sqrt3}2-\tfrac{\sqrt2}2\cdot\tfrac12=\dfrac{\sqrt6-\sqrt2}4\). Podobnie \(\cos75^\circ=\sin15^\circ\).</p>
 </div>
@@ -116,23 +131,30 @@
 <h3>Równania i nierówności trygonometryczne</h3>
 <div class="bx thm"><span class="t">Równania podstawowe (\(k\in\mathbb Z\))</span>
 <ul>
-<li>\(\sin x=a\) (\(|a|\le1\)): \(x=\alpha+2k\pi\) lub \(x=\pi-\alpha+2k\pi\), gdzie \(\alpha=\arcsin a\).</li>
-<li>\(\cos x=a\) (\(|a|\le1\)): \(x=\pm\alpha+2k\pi\), gdzie \(\alpha=\arccos a\).</li>
-<li>\(\operatorname{tg}x=a\): \(x=\alpha+k\pi\), gdzie \(\alpha=\operatorname{arctg}a\). \(\ \)Dla \(|a|>1\) równania \(\sin x=a\), \(\cos x=a\) nie mają rozwiązań.</li>
+<li>\(\sin x=a\) (\(|a|\le1\)): \(x=\alpha+2k\pi\) lub \(x=\pi-\alpha+2k\pi\), gdzie \(\alpha\) jest dowolnym kątem, dla którego \(\sin\alpha=a\) (z tabeli wartości, z tablic lub z kalkulatora).</li>
+<li>\(\cos x=a\) (\(|a|\le1\)): \(x=\pm\alpha+2k\pi\), gdzie \(\cos\alpha=a\).</li>
+<li>\(\operatorname{tg}x=a\): \(x=\alpha+k\pi\), gdzie \(\operatorname{tg}\alpha=a\). Dla \(|a|>1\) równania \(\sin x=a\), \(\cos x=a\) nie mają rozwiązań.</li>
 <li>\(\sin f=\sin g\iff f=g+2k\pi\) lub \(f=\pi-g+2k\pi\); \(\ \cos f=\cos g\iff f=\pm g+2k\pi\); \(\ \operatorname{tg}f=\operatorname{tg}g\iff f=g+k\pi\) (z dziedziną).</li>
 </ul>
 </div>
 <div class="bx met"><span class="t">Metody rozwiązywania</span>
 <ol>
 <li><b>Sprowadzenie do jednej funkcji i jednego kąta</b> (jedynka trygonometryczna, wzory na kąt podwojony), potem podstawienie \(t=\sin x\) (zakres \(|t|\le1\)).</li>
-<li><b>Rozkład na czynniki</b> (wyłączenie wspólnego czynnika, zamiana sum na iloczyny): \(AB=0\iff A=0\) lub \(B=0\). <i>Nie dziel</i> przez wyrażenie trygonometryczne, bo zgubisz rozwiązania.</li>
+<li><b>Rozkład na czynniki</b> (wyłączenie wspólnego czynnika, grupowanie; zamiana sum na iloczyny jest poza wymaganiami): \(AB=0\iff A=0\) lub \(B=0\). <i>Nie dziel</i> przez wyrażenie trygonometryczne, bo zgubisz rozwiązania.</li>
 <li><b>Równania jednorodne</b> \(a\sin^2x+b\sin x\cos x+c\cos^2x=0\): sprawdź \(\cos x=0\), potem dziel przez \(\cos^2x\) i podstaw \(t=\operatorname{tg}x\).</li>
-<li><b>Równanie \(a\sin x+b\cos x=c\)</b>: zapisz \(\sqrt{a^2+b^2}\,\sin(x+\varphi)=c\) (kąt pomocniczy), gdzie \(\cos\varphi=\tfrac a{\sqrt{a^2+b^2}}\), \(\sin\varphi=\tfrac b{\sqrt{a^2+b^2}}\); rozwiązanie istnieje, gdy \(|c|\le\sqrt{a^2+b^2}\).</li>
 <li><b>Zadanie w przedziale</b> \([m,n]\): z rodziny rozwiązań wybierz te \(k\), dla których \(x\in[m,n]\).</li>
 </ol>
 </div>
 <div class="bx ex"><span class="t">Przykład</span>
 <p>\(2\sin^2x-\sin x-1=0\): \(t=\sin x\), \(2t^2-t-1=0\), \(t=1\) lub \(t=-\tfrac12\). Zatem \(x=\tfrac\pi2+2k\pi\) lub \(x=-\tfrac\pi6+2k\pi\) lub \(x=\tfrac{7\pi}6+2k\pi\).</p>
 </div>
-<p><b>Nierówności trygonometryczne:</b> rozwiąż odpowiednie równanie, a potem odczytaj zbiór z wykresu lub z okręgu jednostkowego, np. \(\sin x>\tfrac12\iff x\in\left(\tfrac\pi6+2k\pi,\tfrac{5\pi}6+2k\pi\right)\).</p>
+<details class="opt"><summary><span class="optb">Poza wymaganiami</span>Nierówności trygonometryczne</summary>
+<div class="opt-body">
+<p>Rozwiąż odpowiednie równanie, a potem odczytaj zbiór z wykresu lub z okręgu jednostkowego, np. \(\sin x>\tfrac12\iff x\in\left(\tfrac\pi6+2k\pi,\tfrac{5\pi}6+2k\pi\right)\). W przedziale \([0,2\pi]\): \(\cos x\le\tfrac12\iff x\in\left[\tfrac\pi3,\tfrac{5\pi}3\right]\).</p>
+</div></details>
+<details class="opt"><summary><span class="optb">Poza wymaganiami</span>Równanie \(a\sin x+b\cos x=c\) (kąt pomocniczy)</summary>
+<div class="opt-body">
+<p>Zapisz lewą stronę jako \(\sqrt{a^2+b^2}\,\sin(x+\varphi)\), gdzie \(\cos\varphi=\tfrac a{\sqrt{a^2+b^2}}\), \(\sin\varphi=\tfrac b{\sqrt{a^2+b^2}}\). Rozwiązanie istnieje, gdy \(|c|\le\sqrt{a^2+b^2}\).</p>
+</div></details>
+
 `;

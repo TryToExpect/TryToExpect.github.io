@@ -12,7 +12,10 @@
 <p>Dla \(A=(-2,3]\) i \(B=[1,5)\): \(A\cup B=(-2,5)\), \(A\cap B=[1,3]\), \(A\setminus B=(-2,1)\).</p>
 <div class="fg"><svg class="fig" viewBox="0 0 310 176" width="310" height="176" role="img" aria-label="Przedzialy A=(-2,3] i B=[1,5) na osi liczbowej oraz ich czesc wspolna i suma"><line class="gr d" x1="72" y1="14" x2="72" y2="148"/><line class="gr d" x1="150" y1="14" x2="150" y2="148"/><line class="gr d" x1="202" y1="14" x2="202" y2="148"/><line class="gr d" x1="254" y1="14" x2="254" y2="148"/><line class="ax w" x1="46" y1="26" x2="280" y2="26"/><line class="tha" x1="72" y1="26" x2="202" y2="26"/><circle class="holea" cx="72" cy="26" r="3.4"/><circle class="dota" cx="202" cy="26" r="3.2"/><text class="b" x="8" y="31" text-anchor="start">A</text><line class="ax w" x1="46" y1="58" x2="280" y2="58"/><line class="thp" x1="150" y1="58" x2="254" y2="58"/><circle class="dotp" cx="150" cy="58" r="3.2"/><circle class="holep" cx="254" cy="58" r="3.4"/><text class="b" x="8" y="63" text-anchor="start">B</text><line class="ax w" x1="46" y1="90" x2="280" y2="90"/><line class="th" x1="150" y1="90" x2="202" y2="90"/><circle class="dot" cx="150" cy="90" r="3.2"/><circle class="dot" cx="202" cy="90" r="3.2"/><text class="b" x="8" y="95" text-anchor="start">A∩B</text><line class="ax w" x1="46" y1="122" x2="280" y2="122"/><line class="th" x1="72" y1="122" x2="254" y2="122"/><circle class="hole" cx="72" cy="122" r="3.4"/><circle class="hole" cx="254" cy="122" r="3.4"/><text class="b" x="8" y="127" text-anchor="start">A∪B</text><line class="ax" x1="46" y1="150" x2="283" y2="150"/><polygon class="ah" points="288,150 281,152.9 281,147.1"/><line class="ax" x1="72" y1="146" x2="72" y2="154"/><text class="m" x="72" y="168" text-anchor="middle">−2</text><line class="ax" x1="124" y1="146" x2="124" y2="154"/><text class="m" x="124" y="168" text-anchor="middle">0</text><line class="ax" x1="150" y1="146" x2="150" y2="154"/><text class="m" x="150" y="168" text-anchor="middle">1</text><line class="ax" x1="202" y1="146" x2="202" y2="154"/><text class="m" x="202" y="168" text-anchor="middle">3</text><line class="ax" x1="254" y1="146" x2="254" y2="154"/><text class="m" x="254" y="168" text-anchor="middle">5</text></svg></div>
 <p class="note">Puste kółko oznacza, że liczba nie należy do przedziału, a pełne, że należy. Część wspólna to obszar, który leży w obu przedziałach naraz, a suma to obszar objęty co najmniej jednym z nich.</p>
-<p>Dowód niewymierności \(\sqrt2\) (nie wprost): jeśli \(\sqrt2=\tfrac pq\) (ułamek nieskracalny), to \(p^2=2q^2\), więc \(p\) jest parzyste, \(p=2k\), a stąd \(q^2=2k^2\) i \(q\) też jest parzyste – sprzeczność z nieskracalnością.</p>
+</div>
+<div class="bx pf" data-pf="zp2"><span class="t">Dowód niewymierności \(\sqrt2\) i \(\log_25\)</span>
+<p><b>\(\sqrt2\).</b> Przypuśćmy, że \(\sqrt2=\tfrac pq\), gdzie \(p,q\) są dodatnimi liczbami całkowitymi bez wspólnego dzielnika większego od \(1\). Wtedy \(p^2=2q^2\), więc \(p^2\) jest parzyste, a stąd \(p\) jest parzyste: \(p=2k\). Podstawiając: \(4k^2=2q^2\), czyli \(q^2=2k^2\), więc \(q\) też jest parzyste. Liczby \(p\) i \(q\) mają wspólny dzielnik \(2\) – sprzeczność.</p>
+<p><b>\(\log_25\).</b> Liczba \(\log_25\) jest dodatnia (bo \(5>1\)). Przypuśćmy, że \(\log_25=\tfrac pq\) dla dodatnich liczb całkowitych \(p,q\). Wtedy \(2^{p/q}=5\), więc \(2^p=5^q\). Lewa strona jest liczbą parzystą (bo \(p\ge1\)), a prawa nieparzystą – sprzeczność. Zatem \(\log_25\) jest niewymierna. \(\blacksquare\)</p>
 </div>
 <div class="bx thm"><span class="t">Podzielność</span>
 <ul>
@@ -62,6 +65,11 @@
 </div>
 </div>
 <p>Prawa potęg zachodzą dla \(a,b>0\) i dowolnych wykładników rzeczywistych (dla wykładników całkowitych wystarczy \(a,b\ne0\)); wzory z pierwiastkami – dla \(a,b\ge0\), natomiast \(\sqrt{a^2}=|a|\) – dla każdego \(a\in\mathbb R\).</p>
+<div class="bx pf" data-pf="zp4a"><span class="t">Dowód podstawowych własności potęg</span>
+<p><b>Wykładniki naturalne.</b> \(a^m\cdot a^n\) to iloczyn \(m\) czynników \(a\) pomnożony przez iloczyn \(n\) czynników \(a\), czyli iloczyn \(m+n\) czynników: \(a^{m+n}\). Wyrażenie \((a^m)^n\) to iloczyn \(n\) bloków po \(m\) czynników \(a\), czyli \(a^{mn}\). Z przemienności mnożenia \((ab)^n=ab\cdot ab\cdots ab=a^nb^n\).</p>
+<p><b>Wykładniki całkowite.</b> Definicje \(a^0=1\) i \(a^{-n}=\tfrac1{a^n}\) są tak dobrane, by prawa nadal działały: \(a^n\cdot a^{-n}=\tfrac{a^n}{a^n}=1=a^{n+(-n)}\). Dla \(m>n\) iloraz \(\tfrac{a^m}{a^n}\) po skróceniu \(n\) czynników daje \(a^{m-n}\), a dla \(m&lt;n\): \(\tfrac{a^m}{a^n}=\tfrac1{a^{n-m}}=a^{m-n}\).</p>
+<p><b>Wykładniki wymierne</b> (\(a>0\)). Definiujemy \(a^{1/n}=\sqrt[n]a\) i \(a^{p/q}=\bigl(a^{1/q}\bigr)^p\). Dwa wykładniki wymierne sprowadzamy do wspólnego mianownika \(d\); dla \(x=a^{1/d}\) mamy \(a^{k/d}\cdot a^{l/d}=x^k\cdot x^l=x^{k+l}=a^{(k+l)/d}\). Dla potęgi potęgi: \(L=\bigl(a^{p/q}\bigr)^{r/s}\) i \(R=a^{pr/(qs)}\) spełniają \(L^{qs}=a^{pr}=R^{qs}\), a dwie liczby dodatnie o równych potęgach \(qs\) są równe, więc \(L=R\). Podobnie dla \((ab)^{p/q}\) i \(\bigl(\tfrac ab\bigr)^{p/q}\). \(\blacksquare\)</p>
+</div>
 <p><b>Usuwanie niewymierności z mianownika:</b> \(\dfrac1{\sqrt a}=\dfrac{\sqrt a}a\), \(\dfrac1{\sqrt a+\sqrt b}=\dfrac{\sqrt a-\sqrt b}{a-b}\) (mnożymy przez sprzężenie).</p>
 <p><b>Porównywanie potęg:</b> dla \(a>1\) funkcja \(a^x\) rośnie, dla \(0&lt;a&lt;1\) maleje; dla tego samego wykładnika dodatniego większa podstawa daje większą potęgę. Aby porównać \(2^{50}\) i \(3^{30}\), sprowadzamy do wspólnego wykładnika: \(2^{50}=(2^5)^{10}=32^{10}\), \(3^{30}=(3^3)^{10}=27^{10}\), więc \(2^{50}>3^{30}\).</p>
 <p><b>Notacja wykładnicza:</b> liczbę \(x>0\) zapisujemy w postaci \(a\cdot10^k\), gdzie \(1\le a&lt;10\) i \(k\in\mathbb Z\). Np. \(23\,456=2{,}3456\cdot10^4\), \(0{,}00071=7{,}1\cdot10^{-4}\).</p>
@@ -108,6 +116,15 @@
 \[\log_{a^k}b=\frac1k\log_ab\]
 </div>
 </div>
+</div>
+<div class="bx pf" data-pf="zp4b"><span class="t">Dowód własności logarytmów</span>
+<p>Niech \(u=a^x\) i \(v=a^y\), czyli \(x=\log_au\), \(y=\log_av\) (\(u,v>0\)).</p>
+<ul>
+<li><b>Iloczyn:</b> \(uv=a^x\cdot a^y=a^{x+y}\), więc \(\log_a(uv)=x+y=\log_au+\log_av\).</li>
+<li><b>Iloraz:</b> \(\dfrac uv=a^{x-y}\), więc \(\log_a\dfrac uv=\log_au-\log_av\).</li>
+<li><b>Potęga:</b> \(u^r=(a^x)^r=a^{rx}\), więc \(\log_au^r=r\log_au\).</li>
+<li><b>Zmiana podstawy:</b> niech \(t=\log_ab\), czyli \(a^t=b\). Logarytmując przy podstawie \(c\), dostajemy \(t\log_ca=\log_cb\), więc \(t=\dfrac{\log_cb}{\log_ca}\). \(\blacksquare\)</li>
+</ul>
 </div>
 <div class="bx ex"><span class="t">Przykład</span>
 <p>\(\log_2 12-\log_2 3=\log_24=2\); \(\;\log_95=\dfrac{\log_35}{\log_39}=\tfrac12\log_35\); \(\;81^{\log_3x}=3^{4\log_3x}=x^4\).</p>
