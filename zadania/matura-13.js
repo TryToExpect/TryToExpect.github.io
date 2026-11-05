@@ -15,6 +15,28 @@
 <p class="note"><b>Sprawdzenie:</b> \(-x^2+4x+12=0\iff x^2-4x-12=0\iff(x-6)(x+2)=0\) ✓.</p>`
   },
   {
+    id: 18,
+    group: "Wykres funkcji kwadratowej",
+    src: "maj 2007 · zad. 5",
+    pts: 7,
+    tags: ["funkcja kwadratowa", "wierzchołek paraboli", "trójkąt równoboczny", "symetria"],
+    req: ["ZP V.4", "ZP V.2"],
+    q: String.raw`<p>Trójkąt równoboczny \(ABC\) ma wszystkie wierzchołki na paraboli
+\[y=-x^2+6x.\]
+Wierzchołek \(C\) jest wierzchołkiem tej paraboli, a bok \(AB\) jest równoległy do osi \(Ox\). Narysuj sytuację w układzie współrzędnych i oblicz współrzędne punktów \(A\), \(B\) i \(C\).</p>`,
+    ans: String.raw`\(A=\left(3-\sqrt3,\,6\right)\), \(B=\left(3+\sqrt3,\,6\right)\), \(C=(3,\,9)\)`,
+    sol: String.raw`<p class="step"><b>1) Wierzchołek paraboli.</b> \(x_w=-\dfrac{b}{2a}=-\dfrac{6}{-2}=3\), \(y_w=-9+18=9\). Zatem \(C=(3,9)\), a postać kanoniczna to \(y=-(x-3)^2+9\).</p>
+<div class="fig-wrap" data-sf="1"><svg class="fig" viewBox="0 0 250 280" width="250" height="280" role="img" aria-label="Parabola y = −x² + 6x z wierzchołkiem C(3, 9) i wpisany w nią trójkąt równoboczny ABC, w którym A i B leżą na wysokości y = 6"><line class="ax" x1="12" y1="250" x2="233" y2="250"/><polygon class="ah" points="238,250 231,252.9 231,247.1"/><line class="ax" x1="40" y1="276" x2="40" y2="13"/><polygon class="ah" points="40,8 42.9,15 37.1,15"/><line class="ax" x1="112" y1="247" x2="112" y2="253"/><line class="ax" x1="184" y1="247" x2="184" y2="253"/><line class="ax" x1="37" y1="106" x2="43" y2="106"/><line class="ax" x1="37" y1="34" x2="43" y2="34"/><line class="s d w" x1="40" y1="34" x2="112" y2="34"/><line class="s d w" x1="40" y1="106" x2="70.4" y2="106"/><line class="s d w" x1="112" y1="34" x2="112" y2="250"/><path class="a" d="M37.6,264.6Q112,-196.6 186.4,264.6"/><polygon class="f" points="112,34 70.4,106 153.6,106"/><polygon class="p" points="112,34 70.4,106 153.6,106"/><circle class="dota" cx="112" cy="34" r="3.2"/><circle class="dot" cx="70.4" cy="106" r="3.2"/><circle class="dot" cx="153.6" cy="106" r="3.2"/><text x="120" y="26">C</text><text x="64" y="122" text-anchor="end">A</text><text x="161" y="122">B</text><text class="m" x="34" y="264" text-anchor="end">0</text><text class="m" x="112" y="266" text-anchor="middle">3</text><text class="m" x="184" y="266" text-anchor="middle">6</text><text class="m" x="34" y="110" text-anchor="end">6</text><text class="m" x="34" y="38" text-anchor="end">9</text><text x="236" y="268" text-anchor="end">x</text><text x="48" y="16">y</text><text x="150" y="60">y = −x² + 6x</text></svg></div>
+<p class="step"><b>2) Punkty \(A\) i \(B\).</b> Bok \(AB\) jest poziomy, więc \(A\) i \(B\) mają tę samą rzędną. Parabola jest symetryczna względem prostej \(x=3\), dlatego punkty leżą symetrycznie po obu jej stronach:
+\[A=\left(3-t,\ 9-t^2\right),\qquad B=\left(3+t,\ 9-t^2\right),\qquad t>0.\]</p>
+<p class="step"><b>3) Bok i wysokość.</b> Długość boku: \(|AB|=2t\). Wysokość trójkąta to odległość \(C\) od prostej \(AB\): \(h=9-(9-t^2)=t^2\).</p>
+<p class="step"><b>4) Warunek równoboczności.</b> W trójkącie równobocznym o boku \(a\) wysokość ma długość \(h=\dfrac{a\sqrt3}{2}\), więc
+\[t^2=\frac{2t\sqrt3}{2}=t\sqrt3.\]
+Ponieważ \(t>0\), dzielimy przez \(t\) i dostajemy \(t=\sqrt3\). Wtedy \(y=9-3=6\).</p>
+<p class="step"><b>5) Odpowiedź.</b> \(A=\left(3-\sqrt3,\,6\right)\), \(B=\left(3+\sqrt3,\,6\right)\), \(C=(3,9)\).</p>
+<p class="note"><b>Sprawdzenie:</b> \(|AB|=2\sqrt3\) oraz \(|AC|=\sqrt{(\sqrt3)^2+3^2}=\sqrt{12}=2\sqrt3\), więc boki są równe. Do rysunku: \(\sqrt3\approx1{,}73\), czyli \(A\approx(1{,}27;\,6)\), \(B\approx(4{,}73;\,6)\).</p>`
+  },
+  {
     id: 9,
     group: "Największa i najmniejsza wartość",
     label: "autorskie",
@@ -155,6 +177,25 @@ ma dwa różne rozwiązania rzeczywiste \(x_1\), \(x_2\) spełniające warunek \
 \[-64-12\cdot\frac{m-3}{m-2}>-28\iff\frac{m-3}{m-2}&lt;-3\iff\frac{m-3}{m-2}+3&lt;0\iff\frac{4m-9}{m-2}&lt;0.\]
 Iloraz jest ujemny dla \(2&lt;m&lt;\tfrac94\).</p>
 <p class="step"><b>4) Część wspólna:</b> \(\left(2,\tfrac94\right)\cap\Bigl(\left(-\infty,2\right)\cup\left(\tfrac{11}5,\infty\right)\Bigr)=\left(\tfrac{11}5,\tfrac94\right)\).</p>`
+  },
+  {
+    id: 17,
+    group: "Funkcja kwadratowa – zadania z parametrem",
+    src: "czerwiec 2017 · zad. 13",
+    pts: 6,
+    tags: ["funkcja kwadratowa", "parametr", "wzory Viète'a", "położenie pierwiastków"],
+    req: ["ZR III.5", "ZR III.3"],
+    q: String.raw`<p>Dane jest równanie
+\[x^2-3mx+2m^2+1=0\]
+z parametrem \(m\). Wyznacz wszystkie wartości \(m\), dla których to równanie ma dwa różne rozwiązania i oba należą do przedziału \((-\infty,3)\).</p>`,
+    ans: String.raw`\(m\in(-\infty,-2)\)`,
+    sol: String.raw`<p class="step"><b>Pomysł.</b> Potrzebujemy dwóch różnych pierwiastków, czyli \(\Delta>0\). Oba są mniejsze od \(3\) dokładnie wtedy, gdy obie liczby \(x_1-3\) i \(x_2-3\) są ujemne, a to znaczy: ich suma jest ujemna i ich iloczyn jest dodatni. Sumę i iloczyn policzymy ze wzorów Viète'a: \(x_1+x_2=3m\), \(x_1x_2=2m^2+1\).</p>
+<div class="fig-wrap" data-sf="1"><svg class="fig" viewBox="0 0 280 172" width="280" height="172" role="img" aria-label="Parabola skierowana ramionami w górę, której oba miejsca zerowe x₁ i x₂ leżą na lewo od liczby 3; wartość f(3) jest dodatnia, a oś symetrii leży na lewo od 3"><line class="ax" x1="8" y1="130" x2="265" y2="130"/><polygon class="ah" points="270,130 263,132.9 263,127.1"/><line class="s d w" x1="110" y1="20" x2="110" y2="160"/><path class="a" d="M5,12.2Q110,287.8 215,12.2"/><line class="s d w" x1="210" y1="25" x2="210" y2="130"/><circle class="dot" cx="70" cy="130" r="3.2"/><circle class="dot" cx="150" cy="130" r="3.2"/><circle class="dota" cx="210" cy="25" r="3.2"/><line class="ax" x1="210" y1="127" x2="210" y2="133"/><text x="62" y="148" text-anchor="end">x₁</text><text x="158" y="148">x₂</text><text class="m" x="210" y="148" text-anchor="middle">3</text><text x="272" y="148" text-anchor="end">x</text><text x="220" y="62">f(3) &gt; 0</text><text class="m" x="116" y="30">oś symetrii</text></svg></div>
+<p class="step"><b>1) Dwa różne pierwiastki.</b> \(\Delta=(-3m)^2-4\cdot(2m^2+1)=9m^2-8m^2-4=m^2-4\). Warunek \(m^2-4>0\) daje \(m\in(-\infty,-2)\cup(2,\infty)\).</p>
+<p class="step"><b>2) Suma ujemna.</b> \((x_1-3)+(x_2-3)=3m-6&lt;0\iff m&lt;2\).</p>
+<p class="step"><b>3) Iloczyn dodatni.</b> \((x_1-3)(x_2-3)=x_1x_2-3(x_1+x_2)+9=2m^2+1-9m+9=2m^2-9m+10\). Wyróżnik: \(81-80=1\), pierwiastki \(m=\dfrac{9\pm1}{4}\), czyli \(2\) oraz \(\tfrac52\). Ramiona w górę, więc \(2m^2-9m+10>0\iff m\in(-\infty,2)\cup\left(\tfrac52,\infty\right)\).</p>
+<p class="step"><b>4) Część wspólna.</b> Warunek 1: \(m&lt;-2\) lub \(m>2\). Warunek 2: \(m&lt;2\). Warunek 3: \(m&lt;2\) lub \(m>\tfrac52\). Wszystkie trzy spełnia tylko \(m&lt;-2\).</p>
+<p class="note"><b>Sprawdzenie:</b> dla \(m=-3\) równanie ma postać \(x^2+9x+19=0\), a jego pierwiastki \(\dfrac{-9\pm\sqrt5}{2}\approx-3{,}4\) i \(-5{,}6\) są różne i mniejsze od \(3\). Ten sam wynik daje inny zestaw warunków: \(\Delta>0\), \(f(3)>0\) i \(x_w=\tfrac{3m}{2}&lt;3\) (jak na rysunku).</p>`
   },
   {
     id: 11,
