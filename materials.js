@@ -358,6 +358,7 @@ window.MOVED_TASKS = [
   { from: "matura-2", to: "matura-15", ids: [4, 5, 12, 14, 15, 16] },
   { from: "matura-11", to: "matura-10", ids: [1], as: { 1: 7 } },
   { from: "matura-8", to: "matura-10", ids: [1, 2], as: { 1: 8, 2: 9 } },
+  { from: "matura-13", to: "matura-7", ids: [18], as: { 18: 8 } },
 ];
 
 // Kody wymagań z podstawy programowej (ZPE, rok szkolny 2025/26), pokazywane przy zadaniach (pole req).

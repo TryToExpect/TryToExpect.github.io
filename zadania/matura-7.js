@@ -110,6 +110,28 @@ Prosta \(AC\) ma więc współczynnik kierunkowy \(2\) i wektor kierunkowy \([1,
 <p class="note"><b>Drugi sposób na punkt \(C\).</b> Prosta \(AC\): \(y=2\left(x-\tfrac12\right)-\tfrac32=2x-\tfrac52\). Wstawiamy do równania okręgu \((x-1)^2+(y+1)^2=\tfrac12\): \((x-1)^2+\left(2x-\tfrac32\right)^2=\tfrac12\), czyli \(20x^2-32x+11=0\). Wyróżnik \(\Delta=144\), \(x=\tfrac12\) (to punkt \(A\)) lub \(x=\tfrac{11}{10}\), a stąd \(y=-\tfrac3{10}\).</p>`
   },
   {
+    id: 8,
+    group: "Parabola, prosta i okrąg",
+    src: "maj 2007 · zad. 5",
+    pts: 7,
+    tags: ["parabola", "wierzchołek paraboli", "trójkąt równoboczny", "symetria"],
+    req: ["ZP IX.3", "ZP V.4"],
+    q: String.raw`<p>Trójkąt równoboczny \(ABC\) ma wszystkie wierzchołki na paraboli
+\[y=-x^2+6x.\]
+Wierzchołek \(C\) jest wierzchołkiem tej paraboli, a bok \(AB\) jest równoległy do osi \(Ox\). Narysuj sytuację w układzie współrzędnych i oblicz współrzędne punktów \(A\), \(B\) i \(C\).</p>`,
+    ans: String.raw`\(A=\left(3-\sqrt3,\,6\right)\), \(B=\left(3+\sqrt3,\,6\right)\), \(C=(3,\,9)\)`,
+    sol: String.raw`<p class="step"><b>1) Wierzchołek paraboli.</b> \(x_w=-\dfrac{b}{2a}=-\dfrac{6}{-2}=3\), \(y_w=-9+18=9\). Zatem \(C=(3,9)\), a postać kanoniczna to \(y=-(x-3)^2+9\).</p>
+<div class="fig-wrap" data-sf="1"><svg class="fig" viewBox="0 0 250 280" width="250" height="280" role="img" aria-label="Parabola y = −x² + 6x z wierzchołkiem C(3, 9) i wpisany w nią trójkąt równoboczny ABC, w którym A i B leżą na wysokości y = 6"><line class="ax" x1="12" y1="250" x2="233" y2="250"/><polygon class="ah" points="238,250 231,252.9 231,247.1"/><line class="ax" x1="40" y1="276" x2="40" y2="13"/><polygon class="ah" points="40,8 42.9,15 37.1,15"/><line class="ax" x1="112" y1="247" x2="112" y2="253"/><line class="ax" x1="184" y1="247" x2="184" y2="253"/><line class="ax" x1="37" y1="106" x2="43" y2="106"/><line class="ax" x1="37" y1="34" x2="43" y2="34"/><line class="s d w" x1="40" y1="34" x2="112" y2="34"/><line class="s d w" x1="40" y1="106" x2="70.4" y2="106"/><line class="s d w" x1="112" y1="34" x2="112" y2="250"/><path class="a" d="M37.6,264.6Q112,-196.6 186.4,264.6"/><polygon class="f" points="112,34 70.4,106 153.6,106"/><polygon class="p" points="112,34 70.4,106 153.6,106"/><circle class="dota" cx="112" cy="34" r="3.2"/><circle class="dot" cx="70.4" cy="106" r="3.2"/><circle class="dot" cx="153.6" cy="106" r="3.2"/><text x="120" y="26">C</text><text x="64" y="122" text-anchor="end">A</text><text x="161" y="122">B</text><text class="m" x="34" y="264" text-anchor="end">0</text><text class="m" x="112" y="266" text-anchor="middle">3</text><text class="m" x="184" y="266" text-anchor="middle">6</text><text class="m" x="34" y="110" text-anchor="end">6</text><text class="m" x="34" y="38" text-anchor="end">9</text><text x="236" y="268" text-anchor="end">x</text><text x="48" y="16">y</text><text x="150" y="60">y = −x² + 6x</text></svg></div>
+<p class="step"><b>2) Punkty \(A\) i \(B\).</b> Bok \(AB\) jest poziomy, więc \(A\) i \(B\) mają tę samą rzędną. Parabola jest symetryczna względem prostej \(x=3\), dlatego punkty leżą symetrycznie po obu jej stronach:
+\[A=\left(3-t,\ 9-t^2\right),\qquad B=\left(3+t,\ 9-t^2\right),\qquad t>0.\]</p>
+<p class="step"><b>3) Bok i wysokość.</b> Długość boku: \(|AB|=2t\). Wysokość trójkąta to odległość \(C\) od prostej \(AB\): \(h=9-(9-t^2)=t^2\).</p>
+<p class="step"><b>4) Warunek równoboczności.</b> W trójkącie równobocznym o boku \(a\) wysokość ma długość \(h=\dfrac{a\sqrt3}{2}\), więc
+\[t^2=\frac{2t\sqrt3}{2}=t\sqrt3.\]
+Ponieważ \(t>0\), dzielimy przez \(t\) i dostajemy \(t=\sqrt3\). Wtedy \(y=9-3=6\).</p>
+<p class="step"><b>5) Odpowiedź.</b> \(A=\left(3-\sqrt3,\,6\right)\), \(B=\left(3+\sqrt3,\,6\right)\), \(C=(3,9)\).</p>
+<p class="note"><b>Sprawdzenie:</b> \(|AB|=2\sqrt3\) oraz \(|AC|=\sqrt{(\sqrt3)^2+3^2}=\sqrt{12}=2\sqrt3\), więc boki są równe. Do rysunku: \(\sqrt3\approx1{,}73\), czyli \(A\approx(1{,}27;\,6)\), \(B\approx(4{,}73;\,6)\).</p>`
+  },
+  {
     id: 6,
     group: "Wektory i równoległobok",
     label: "autorskie",
