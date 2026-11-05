@@ -1,4 +1,4 @@
-(window.THEORY = window.THEORY || {})['matura-8'] = String.raw`
+(window.THEORY ||= {})['matura-8'] = String.raw`
 <h3>Proste i płaszczyzny w przestrzeni, kąty</h3>
 <div class="bx def"><span class="t">Wzajemne położenie</span>
 <ul>

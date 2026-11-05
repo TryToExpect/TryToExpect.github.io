@@ -1,4 +1,4 @@
-(window.THEORY = window.THEORY || {})['matura-9'] = String.raw`
+(window.THEORY ||= {})['matura-9'] = String.raw`
 <h3>Reguły zliczania, permutacje, wariacje, kombinacje</h3>
 <div class="bx thm"><span class="t">Reguły</span>
 <ul>

@@ -1,4 +1,4 @@
-(window.TASKS = window.TASKS || {})['matura-12'] = [
+(window.TASKS ||= {})['matura-12'] = [
   {
     id: 1,
     group: "Funkcja wykładnicza w zastosowaniach",

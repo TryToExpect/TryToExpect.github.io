@@ -34,6 +34,10 @@
     <details class="opt"><summary><span class="optb">Poza wymaganiami</span>Tytuł</summary><div class="opt-body">…</div></details>
   a dowód z listy podstawy w ramkę <div class="bx pf" data-pf="zp1">…</div> (spis dowodów w teoria/matura-1.js).
   Poprawność plików sprawdza tools/check.mjs (uruchamia go GitHub Actions po każdym pushu).
+
+  Typy pól (zadania, działy, sekcje) są opisane w types/tresc.d.ts. Dzięki plikowi jsconfig.json edytor
+  (np. VS Code) od razu podkreśla błędy w materials.js, teoria/*.js i zadania/*.js: literówkę w nazwie pola,
+  brakujące pole, tekst zamiast liczby. Strona działa bez tych plików; służą tylko podczas edycji.
 */
 
 window.SITE = {

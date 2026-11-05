@@ -1,4 +1,4 @@
-(window.THEORY = window.THEORY || {})['studia-6'] = String.raw`
+(window.THEORY ||= {})['studia-6'] = String.raw`
 <div class="bx ex"><span class="t">O skrypcie</span>
 <p><b>Rachunek prawdopodobieństwa i statystyka</b> – od aksjomatów Kołmogorowa i zmiennych losowych, przez twierdzenia graniczne, po estymację, przedziały ufności i testowanie hipotez.</p>
 <ul>

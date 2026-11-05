@@ -1,4 +1,4 @@
-(window.TASKS = window.TASKS || {})['matura-15'] = [
+(window.TASKS ||= {})['matura-15'] = [
   {
     id: 4,
     group: "Równość wielomianów, dzielenie i reszta",

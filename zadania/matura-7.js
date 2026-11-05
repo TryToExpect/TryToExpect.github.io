@@ -1,4 +1,4 @@
-(window.TASKS = window.TASKS || {})['matura-7'] = [
+(window.TASKS ||= {})['matura-7'] = [
   {
     id: 1,
     group: "Okręgi i wektory",

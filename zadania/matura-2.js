@@ -1,4 +1,4 @@
-(window.TASKS = window.TASKS || {})['matura-2'] = [
+(window.TASKS ||= {})['matura-2'] = [
   {
     id: 7,
     group: "Układy równań",

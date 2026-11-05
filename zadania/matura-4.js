@@ -1,4 +1,4 @@
-(window.TASKS = window.TASKS || {})['matura-4'] = [
+(window.TASKS ||= {})['matura-4'] = [
   {
     id: 9,
     group: "Funkcje trygonometryczne i wzory redukcyjne",

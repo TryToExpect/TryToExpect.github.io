@@ -1,4 +1,4 @@
-(window.THEORY = window.THEORY || {})['matura-6'] = String.raw`
+(window.THEORY ||= {})['matura-6'] = String.raw`
 <div class="bx def"><span class="t">Oznaczenia w tym dziale</span>
 <p>W trójkącie \(ABC\) przyjmujemy: \(a=|BC|\), \(b=|AC|\), \(c=|AB|\); kąty \(\alpha,\beta,\gamma\) leżą przy wierzchołkach \(A,B,C\), czyli naprzeciw boków \(a,b,c\). Dalej: \(P\) – pole, \(p=\tfrac{a+b+c}2\) – połowa obwodu, \(h_a\) – wysokość opuszczona na bok \(a\), \(R\) i \(r\) – promienie okręgów opisanego i wpisanego. Zapis \(|AB|\) oznacza długość odcinka, a \(\angle ABC\) – kąt przy wierzchołku \(B\).</p>
 </div>

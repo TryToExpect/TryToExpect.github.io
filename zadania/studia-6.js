@@ -1,4 +1,4 @@
-(window.TASKS = window.TASKS || {})['studia-6'] = [
+(window.TASKS ||= {})['studia-6'] = [
   {
     id: 1,
     group: "Przestrzeń probabilistyczna, niezależność, lematy Borela–Cantellego",

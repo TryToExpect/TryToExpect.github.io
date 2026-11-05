@@ -1,4 +1,4 @@
-(window.THEORY = window.THEORY || {})['matura-14'] = String.raw`
+(window.THEORY ||= {})['matura-14'] = String.raw`
 <h3>Mapa arkusza: jak wygląda matura rozszerzona</h3>
 <p>Arkusz z matematyki na poziomie rozszerzonym to kilkanaście zadań otwartych, za które można zdobyć <b>50 punktów</b>. Zadania są ułożone mniej więcej od najłatwiejszych (2 pkt) do najtrudniejszych (5–6 pkt). Poniższa tabela pokazuje, co było na jakim miejscu w majowych arkuszach z lat 2023–2026 (na podstawie zadań zebranych na tej stronie).</p>
 <div class="tw"><table>

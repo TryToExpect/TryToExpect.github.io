@@ -1,4 +1,4 @@
-(window.THEORY = window.THEORY || {})['matura-3'] = String.raw`
+(window.THEORY ||= {})['matura-3'] = String.raw`
 <h3>Pojęcie funkcji, dziedzina, zbiór wartości, własności</h3>
 <div class="bx def"><span class="t">Definicja</span>
 <p><b>Funkcja</b> \(f:X\to Y\) przyporządkowuje każdemu elementowi \(x\) zbioru \(X\) (dziedziny \(D_f\)) dokładnie jeden element \(f(x)\in Y\). <b>Zbiór wartości</b> to \(\{f(x):x\in D_f\}\). Wykres to zbiór punktów \((x,f(x))\); każda prosta pionowa przecina go w co najwyżej jednym punkcie, a punkt \((a,b)\) należy do wykresu wtedy i tylko wtedy, gdy \(f(a)=b\). <b>Miejsce zerowe</b> to taki argument \(x\), dla którego \(f(x)=0\).</p>

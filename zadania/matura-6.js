@@ -1,4 +1,4 @@
-(window.TASKS = window.TASKS || {})['matura-6'] = [
+(window.TASKS ||= {})['matura-6'] = [
   {
     id: 1,
     group: "Trójkąty",

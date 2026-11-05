@@ -1,4 +1,4 @@
-(window.THEORY = window.THEORY || {})['matura-2'] = String.raw`
+(window.THEORY ||= {})['matura-2'] = String.raw`
 <h3>Równania i nierówności liniowe, układy równań</h3>
 <div class="bx thm"><span class="t">Równanie \(ax+b=0\)</span>
 <ul>

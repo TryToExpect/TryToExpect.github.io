@@ -1,4 +1,4 @@
-(window.THEORY = window.THEORY || {})['matura-5'] = String.raw`<h3>Pojęcie ciągu</h3>
+(window.THEORY ||= {})['matura-5'] = String.raw`<h3>Pojęcie ciągu</h3>
 <div class="bx def"><span class="t">Definicja</span>
 <p><b>Ciąg nieskończony</b> to funkcja \(a:\mathbb{N}_+\to\mathbb{R}\). Wartość tej funkcji dla liczby \(n\) zapisujemy \(a_n\) i nazywamy <b>\(n\)-tym wyrazem</b> ciągu; sam ciąg oznaczamy \((a_n)\). <b>Ciąg skończony</b> ma dziedzinę \(\{1,2,\dots,N\}\).</p>
 </div>

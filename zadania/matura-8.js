@@ -1,4 +1,4 @@
-(window.TASKS = window.TASKS || {})['matura-8'] = [
+(window.TASKS ||= {})['matura-8'] = [
   {
     id: 3,
     group: "Przekroje i kąty w ostrosłupach i sześcianie",

@@ -1,4 +1,4 @@
-(window.THEORY = window.THEORY || {})['matura-10'] = String.raw`
+(window.THEORY ||= {})['matura-10'] = String.raw`
 <h3>Granica funkcji i asymptoty</h3>
 <div class="bx def"><span class="t">Granica funkcji w punkcie</span>
 <p>Liczba \(g\) jest <b>granicą funkcji</b> \(f\) w punkcie \(x_0\) (\(\lim\limits_{x\to x_0}f(x)=g\)), gdy dla każdego ciągu \((x_n)\) o wyrazach z dziedziny, \(x_n\ne x_0\), zbieżnego do \(x_0\), ciąg \(f(x_n)\) jest zbieżny do \(g\) (definicja Heinego). Granice <b>jednostronne</b>: \(\lim\limits_{x\to x_0^-}\) (z lewej, \(x&lt;x_0\)) i \(\lim\limits_{x\to x_0^+}\) (z prawej). Granica istnieje, gdy obie jednostronne istnieją i są równe. Granice niewłaściwe: \(\pm\infty\); granice w nieskończoności: \(\lim\limits_{x\to\pm\infty}f(x)\).</p>

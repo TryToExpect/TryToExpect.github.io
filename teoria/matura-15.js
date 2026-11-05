@@ -1,4 +1,4 @@
-(window.THEORY = window.THEORY || {})['matura-15'] = String.raw`
+(window.THEORY ||= {})['matura-15'] = String.raw`
 <h3>Wielomian, działania, równość wielomianów</h3>
 <div class="bx def"><span class="t">Definicje</span>
 <p>Wielomian stopnia \(n\): \(W(x)=a_nx^n+\dots+a_1x+a_0\), \(a_n\ne0\). Dwa wielomiany są równe, gdy mają ten sam stopień i równe odpowiednie współczynniki. Pierwiastek (miejsce zerowe): \(W(a)=0\). Pierwiastek \(a\) ma <b>krotność \(k\)</b>, gdy \((x-a)^k\mid W(x)\), ale \((x-a)^{k+1}\nmid W(x)\).</p>

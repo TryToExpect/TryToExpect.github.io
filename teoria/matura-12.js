@@ -1,4 +1,4 @@
-(window.THEORY = window.THEORY || {})['matura-12'] = String.raw`
+(window.THEORY ||= {})['matura-12'] = String.raw`
 <h3>Funkcja wykładnicza i jej własności</h3>
 <div class="bx def"><span class="t">Funkcja wykładnicza \(f(x)=a^x\), \(a>0\), \(a\ne1\)</span>
 <ul>

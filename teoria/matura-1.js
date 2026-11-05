@@ -1,4 +1,4 @@
-(window.THEORY = window.THEORY || {})['matura-1'] = String.raw`
+(window.THEORY ||= {})['matura-1'] = String.raw`
 <h3>Wzory skróconego mnożenia i przekształcanie wyrażeń</h3>
 <div class="bx thm"><span class="t">Wzory</span>
 <div class="two">

@@ -1,4 +1,4 @@
-(window.TASKS = window.TASKS || {})['matura-13'] = [
+(window.TASKS ||= {})['matura-13'] = [
   {
     id: 8,
     group: "Wzór funkcji kwadratowej",

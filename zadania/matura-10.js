@@ -1,4 +1,4 @@
-(window.TASKS = window.TASKS || {})['matura-10'] = [
+(window.TASKS ||= {})['matura-10'] = [
   {
     id: 1,
     group: "Granica funkcji",

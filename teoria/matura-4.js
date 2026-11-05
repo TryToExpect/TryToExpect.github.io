@@ -1,4 +1,4 @@
-(window.THEORY = window.THEORY || {})['matura-4'] = String.raw`
+(window.THEORY ||= {})['matura-4'] = String.raw`
 <h3>Funkcje trygonometryczne kąta, miara łukowa, okrąg jednostkowy</h3>
 <div class="bx def"><span class="t">Kąt ostry w trójkącie prostokątnym</span>
 <p>\(\sin\alpha=\dfrac{\text{przyprostokątna naprzeciw}}{\text{przeciwprostokątna}}\), \(\ \cos\alpha=\dfrac{\text{przyprostokątna przyległa}}{\text{przeciwprostokątna}}\), \(\ \operatorname{tg}\alpha=\dfrac{\text{naprzeciw}}{\text{przyległa}}=\dfrac{\sin\alpha}{\cos\alpha}\), \(\ \operatorname{ctg}\alpha=\dfrac1{\operatorname{tg}\alpha}\).</p>

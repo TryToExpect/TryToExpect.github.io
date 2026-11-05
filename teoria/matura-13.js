@@ -1,4 +1,4 @@
-(window.THEORY = window.THEORY || {})['matura-13'] = String.raw`
+(window.THEORY ||= {})['matura-13'] = String.raw`
 <h3>Funkcja kwadratowa: postacie, wierzchołek, wykres</h3>
 <div class="bx def"><span class="t">Funkcja kwadratowa \(f(x)=ax^2+bx+c\), \(a\ne0\)</span>
 <ul>

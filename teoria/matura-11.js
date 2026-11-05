@@ -1,4 +1,4 @@
-(window.THEORY = window.THEORY || {})['matura-11'] = String.raw`
+(window.THEORY ||= {})['matura-11'] = String.raw`
 <h3>Zbiory liczbowe, przedziały, podzielność</h3>
 <div class="bx def"><span class="t">Zbiory liczbowe</span>
 <ul>

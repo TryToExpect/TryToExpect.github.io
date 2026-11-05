@@ -1,4 +1,4 @@
-(window.THEORY = window.THEORY || {})['matura-7'] = String.raw`
+(window.THEORY ||= {})['matura-7'] = String.raw`
 <div class="bx def"><span class="t">Oznaczenia w tym dziale</span>
 <p>Punkty zapisujemy współrzędnymi: \(A=(x_A,y_A)\), \(B=(x_B,y_B)\). Wektory: \(\vec v=[v_X,v_Y]\), \(\vec u=[u_X,u_Y]\); wektor o początku \(A\) i końcu \(B\) to \(\overrightarrow{AB}\). Oś pozioma to \(Ox\), pionowa – \(Oy\).</p>
 </div>
