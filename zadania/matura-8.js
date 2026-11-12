@@ -101,6 +101,26 @@ Z danych: \(\dfrac{a^2}{a^2+h^2}=\dfrac9{25}\Rightarrow25a^2=9a^2+9h^2\Rightarro
 <p class="step"><b>Powierzchnia boczna ściętego.</b> \(P_b-P_b'=65\pi\left(1-\tfrac49\right)=65\pi\cdot\tfrac59=\dfrac{325\pi}9\).</p>`
   },
   {
+    id: 10,
+    group: "Bryły podobne i obrotowe",
+    src: "maj 2017 · zad. 9",
+    pts: 4,
+    tags: ["czworościan foremny", "kula wpisana", "bryły podobne", "odległość punktu od płaszczyzny"],
+    req: ["ZP X.5", "ZP X.6"],
+    q: String.raw`<p>W czworościanie foremnym o krawędzi długości \(6\) umieszczono kulę, która ma dokładnie jeden punkt wspólny z każdą ścianą czworościanu. Płaszczyzna \(\pi\), równoległa do podstawy czworościanu, dzieli go na dwie bryły: ostrosłup, którego objętość stanowi \(\tfrac8{27}\) objętości czworościanu, oraz ostrosłup ścięty.</p>
+<p>Oblicz odległość środka \(S\) kuli od płaszczyzny \(\pi\), czyli długość najkrótszego z odcinków \(SP\), gdzie \(P\) jest punktem płaszczyzny \(\pi\).</p>`,
+    ans: String.raw`\(\dfrac{\sqrt6}6\)`,
+    sol: String.raw`<div class="fig-wrap" data-sf="1"><svg class="fig" viewBox="0 0 318 270" width="318" height="270" role="img" aria-label="Przekrój czworościanu foremnego płaszczyzną DCM, gdzie M jest środkiem krawędzi AB: trójkąt DCM z wysokością DO, okrąg będący przekrojem kuli wpisanej o środku S i promieniu r, styczny do podstawy w punkcie O i do boku DM, prosta π równoległa do podstawy na wysokości H/3 oraz czerwony odcinek SP, który jest szukaną odległością"><polygon class="f" points="34,246 186.4,30.4 262.6,246"/><circle class="s f2" cx="186.4" cy="192.1" r="53.9"/><polygon class="s" points="34,246 186.4,30.4 262.6,246"/><line class="a d" x1="186.4" y1="30.4" x2="186.4" y2="246"/><line class="gr" x1="262.6" y1="246" x2="284" y2="246"/><line class="a" x1="62" y1="174.1" x2="284" y2="174.1"/><line class="thp" x1="186.4" y1="192.1" x2="186.4" y2="174.1"/><path class="s w" d="M186.4,239 L193.4,239 L193.4,246"/><path class="s w" d="M186.4,181.1 L193.4,181.1 L193.4,174.1"/><line class="ax" x1="280" y1="174.1" x2="280" y2="246"/><line class="ax" x1="276" y1="174.1" x2="284" y2="174.1"/><line class="ax" x1="276" y1="246" x2="284" y2="246"/><circle class="dot" cx="186.4" cy="192.1" r="2.4"/><circle class="dot" cx="186.4" cy="174.1" r="2.4"/><circle class="dot" cx="186.4" cy="246" r="2.4"/><text x="186.4" y="22.4" text-anchor="middle">D</text><text x="28" y="260" text-anchor="end">C</text><text x="268.6" y="260" text-anchor="start">M</text><text x="186.4" y="262" text-anchor="middle">O</text><text x="194.4" y="206.1" text-anchor="start">S</text><text x="194.4" y="169.1" text-anchor="start">P</text><text class="ac" x="56" y="178.1" text-anchor="end">π</text><text class="ac" x="178.4" y="89.3" text-anchor="end">H</text><text class="ac" x="178.4" y="224.1" text-anchor="end">r</text><text class="pn" x="178.4" y="188.1" text-anchor="end">d</text><text class="ac" x="288" y="215.1" text-anchor="start">H/3</text></svg></div>
+<p class="step"><b>Pomysł.</b> Czworościan \(ABCD\) jest symetryczny względem wysokości \(DO\) (\(O\) – środek podstawy \(ABC\)), więc środek \(S\) kuli leży na tej wysokości. Płaszczyzna \(\pi\) jest równoległa do podstawy, czyli prostopadła do \(DO\), więc szukana odległość to czerwony odcinek \(SP\), gdzie \(P\) jest punktem przecięcia \(DO\) z \(\pi\). Wystarczy znaleźć wysokości, na których leżą \(S\) i \(\pi\), i je odjąć (rysunek: przekrój płaszczyzną \(DCM\), gdzie \(M\) jest środkiem krawędzi \(AB\)).</p>
+<p class="step"><b>Krok 1: wysokość czworościanu.</b> \(O\) jest środkiem trójkąta równobocznego o boku \(6\), więc \(|AO|=\tfrac23\cdot\tfrac{6\sqrt3}2=2\sqrt3\). Z trójkąta prostokątnego \(AOD\): \(H=|DO|=\sqrt{6^2-(2\sqrt3)^2}=\sqrt{24}=2\sqrt6\).</p>
+<p class="step"><b>Krok 2: promień kuli.</b> Kula dotyka podstawy w punkcie \(O\), więc \(|OS|=r\). Środek \(S\) jest w odległości \(r\) od każdej z czterech ścian, więc dzieli czworościan na cztery ostrosłupy o wierzchołku \(S\), wysokości \(r\) i podstawach będących ścianami (każda o polu \(P_p\)). Stąd
+\[V=4\cdot\tfrac13P_p\,r\quad\text{i}\quad V=\tfrac13P_p\,H\ \Longrightarrow\ r=\tfrac H4=\tfrac{\sqrt6}2.\]</p>
+<p class="step"><b>Krok 3: położenie płaszczyzny \(\pi\).</b> Odcięty ostrosłup jest podobny do czworościanu w skali \(k\), gdzie \(k^3=\tfrac8{27}\), czyli \(k=\tfrac23\). Jego wysokość to \(|DP|=\tfrac23H\), więc \(|OP|=H-\tfrac23H=\tfrac13H=\tfrac{2\sqrt6}3\).</p>
+<p class="step"><b>Krok 4: odległość.</b> Skoro \(r=\tfrac H4<\tfrac H3\), punkt \(S\) leży poniżej \(\pi\) i
+\[|SP|=|OP|-|OS|=\frac{2\sqrt6}3-\frac{\sqrt6}2=\frac{4\sqrt6-3\sqrt6}6=\frac{\sqrt6}6.\]</p>
+<p class="note"><b>Sprawdzenie:</b> ogólnie \(|SP|=\tfrac H3-\tfrac H4=\tfrac H{12}=\tfrac{2\sqrt6}{12}=\tfrac{\sqrt6}6\). Na rysunku okrąg dotyka boku \(DM\) dokładnie na prostej \(\pi\): kula dotyka ściany w jej środku ciężkości, a ten leży na wysokości \(\tfrac13H\), tak samo jak \(\pi\).</p>`
+  },
+  {
     id: 9,
     group: "Prostopadłość w przestrzeni",
     label: "autorskie",

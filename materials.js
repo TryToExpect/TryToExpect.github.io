@@ -226,6 +226,7 @@ window.MATERIALS = {
           "Proste i płaszczyzny w przestrzeni, kąty; twierdzenia o prostopadłości z dowodami",
           "Graniastosłupy i ostrosłupy (pola, objętości, kąty)",
           "Bryły obrotowe: walec, stożek, kula",
+          "Kula wpisana i opisana na bryłach",
           "Przekroje sześcianu i ostrosłupów, bryły podobne",
         ],
         files: [],
