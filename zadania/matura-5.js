@@ -92,6 +92,19 @@
 <p class="step"><b>Sprawdzenie.</b> \(S_{13}=15\cdot169+185\cdot13=4940&lt;5000\), \(S_{14}=15\cdot196+185\cdot14=5530>5000\). Odpowiedź: po \(14\) miesiącach.</p>`
   },
   {
+    id: 15,
+    group: "Ciąg arytmetyczny i geometryczny",
+    src: "czerwiec 2023 · zad. 11",
+    pts: 5,
+    tags: ["ciąg geometryczny", "ciąg arytmetyczny", "układ równań"],
+    req: ["ZP VI.5", "ZP VI.6"],
+    q: String.raw`<p>Ciąg \((a,b,c)\) jest geometryczny o wyrazach dodatnich. Ciąg \((2a,2b,c+1)\) jest arytmetyczny. Ponadto \(c-b=6\). Oblicz \(a\), \(b\) oraz \(c\).</p>`,
+    ans: String.raw`\(a=1\), \(b=3\), \(c=9\)`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> Arytmetyczny: \(4b=2a+c+1\); z \(c=b+6\): \(a=\dfrac{3b-7}2\).</p>
+<p class="step"><b>Krok 2.</b> Geometryczny: \(b^2=ac=\dfrac{(3b-7)(b+6)}2\Rightarrow b^2+11b-42=0\Rightarrow b=3\) (bo \(b&gt;0\)).</p>
+<p class="step"><b>Krok 3.</b> \(a=1\), \(c=9\). Sprawdzenie: \((1,3,9)\) i \((2,6,10)\) ✓.</p>`
+  },
+  {
     id: 5,
     group: "Granica ciągu",
     src: "maj 2021 · zad. 5",
@@ -237,5 +250,31 @@
     sol: String.raw`<p class="step"><b>Krok 1.</b> Wyrazy nieparzyste \(q,q^3,q^5,\dots\) i parzyste \(q^2,q^4,\dots\) tworzą szeregi o ilorazie \(q^2\): \(S_N=\dfrac q{1-q^2}\), \(S_P=\dfrac{q^2}{1-q^2}\) (\(q\ne0\)).</p>
 <p class="step"><b>Krok 2.</b> \(\dfrac{S_N}{S_P}=\dfrac1q\), \(S_N-S_P=\dfrac{q(1-q)}{(1-q)(1+q)}=\dfrac q{1+q}\).</p>
 <p class="step"><b>Krok 3.</b> \(\dfrac1q=\dfrac q{1+q}\Rightarrow q^2-q-1=0\Rightarrow q=\dfrac{1\pm\sqrt5}2\). Warunek \(|q|&lt;1\) spełnia tylko \(q=\dfrac{1-\sqrt5}2\approx-0{,}62\).</p>`
+  },
+  {
+    id: 14,
+    group: "Szereg geometryczny",
+    src: "czerwiec 2023 · zad. 7",
+    pts: 4,
+    tags: ["szereg geometryczny", "warunek zbieżności", "równanie wymierne"],
+    req: ["ZR VI.2"],
+    q: String.raw`<p>Dany jest nieskończony szereg geometryczny \(2x-\dfrac{6x}{x-1}+\dfrac{18x}{(x-1)^2}-\dfrac{54x}{(x-1)^3}+\ldots\) Wyznacz wszystkie wartości \(x\) (różne od \(0\) i od \(1\)), dla których suma tego szeregu istnieje i jest równa \(\dfrac{15}2\).</p>`,
+    ans: String.raw`\(x=6\)`,
+    sol: String.raw`<p class="step"><b>Krok 1: zbieżność.</b> \(a_1=2x\), \(q=-\dfrac3{x-1}\). Suma istnieje, gdy \(|q|&lt;1\iff|x-1|&gt;3\iff x&lt;-2\ \text{lub}\ x&gt;4\).</p>
+<p class="step"><b>Krok 2: suma.</b> \(S=\dfrac{2x}{1+\frac3{x-1}}=\dfrac{2x(x-1)}{x+2}=\dfrac{15}2\Rightarrow 4x^2-19x-30=0\Rightarrow x=6\ \text{lub}\ x=-\tfrac54\).</p>
+<p class="step"><b>Krok 3.</b> Warunek z kroku 1 spełnia tylko \(x=6\).</p>`
+  },
+  {
+    id: 16,
+    group: "Szereg geometryczny",
+    src: "czerwiec 2024 · zad. 7",
+    pts: 4,
+    tags: ["szereg geometryczny", "wyrazy nieparzyste", "wzór ogólny"],
+    req: ["ZR VI.2"],
+    q: String.raw`<p>Nieskończony ciąg geometryczny \((a_n)\) spełnia warunki \(a_1+a_3+a_5+\ldots=16\) oraz \(a_1+a_3=\tfrac52\cdot a_2\). Wyznacz wzór ogólny na \(n\)-ty wyraz ciągu \((a_n)\).</p>`,
+    ans: String.raw`\(a_n=12\cdot\left(\tfrac12\right)^{n-1}\)`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> \(a_1(1+q^2)=\tfrac52a_1q\); \(a_1\ne0\) (inaczej suma byłaby \(0\)), więc \(2q^2-5q+2=0\), \(q=2\) lub \(q=\tfrac12\).</p>
+<p class="step"><b>Krok 2.</b> Wyrazy nieparzyste tworzą szereg o ilorazie \(q^2\), który ma sumę tylko dla \(|q|&lt;1\): \(q=\tfrac12\).</p>
+<p class="step"><b>Krok 3.</b> \(\dfrac{a_1}{1-\frac14}=16\Rightarrow a_1=12\), więc \(a_n=12\cdot\left(\tfrac12\right)^{n-1}\).</p>`
   }
 ];

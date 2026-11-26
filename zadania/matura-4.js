@@ -167,6 +167,32 @@ Zatem \(\cos x=-1\) lub \(\sin x=-\tfrac12\).</p>
 <p class="step"><b>Krok 2.</b> Stąd \(x=\tfrac\pi3+\tfrac{2k\pi}3\) lub \(x=-\tfrac\pi9+\tfrac{2k\pi}3\). W \(\langle0,\pi\rangle\): \(x=\tfrac\pi3,\ \pi\) oraz \(x=\tfrac{5\pi}9\).</p>`
   },
   {
+    id: 13,
+    group: "Równania trygonometryczne",
+    src: "czerwiec 2023 · zad. 8",
+    pts: 4,
+    tags: ["równanie trygonometryczne", "sin a = sin b", "wzory redukcyjne"],
+    req: ["ZR VII.4", "ZR VII.6"],
+    q: String.raw`<p>Rozwiąż równanie \(\sin(5x)+\cos x=0\) w zbiorze \(\left[-\tfrac\pi2,\tfrac\pi2\right]\).</p>`,
+    ans: String.raw`\(x\in\left\{-\tfrac{5\pi}{12},\,-\tfrac\pi8,\,-\tfrac\pi{12},\,\tfrac\pi4,\,\tfrac{3\pi}8\right\}\)`,
+    sol: String.raw`<p class="step"><b>Pomysł.</b> \(-\cos x=\sin\left(x-\tfrac\pi2\right)\), więc równanie ma postać \(\sin5x=\sin\left(x-\tfrac\pi2\right)\).</p>
+<p class="step"><b>Krok 1.</b> \(5x=x-\tfrac\pi2+2k\pi\Rightarrow x=-\tfrac\pi8+\tfrac{k\pi}2\) lub \(5x=\pi-\left(x-\tfrac\pi2\right)+2k\pi\Rightarrow x=\tfrac\pi4+\tfrac{k\pi}3\).</p>
+<p class="step"><b>Krok 2.</b> W \(\left[-\tfrac\pi2,\tfrac\pi2\right]\): z pierwszej serii \(-\tfrac\pi8,\ \tfrac{3\pi}8\); z drugiej \(\tfrac\pi4,\ -\tfrac\pi{12},\ -\tfrac{5\pi}{12}\).</p>`
+  },
+  {
+    id: 14,
+    group: "Równania trygonometryczne",
+    src: "czerwiec 2024 · zad. 9",
+    pts: 4,
+    tags: ["suma sinusów", "równanie iloczynowe"],
+    req: ["ZR VII.5", "ZR VII.6"],
+    q: String.raw`<p>Rozwiąż równanie \(\sin(6x)+\sqrt3\cdot\sin(5x)+\sin(4x)=0\).</p>`,
+    ans: String.raw`\(x=\dfrac{k\pi}5\) lub \(x=\pm\dfrac{5\pi}6+2k\pi\), \(k\in\mathbb Z\)`,
+    sol: String.raw`<p class="step"><b>Pomysł.</b> Wzór na sumę sinusów: \(\sin6x+\sin4x=2\sin5x\cos x\) – pojawia się wspólny czynnik \(\sin5x\).</p>
+<p class="step"><b>Krok 1.</b> Równanie: \(2\sin5x\cos x+\sqrt3\sin5x=0\iff\sin5x\,(2\cos x+\sqrt3)=0\).</p>
+<p class="step"><b>Krok 2.</b> \(\sin5x=0\Rightarrow x=\tfrac{k\pi}5\); \(\cos x=-\tfrac{\sqrt3}2\Rightarrow x=\pm\tfrac{5\pi}6+2k\pi\), \(k\in\mathbb Z\).</p>`
+  },
+  {
     id: 7,
     group: "Zadania z parametrem",
     tags: ["równanie z parametrem", "iloczyn równy zero", "nierówność trygonometryczna", "liczba rozwiązań"],

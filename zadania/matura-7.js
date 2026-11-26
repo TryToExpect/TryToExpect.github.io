@@ -162,6 +162,19 @@ c) Wykaż, że \(ABCD\) jest rombem.</p>`,
 <p class="step"><b>c)</b> \(|AB|=\sqrt{36+4}=\sqrt{40}\) i \(|AD|=\sqrt{4+36}=\sqrt{40}\), więc sąsiednie boki są równe, a równoległobok o równych sąsiednich bokach jest rombem. \(\blacksquare\)</p>`
   },
   {
+    id: 13,
+    group: "Wektory i równoległobok",
+    src: "czerwiec 2024 · zad. 11",
+    pts: 6,
+    tags: ["parabola i prosta", "odległość punktu od prostej", "równoległobok"],
+    req: ["ZP IX.2", "ZP IX.3", "ZR IV"],
+    q: String.raw`<p>Prosta o równaniu \(3x+y+2=0\) przecina parabolę \(y=x^2-2x-8\) w punktach \(A\) i \(B\), które są kolejnymi wierzchołkami równoległoboku \(ABCD\). Wierzchołek \(A\) ma pierwszą współrzędną ujemną. Wierzchołek \(C\) leży na prostej \(y=-\tfrac12x+1\) i ma pierwszą współrzędną dodatnią. Odległość punktu \(C\) od prostej \(AB\) jest równa \(\dfrac{9\sqrt{10}}5\). Oblicz długość boku \(BC\).</p>`,
+    ans: String.raw`\(|BC|=2\sqrt{13}\)`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> \(x^2-2x-8=-3x-2\Rightarrow x^2+x-6=0\Rightarrow x=-3\) lub \(x=2\). Zatem \(A=(-3,7)\), \(B=(2,-8)\).</p>
+<p class="step"><b>Krok 2.</b> \(C=\left(c,-\tfrac12c+1\right)\), \(c&gt;0\). Odległość od prostej \(3x+y+2=0\): \(\dfrac{|2{,}5c+3|}{\sqrt{10}}=\dfrac{9\sqrt{10}}5\Rightarrow|2{,}5c+3|=18\Rightarrow c=6\) (drugie rozwiązanie \(c=-8{,}4\) jest ujemne). \(C=(6,-2)\).</p>
+<p class="step"><b>Krok 3.</b> \(|BC|=\sqrt{4^2+6^2}=\sqrt{52}=2\sqrt{13}\).</p>`
+  },
+  {
     id: 7,
     group: "Okrąg opisany na trójkącie",
     label: "autorskie",
@@ -176,6 +189,19 @@ c) Wykaż, że \(ABCD\) jest rombem.</p>`,
 <p class="step"><b>Symetralna \(AC\).</b> Środek \(AC\) to \(\left(\tfrac12,\tfrac32\right)\), wektor \(\overrightarrow{AC}=[1,3]\) jest prostopadły do symetralnej: \(1\cdot\left(x-\tfrac12\right)+3\left(y-\tfrac32\right)=0\), czyli \(x+3y-5=0\).</p>
 <p class="step"><b>Środek.</b> Dla \(x=2\): \(3y=3\), \(y=1\), więc \(S=(2,1)\). Promień: \(r^2=|SA|^2=4+1=5\).</p>
 <p class="step"><b>Sprawdzenie.</b> \(|SB|^2=4+1=5\), \(|SC|^2=1+4=5\) ✓. Okrąg: \((x-2)^2+(y-1)^2=5\).</p>`
+  },
+  {
+    id: 12,
+    group: "Okrąg opisany na trójkącie",
+    src: "czerwiec 2023 · zad. 9",
+    pts: 4,
+    tags: ["prosta przez środek okręgu", "trójkąt prostokątny", "wysokość"],
+    req: ["ZP IX.4", "ZR IX.1"],
+    q: String.raw`<p>W okrąg o równaniu \((x-1)^2+(y-2)^2=25\) wpisano trójkąt \(ABC\). Bok \(AB\) jest zawarty w prostej \(4x-3y+2=0\). Wysokość \(CD\) dzieli bok \(AB\) tak, że \(|AD|=4\cdot|DB|\). Oblicz pole trójkąta \(ABC\).</p>`,
+    ans: String.raw`\(P=20\)`,
+    sol: String.raw`<p class="step"><b>Pomysł.</b> Środek \(S=(1,2)\) leży na prostej \(AB\): \(4-6+2=0\). Zatem \(AB\) jest średnicą, \(|AB|=10\), a kąt \(ACB\) jest prosty.</p>
+<p class="step"><b>Krok 1.</b> \(|AD|=8\), \(|DB|=2\). W trójkącie prostokątnym wysokość z wierzchołka kąta prostego: \(|CD|^2=|AD|\cdot|DB|=16\), \(|CD|=4\).</p>
+<p class="step"><b>Krok 2.</b> \(P=\tfrac12\cdot10\cdot4=20\).</p>`
   },
   {
     id: 9,

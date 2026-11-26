@@ -41,6 +41,17 @@
 <p class="step">Po skróceniu: \(\displaystyle\lim_{x\to-3}\frac{0{,}5(x+4)}{-(x-5)}=\frac{0{,}5\cdot1}{8}=\frac1{16}\). Odpowiedź <b>B</b>.</p>`
   },
   {
+    id: 21,
+    group: "Granica funkcji",
+    src: "czerwiec 2024 · zad. 2",
+    pts: 2,
+    tags: ["granica jednostronna", "wartość bezwzględna"],
+    req: ["ZR XIII.1"],
+    q: String.raw`<p>Oblicz granicę \(\displaystyle\lim_{x\to3^-}\frac{|x-3|}{x^2-9}\).</p>`,
+    ans: String.raw`\(-\dfrac16\)`,
+    sol: String.raw`<p class="step">Dla \(x&lt;3\) mamy \(|x-3|=-(x-3)\), więc \(\dfrac{|x-3|}{x^2-9}=\dfrac{-(x-3)}{(x-3)(x+3)}=-\dfrac1{x+3}\longrightarrow-\dfrac16\).</p>`
+  },
+  {
     id: 2,
     group: "Styczna do wykresu funkcji",
     src: "maj 2023 · zad. 3",
@@ -70,6 +81,30 @@
 <p class="step"><b>Krok 1: punkt \(P\).</b> \(f(2)=\dfrac{8-6+2}2=2\), więc \(P=(2,2)\).</p>
 <p class="step"><b>Krok 2: pochodna.</b> \(f(x)=x^2-3+\dfrac2x\), więc \(f'(x)=2x-\dfrac2{x^2}\) i \(a=f'(2)=4-\dfrac12=\dfrac72\).</p>
 <p class="step"><b>Krok 3: wyraz wolny.</b> Styczna przechodzi przez \(P\): \(2=\tfrac72\cdot2+b\Rightarrow b=-5\).</p>`
+  },
+  {
+    id: 19,
+    group: "Styczna do wykresu funkcji",
+    src: "czerwiec 2023 · zad. 4",
+    pts: 3,
+    tags: ["równanie stycznej", "rozkład wielomianu"],
+    req: ["ZR XIII.3", "ZR XIII.4"],
+    q: String.raw`<p>Funkcja \(f\) jest określona wzorem \(f(x)=2x^3-4x^2+9x\). Punkt \(P=(x_0,18)\) należy do wykresu funkcji \(f\). Oblicz \(x_0\) oraz wyznacz równanie stycznej do wykresu funkcji \(f\) w punkcie \(P\).</p>`,
+    ans: String.raw`\(x_0=2\), \(y=17x-16\)`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> \(2x^3-4x^2+9x-18=0\Rightarrow 2x^2(x-2)+9(x-2)=(x-2)(2x^2+9)=0\). Drugi czynnik jest dodatni, więc \(x_0=2\).</p>
+<p class="step"><b>Krok 2.</b> \(f'(x)=6x^2-8x+9\), \(f'(2)=17\). Styczna: \(y=17(x-2)+18=17x-16\).</p>`
+  },
+  {
+    id: 22,
+    group: "Styczna do wykresu funkcji",
+    src: "czerwiec 2024 · zad. 3",
+    pts: 3,
+    tags: ["równanie stycznej", "pochodna ilorazu"],
+    req: ["ZR XIII.3", "ZR XIII.4"],
+    q: String.raw`<p>Funkcja \(f\) jest określona wzorem \(f(x)=\dfrac{2x+1}{x-4}\) dla \(x\ne4\). Punkt \(P=(x_0,5)\) należy do wykresu funkcji \(f\). Oblicz \(x_0\) oraz wyznacz równanie stycznej do wykresu funkcji \(f\) w punkcie \(P\).</p>`,
+    ans: String.raw`\(x_0=7\), \(y=-x+12\)`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> \(\dfrac{2x+1}{x-4}=5\Rightarrow2x+1=5x-20\Rightarrow x_0=7\).</p>
+<p class="step"><b>Krok 2.</b> \(f'(x)=\dfrac{2(x-4)-(2x+1)}{(x-4)^2}=\dfrac{-9}{(x-4)^2}\), \(f'(7)=-1\). Styczna: \(y=-(x-7)+5=-x+12\).</p>`
   },
   {
     id: 7,
@@ -201,6 +236,31 @@ więc drugi składnik jest równy \(1\cdot x^2=x^2\).</p>
 <p class="note">Wtedy trójkąt jest równoboczny: bok \(4\sqrt3\) ma promień okręgu wpisanego \(\tfrac{4\sqrt3\cdot\sqrt3}6=2\).</p>`
   },
   {
+    id: 23,
+    group: "Zadania dwuczęściowe: najpierw wzór, potem optymalizacja",
+    src: "czerwiec 2024 · zad. 13.1",
+    pts: 2,
+    tags: ["ostrosłup prawidłowy trójkątny", "objętość jako funkcja"],
+    req: ["ZP X.5"],
+    q: String.raw`<p>Rozważamy wszystkie ostrosłupy prawidłowe trójkątne, w których suma wysokości \(H\) ostrosłupa i promienia \(R\) okręgu opisanego na podstawie jest równa \(6\).</p>
+<p>Wykaż, że objętość \(V\) każdego z nich wyraża się wzorem \(V(R)=\dfrac{\sqrt3}4\left(6R^2-R^3\right)\).</p>`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> W trójkącie równobocznym \(R=\tfrac{a\sqrt3}3\), więc \(a=R\sqrt3\) i \(P_p=\dfrac{a^2\sqrt3}4=\dfrac{3\sqrt3}4R^2\).</p>
+<p class="step"><b>Krok 2.</b> \(H=6-R\), więc \(V=\tfrac13\cdot\dfrac{3\sqrt3}4R^2(6-R)=\dfrac{\sqrt3}4\left(6R^2-R^3\right)\). \(\blacksquare\)</p>`
+  },
+  {
+    id: 24,
+    group: "Zadania dwuczęściowe: najpierw wzór, potem optymalizacja",
+    src: "czerwiec 2024 · zad. 13.2",
+    pts: 4,
+    tags: ["największa objętość", "pochodna wielomianu"],
+    req: ["ZR XIII.6"],
+    q: String.raw`<p>Objętość ostrosłupa z zadania 13.1 wyraża się wzorem \(V(R)=\dfrac{\sqrt3}4\left(6R^2-R^3\right)\) dla \(R\in(0,6)\). Wyznacz \(R\), dla którego objętość jest największa, i oblicz tę największą objętość.</p>`,
+    ans: String.raw`\(R=4\), \(V_{\max}=8\sqrt3\)`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> \(V'(R)=\dfrac{\sqrt3}4\left(12R-3R^2\right)=\dfrac{3\sqrt3}4R(4-R)\).</p>
+<p class="step"><b>Krok 2.</b> Na \((0,6)\): \(V'&gt;0\) dla \(R&lt;4\), \(V'&lt;0\) dla \(R&gt;4\) – maksimum w \(R=4\).</p>
+<p class="step"><b>Krok 3.</b> \(V(4)=\dfrac{\sqrt3}4(96-64)=8\sqrt3\).</p>`
+  },
+  {
     id: 11,
     group: "Własność Darboux",
     label: "autorskie",
@@ -255,6 +315,19 @@ więc drugi składnik jest równy \(1\cdot x^2=x^2\).</p>
     sol: String.raw`<p class="step"><b>a)</b> Trójkąt jest ostrokątny, więc środek \(S\) okręgu leży wewnątrz, na wysokości z \(C\). Wysokość: \(h=|CS|+x=1+x\); połowa podstawy z trójkąta prostokątnego o przeciwprostokątnej \(|SA|=1\): \(\sqrt{1-x^2}\). Stąd \(P=\sqrt{1-x^2}\,(1+x)\). \(\blacksquare\)</p>
 <p class="step"><b>b)</b> Środek wewnątrz trójkąta i po stronie \(C\): \(0&lt;x&lt;1\) (dla \(x=0\) trójkąt byłby prostokątny).</p>
 <p class="step"><b>c)</b> Maksymalizujemy \(f(x)=P^2=(1+x)^3(1-x)\): \(f'(x)=(1+x)^2\left[3(1-x)-(1+x)\right]=(1+x)^2(2-4x)\). \(f'&gt;0\) dla \(x&lt;\tfrac12\), \(f'&lt;0\) dla \(x&gt;\tfrac12\) – maksimum w \(x=\tfrac12\): \(P=\tfrac32\cdot\tfrac{\sqrt3}2=\tfrac{3\sqrt3}4\) (trójkąt równoboczny).</p>`
+  },
+  {
+    id: 20,
+    group: "Zadania optymalizacyjne",
+    src: "czerwiec 2023 · zad. 13",
+    pts: 6,
+    tags: ["graniastosłup prawidłowy", "objętość", "pochodna"],
+    req: ["ZR XIII.6", "ZP X.5"],
+    q: String.raw`<p>Rozważamy wszystkie graniastosłupy prawidłowe czworokątne \(ABCDEFGH\), w których odcinek łączący punkt \(O\) przecięcia przekątnych podstawy \(ABCD\) z dowolnym wierzchołkiem górnej podstawy \(EFGH\) ma długość \(d\).</p>
+<p>a) Wyznacz zależność objętości \(V\) od wysokości \(h\) i podaj dziedzinę funkcji \(V(h)\).<br>b) Wyznacz wysokość graniastosłupa o największej objętości.</p>`,
+    ans: String.raw`a) \(V(h)=2h(d^2-h^2)\), \(h\in(0,d)\); b) \(h=\dfrac{d\sqrt3}3\)`,
+    sol: String.raw`<p class="step"><b>a)</b> Rzut wierzchołka \(E\) na dolną podstawę to wierzchołek \(A\), więc \(d^2=h^2+|OA|^2=h^2+\tfrac{a^2}2\), gdzie \(a\) – krawędź podstawy. Stąd \(a^2=2(d^2-h^2)\) i \(V=a^2h=2h(d^2-h^2)\), \(h\in(0,d)\).</p>
+<p class="step"><b>b)</b> \(V'(h)=2d^2-6h^2\), zero w \(h=\tfrac d{\sqrt3}\); \(V'&gt;0\) dla mniejszych \(h\), \(V'&lt;0\) dla większych – maksimum w \(h=\dfrac{d\sqrt3}3\).</p>`
   },
   {
     id: 15,

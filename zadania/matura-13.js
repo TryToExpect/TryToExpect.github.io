@@ -88,6 +88,35 @@
 <p class="step"><b>Krok 3.</b> Obie wartości spełniają \(m\ne0\), \(m\ne1\). Odpowiedź: \(m\in\left\{-1,\tfrac12\right\}\).</p>`
   },
   {
+    id: 20,
+    group: "Wzory Viète’a",
+    src: "czerwiec 2023 · zad. 10",
+    pts: 5,
+    tags: ["równanie kwadratowe z parametrem", "suma odwrotności kwadratów"],
+    req: ["ZR III.3", "ZR III.5"],
+    q: String.raw`<p>Wyznacz wszystkie wartości parametru \(m\), dla których równanie \(mx^2-(m+1)x-2m+3=0\) ma dokładnie dwa różne rozwiązania rzeczywiste \(x_1\), \(x_2\) spełniające warunki: \(x_1\ne0\), \(x_2\ne0\) oraz \(\dfrac1{x_1^2}+\dfrac1{x_2^2}&lt;1\).</p>`,
+    ans: String.raw`\(m\in\left(-4-2\sqrt6,0\right)\cup\left(0,\tfrac19\right)\)`,
+    sol: String.raw`<p class="step"><b>Krok 1: dwa pierwiastki.</b> \(m\ne0\) i \(\Delta=(m+1)^2+4m(2m-3)=9m^2-10m+1=(9m-1)(m-1)&gt;0\iff m&lt;\tfrac19\ \text{lub}\ m&gt;1\). Pierwiastki niezerowe: \(-2m+3\ne0\), czyli \(m\ne\tfrac32\).</p>
+<p class="step"><b>Krok 2: warunek.</b> \(\dfrac1{x_1^2}+\dfrac1{x_2^2}=\dfrac{(x_1+x_2)^2-2x_1x_2}{(x_1x_2)^2}\). Z Viète’a \(x_1+x_2=\tfrac{m+1}m\), \(x_1x_2=\tfrac{3-2m}m\), więc wyrażenie to \(\dfrac{5m^2-4m+1}{(3-2m)^2}\).</p>
+<p class="step"><b>Krok 3.</b> Mianownik jest dodatni: \(5m^2-4m+1&lt;(3-2m)^2\iff m^2+8m-8&lt;0\iff m\in\left(-4-2\sqrt6,-4+2\sqrt6\right)\) (\(-4+2\sqrt6\approx0{,}9\)).</p>
+<p class="step"><b>Krok 4.</b> Część wspólna z krokiem 1: \(m\in\left(-4-2\sqrt6,0\right)\cup\left(0,\tfrac19\right)\).</p>`
+  },
+  {
+    id: 21,
+    group: "Wzory Viète’a",
+    src: "czerwiec 2024 · zad. 12",
+    pts: 6,
+    tags: ["równanie kwadratowe z parametrem", "wzory Viète’a", "równanie trzeciego stopnia"],
+    req: ["ZR III.3", "ZR III.5", "ZR III.1"],
+    q: String.raw`<p>Wyznacz wszystkie wartości parametru \(m\), dla których równanie \((3-m)x^2+(m+1)x-(m+1)^2=0\) ma dwa różne rozwiązania rzeczywiste \(x_1\), \(x_2\) spełniające warunek \(x_1^2+x_2^2=x_1\cdot x_2+7\).</p>`,
+    ans: String.raw`\(m=1\) lub \(m=\dfrac{-3-2\sqrt{42}}3\)`,
+    sol: String.raw`<p class="step"><b>Krok 1: dwa pierwiastki.</b> \(m\ne3\) i \(\Delta=(m+1)^2+4(3-m)(m+1)^2=(m+1)^2(13-4m)&gt;0\iff m\ne-1\ \text{i}\ m&lt;\tfrac{13}4\).</p>
+<p class="step"><b>Krok 2: warunek.</b> \(x_1^2+x_2^2=x_1x_2+7\iff(x_1+x_2)^2-3x_1x_2=7\). Z Viète’a \(x_1+x_2=\tfrac{m+1}{m-3}\), \(x_1x_2=\tfrac{(m+1)^2}{m-3}\), więc
+\[\frac{(m+1)^2}{(m-3)^2}-\frac{3(m+1)^2}{m-3}=7\iff(m+1)^2(10-3m)=7(m-3)^2\iff3m^3+3m^2-59m+53=0.\]</p>
+<p class="step"><b>Krok 3.</b> \(m=1\) jest pierwiastkiem: \((m-1)(3m^2+6m-53)=0\), skąd \(m=1\) lub \(m=\dfrac{-3\pm2\sqrt{42}}3\).</p>
+<p class="step"><b>Krok 4.</b> \(\dfrac{-3+2\sqrt{42}}3\approx3{,}32&gt;\tfrac{13}4\) odpada. Zostają \(m=1\) i \(m=\dfrac{-3-2\sqrt{42}}3\approx-5{,}32\).</p>`
+  },
+  {
     id: 4,
     group: "Funkcja kwadratowa – zadania z parametrem",
     src: "maj 2026 · zad. 10",

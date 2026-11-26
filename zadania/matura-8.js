@@ -120,6 +120,19 @@ Stąd \(2h^2=44\), \(h=\sqrt{22}\).</p>`
 <p class="step"><b>Krok 4.</b> \(V=P_p\cdot H=R^3\cos\alpha(1+\sin\alpha)\operatorname{tg}\alpha\sqrt{2-2\sin\alpha}=R^3\sin\alpha\,(1+\sin\alpha)\sqrt{2-2\sin\alpha}\).</p>`
   },
   {
+    id: 13,
+    group: "Przekroje i kąty w ostrosłupach i sześcianie",
+    src: "czerwiec 2024 · zad. 10",
+    pts: 4,
+    tags: ["graniastosłup prawidłowy trójkątny", "przekątne ścian", "pole powierzchni"],
+    req: ["ZP X.3", "ZP X.5"],
+    q: String.raw`<p>Krawędź podstawy graniastosłupa prawidłowego trójkątnego ma długość \(a\). Sinus kąta między przekątnymi ścian bocznych wychodzącymi z jednego wierzchołka graniastosłupa jest równy \(\dfrac{\sqrt{11}}6\). Wyznacz pole powierzchni całkowitej tego graniastosłupa.</p>`,
+    ans: String.raw`\(P_c=\dfrac{\sqrt3}2a^2+3\sqrt2\,a^2\)`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> Z wierzchołka \(A\) wychodzą przekątne \(AB_1\) i \(AC_1\) o długości \(d=\sqrt{a^2+h^2}\); trzeci bok trójkąta \(AB_1C_1\) to \(|B_1C_1|=a\). Ponieważ \(d&gt;a\), kąt \(\varphi\) przy \(A\) jest ostry i \(\cos\varphi=\sqrt{1-\tfrac{11}{36}}=\tfrac56\).</p>
+<p class="step"><b>Krok 2.</b> Twierdzenie cosinusów: \(a^2=2d^2-2d^2\cdot\tfrac56=\tfrac13d^2\), więc \(d^2=3a^2\) i \(h^2=2a^2\), \(h=a\sqrt2\).</p>
+<p class="step"><b>Krok 3.</b> \(P_c=2\cdot\dfrac{a^2\sqrt3}4+3\cdot a\cdot a\sqrt2=\dfrac{\sqrt3}2a^2+3\sqrt2a^2\).</p>`
+  },
+  {
     id: 8,
     group: "Bryły podobne i obrotowe",
     label: "autorskie",

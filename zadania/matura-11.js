@@ -78,6 +78,19 @@
 <p class="step">Zatem \(\log_{18}40=\dfrac{3a+1}{a+2b}\). Odpowiedź <b>D</b>.</p>`
   },
   {
+    id: 13,
+    group: "Logarytmy i potęgi",
+    src: "czerwiec 2023 · zad. 1",
+    pts: 2,
+    tags: ["potęga o wykładniku logarytmicznym", "zamiana podstawy logarytmu"],
+    req: ["ZP I.9", "ZR I.1"],
+    q: String.raw`<p>Dane są liczby \(a=4^{\log_245}\) oraz \(b=\dfrac{\log_32023}{\log_92023}\). Oblicz \(a-b\).</p>`,
+    ans: String.raw`\(a-b=2023\)`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> \(a=\left(2^2\right)^{\log_245}=\left(2^{\log_245}\right)^2=45^2=2025\).</p>
+<p class="step"><b>Krok 2.</b> \(\log_92023=\dfrac{\log_32023}{\log_39}=\dfrac{\log_32023}2\), więc \(b=2\).</p>
+<p class="step">\(a-b=2025-2=2023\).</p>`
+  },
+  {
     id: 6,
     group: "Procenty i procent składany",
     label: "autorskie",

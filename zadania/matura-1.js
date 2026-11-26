@@ -188,6 +188,18 @@ Lewą stronę rozkładamy: \(x^3+y^3-x^2y-xy^2=x^2(x-y)-y^2(x-y)=(x-y)(x^2-y^2)=
 <p class="note">Równość zachodzi tylko dla \(x=y\).</p>`
   },
   {
+    id: 18,
+    group: "Dowody algebraiczne",
+    src: "czerwiec 2023 · zad. 5",
+    pts: 3,
+    tags: ["nierówność", "rozkład wielomianu", "dowód"],
+    req: ["ZP III.1", "ZR II.2"],
+    q: String.raw`<p>Wykaż, że dla każdej liczby rzeczywistej dodatniej \(a\) prawdziwa jest nierówność \(a^2+\dfrac{16}a\ge12\).</p>`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> Mnożymy przez \(a&gt;0\): nierówność jest równoważna \(a^3-12a+16\ge0\).</p>
+<p class="step"><b>Krok 2.</b> Liczba \(2\) jest pierwiastkiem lewej strony, i to podwójnym: \(a^3-12a+16=(a-2)^2(a+4)\).</p>
+<p class="step"><b>Krok 3.</b> \((a-2)^2\ge0\) i \(a+4&gt;0\), więc iloczyn jest nieujemny. \(\blacksquare\) (Równość dla \(a=2\).)</p>`
+  },
+  {
     id: 15,
     group: "Dowody o podzielności",
     label: "autorskie",

@@ -29,6 +29,18 @@
 <p class="step">Razem \(12\,500+15\,000=27\,500\).</p>`
   },
   {
+    id: 14,
+    group: "Kombinatoryka",
+    src: "czerwiec 2023 · zad. 2",
+    pts: 3,
+    tags: ["permutacje", "osoby obok siebie"],
+    req: ["ZR XI.1"],
+    q: String.raw`<p>Wśród \(n\) osób są Ania i jej dwaj znajomi. Wszystkie te osoby ustawiamy w kolejkę. Liczba wszystkich ustawień jest \(12\) razy większa od liczby tych ustawień, w których Ania i jej dwaj znajomi zajmują trzy kolejne miejsca (w dowolnej kolejności). Oblicz \(n\).</p>`,
+    ans: String.raw`\(n=9\)`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> Trójkę traktujemy jak jeden „blok”: ustawiamy \(n-2\) obiektów na \((n-2)!\) sposobów, a osoby w bloku na \(3!=6\) sposobów. Takich ustawień jest \(6\,(n-2)!\).</p>
+<p class="step"><b>Krok 2.</b> \(n!=12\cdot6\,(n-2)!\Rightarrow n(n-1)=72\Rightarrow n=9\).</p>`
+  },
+  {
     id: 2,
     group: "Prawdopodobieństwo klasyczne",
     src: "maj 2026 · zad. 2",
@@ -129,6 +141,19 @@ b) Wylosowano kulę białą. Oblicz prawdopodobieństwo, że pochodzi z pierwsze
     sol: String.raw`<p class="step">Warunek „jest mężczyzną” zawęża losowanie do \(240\) osób, wśród których \(43\) jest w wieku przedemerytalnym: \(P=\dfrac{43}{240}=0{,}179166\ldots\)</p>`
   },
   {
+    id: 16,
+    group: "Prawdopodobieństwo warunkowe",
+    src: "czerwiec 2024 · zad. 4",
+    pts: 3,
+    tags: ["prawdopodobieństwo warunkowe", "rzuty monetą", "trzy z rzędu"],
+    req: ["ZR XII.1"],
+    q: String.raw`<p>Rzucamy dziesięć razy symetryczną monetą. Oblicz prawdopodobieństwo, że orzeł wypadł dokładnie trzy razy z rzędu, jeśli wiadomo, że wypadł dokładnie trzy razy.</p>`,
+    ans: String.raw`\(\dfrac1{15}\)`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> Wyników z dokładnie trzema orłami jest \(\binom{10}3=120\) i wszystkie są jednakowo prawdopodobne.</p>
+<p class="step"><b>Krok 2.</b> Trzy orły stoją obok siebie: blok zaczyna się w rzucie \(1,2,\dots,8\) – \(8\) możliwości.</p>
+<p class="step"><b>Krok 3.</b> \(P=\dfrac8{120}=\dfrac1{15}\).</p>`
+  },
+  {
     id: 5,
     group: "Schemat Bernoulliego",
     src: "maj 2023 · zad. 2",
@@ -155,6 +180,18 @@ b) Wylosowano kulę białą. Oblicz prawdopodobieństwo, że pochodzi z pierwsze
     sol: String.raw`<p class="step"><b>Pomysł.</b> Schemat Bernoulliego z \(n=10\) i prawdopodobieństwem „sukcesu” (opakowanie z za małą zawartością tłuszczu) \(p=0{,}01\). Interesuje nas \(P(S_{10}\le1)=P(S_{10}=0)+P(S_{10}=1)\).</p>
 <p class="step"><b>Krok 1.</b> \(P(S_{10}=0)=0{,}99^{10}\approx0{,}904382\) oraz \(P(S_{10}=1)=\binom{10}{1}\cdot0{,}01\cdot0{,}99^9=0{,}1\cdot0{,}99^9\approx0{,}091352\).</p>
 <p class="step"><b>Krok 2.</b> \(P\approx0{,}904382+0{,}091352=0{,}995734\approx0{,}996\).</p>`
+  },
+  {
+    id: 15,
+    group: "Schemat Bernoulliego",
+    src: "czerwiec 2023 · zad. 3",
+    pts: 3,
+    tags: ["schemat Bernoulliego", "co najwyżej dwa sukcesy"],
+    req: ["ZR XII.2"],
+    q: String.raw`<p>Prawdopodobieństwo awarii sieci ciepłowniczej na pewnym osiedlu w godzinach porannych pojedynczego dnia jest równe \(0{,}1\). Oblicz prawdopodobieństwo, że w okresie siedmiu dni wystąpią co najwyżej dwa dni z poranną awarią. Wynik podaj w zaokrągleniu do części setnych.</p>`,
+    ans: String.raw`\(P(A)\approx0{,}97\)`,
+    sol: String.raw`<p class="step">Schemat Bernoulliego: \(n=7\), \(p=0{,}1\), \(q=0{,}9\); sumujemy \(k=0,1,2\):
+\[P(A)=0{,}9^7+7\cdot0{,}1\cdot0{,}9^6+21\cdot0{,}01\cdot0{,}9^5\approx0{,}4783+0{,}3720+0{,}1240=0{,}9743\approx0{,}97.\]</p>`
   },
   {
     id: 7,

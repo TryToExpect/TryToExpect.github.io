@@ -135,6 +135,19 @@ Czyli \(b^2=a^2+ac\), to znaczy \(|AC|^2=|BC|^2+|AB|\cdot|BC|\). \(\blacksquare\
 <p class="note"><b>Uwaga:</b> trójkąt o bokach \(5,5,8\) jest w rzeczywistości rozwartokątny (\(8^2&gt;5^2+5^2\)). Słowo „ostrokątny” należy więc rozumieć jako „kąt między bokami \(5\) i \(8\) jest ostry”; druga możliwość, \(\cos\gamma=-\tfrac45\), daje \(c=\sqrt{153}\), czego nie ma wśród odpowiedzi.</p>`
   },
   {
+    id: 20,
+    group: "Trójkąty",
+    src: "czerwiec 2024 · zad. 8",
+    pts: 4,
+    tags: ["twierdzenie sinusów", "twierdzenie cosinusów", "trójkąt wpisany w okrąg"],
+    req: ["ZR VII.7", "ZP VII.3"],
+    q: String.raw`<p>W okrąg o promieniu \(4\) wpisano trójkąt \(ABC\). Długość boku \(AB\) jest równa \(6\). Bok \(BC\) ma długość \(4\sqrt3\) i jest najdłuższym bokiem tego trójkąta. Oblicz długość boku \(AC\).</p>`,
+    ans: String.raw`\(|AC|=\sqrt{21}-3\)`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> Z twierdzenia sinusów \(\sin\angle A=\dfrac{4\sqrt3}{2\cdot4}=\dfrac{\sqrt3}2\), więc \(\angle A=60^\circ\) lub \(120^\circ\).</p>
+<p class="step"><b>Krok 2.</b> Naprzeciw najdłuższego boku leży największy kąt. Gdyby \(\angle A=60^\circ\), wszystkie kąty miałyby po \(60^\circ\) i trójkąt byłby równoboczny – sprzeczność z \(|AB|=6\ne4\sqrt3\). Zatem \(\angle A=120^\circ\).</p>
+<p class="step"><b>Krok 3.</b> Twierdzenie cosinusów dla \(x=|AC|\): \(48=36+x^2-2\cdot6x\cdot\left(-\tfrac12\right)\Rightarrow x^2+6x-12=0\Rightarrow x=-3+\sqrt{21}\) (dodatnie rozwiązanie).</p>`
+  },
+  {
     id: 5,
     group: "Czworokąty",
     src: "maj 2025 · zad. 7",
@@ -236,6 +249,22 @@ Zatem \(3x^2+3x-90=0\), czyli \(x^2+x-30=0\), \((x-5)(x+6)=0\). Długość jest 
 <p class="note"><b>Kontrola wzorem Brahmagupty</b> (dla czworokąta wpisanego w okrąg): półobwód \(p=15\), \(P=\sqrt{(p-9)(p-5)(p-6)(p-10)}=\sqrt{6\cdot10\cdot9\cdot5}=\sqrt{2700}=30\sqrt3\) ✓. Przy okazji, z wzoru \(P=r\cdot p\) dla czworokąta opisanego wychodzi promień okręgu wpisanego \(r=\dfrac{30\sqrt3}{15}=2\sqrt3\).</p>`
   },
   {
+    id: 18,
+    group: "Czworokąty",
+    src: "czerwiec 2023 · zad. 12",
+    pts: 5,
+    tags: ["czworokąt wpisany w okrąg", "cięciwy", "twierdzenie Pitagorasa"],
+    req: ["ZR VIII.1", "ZP VIII.12"],
+    q: String.raw`<p>Czworokąt wypukły \(ABCD\) jest wpisany w okrąg o promieniu \(4\). Kąty \(BAD\) i \(BCD\) są proste (zobacz rysunek). Przekątne \(AC\) i \(BD\) przecinają się w punkcie \(E\) tak, że \(|BE|=3\cdot|DE|\) oraz \(|BD|=2\cdot|AE|\). Oblicz długości boków czworokąta \(ABCD\).</p>`,
+    fig: String.raw`<svg class="fig" viewBox="0 0 300 220" width="300" height="220" role="img" aria-label="Czworokąt ABCD wpisany w okrąg o promieniu 4; BD jest średnicą, kąty przy A i C są proste, przekątne przecinają się w punkcie E"><circle class="s d w" cx="150" cy="110" r="80"/><polygon class="s" points="170,32.5 70,110 205,168.1 230,110"/><line class="a" x1="70" y1="110" x2="230" y2="110"/><line class="a" x1="170" y1="32.5" x2="205" y2="168.1"/><circle class="dot" cx="190" cy="110" r="2.4"/><text x="172" y="24" text-anchor="middle">A</text><text x="62" y="114" text-anchor="end">B</text><text x="208" y="184" text-anchor="middle">C</text><text x="238" y="114" text-anchor="start">D</text><text x="194" y="102" text-anchor="start">E</text></svg>`,
+    ans: String.raw`\(|AB|=2\sqrt{10}\), \(|BC|=3\sqrt6\), \(|CD|=\sqrt{10}\), \(|AD|=2\sqrt6\)`,
+    sol: String.raw`<p class="step"><b>Pomysł.</b> Kąt wpisany \(BAD\) jest prosty, więc \(BD\) jest średnicą: \(|BD|=8\), \(|BE|=6\), \(|DE|=2\), \(|AE|=4\). Wygodnie użyć układu współrzędnych ze środkiem okręgu w \((0,0)\).</p>
+<p class="step"><b>Krok 1.</b> \(B=(-4,0)\), \(D=(4,0)\), \(E=(2,0)\). Punkt \(A=(x,y)\): \(x^2+y^2=16\) i \((x-2)^2+y^2=16\), skąd \(x=1\), \(A=(1,\sqrt{15})\).</p>
+<p class="step"><b>Krok 2.</b> Z twierdzenia o cięciwach \(|AE|\cdot|EC|=|BE|\cdot|ED|=12\), więc \(|EC|=3\) i \(C=E+\tfrac34(E-A)=\left(\tfrac{11}4,-\tfrac{3\sqrt{15}}4\right)\).</p>
+<p class="step"><b>Krok 3.</b> \(|AB|=\sqrt{25+15}=2\sqrt{10}\), \(|AD|=\sqrt{9+15}=2\sqrt6\), \(|BC|=\sqrt{\tfrac{729}{16}+\tfrac{135}{16}}=3\sqrt6\), \(|CD|=\sqrt{\tfrac{25}{16}+\tfrac{135}{16}}=\sqrt{10}\).</p>
+<p class="note"><b>Sprawdzenie:</b> \(|AB|^2+|AD|^2=|BC|^2+|CD|^2=64=|BD|^2\) ✓.</p>`
+  },
+  {
     id: 11,
     group: "Dowody geometryczne",
     label: "autorskie",
@@ -275,6 +304,32 @@ Zatem \(3x^2+3x-90=0\), czyli \(x^2+x-30=0\), \((x-5)(x+6)=0\). Długość jest 
     sol: String.raw`<p class="step"><b>Krok 1.</b> \(OB'\parallel CB\), więc z twierdzenia Talesa (trójkąt \(ABC\)): \(\dfrac{|AB'|}{|AB|}=\dfrac{|AO|}{|AC|}\). Podobnie \(OA'\parallel DA\) w trójkącie \(BAD\): \(\dfrac{|BA'|}{|AB|}=\dfrac{|BO|}{|BD|}\).</p>
 <p class="step"><b>Krok 2.</b> Trójkąty \(AOB\) i \(COD\) są podobne (\(AB\parallel CD\)), więc \(\dfrac{|AO|}{|OC|}=\dfrac{|BO|}{|OD|}\), a stąd \(\dfrac{|AO|}{|AC|}=\dfrac{|BO|}{|BD|}\).</p>
 <p class="step"><b>Krok 3.</b> Zatem \(|AB'|=|BA'|\), czyli \(|AA'|=|AB|-|BA'|=|AB|-|AB'|=|BB'|\). \(\blacksquare\)</p>`
+  },
+  {
+    id: 17,
+    group: "Dowody geometryczne",
+    src: "czerwiec 2023 · zad. 6",
+    pts: 3,
+    tags: ["odcinki stycznych", "trójkąt równoramienny", "dowód"],
+    req: ["ZP VIII.11"],
+    q: String.raw`<p>Przez punkt \(A\) poprowadzono dwie proste styczne do okręgu \(\mathcal O\) w punktach \(P\) i \(Q\). Przez punkt \(B\) leżący na odcinku \(AP\) poprowadzono styczną do okręgu w punkcie \(D\), która przecięła odcinek \(AQ\) w punkcie \(C\) (zobacz rysunek).</p>
+<p>Wykaż, że jeżeli \(|AQ|=5\cdot|BP|\) oraz \(|CD|=2\cdot|BD|\), to trójkąt \(ABC\) jest równoramienny.</p>`,
+    fig: String.raw`<svg class="fig" viewBox="0 0 280 220" width="280" height="220" role="img" aria-label="Okrąg i styczne: z punktu A poprowadzono styczne AP i AQ; styczna w punkcie D przecina odcinki AP i AQ w punktach B i C"><circle class="s" cx="200" cy="110" r="60"/><line class="s" x1="40" y1="110" x2="177.5" y2="54.4"/><line class="s" x1="40" y1="110" x2="177.5" y2="165.6"/><line class="a" x1="123.8" y1="76.1" x2="152.7" y2="155.6"/><circle class="dot" cx="177.5" cy="54.4" r="2.4"/><circle class="dot" cx="177.5" cy="165.6" r="2.4"/><circle class="dot" cx="143.6" cy="130.5" r="2.4"/><circle class="dot" cx="123.8" cy="76.1" r="2.4"/><circle class="dot" cx="152.7" cy="155.6" r="2.4"/><text x="32" y="114" text-anchor="end">A</text><text x="180" y="46" text-anchor="start">P</text><text x="180" y="182" text-anchor="start">Q</text><text x="121" y="68" text-anchor="end">B</text><text x="148" y="174" text-anchor="end">C</text><text x="152" y="128" text-anchor="start">D</text><text class="m" x="232" y="44" text-anchor="start">okrąg</text></svg>`,
+    sol: String.raw`<p class="step"><b>Pomysł.</b> Odcinki stycznych poprowadzonych z jednego punktu są równe: \(|AP|=|AQ|\), \(|BP|=|BD|\), \(|CD|=|CQ|\).</p>
+<p class="step"><b>Krok 1.</b> Niech \(|BP|=|BD|=t\). Wtedy \(|CD|=|CQ|=2t\) i \(|AQ|=|AP|=5t\).</p>
+<p class="step"><b>Krok 2.</b> \(|AC|=|AQ|-|CQ|=3t\) oraz \(|BC|=|BD|+|DC|=3t\). Zatem \(|AC|=|BC|\) – trójkąt \(ABC\) jest równoramienny. \(\blacksquare\)</p>`
+  },
+  {
+    id: 19,
+    group: "Dowody geometryczne",
+    src: "czerwiec 2024 · zad. 6",
+    pts: 3,
+    tags: ["trapez opisany na okręgu", "nierówność między średnimi", "dowód"],
+    req: ["ZR VIII.1", "ZP VIII.11"],
+    q: String.raw`<p>Długości podstaw trapezu równoramiennego są równe \(a\) oraz \(b\), przy czym \(a&gt;b\). W ten trapez można wpisać okrąg. Wykaż, że pole tego trapezu jest większe od \(a\cdot b\).</p>`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> W czworokąt opisany na okręgu sumy przeciwległych boków są równe: \(2c=a+b\), więc ramię \(c=\tfrac{a+b}2\).</p>
+<p class="step"><b>Krok 2.</b> Wysokość: \(h^2=c^2-\left(\tfrac{a-b}2\right)^2=\tfrac{(a+b)^2-(a-b)^2}4=ab\), czyli \(h=\sqrt{ab}\).</p>
+<p class="step"><b>Krok 3.</b> \(P=\tfrac{a+b}2\cdot\sqrt{ab}\). Ponieważ \(a\ne b\), mamy \(\tfrac{a+b}2&gt;\sqrt{ab}\) (bo \(\left(\sqrt a-\sqrt b\right)^2&gt;0\)), więc \(P&gt;\sqrt{ab}\cdot\sqrt{ab}=ab\). \(\blacksquare\)</p>`
   },
   {
     id: 13,

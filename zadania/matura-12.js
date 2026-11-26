@@ -56,6 +56,20 @@ Zatem \(T(15)=60\cdot\dfrac{3\sqrt3}8+20=\dfrac{45\sqrt3}2+20\approx38{,}97+20=5
 <p class="step"><b>Krok 3.</b> Po zaokrągleniu do jedności: \(59^\circ\text{C}\).</p>`
   },
   {
+    id: 10,
+    group: "Funkcja wykładnicza w zastosowaniach",
+    src: "czerwiec 2024 · zad. 1",
+    pts: 2,
+    tags: ["funkcja wykładnicza", "reakcja chemiczna", "granica w nieskończoności"],
+    req: ["ZP V.14"],
+    q: String.raw`<p>W chwili \(t=0\) zainicjowano reakcję chemiczną, w której masa \(m\) związku A (w gramach) zmieniała się zgodnie z zależnością \(m(t)=a\cdot2^{-0{,}05t}+b\) dla \(t\ge0\) (\(t\) w sekundach; \(a\), \(b\) – współczynniki). Masa początkowa była równa \(m_0\), a po osiągnięciu stanu równowagi (gdy \(t\to\infty\)) masa związku była równa \(\tfrac19\) masy początkowej.</p>
+<p>Oblicz, po ilu sekundach przereagowało \(87{,}5\%\) masy początkowej tego związku.</p>`,
+    ans: String.raw`po \(120\) sekundach`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> Gdy \(t\to\infty\), \(2^{-0{,}05t}\to0\), więc \(b=\tfrac19m_0\). Z \(m(0)=a+b=m_0\): \(a=\tfrac89m_0\).</p>
+<p class="step"><b>Krok 2.</b> Przereagowało \(87{,}5\%\), czyli zostało \(12{,}5\%=\tfrac18m_0\): \(\tfrac89m_0\cdot2^{-0{,}05t}+\tfrac19m_0=\tfrac18m_0\Rightarrow\tfrac89\cdot2^{-0{,}05t}=\tfrac1{72}\Rightarrow2^{-0{,}05t}=2^{-6}\).</p>
+<p class="step"><b>Krok 3.</b> \(0{,}05t=6\Rightarrow t=120\) s.</p>`
+  },
+  {
     id: 4,
     group: "Równania i nierówności wykładnicze",
     label: "autorskie",
