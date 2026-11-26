@@ -177,5 +177,21 @@
 \[x^3-(m+2)x^2+(2m+1)x-m=(x-1)^2(x-m).\]</p>
 <p class="step"><b>Rozwiązania.</b> Równanie ma rozwiązania \(x=1\) i \(x=m\). Są to dwie różne liczby wtedy i tylko wtedy, gdy \(m\ne1\); dla \(m=1\) jedynym rozwiązaniem jest \(x=1\) (pierwiastek potrójny).</p>
 <p class="step"><b>Odpowiedź.</b> \(m\in\mathbb R\setminus\{1\}\).</p>`
+  },
+  {
+    id: 23,
+    group: "Wielomiany z parametrem",
+    src: "czerwiec 2022 · zad. 13",
+    pts: 6,
+    tags: ["równanie wielomianowe z parametrem", "wzory Viète’a", "trzy pierwiastki"],
+    req: ["ZR III.3", "ZR III.5"],
+    q: String.raw`<p>Wyznacz wszystkie wartości parametru \(m\), dla których równanie \((x-4)\left[x^2+(m-3)x+m^2-m-6\right]=0\) ma trzy różne rozwiązania rzeczywiste \(x_1,x_2,x_3\) spełniające warunek
+\[x_1\cdot x_2\cdot x_3&gt;x_1^2+x_2^2+x_3^2-5m-51.\]</p>`,
+    ans: String.raw`\(m\in\left(-\tfrac{11}3,\tfrac{-3-\sqrt{17}}2\right)\cup\left(\tfrac{-3-\sqrt{17}}2,-2\right)\cup(1,3)\)`,
+    sol: String.raw`<p class="step"><b>Pomysł.</b> Jeden pierwiastek to \(x_3=4\); pozostałe \(x_1,x_2\) są pierwiastkami trójmianu \(x^2+(m-3)x+m^2-m-6\), więc użyjemy wzorów Viète’a: \(x_1+x_2=3-m\), \(x_1x_2=m^2-m-6\).</p>
+<p class="step"><b>Krok 1: dwa różne pierwiastki trójmianu.</b> \(\Delta=(m-3)^2-4(m^2-m-6)=-3m^2-2m+33&gt;0\iff m\in\left(-\tfrac{11}3,3\right)\).</p>
+<p class="step"><b>Krok 2: żaden nie jest równy \(4\).</b> \(16+4(m-3)+m^2-m-6\ne0\iff m^2+3m-2\ne0\iff m\ne\tfrac{-3\pm\sqrt{17}}2\).</p>
+<p class="step"><b>Krok 3: warunek.</b> \(x_1^2+x_2^2=(3-m)^2-2(m^2-m-6)=-m^2-4m+21\). Nierówność: \(4(m^2-m-6)&gt;-m^2-4m+21+16-5m-51\), czyli \(5m^2+5m-10&gt;0\iff(m+2)(m-1)&gt;0\iff m&lt;-2\ \text{lub}\ m&gt;1\).</p>
+<p class="step"><b>Krok 4.</b> Część wspólna: \(m\in\left(-\tfrac{11}3,-2\right)\cup(1,3)\) bez \(\tfrac{-3-\sqrt{17}}2\approx-3{,}56\) (druga wykluczona liczba \(\approx0{,}56\) i tak nie należy do zbioru).</p>`
   }
 ];

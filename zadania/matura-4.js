@@ -15,6 +15,18 @@ b) Oblicz wartość wyrażenia \(\sin\dfrac{7\pi}6\cdot\cos\left(-\dfrac\pi3\rig
 <p class="step"><b>Wynik.</b> \(-\dfrac12\cdot\dfrac12+1=\dfrac34\).</p>`
   },
   {
+    id: 11,
+    group: "Funkcje trygonometryczne i wzory redukcyjne",
+    src: "maj 2022 · zad. 3",
+    pts: 1,
+    tags: ["sinus różnicy", "jedynka trygonometryczna", "zadanie zamknięte"],
+    req: ["ZR VII.5"],
+    q: String.raw`<p>Jeżeli \(\cos\beta=-\tfrac13\) i \(\beta\in\left(\pi,\tfrac32\pi\right)\), to wartość wyrażenia \(\sin\left(\beta-\tfrac13\pi\right)\) jest równa</p><p><b>A.</b> \(\dfrac{-2\sqrt2+\sqrt3}6\) &nbsp;&nbsp; <b>B.</b> \(\dfrac{2\sqrt6+1}6\) &nbsp;&nbsp; <b>C.</b> \(\dfrac{2\sqrt2+\sqrt3}6\) &nbsp;&nbsp; <b>D.</b> \(\dfrac{1-2\sqrt6}6\)</p>`,
+    ans: String.raw`<b>A</b>`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> W III ćwiartce sinus jest ujemny: \(\sin\beta=-\sqrt{1-\tfrac19}=-\tfrac{2\sqrt2}3\).</p>
+<p class="step"><b>Krok 2.</b> \(\sin\left(\beta-\tfrac\pi3\right)=\sin\beta\cdot\tfrac12-\cos\beta\cdot\tfrac{\sqrt3}2=-\tfrac{\sqrt2}3+\tfrac{\sqrt3}6=\dfrac{-2\sqrt2+\sqrt3}6\). Odpowiedź <b>A</b>.</p>`
+  },
+  {
     id: 10,
     group: "Wykres funkcji trygonometrycznej",
     label: "autorskie",
@@ -140,6 +152,19 @@ Zatem \(\cos x=-1\) lub \(\sin x=-\tfrac12\).</p>
 </ul>
 <div class="fig-wrap"><svg class="fig" viewBox="0 0 350 265" width="350" height="265" role="img" aria-label="Okrąg jednostkowy z prostą y = −1/2 i prostą x = −1; zaznaczone punkty odpowiadające kątom −π/6, −5π/6 oraz −π i π"><circle class="s" style="fill:var(--surface)" cx="150" cy="140" r="96"/><line class="s" x1="36" y1="140" x2="270" y2="140" style="stroke-width:1"/><path class="s" d="M264,137L270,140L264,143" style="stroke-width:1"/><line class="s" x1="150" y1="252" x2="150" y2="20" style="stroke-width:1"/><path class="s" d="M147,26L150,20L153,26" style="stroke-width:1"/><text x="276" y="144">x</text><text x="158" y="26">y</text><text class="m" x="249" y="155">1</text><line class="a d" x1="58" y1="188" x2="256" y2="188"/><line class="a d" x1="54" y1="78" x2="54" y2="182"/><line class="p" x1="150" y1="140" x2="233.1" y2="188"/><line class="p" x1="150" y1="140" x2="66.9" y2="188"/><line class="p" x1="150" y1="140" x2="54" y2="140"/><circle class="dot" style="fill:var(--pen)" cx="233.1" cy="188" r="3.6"/><circle class="dot" style="fill:var(--pen)" cx="66.9" cy="188" r="3.6"/><circle class="dot" style="fill:var(--pen)" cx="54" cy="140" r="3.6"/><text x="240.1" y="205">−π/6</text><text x="63.9" y="205" text-anchor="end">−5π/6</text><text x="45" y="144" text-anchor="end">−π, π</text><text x="262" y="192"><tspan style="font-style:normal">sin</tspan> x = −1/2</text><text x="54" y="70" text-anchor="middle"><tspan style="font-style:normal">cos</tspan> x = −1</text></svg></div>
 <p class="note">Rys. Rozwiązania na okręgu jednostkowym (czerwone punkty). Kąty dodatnie liczymy w lewo od osi \(Ox\), ujemne w prawo.</p>`
+  },
+  {
+    id: 12,
+    group: "Równania trygonometryczne",
+    src: "czerwiec 2022 · zad. 11",
+    pts: 4,
+    tags: ["a cos x + b sin x", "cosinus różnicy", "równanie w przedziale"],
+    req: ["ZR VII.5", "ZR VII.6"],
+    q: String.raw`<p>Rozwiąż równanie \(\cos(3x)+\sqrt3\sin(3x)+1=0\) w przedziale \(\langle0,\pi\rangle\).</p>`,
+    ans: String.raw`\(x\in\left\{\dfrac\pi3,\ \dfrac{5\pi}9,\ \pi\right\}\)`,
+    sol: String.raw`<p class="step"><b>Pomysł.</b> \(\cos t+\sqrt3\sin t=2\left(\tfrac12\cos t+\tfrac{\sqrt3}2\sin t\right)=2\cos\left(t-\tfrac\pi3\right)\).</p>
+<p class="step"><b>Krok 1.</b> Równanie: \(\cos\left(3x-\tfrac\pi3\right)=-\tfrac12\), więc \(3x-\tfrac\pi3=\tfrac{2\pi}3+2k\pi\) lub \(3x-\tfrac\pi3=-\tfrac{2\pi}3+2k\pi\).</p>
+<p class="step"><b>Krok 2.</b> Stąd \(x=\tfrac\pi3+\tfrac{2k\pi}3\) lub \(x=-\tfrac\pi9+\tfrac{2k\pi}3\). W \(\langle0,\pi\rangle\): \(x=\tfrac\pi3,\ \pi\) oraz \(x=\tfrac{5\pi}9\).</p>`
   },
   {
     id: 7,

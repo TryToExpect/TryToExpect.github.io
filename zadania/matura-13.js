@@ -73,6 +73,21 @@
 <p class="step"><b>Minimum.</b> \(m^2+2\ge2\), a równość zachodzi dla \(m=0\) (pierwiastki \(\pm1\)). Najmniejsza suma kwadratów wynosi \(2\).</p>`
   },
   {
+    id: 19,
+    group: "Wzory Viète’a",
+    src: "maj 2022 · zad. 12",
+    pts: 5,
+    tags: ["równanie kwadratowe z parametrem", "pierwiastki", "warunek z odwrotnościami"],
+    req: ["ZR III.3", "ZR III.5"],
+    q: String.raw`<p>Wyznacz wszystkie wartości parametru \(m\), dla których równanie \(x^2-(m+1)x+m=0\) ma dwa różne rozwiązania rzeczywiste \(x_1\), \(x_2\) spełniające warunki: \(x_1\ne0\), \(x_2\ne0\) oraz
+\[\frac1{x_1}+\frac1{x_2}+2=\frac1{x_1^2}+\frac1{x_2^2}.\]</p>`,
+    ans: String.raw`\(m=-1\) lub \(m=\dfrac12\)`,
+    sol: String.raw`<p class="step"><b>Pomysł.</b> Trójmian się rozkłada: \(x^2-(m+1)x+m=(x-1)(x-m)\), więc pierwiastki to po prostu \(1\) i \(m\) – nie trzeba wzorów Viète’a.</p>
+<p class="step"><b>Krok 1: warunki.</b> Dwa różne pierwiastki: \(m\ne1\). Pierwiastki niezerowe: \(m\ne0\).</p>
+<p class="step"><b>Krok 2: równanie.</b> Dla \(x_1=1\), \(x_2=m\): \(1+\tfrac1m+2=1+\tfrac1{m^2}\), czyli \(2+\tfrac1m=\tfrac1{m^2}\). Mnożymy przez \(m^2\): \(2m^2+m-1=0\), skąd \(m=-1\) lub \(m=\tfrac12\).</p>
+<p class="step"><b>Krok 3.</b> Obie wartości spełniają \(m\ne0\), \(m\ne1\). Odpowiedź: \(m\in\left\{-1,\tfrac12\right\}\).</p>`
+  },
+  {
     id: 4,
     group: "Funkcja kwadratowa – zadania z parametrem",
     src: "maj 2026 · zad. 10",

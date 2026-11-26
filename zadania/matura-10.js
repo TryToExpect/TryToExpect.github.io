@@ -29,6 +29,18 @@
 <p class="step"><b>c)</b> Dzielimy przez najszybciej rosnący składnik \(3^x\): \(\dfrac{\left(\frac23\right)^x-1}{\left(\frac23\right)^x+1}\). Ponieważ \(0&lt;\tfrac23&lt;1\), \(\left(\tfrac23\right)^x\to0\), więc granica to \(\dfrac{0-1}{0+1}=-1\).</p>`
   },
   {
+    id: 17,
+    group: "Granica funkcji",
+    src: "czerwiec 2022 · zad. 2",
+    pts: 1,
+    tags: ["granica funkcji wymiernej", "symbol 0/0", "zadanie zamknięte"],
+    req: ["ZR XIII.1"],
+    q: String.raw`<p>Granica \(\displaystyle\lim_{x\to-3}\frac{0{,}5x^2+3{,}5x+6}{-x^2+2x+15}\) jest równa</p><p><b>A.</b> \(\left(-\dfrac18\right)\) &nbsp;&nbsp; <b>B.</b> \(\dfrac1{16}\) &nbsp;&nbsp; <b>C.</b> \(\left(-\dfrac1{16}\right)\) &nbsp;&nbsp; <b>D.</b> \(\dfrac74\)</p>`,
+    ans: String.raw`<b>B</b> \(\left(\dfrac1{16}\right)\)`,
+    sol: String.raw`<p class="step">Licznik i mianownik zerują się dla \(x=-3\), więc rozkładamy: \(0{,}5x^2+3{,}5x+6=0{,}5(x+3)(x+4)\), \(-x^2+2x+15=-(x+3)(x-5)\).</p>
+<p class="step">Po skróceniu: \(\displaystyle\lim_{x\to-3}\frac{0{,}5(x+4)}{-(x-5)}=\frac{0{,}5\cdot1}{8}=\frac1{16}\). Odpowiedź <b>B</b>.</p>`
+  },
+  {
     id: 2,
     group: "Styczna do wykresu funkcji",
     src: "maj 2023 · zad. 3",
@@ -159,6 +171,36 @@ więc drugi składnik jest równy \(1\cdot x^2=x^2\).</p>
 <p class="note"><b>Uwaga:</b> punkt \(a=24\), w którym pochodna się zeruje, leży poza dziedziną, więc minimum przypada na jej końcu – to częsta pułapka w zadaniach optymalizacyjnych.</p>`
   },
   {
+    id: 13,
+    group: "Zadania dwuczęściowe: najpierw wzór, potem optymalizacja",
+    src: "maj 2026 · zad. 12.1",
+    pts: 3,
+    tags: ["okrąg wpisany w trójkąt", "tangens kąta podwojonego", "pole trójkąta"],
+    req: ["ZP VIII.8", "ZR VII.5"],
+    q: String.raw`<p>W projekcie ogrodu zaplanowano kwietnik w kształcie trójkąta równoramiennego o podstawie długości \(x\) metrów (\(x\le10\)). Na kwietniku ma być fontanna w kształcie koła o średnicy \(4\) metrów, styczna do każdego z boków kwietnika (zobacz rysunek). Projektant chce, aby pole kwietnika było najmniejsze.</p>
+<p>Wykaż, że pole \(P\) kwietnika (w m²) o podstawie długości \(x\) wyraża się wzorem \(P(x)=\dfrac{2x^3}{x^2-16}\).</p>`,
+    fig: String.raw`<svg class="fig" viewBox="0 0 260 200" width="260" height="200" role="img" aria-label="Kwietnik w kształcie trójkąta równoramiennego o podstawie długości x z wpisaną okrągłą fontanną o średnicy 4, styczną do wszystkich boków"><polygon class="s" points="30,170 230,170 130,30"/><circle class="s f2" cx="130" cy="118.5" r="51.5"/><text class="m" x="130" y="123" text-anchor="middle">fontanna</text><text x="130" y="190" text-anchor="middle">x</text></svg>`,
+    sol: String.raw`<p class="step"><b>Pomysł.</b> Koło fontanny jest okręgiem wpisanym w trójkąt (\(r=2\)), a jego środek leży na dwusiecznej kąta przy podstawie. Z tangensa połowy tego kąta dostaniemy tangens całego kąta, a z niego wysokość.</p>
+<p class="step"><b>Krok 1.</b> Niech \(2\alpha\) będzie kątem przy podstawie, \(D\) – środkiem podstawy, \(S\) – środkiem koła. W trójkącie prostokątnym \(SDB\): \(\operatorname{tg}\alpha=\dfrac{r}{\frac x2}=\dfrac4x\) (stąd \(x&gt;4\)).</p>
+<p class="step"><b>Krok 2.</b> \(\operatorname{tg}2\alpha=\dfrac{2\cdot\frac4x}{1-\frac{16}{x^2}}=\dfrac{8x}{x^2-16}\), więc wysokość \(h=\dfrac x2\operatorname{tg}2\alpha=\dfrac{4x^2}{x^2-16}\).</p>
+<p class="step"><b>Krok 3.</b> \(P=\dfrac12xh=\dfrac{2x^3}{x^2-16}\). \(\blacksquare\)</p>`
+  },
+  {
+    id: 14,
+    group: "Zadania dwuczęściowe: najpierw wzór, potem optymalizacja",
+    src: "maj 2026 · zad. 12.2",
+    pts: 4,
+    tags: ["pochodna funkcji wymiernej", "najmniejsza wartość", "trójkąt równoboczny"],
+    req: ["ZR XIII.4", "ZR XIII.6"],
+    q: String.raw`<p>Pole \(P\) trójkątnego kwietnika z zadania 12.1 o podstawie długości \(x\) metrów wyraża się wzorem \(P(x)=\dfrac{2x^3}{x^2-16}\) dla \(x\in(4,10]\).</p>
+<p>Wyznacz długość \(x\) podstawy, dla której pole kwietnika jest najmniejsze, i oblicz to najmniejsze pole.</p>`,
+    ans: String.raw`\(x=4\sqrt3\) m, \(P_{\min}=12\sqrt3\) m²`,
+    sol: String.raw`<p class="step"><b>Krok 1: pochodna.</b> \(P'(x)=\dfrac{6x^2(x^2-16)-2x^3\cdot2x}{(x^2-16)^2}=\dfrac{2x^2(x^2-48)}{(x^2-16)^2}\).</p>
+<p class="step"><b>Krok 2: znak.</b> W przedziale \((4,10]\) znak \(P'\) jest znakiem \(x^2-48\): \(P'&lt;0\) dla \(x\in(4,4\sqrt3)\), \(P'&gt;0\) dla \(x\in(4\sqrt3,10]\) (\(4\sqrt3\approx6{,}93\)). Zatem w \(x=4\sqrt3\) funkcja ma najmniejszą wartość.</p>
+<p class="step"><b>Krok 3.</b> \(P(4\sqrt3)=\dfrac{2\cdot192\sqrt3}{48-16}=12\sqrt3\).</p>
+<p class="note">Wtedy trójkąt jest równoboczny: bok \(4\sqrt3\) ma promień okręgu wpisanego \(\tfrac{4\sqrt3\cdot\sqrt3}6=2\).</p>`
+  },
+  {
     id: 11,
     group: "Własność Darboux",
     label: "autorskie",
@@ -184,5 +226,46 @@ więc drugi składnik jest równy \(1\cdot x^2=x^2\).</p>
 <p class="step"><b>Pochodna.</b> \(V'(x)=12x^2-96x+144=12(x^2-8x+12)=12(x-2)(x-6)\). W dziedzinie \(V'(x)=0\) tylko dla \(x=2\).</p>
 <p class="step"><b>Charakter ekstremum.</b> Dla \(0&lt;x&lt;2\) mamy \(V'>0\) (rośnie), a dla \(2&lt;x&lt;6\) mamy \(V'&lt;0\) (maleje), więc w \(x=2\) jest maksimum, i to największa wartość w całej dziedzinie.</p>
 <p class="step"><b>Odpowiedź.</b> \(x=2\) cm, \(V(2)=2\cdot8^2=128\ \text{cm}^3\).</p>`
+  },
+  {
+    id: 16,
+    group: "Zadania optymalizacyjne",
+    src: "maj 2022 · zad. 15",
+    pts: 7,
+    tags: ["trójkąt równoramienny", "pole jako funkcja", "dziedzina", "pochodna"],
+    req: ["ZR XIII.6"],
+    q: String.raw`<p>Rozpatrujemy wszystkie trójkąty równoramienne o obwodzie równym \(18\).</p>
+<p>a) Wykaż, że pole \(P\) każdego z tych trójkątów, jako funkcja długości \(b\) ramienia, wyraża się wzorem \(P(b)=\dfrac{(18-2b)\sqrt{18b-81}}2\).<br>b) Wyznacz dziedzinę funkcji \(P\).<br>c) Oblicz długości boków tego z rozpatrywanych trójkątów, który ma największe pole.</p>`,
+    ans: String.raw`b) \(\left(\tfrac92,9\right)\); c) \(6,6,6\) (trójkąt równoboczny)`,
+    sol: String.raw`<p class="step"><b>a)</b> Podstawa \(a=18-2b\), połowa podstawy \(9-b\). Wysokość: \(h=\sqrt{b^2-(9-b)^2}=\sqrt{18b-81}\). Stąd \(P=\tfrac12ah=\dfrac{(18-2b)\sqrt{18b-81}}2\). \(\blacksquare\)</p>
+<p class="step"><b>b)</b> Podstawa dodatnia: \(b&lt;9\); nierówność trójkąta \(2b&gt;18-2b\): \(b&gt;\tfrac92\). Dziedzina: \(\left(\tfrac92,9\right)\).</p>
+<p class="step"><b>c)</b> \(P&gt;0\), więc wystarczy maksymalizować \(g(b)=P^2=(9-b)^2(18b-81)\). \(g'(b)=-2(9-b)(18b-81)+18(9-b)^2=(9-b)\left[18(9-b)-2(18b-81)\right]=54(9-b)(6-b)\).</p>
+<p class="step">Na dziedzinie \(9-b&gt;0\), więc \(g'&gt;0\) dla \(b&lt;6\) i \(g'&lt;0\) dla \(b&gt;6\): maksimum w \(b=6\). Wtedy podstawa \(18-12=6\) – trójkąt równoboczny o boku \(6\).</p>`
+  },
+  {
+    id: 18,
+    group: "Zadania optymalizacyjne",
+    src: "czerwiec 2022 · zad. 15",
+    pts: 7,
+    tags: ["trójkąt wpisany w okrąg", "pole jako funkcja", "pochodna"],
+    req: ["ZR XIII.6"],
+    q: String.raw`<p>Rozpatrujemy wszystkie trójkąty równoramienne ostrokątne \(ABC\) (\(|AC|=|BC|\)) wpisane w okrąg o promieniu \(R=1\). Niech \(x\) oznacza odległość środka okręgu od podstawy \(AB\).</p>
+<p>a) Wykaż, że pole \(P\) każdego z tych trójkątów wyraża się wzorem \(P(x)=(x+1)\sqrt{1-x^2}\).<br>b) Wyznacz dziedzinę funkcji \(P\).<br>c) Oblicz \(x\) dla trójkąta o największym polu i to największe pole.</p>`,
+    ans: String.raw`b) \((0,1)\); c) \(x=\tfrac12\), \(P_{\max}=\dfrac{3\sqrt3}4\)`,
+    sol: String.raw`<p class="step"><b>a)</b> Trójkąt jest ostrokątny, więc środek \(S\) okręgu leży wewnątrz, na wysokości z \(C\). Wysokość: \(h=|CS|+x=1+x\); połowa podstawy z trójkąta prostokątnego o przeciwprostokątnej \(|SA|=1\): \(\sqrt{1-x^2}\). Stąd \(P=\sqrt{1-x^2}\,(1+x)\). \(\blacksquare\)</p>
+<p class="step"><b>b)</b> Środek wewnątrz trójkąta i po stronie \(C\): \(0&lt;x&lt;1\) (dla \(x=0\) trójkąt byłby prostokątny).</p>
+<p class="step"><b>c)</b> Maksymalizujemy \(f(x)=P^2=(1+x)^3(1-x)\): \(f'(x)=(1+x)^2\left[3(1-x)-(1+x)\right]=(1+x)^2(2-4x)\). \(f'&gt;0\) dla \(x&lt;\tfrac12\), \(f'&lt;0\) dla \(x&gt;\tfrac12\) – maksimum w \(x=\tfrac12\): \(P=\tfrac32\cdot\tfrac{\sqrt3}2=\tfrac{3\sqrt3}4\) (trójkąt równoboczny).</p>`
+  },
+  {
+    id: 15,
+    group: "Pochodna funkcji",
+    src: "maj 2022 · zad. 2",
+    pts: 1,
+    tags: ["pochodna", "skracanie wyrażenia wymiernego", "zadanie zamknięte"],
+    req: ["ZR XIII.4"],
+    q: String.raw`<p>Funkcja \(f\) jest określona wzorem \(f(x)=\dfrac{x^3-8}{x-2}\) dla każdej liczby rzeczywistej \(x\ne2\). Wartość pochodnej tej funkcji dla argumentu \(x=\tfrac12\) jest równa</p><p><b>A.</b> \(\dfrac34\) &nbsp;&nbsp; <b>B.</b> \(\dfrac94\) &nbsp;&nbsp; <b>C.</b> \(3\) &nbsp;&nbsp; <b>D.</b> \(\dfrac{54}8\)</p>`,
+    ans: String.raw`<b>C</b> \((3)\)`,
+    sol: String.raw`<p class="step"><b>Pomysł.</b> Najpierw skracamy: \(x^3-8=(x-2)(x^2+2x+4)\), więc \(f(x)=x^2+2x+4\) dla \(x\ne2\).</p>
+<p class="step">\(f'(x)=2x+2\), więc \(f'\!\left(\tfrac12\right)=1+2=3\). Odpowiedź <b>C</b>.</p>`
   }
 ];

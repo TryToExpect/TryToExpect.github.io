@@ -224,5 +224,18 @@
 <p class="step"><b>Krok 3: ciąg \((b_n)\).</b> Suma 25 początkowych wyrazów to \(\dfrac{b_1+b_{25}}2\cdot25=25\,b_{13}\) (bo \(b_1+b_{25}=2b_{13}\)). Zatem \(25\,b_{13}=1125\), czyli \(b_{13}=45\).</p>
 <p class="step"><b>Krok 4: różnica i \(b_1\).</b> \(b_{13}=b_4+9r\), więc \(45=108+9r\), skąd \(r=-7\). Wtedy \(b_1=b_4-3r=108+21=129\).</p>
 <p class="note"><b>Sprawdzenie:</b> \(S_{25}=\dfrac{2\cdot129+24\cdot(-7)}{2}\cdot25=45\cdot25=1125\) ✓ oraz \(b_4=129-21=108\) ✓. &nbsp;<b>Uwaga:</b> „suma wszystkich wyrazów” ciągu geometrycznego oznacza szereg – trzeba sprawdzić \(|q|&lt;1\).</p>`
+  },
+  {
+    id: 13,
+    group: "Szereg geometryczny",
+    src: "czerwiec 2022 · zad. 10",
+    pts: 4,
+    tags: ["szereg geometryczny", "wyrazy parzyste i nieparzyste"],
+    req: ["ZR VI.2"],
+    q: String.raw`<p>Nieskończony ciąg geometryczny \((a_n)\) ma iloraz \(q\) równy pierwszemu wyrazowi i \(|q|&lt;1\). Stosunek sumy \(S_N\) wszystkich wyrazów o numerach nieparzystych do sumy \(S_P\) wszystkich wyrazów o numerach parzystych jest równy różnicy tych sum: \(\dfrac{S_N}{S_P}=S_N-S_P\). Oblicz \(q\).</p>`,
+    ans: String.raw`\(q=\dfrac{1-\sqrt5}2\)`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> Wyrazy nieparzyste \(q,q^3,q^5,\dots\) i parzyste \(q^2,q^4,\dots\) tworzą szeregi o ilorazie \(q^2\): \(S_N=\dfrac q{1-q^2}\), \(S_P=\dfrac{q^2}{1-q^2}\) (\(q\ne0\)).</p>
+<p class="step"><b>Krok 2.</b> \(\dfrac{S_N}{S_P}=\dfrac1q\), \(S_N-S_P=\dfrac{q(1-q)}{(1-q)(1+q)}=\dfrac q{1+q}\).</p>
+<p class="step"><b>Krok 3.</b> \(\dfrac1q=\dfrac q{1+q}\Rightarrow q^2-q-1=0\Rightarrow q=\dfrac{1\pm\sqrt5}2\). Warunek \(|q|&lt;1\) spełnia tylko \(q=\dfrac{1-\sqrt5}2\approx-0{,}62\).</p>`
   }
 ];

@@ -86,6 +86,40 @@ Z danych: \(\dfrac{a^2}{a^2+h^2}=\dfrac9{25}\Rightarrow25a^2=9a^2+9h^2\Rightarro
 <p class="step"><b>Kąt.</b> Z twierdzenia cosinusów w trójkącie \(SMN\): \(6^2=5^2+5^2-2\cdot5\cdot5\cos\angle MSN\), czyli \(36=50-50\cos\angle MSN\) i \(\cos\angle MSN=\dfrac{14}{50}=\dfrac7{25}\).</p>`
   },
   {
+    id: 11,
+    group: "Przekroje i kąty w ostrosłupach i sześcianie",
+    src: "maj 2022 · zad. 13",
+    pts: 5,
+    tags: ["graniastosłup prosty", "przekątne ścian", "twierdzenie cosinusów", "pole trójkąta z sinusem"],
+    req: ["ZP X.3", "ZP VII.3"],
+    q: String.raw`<p>Dany jest graniastosłup prosty \(ABCDEFGH\) o podstawie prostokątnej \(ABCD\). Przekątne \(AH\) i \(AF\) ścian bocznych tworzą kąt ostry o mierze \(\alpha\) takiej, że \(\sin\alpha=\tfrac{12}{13}\) (zobacz rysunek). Pole trójkąta \(AFH\) jest równe \(26{,}4\).</p>
+<p>Oblicz wysokość \(h\) tego graniastosłupa.</p>`,
+    fig: String.raw`<svg class="fig" viewBox="0 0 270 212" width="270" height="212" role="img" aria-label="Graniastosłup prosty ABCDEFGH o podstawie prostokątnej ABCD; przekątne AH i AF ścian bocznych tworzą kąt α; h – wysokość graniastosłupa"><polygon class="f2" points="40,190 190,60 90,20"/><line class="s" x1="40" y1="190" x2="190" y2="190"/><line class="s" x1="190" y1="190" x2="240" y2="150"/><line class="s d w" x1="240" y1="150" x2="90" y2="150"/><line class="s d w" x1="90" y1="150" x2="40" y2="190"/><line class="s" x1="40" y1="190" x2="40" y2="60"/><line class="s" x1="190" y1="190" x2="190" y2="60"/><line class="s" x1="240" y1="150" x2="240" y2="20"/><line class="s d w" x1="90" y1="150" x2="90" y2="20"/><line class="s" x1="40" y1="60" x2="190" y2="60"/><line class="s" x1="190" y1="60" x2="240" y2="20"/><line class="s" x1="240" y1="20" x2="90" y2="20"/><line class="s" x1="90" y1="20" x2="40" y2="60"/><line class="a" x1="40" y1="190" x2="190" y2="60"/><line class="a d" x1="40" y1="190" x2="90" y2="20"/><line class="a" x1="190" y1="60" x2="90" y2="20"/><path class="p" d="M61.2,171.7 A28,28 0 0 0 47.9,163.1"/><text x="33" y="204" text-anchor="end">A</text><text x="196" y="204" text-anchor="start">B</text><text x="247" y="158" text-anchor="start">C</text><text x="97" y="165" text-anchor="start">D</text><text x="33" y="62" text-anchor="end">E</text><text x="197" y="74" text-anchor="start">F</text><text x="247" y="20" text-anchor="start">G</text><text x="90" y="13" text-anchor="middle">H</text><text class="pn" x="66" y="156" text-anchor="middle">α</text><text class="ac" x="32" y="130" text-anchor="end">h</text></svg>`,
+    ans: String.raw`\(h=\sqrt{22}\)`,
+    sol: String.raw`<p class="step"><b>Pomysł.</b> Trójkąt \(AFH\) ma boki będące przekątnymi trzech ścian. Twierdzenie cosinusów dla boku \(FH\) „skraca” krawędzie podstawy i zostaje samo \(h\).</p>
+<p class="step"><b>Krok 1.</b> Niech \(|AB|=a\), \(|AD|=b\). Wtedy \(|AF|^2=a^2+h^2\), \(|AH|^2=b^2+h^2\), \(|FH|^2=a^2+b^2\).</p>
+<p class="step"><b>Krok 2.</b> Z pola: \(\tfrac12|AF||AH|\cdot\tfrac{12}{13}=26{,}4\), więc \(|AF||AH|=57{,}2\). Kąt jest ostry, więc \(\cos\alpha=\tfrac5{13}\).</p>
+<p class="step"><b>Krok 3.</b> Twierdzenie cosinusów w trójkącie \(AFH\):
+\[a^2+b^2=(a^2+h^2)+(b^2+h^2)-2\cdot57{,}2\cdot\tfrac5{13}=a^2+b^2+2h^2-44.\]
+Stąd \(2h^2=44\), \(h=\sqrt{22}\).</p>`
+  },
+  {
+    id: 12,
+    group: "Przekroje i kąty w ostrosłupach i sześcianie",
+    src: "czerwiec 2022 · zad. 12",
+    pts: 5,
+    tags: ["graniastosłup prosty", "trapez wpisany w okrąg", "objętość z parametrem"],
+    req: ["ZP X.3", "ZP X.5"],
+    q: String.raw`<p>Podstawą graniastosłupa prostego \(ABCDA_1B_1C_1D_1\) jest trapez równoramienny \(ABCD\) wpisany w okrąg o środku \(O\) i promieniu \(R\). Dłuższa podstawa \(AB\) trapezu jest średnicą tego okręgu, a krótsza – cięciwą odpowiadającą kątowi środkowemu o mierze \(2\alpha\) (rysunek przedstawia podstawę). Przekątna ściany bocznej zawierającej ramię trapezu jest nachylona do płaszczyzny podstawy pod kątem \(\alpha\).</p>
+<p>Wyznacz objętość tego graniastosłupa jako funkcję promienia \(R\) i miary kąta \(\alpha\).</p>`,
+    fig: String.raw`<svg class="fig" viewBox="0 0 300 200" width="300" height="200" role="img" aria-label="Podstawa graniastosłupa: trapez równoramienny ABCD wpisany w półokrąg o środku O i promieniu R; AB jest średnicą, a cięciwa CD odpowiada kątowi środkowemu 2α"><path class="s d w" d="M30,170 A120,120 0 0 1 270,170"/><polygon class="s" points="30,170 270,170 218.8,71.7 81.2,71.7"/><line class="a" x1="150" y1="170" x2="218.8" y2="71.7"/><line class="a" x1="150" y1="170" x2="81.2" y2="71.7"/><path class="p" d="M133.9,147.1 A28,28 0 0 1 166.1,147.1"/><circle class="dot" cx="150" cy="170" r="2.4"/><text x="22" y="184" text-anchor="end">A</text><text x="278" y="184" text-anchor="start">B</text><text x="226" y="68" text-anchor="start">C</text><text x="74" y="68" text-anchor="end">D</text><text x="150" y="188" text-anchor="middle">O</text><text class="pn" x="150" y="136" text-anchor="middle">2α</text><text class="ac" x="196" y="118" text-anchor="start">R</text><text class="ac" x="104" y="118" text-anchor="end">R</text></svg>`,
+    ans: String.raw`\(V=R^3\sin\alpha\,(1+\sin\alpha)\sqrt{2-2\sin\alpha}\)`,
+    sol: String.raw`<p class="step"><b>Krok 1: podstawa.</b> \(|AB|=2R\), \(|CD|=2R\sin\alpha\) (cięciwa dla kąta \(2\alpha\)), wysokość trapezu to odległość \(O\) od \(CD\): \(h=R\cos\alpha\). Pole: \(P_p=\dfrac{2R+2R\sin\alpha}2\cdot R\cos\alpha=R^2\cos\alpha(1+\sin\alpha)\).</p>
+<p class="step"><b>Krok 2: ramię.</b> W układzie z \(O=(0,0)\): \(B=(R,0)\), \(C=(R\sin\alpha,R\cos\alpha)\), więc \(|BC|^2=R^2(1-\sin\alpha)^2+R^2\cos^2\alpha=R^2(2-2\sin\alpha)\).</p>
+<p class="step"><b>Krok 3: wysokość.</b> W trójkącie prostokątnym \(BCC_1\) kąt przy \(B\) to \(\alpha\), więc \(H=|BC|\operatorname{tg}\alpha=R\sqrt{2-2\sin\alpha}\,\operatorname{tg}\alpha\).</p>
+<p class="step"><b>Krok 4.</b> \(V=P_p\cdot H=R^3\cos\alpha(1+\sin\alpha)\operatorname{tg}\alpha\sqrt{2-2\sin\alpha}=R^3\sin\alpha\,(1+\sin\alpha)\sqrt{2-2\sin\alpha}\).</p>`
+  },
+  {
     id: 8,
     group: "Bryły podobne i obrotowe",
     label: "autorskie",

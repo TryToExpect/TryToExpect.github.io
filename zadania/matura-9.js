@@ -15,6 +15,20 @@
 <p class="step"><b>Krok 3: wynik.</b> \(100\cdot120-40\cdot24=12000-960=11040\).</p>`
   },
   {
+    id: 13,
+    group: "Kombinatoryka",
+    src: "czerwiec 2022 · zad. 7",
+    pts: 3,
+    tags: ["liczby pięciocyfrowe", "cyfry nieparzyste", "reguła mnożenia"],
+    req: ["ZP XI.2", "ZR XI.2"],
+    q: String.raw`<p>Oblicz, ile jest wszystkich liczb naturalnych pięciocyfrowych, w których zapisie występują dokładnie dwie cyfry nieparzyste.</p>`,
+    ans: String.raw`\(27\,500\)`,
+    sol: String.raw`<p class="step"><b>Pomysł.</b> Cyfr nieparzystych jest \(5\), parzystych też \(5\) – ale pierwsza cyfra nie może być zerem. Dlatego dzielimy na dwa przypadki według pierwszej cyfry.</p>
+<p class="step"><b>Pierwsza cyfra nieparzysta</b> (\(5\) możliwości): druga nieparzysta stoi na jednym z \(4\) pozostałych miejsc, pozostałe trzy cyfry parzyste: \(5\cdot4\cdot5\cdot5^3=12\,500\).</p>
+<p class="step"><b>Pierwsza cyfra parzysta</b> (\(2,4,6,8\) – \(4\) możliwości): dwie nieparzyste na \(\binom42=6\) sposobów miejsc, potem \(5^2\cdot5^2\): \(4\cdot6\cdot625=15\,000\).</p>
+<p class="step">Razem \(12\,500+15\,000=27\,500\).</p>`
+  },
+  {
     id: 2,
     group: "Prawdopodobieństwo klasyczne",
     src: "maj 2026 · zad. 2",
@@ -90,6 +104,29 @@ b) Wylosowano kulę białą. Oblicz prawdopodobieństwo, że pochodzi z pierwsze
 <p class="step"><b>Oznaczenia.</b> \(U_1\) – losowanie z pierwszej urny, \(P(U_1)=\tfrac26=\tfrac13\); \(U_2\) – z drugiej, \(P(U_2)=\tfrac23\); \(B\) – kula biała. \(P(B\mid U_1)=\tfrac35\), \(P(B\mid U_2)=\tfrac15\).</p>
 <p class="step"><b>a) Prawdopodobieństwo całkowite.</b> \(P(B)=P(U_1)P(B\mid U_1)+P(U_2)P(B\mid U_2)=\dfrac13\cdot\dfrac35+\dfrac23\cdot\dfrac15=\dfrac15+\dfrac2{15}=\dfrac13\).</p>
 <p class="step"><b>b) Wzór Bayesa.</b> \(P(U_1\mid B)=\dfrac{P(U_1)P(B\mid U_1)}{P(B)}=\dfrac{\frac15}{\frac13}=\dfrac35\).</p>`
+  },
+  {
+    id: 11,
+    group: "Prawdopodobieństwo warunkowe",
+    src: "maj 2022 · zad. 4",
+    pts: 1,
+    tags: ["prawdopodobieństwo całkowite", "urny", "zadanie zamknięte"],
+    req: ["ZR XII.1"],
+    q: String.raw`<p>W każdej z dwóch urn jest siedem kul: w pierwszej jedna biała i sześć czarnych, w drugiej cztery białe i trzy czarne. Rzucamy raz symetryczną monetą. Jeżeli wypadnie reszka, losujemy jedną kulę z pierwszej urny, w przeciwnym przypadku – z drugiej. Prawdopodobieństwo wylosowania kuli białej jest równe</p><p><b>A.</b> \(\dfrac5{14}\) &nbsp;&nbsp; <b>B.</b> \(\dfrac9{14}\) &nbsp;&nbsp; <b>C.</b> \(\dfrac57\) &nbsp;&nbsp; <b>D.</b> \(\dfrac67\)</p>`,
+    ans: String.raw`<b>A</b> \(\left(\dfrac5{14}\right)\)`,
+    sol: String.raw`<p class="step">Wzór na prawdopodobieństwo całkowite: \(P(B)=\tfrac12\cdot\tfrac17+\tfrac12\cdot\tfrac47=\tfrac5{14}\). Odpowiedź <b>A</b>.</p>`
+  },
+  {
+    id: 12,
+    group: "Prawdopodobieństwo warunkowe",
+    src: "czerwiec 2022 · zad. 5",
+    pts: 2,
+    tags: ["prawdopodobieństwo warunkowe", "zadanie kodowane"],
+    req: ["ZR XII.1"],
+    q: String.raw`<p>Wśród \(390\) pracowników firmy jest \(150\) kobiet i \(240\) mężczyzn. W wieku przedemerytalnym jest \(21\) kobiet i \(43\) mężczyzn. Oblicz prawdopodobieństwo, że losowo wybrany pracownik jest w wieku przedemerytalnym, pod warunkiem że jest mężczyzną.</p>
+<p>Wpisz kolejno pierwszą, drugą i trzecią cyfrę po przecinku nieskończonego rozwinięcia dziesiętnego wyniku.</p>`,
+    ans: String.raw`\(\dfrac{43}{240}=0{,}1791\ldots\); &nbsp;w kratkach: <b>1 · 7 · 9</b>`,
+    sol: String.raw`<p class="step">Warunek „jest mężczyzną” zawęża losowanie do \(240\) osób, wśród których \(43\) jest w wieku przedemerytalnym: \(P=\dfrac{43}{240}=0{,}179166\ldots\)</p>`
   },
   {
     id: 5,

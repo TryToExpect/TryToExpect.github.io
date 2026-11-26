@@ -51,6 +51,19 @@ Wektory \(\overrightarrow{AM}\) i \(\overrightarrow{BM}\) mają przeciwne zwroty
 <p class="note"><b>Drugi sposób na punkt \(C\).</b> Punkt na prostej \(x+2y=4\) zapisujemy jako \(C=(4-2y,\ y)\). Warunek \(|CA|^2=|CB|^2\) daje \((3-2y)^2+(y+1)^2=(-2y)^2+y^2\), czyli \(10-10y+5y^2=5y^2\), skąd \(y=1\) i \(C=(2,1)\).</p>`
   },
   {
+    id: 10,
+    group: "Okręgi i wektory",
+    src: "czerwiec 2022 · zad. 3",
+    pts: 1,
+    tags: ["suma wektorów", "układ równań", "zadanie zamknięte"],
+    req: ["ZR IX.3"],
+    q: String.raw`<p>Sumą wektorów \(\vec a=\left[2+2m,\ \tfrac23n+1\right]\) oraz \(\vec b=[n+1,\ m+2]\) jest wektor \(\vec c=[0,0]\). Wynika stąd, że</p>
+<p><b>A.</b> \(m=1\) i \(n=3\) &nbsp;&nbsp; <b>B.</b> \(m=-9\) i \(n=-21\) &nbsp;&nbsp; <b>C.</b> \(m=3\) i \(n=-9\) &nbsp;&nbsp; <b>D.</b> \(m=-1\) i \(n=0\)</p>`,
+    ans: String.raw`<b>C</b>`,
+    sol: String.raw`<p class="step">Współrzędne sumy są zerowe: \(2m+n=-3\) oraz \(m+\tfrac23n=-3\).</p>
+<p class="step">Z pierwszego \(n=-3-2m\); podstawiamy: \(m-2-\tfrac43m=-3\), więc \(m=3\), \(n=-9\). Odpowiedź <b>C</b>.</p>`
+  },
+  {
     id: 3,
     group: "Styczne do okręgu",
     src: "maj 2024 · zad. 11",
@@ -163,5 +176,36 @@ c) Wykaż, że \(ABCD\) jest rombem.</p>`,
 <p class="step"><b>Symetralna \(AC\).</b> Środek \(AC\) to \(\left(\tfrac12,\tfrac32\right)\), wektor \(\overrightarrow{AC}=[1,3]\) jest prostopadły do symetralnej: \(1\cdot\left(x-\tfrac12\right)+3\left(y-\tfrac32\right)=0\), czyli \(x+3y-5=0\).</p>
 <p class="step"><b>Środek.</b> Dla \(x=2\): \(3y=3\), \(y=1\), więc \(S=(2,1)\). Promień: \(r^2=|SA|^2=4+1=5\).</p>
 <p class="step"><b>Sprawdzenie.</b> \(|SB|^2=4+1=5\), \(|SC|^2=1+4=5\) ✓. Okrąg: \((x-2)^2+(y-1)^2=5\).</p>`
+  },
+  {
+    id: 9,
+    group: "Trójkąt w układzie współrzędnych",
+    src: "maj 2022 · zad. 14",
+    pts: 6,
+    tags: ["odległość punktu od prostej", "trójkąt równoramienny", "pole trójkąta"],
+    req: ["ZP IX.2", "ZP IX.3"],
+    q: String.raw`<p>Punkt \(A=(-3,2)\) jest wierzchołkiem trójkąta równoramiennego \(ABC\), w którym \(|AC|=|BC|\). Pole tego trójkąta jest równe \(15\). Bok \(BC\) zawarty jest w prostej o równaniu \(y=x-1\).</p>
+<p>Oblicz współrzędne wierzchołków \(B\) i \(C\) tego trójkąta.</p>`,
+    ans: String.raw`\(C=(4,3)\), \(B=(9,8)\) lub \(B=(-1,-2)\); albo \(C=(-4,-5)\), \(B=(1,0)\) lub \(B=(-9,-10)\)`,
+    sol: String.raw`<p class="step"><b>Pomysł.</b> Wysokość opuszczona z \(A\) na bok \(BC\) to odległość \(A\) od prostej \(x-y-1=0\). Z pola dostaniemy \(|BC|\), a więc też \(|AC|\).</p>
+<p class="step"><b>Krok 1.</b> \(d=\dfrac{|-3-2-1|}{\sqrt2}=3\sqrt2\). Z pola \(\tfrac12|BC|\cdot3\sqrt2=15\): \(|BC|=5\sqrt2=|AC|\).</p>
+<p class="step"><b>Krok 2: punkt \(C\).</b> \(C=(c,c-1)\) i \(|AC|^2=50\): \((c+3)^2+(c-3)^2=50\Rightarrow 2c^2+18=50\Rightarrow c=\pm4\). Zatem \(C=(4,3)\) albo \(C=(-4,-5)\).</p>
+<p class="step"><b>Krok 3: punkt \(B\).</b> \(B\) leży na tej samej prostej (kierunek \([1,1]\)) w odległości \(5\sqrt2\) od \(C\), czyli \(B=C\pm[5,5]\). Dla \(C=(4,3)\): \(B=(9,8)\) lub \(B=(-1,-2)\); dla \(C=(-4,-5)\): \(B=(1,0)\) lub \(B=(-9,-10)\).</p>
+<p class="note">Są więc cztery trójkąty spełniające warunki zadania.</p>`
+  },
+  {
+    id: 11,
+    group: "Wzajemne położenie okręgów",
+    src: "czerwiec 2022 · zad. 14",
+    pts: 6,
+    tags: ["dwa okręgi", "wspólna cięciwa", "równanie okręgu"],
+    req: ["ZR IX.2", "ZP IX.4"],
+    q: String.raw`<p>Dane są okrąg \(o_1\) o równaniu \((x-6)^2+(y-4)^2=98\) oraz okrąg \(o_2\) o promieniu \(2\sqrt5\). Środki okręgów \(o_1\) i \(o_2\) leżą po różnych stronach prostej \(k\) o równaniu \(y=-3x-6\), a punkty wspólne obu okręgów leżą na prostej \(k\). Wyznacz równanie okręgu \(o_2\).</p>`,
+    ans: String.raw`\((x+3)^2+(y-1)^2=20\)`,
+    sol: String.raw`<p class="step"><b>Pomysł.</b> Prosta \(k\) zawiera wspólną cięciwę, a środki okręgów leżą na symetralnej tej cięciwy.</p>
+<p class="step"><b>Krok 1: punkty wspólne.</b> Podstawiamy \(y=-3x-6\) do \(o_1\): \((x-6)^2+(3x+10)^2=98\Rightarrow 5x^2+24x+19=0\Rightarrow x=-1\) lub \(x=-\tfrac{19}5\). Punkty: \(P=(-1,-3)\), \(Q=\left(-\tfrac{19}5,\tfrac{27}5\right)\), środek cięciwy \(M=\left(-\tfrac{12}5,\tfrac65\right)\).</p>
+<p class="step"><b>Krok 2: odległość środka \(S_2\) od \(M\).</b> \(|MP|^2=\left(\tfrac75\right)^2+\left(\tfrac{21}5\right)^2=\tfrac{98}5\), więc \(|S_2M|^2=20-\tfrac{98}5=\tfrac25\).</p>
+<p class="step"><b>Krok 3.</b> Symetralna ma kierunek \([3,1]\) (prostopadły do \(k\)), a \(S_1-M=\left[\tfrac{42}5,\tfrac{14}5\right]\) ma zwrot \([3,1]\). \(S_2\) leży po drugiej stronie, więc \(S_2=M-t[3,1]\), gdzie \(10t^2=\tfrac25\), \(t=\tfrac15\): \(S_2=\left(-\tfrac{12}5-\tfrac35,\ \tfrac65-\tfrac15\right)=(-3,1)\).</p>
+<p class="note"><b>Sprawdzenie:</b> \(|S_2P|^2=2^2+4^2=20\) ✓.</p>`
   }
 ];

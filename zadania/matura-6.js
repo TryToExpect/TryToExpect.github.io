@@ -122,6 +122,19 @@ Czyli \(b^2=a^2+ac\), to znaczy \(|AC|^2=|BC|^2+|AB|\cdot|BC|\). \(\blacksquare\
 <p class="note">Kąt \(BAC\) leży naprzeciw najdłuższego boku, ale jest ostry, bo \(7^2=49&lt;39+25=64\); dlatego sinus wyznacza go jednoznacznie.</p>`
   },
   {
+    id: 15,
+    group: "Trójkąty",
+    src: "czerwiec 2022 · zad. 4",
+    pts: 1,
+    tags: ["pole trójkąta z sinusem", "twierdzenie cosinusów", "zadanie zamknięte"],
+    req: ["ZP VII.3"],
+    q: String.raw`<p>Pole trójkąta ostrokątnego o bokach \(5\) i \(8\) jest równe \(12\). Długość trzeciego boku tego trójkąta jest równa</p><p><b>A.</b> \(5\) &nbsp;&nbsp; <b>B.</b> \(8\) &nbsp;&nbsp; <b>C.</b> \(\sqrt{41}\) &nbsp;&nbsp; <b>D.</b> \(\sqrt{143}\)</p>`,
+    ans: String.raw`<b>A</b> \((5)\)`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> \(\tfrac12\cdot5\cdot8\cdot\sin\gamma=12\), więc \(\sin\gamma=\tfrac35\), gdzie \(\gamma\) to kąt między danymi bokami. Kąt ostry: \(\cos\gamma=\tfrac45\).</p>
+<p class="step"><b>Krok 2.</b> Z twierdzenia cosinusów \(c^2=25+64-2\cdot5\cdot8\cdot\tfrac45=25\), czyli \(c=5\). Odpowiedź <b>A</b> (zgodna z kluczem CKE).</p>
+<p class="note"><b>Uwaga:</b> trójkąt o bokach \(5,5,8\) jest w rzeczywistości rozwartokątny (\(8^2&gt;5^2+5^2\)). Słowo „ostrokątny” należy więc rozumieć jako „kąt między bokami \(5\) i \(8\) jest ostry”; druga możliwość, \(\cos\gamma=-\tfrac45\), daje \(c=\sqrt{153}\), czego nie ma wśród odpowiedzi.</p>`
+  },
+  {
     id: 5,
     group: "Czworokąty",
     src: "maj 2025 · zad. 7",
@@ -235,6 +248,33 @@ Zatem \(3x^2+3x-90=0\), czyli \(x^2+x-30=0\), \((x-5)(x+6)=0\). Długość jest 
 <p class="step"><b>Przekątna \(BD\).</b> Z twierdzenia cosinusów w trójkącie \(ABD\): \(|BD|^2=a^2+b^2-2ab\cos\alpha\).</p>
 <p class="step"><b>Przekątna \(AC\).</b> W trójkącie \(ABC\) kąt przy \(B\) ma miarę \(180^\circ-\alpha\), więc \(|AC|^2=a^2+b^2-2ab\cos(180^\circ-\alpha)=a^2+b^2+2ab\cos\alpha\).</p>
 <p class="step"><b>Suma.</b> \(|AC|^2+|BD|^2=2a^2+2b^2=a^2+b^2+a^2+b^2\), a to jest suma kwadratów długości czterech boków (\(a,b,a,b\)). \(\blacksquare\)</p>`
+  },
+  {
+    id: 14,
+    group: "Dowody geometryczne",
+    src: "maj 2022 · zad. 8",
+    pts: 3,
+    tags: ["trapez", "twierdzenie sinusów", "twierdzenie cosinusów", "dowód"],
+    req: ["ZP VII.3", "ZR VII.7", "ZP VIII.11"],
+    q: String.raw`<p>Punkt \(P\) jest punktem przecięcia przekątnych trapezu \(ABCD\). Długość podstawy \(CD\) jest o \(2\) mniejsza od długości podstawy \(AB\). Promień okręgu opisanego na trójkącie ostrokątnym \(CPD\) jest o \(3\) mniejszy od promienia okręgu opisanego na trójkącie \(APB\).</p>
+<p>Wykaż, że \(|DP|^2+|CP|^2-|CD|^2=\dfrac{4\sqrt2}3\cdot|DP|\cdot|CP|\).</p>`,
+    sol: String.raw`<p class="step"><b>Pomysł.</b> Kąty \(DPC\) i \(APB\) są wierzchołkowe, więc równe; oznaczmy je \(\gamma\). Twierdzenie sinusów daje \(\sin\gamma\), a twierdzenie cosinusów – tezę.</p>
+<p class="step"><b>Krok 1.</b> Niech \(R\) i \(R-3\) będą promieniami okręgów opisanych na trójkątach \(APB\) i \(CPD\). Z twierdzenia sinusów \(|AB|=2R\sin\gamma\), \(|CD|=2(R-3)\sin\gamma\). Odejmujemy: \(2=|AB|-|CD|=6\sin\gamma\), więc \(\sin\gamma=\tfrac13\).</p>
+<p class="step"><b>Krok 2.</b> Trójkąt \(CPD\) jest ostrokątny, więc \(\cos\gamma=\sqrt{1-\tfrac19}=\tfrac{2\sqrt2}3\).</p>
+<p class="step"><b>Krok 3.</b> Z twierdzenia cosinusów w trójkącie \(CPD\): \(|CD|^2=|DP|^2+|CP|^2-2|DP||CP|\cos\gamma\), czyli
+\[|DP|^2+|CP|^2-|CD|^2=2\cdot\tfrac{2\sqrt2}3\,|DP||CP|=\tfrac{4\sqrt2}3\,|DP||CP|.\ \blacksquare\]</p>`
+  },
+  {
+    id: 16,
+    group: "Dowody geometryczne",
+    src: "czerwiec 2022 · zad. 9",
+    pts: 3,
+    tags: ["trapez", "twierdzenie Talesa", "podobieństwo", "dowód"],
+    req: ["ZP VIII.8", "ZP VIII.11"],
+    q: String.raw`<p>W trapezie \(ABCD\) o podstawach \(AB\) i \(CD\) przez punkt \(O\) przecięcia się przekątnych poprowadzono dwie proste równoległe do boków \(BC\) i \(AD\). Prosta równoległa do \(BC\) przecina bok \(AB\) w punkcie \(B'\), a prosta równoległa do \(AD\) przecina bok \(AB\) w punkcie \(A'\). Wykaż, że \(|AA'|=|BB'|\).</p>`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> \(OB'\parallel CB\), więc z twierdzenia Talesa (trójkąt \(ABC\)): \(\dfrac{|AB'|}{|AB|}=\dfrac{|AO|}{|AC|}\). Podobnie \(OA'\parallel DA\) w trójkącie \(BAD\): \(\dfrac{|BA'|}{|AB|}=\dfrac{|BO|}{|BD|}\).</p>
+<p class="step"><b>Krok 2.</b> Trójkąty \(AOB\) i \(COD\) są podobne (\(AB\parallel CD\)), więc \(\dfrac{|AO|}{|OC|}=\dfrac{|BO|}{|OD|}\), a stąd \(\dfrac{|AO|}{|AC|}=\dfrac{|BO|}{|BD|}\).</p>
+<p class="step"><b>Krok 3.</b> Zatem \(|AB'|=|BA'|\), czyli \(|AA'|=|AB|-|BA'|=|AB|-|AB'|=|BB'|\). \(\blacksquare\)</p>`
   },
   {
     id: 13,

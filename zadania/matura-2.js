@@ -116,6 +116,20 @@
 <p class="step"><b>Suma:</b> \(x\in(-2,5)\). (Interpretacja: suma odległości punktu \(x\) od \(-1\) i od \(4\) jest mniejsza niż \(7\); środek odcinka to \(1{,}5\), a zbiór jest przedziałem o promieniu \(3{,}5\).)</p>`
   },
   {
+    id: 17,
+    group: "Wartość bezwzględna",
+    src: "maj 2022 · zad. 7",
+    pts: 3,
+    tags: ["równanie z wartością bezwzględną", "przypadki"],
+    req: ["ZR III.4"],
+    q: String.raw`<p>Rozwiąż równanie \(|x-3|=2x+11\).</p>`,
+    ans: String.raw`\(x=-\dfrac83\)`,
+    sol: String.raw`<p class="step"><b>Pomysł.</b> Rozważamy dwa przedziały, na których \(x-3\) ma stały znak.</p>
+<p class="step"><b>Dla \(x\ge3\):</b> \(x-3=2x+11\Rightarrow x=-14\), ale \(-14\notin[3,\infty)\) – brak rozwiązania.</p>
+<p class="step"><b>Dla \(x&lt;3\):</b> \(3-x=2x+11\Rightarrow 3x=-8\Rightarrow x=-\tfrac83\), a \(-\tfrac83&lt;3\) ✓.</p>
+<p class="note"><b>Sprawdzenie:</b> \(\left|-\tfrac83-3\right|=\tfrac{17}3\) i \(2\cdot\left(-\tfrac83\right)+11=\tfrac{17}3\).</p>`
+  },
+  {
     id: 10,
     group: "Równania i nierówności wymierne",
     label: "autorskie",
@@ -144,5 +158,18 @@
 \[\frac{x+3}{x-1}-\frac2x\le0\iff\frac{x(x+3)-2(x-1)}{x(x-1)}\le0\iff\frac{x^2+x+2}{x(x-1)}\le0.\]</p>
 <p class="step"><b>Znaki.</b> Licznik \(x^2+x+2\) ma \(\Delta=1-8&lt;0\), więc jest zawsze dodatni. Ułamek jest więc niedodatni wtedy i tylko wtedy, gdy mianownik jest ujemny: \(x(x-1)&lt;0\iff0&lt;x&lt;1\). (Zero w liczniku nie występuje, więc nierówność nieostra daje ten sam wynik.)</p>
 <p class="step"><b>Odpowiedź.</b> \(x\in(0,1)\).</p>`
+  },
+  {
+    id: 18,
+    group: "Równania i nierówności wymierne",
+    src: "czerwiec 2022 · zad. 8",
+    pts: 3,
+    tags: ["nierówność wymierna", "dziedzina"],
+    req: ["ZR III.2"],
+    q: String.raw`<p>Rozwiąż nierówność \(\dfrac{3x+1}{2x+1}\le\dfrac{3x+4}{2x+3}\).</p>`,
+    ans: String.raw`\(x\in\left(-\infty,-\tfrac32\right)\cup\left(-\tfrac12,+\infty\right)\)`,
+    sol: String.raw`<p class="step"><b>Dziedzina:</b> \(x\ne-\tfrac12\), \(x\ne-\tfrac32\).</p>
+<p class="step"><b>Krok 1.</b> Przenosimy na jedną stronę: \(\dfrac{(3x+1)(2x+3)-(3x+4)(2x+1)}{(2x+1)(2x+3)}\le0\). W liczniku \((6x^2+11x+3)-(6x^2+11x+4)=-1\).</p>
+<p class="step"><b>Krok 2.</b> \(\dfrac{-1}{(2x+1)(2x+3)}\le0\iff(2x+1)(2x+3)&gt;0\iff x&lt;-\tfrac32\ \text{lub}\ x&gt;-\tfrac12\).</p>`
   }
 ];

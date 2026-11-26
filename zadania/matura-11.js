@@ -54,6 +54,30 @@
 <p class="note"><b>Sprawdzenie:</b> \(a\approx0{,}3869\), a \(\dfrac{2-a}{1+a}\approx1{,}1632\approx\dfrac{\ln18}{\ln12}\).</p>`
   },
   {
+    id: 11,
+    group: "Logarytmy i potęgi",
+    src: "maj 2022 · zad. 1",
+    pts: 1,
+    tags: ["logarytm potęgi", "zamiana podstawy logarytmu", "zadanie zamknięte"],
+    req: ["ZP I.9", "ZR I.1"],
+    q: String.raw`<p>Liczba \(\log_3\sqrt{27}-\log_{27}\sqrt3\) jest równa</p><p><b>A.</b> \(\dfrac43\) &nbsp;&nbsp; <b>B.</b> \(\dfrac12\) &nbsp;&nbsp; <b>C.</b> \(\dfrac{11}{12}\) &nbsp;&nbsp; <b>D.</b> \(3\)</p>`,
+    ans: String.raw`<b>A</b> \(\left(\dfrac43\right)\)`,
+    sol: String.raw`<p class="step">Zapisujemy wszystko jako potęgi trójki: \(\sqrt{27}=3^{3/2}\), \(\sqrt3=3^{1/2}\), \(27=3^3\). Zatem \(\log_3\sqrt{27}=\tfrac32\) i \(\log_{27}\sqrt3=\dfrac{1/2}{3}=\tfrac16\).</p>
+<p class="step">\(\tfrac32-\tfrac16=\tfrac86=\tfrac43\). Odpowiedź <b>A</b>.</p>`
+  },
+  {
+    id: 12,
+    group: "Logarytmy i potęgi",
+    src: "czerwiec 2022 · zad. 1",
+    pts: 1,
+    tags: ["zamiana podstawy logarytmu", "logarytm iloczynu", "zadanie zamknięte"],
+    req: ["ZP I.9", "ZR I.1"],
+    q: String.raw`<p>Wiadomo, że \(\log_52=a\) i \(\log_53=b\). Wtedy liczba \(\log_{18}40\) jest równa</p><p><b>A.</b> \(\dfrac{3a+1}{a+b}\) &nbsp;&nbsp; <b>B.</b> \(\dfrac{2a+1}{a+b}\) &nbsp;&nbsp; <b>C.</b> \(\dfrac{2a+1}{a+2b}\) &nbsp;&nbsp; <b>D.</b> \(\dfrac{3a+1}{2b+a}\)</p>`,
+    ans: String.raw`<b>D</b>`,
+    sol: String.raw`<p class="step">Zmieniamy podstawę na \(5\): \(\log_{18}40=\dfrac{\log_540}{\log_518}\). Ponieważ \(40=2^3\cdot5\) i \(18=2\cdot3^2\), mamy \(\log_540=3a+1\), \(\log_518=a+2b\).</p>
+<p class="step">Zatem \(\log_{18}40=\dfrac{3a+1}{a+2b}\). Odpowiedź <b>D</b>.</p>`
+  },
+  {
     id: 6,
     group: "Procenty i procent składany",
     label: "autorskie",
