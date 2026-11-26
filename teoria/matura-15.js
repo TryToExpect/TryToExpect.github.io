@@ -2,6 +2,7 @@
 <h3>Wielomian, działania, równość wielomianów</h3>
 <div class="bx def"><span class="t">Definicje</span>
 <p>Wielomian stopnia \(n\): \(W(x)=a_nx^n+\dots+a_1x+a_0\), \(a_n\ne0\). Dwa wielomiany są równe, gdy mają ten sam stopień i równe odpowiednie współczynniki. Pierwiastek (miejsce zerowe): \(W(a)=0\). Pierwiastek \(a\) ma <b>krotność \(k\)</b>, gdy \((x-a)^k\mid W(x)\), ale \((x-a)^{k+1}\nmid W(x)\).</p>
+<p><b>Przykład.</b> \(W(x)=x^3-3x+2=(x-1)^2(x+2)\) ma stopień \(3\); pierwiastek \(1\) jest dwukrotny, \(-2\) – jednokrotny. Wielomiany \(ax^2+3x\) i \(2x^2+bx\) są równe dla \(a=2\), \(b=3\).</p>
 </div>
 <div class="bx thm"><span class="t">Działania na wielomianach</span>
 <ul>
@@ -20,20 +21,7 @@
 <li><b>Twierdzenie o reszcie (Bézouta):</b> reszta z dzielenia \(W(x)\) przez \((x-a)\) jest równa \(W(a)\). Zatem \(a\) jest pierwiastkiem \(\iff\) \((x-a)\mid W(x)\).</li>
 <li><b>Schemat Hornera</b> ułatwia dzielenie przez \(x-a\) i liczenie \(W(a)\).</li>
 </ul>
-</div>
-<div class="bx pf" data-pf="zr3"><span class="t">Dowód twierdzenia o dzieleniu przez \(x-a\) i schematu Hornera</span>
-<p><b>Twierdzenie.</b> Dla wielomianu \(W\) i liczby \(a\) istnieją wielomian \(Q\) i liczba \(r\) takie, że \(W(x)=(x-a)Q(x)+r\), przy czym \(r=W(a)\); współczynniki \(Q\) i liczbę \(r\) dają wzory rekurencyjne (schemat Hornera).</p>
-<p><b>Dowód dla wielomianu czwartego stopnia</b> \(W(x)=a_4x^4+a_3x^3+a_2x^2+a_1x+a_0\) (dla dowolnego stopnia rachunek jest taki sam). Szukamy \(Q(x)=b_3x^3+b_2x^2+b_1x+b_0\) i liczby \(r\). Po wymnożeniu
-\[(x-a)Q(x)+r=b_3x^4+(b_2-ab_3)x^3+(b_1-ab_2)x^2+(b_0-ab_1)x+(r-ab_0).\]
-Dwa wielomiany są równe, gdy mają równe współczynniki, więc porównując je z \(W\):
-\[b_3=a_4,\quad b_2=a_3+ab_3,\quad b_1=a_2+ab_2,\quad b_0=a_1+ab_1,\quad r=a_0+ab_0.\]
-Te równania wyznaczają \(b_3,b_2,b_1,b_0,r\) kolejno, więc rozkład istnieje (i jest jedyny). Podstawiając \(x=a\) do \(W(x)=(x-a)Q(x)+r\) dostajemy \(W(a)=r\). \(\blacksquare\)</p>
-<p><b>Schemat Hornera w praktyce.</b> Każdy kolejny współczynnik ilorazu to współczynnik \(W\) powiększony o \(a\) razy poprzedni wynik. Dla \(W(x)=2x^3-3x^2-8x-3\) i \(a=3\):</p>
-<div class="tw"><table>
-<thead><tr><th></th><th class="c">\(2\)</th><th class="c">\(-3\)</th><th class="c">\(-8\)</th><th class="c">\(-3\)</th></tr></thead>
-<tbody><tr><td>\(a=3\)</td><td class="c">\(2\)</td><td class="c">\(-3+3\cdot2=3\)</td><td class="c">\(-8+3\cdot3=1\)</td><td class="c">\(-3+3\cdot1=0\)</td></tr></tbody>
-</table></div>
-<p>Iloraz to \(2x^2+3x+1\), a reszta jest równa \(0\), więc \(2x^3-3x^2-8x-3=(x-3)(2x^2+3x+1)\).</p>
+<p><b>Przykład.</b> Reszta z dzielenia \(x^3-2x+5\) przez \(x-2\) to \(W(2)=9\). Liczba \(1\) jest pierwiastkiem \(x^3-6x^2+11x-6\) (bo \(1-6+11-6=0\)), więc \(x^3-6x^2+11x-6=(x-1)(x^2-5x+6)\).</p>
 </div>
 <div class="bx ex"><span class="t">Przykłady</span>
 <p><b>Reszta bez dzielenia.</b> Reszta z dzielenia \(W(x)=x^5-2x+1\) przez \(x+1=x-(-1)\) jest równa \(W(-1)=-1+2+1=2\).</p>
@@ -46,9 +34,11 @@ Te równania wyznaczają \(b_3,b_2,b_1,b_0,r\) kolejno, więc rozkład istnieje 
 <li>Wielomian stopnia \(n\) ma co najwyżej \(n\) pierwiastków rzeczywistych. Wielomian nieparzystego stopnia ma co najmniej jeden pierwiastek.</li>
 <li>Jeśli wielomian \(W\) stopnia \(n\) ma \(n\) pierwiastków \(x_1,\dots,x_n\) (liczonych z krotnościami), to \(W(x)=a_n(x-x_1)(x-x_2)\cdots(x-x_n)\). Np. gdy liczby \(-3,\ 1,\ 7\) są pierwiastkami wielomianu \(W(x)=5x^3+bx^2+cx+d\), to \(W(x)=5(x+3)(x-1)(x-7)\).</li>
 </ul>
+<p><b>Przykład.</b> \(x^3-x=x(x-1)(x+1)\) ma trzy pierwiastki \(-1,0,1\), a \(x^3+x=x(x^2+1)\) – tylko jeden: \(0\).</p>
 </div>
 <div class="bx thm"><span class="t">Twierdzenie o pierwiastkach wymiernych</span>
 <p>Jeśli \(W\) ma współczynniki całkowite i liczba wymierna \(\tfrac pq\) (ułamek nieskracalny) jest jego pierwiastkiem, to \(p\mid a_0\) i \(q\mid a_n\). W szczególności, gdy \(a_n=1\), pierwiastki wymierne są całkowite i dzielą \(a_0\).</p>
+<p><b>Przykład.</b> \(W(x)=2x^3-x^2-2x+1\): kandydaci na pierwiastki wymierne to \(\pm1,\pm\tfrac12\). Sprawdzamy: \(W(1)=W(-1)=W\!\left(\tfrac12\right)=0\), więc \(W(x)=(2x-1)(x-1)(x+1)\).</p>
 </div>
 <div class="bx met"><span class="t">Jak rozłożyć wielomian na czynniki</span>
 <ol>

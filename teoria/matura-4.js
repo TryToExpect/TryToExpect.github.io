@@ -2,6 +2,7 @@
 <h3>Funkcje trygonometryczne kąta, miara łukowa, okrąg jednostkowy</h3>
 <div class="bx def"><span class="t">Kąt ostry w trójkącie prostokątnym</span>
 <p>\(\sin\alpha=\dfrac{\text{przyprostokątna naprzeciw}}{\text{przeciwprostokątna}}\), \(\ \cos\alpha=\dfrac{\text{przyprostokątna przyległa}}{\text{przeciwprostokątna}}\), \(\ \operatorname{tg}\alpha=\dfrac{\text{naprzeciw}}{\text{przyległa}}=\dfrac{\sin\alpha}{\cos\alpha}\), \(\ \operatorname{ctg}\alpha=\dfrac1{\operatorname{tg}\alpha}\).</p>
+<p><b>Przykład.</b> W trójkącie prostokątnym o bokach \(3,4,5\) dla kąta \(\alpha\) leżącego naprzeciw boku \(3\): \(\sin\alpha=\tfrac35\), \(\cos\alpha=\tfrac45\), \(\operatorname{tg}\alpha=\tfrac34\), \(\operatorname{ctg}\alpha=\tfrac43\).</p>
 </div>
 <div class="tw"><table>
 <thead><tr><th>\(\alpha\)</th><th class="c">\(0^\circ\)</th><th class="c">\(30^\circ\)</th><th class="c">\(45^\circ\)</th><th class="c">\(60^\circ\)</th><th class="c">\(90^\circ\)</th></tr></thead>
@@ -19,6 +20,7 @@
 <li><b>Znaki w ćwiartkach:</b> I: wszystkie dodatnie; II: tylko \(\sin\); III: tylko \(\operatorname{tg}\) i \(\operatorname{ctg}\); IV: tylko \(\cos\).</li>
 </ul>
 <div class="fgs"><div class="fg"><svg class="fig" viewBox="0 0 244 224" width="244" height="224" role="img" aria-label="Okrag jednostkowy: kat alfa, sinus, cosinus i tangens jako dlugosci odcinkow"><line class="ax" x1="8" y1="114" x2="221" y2="114"/><polygon class="ah" points="226,114 219,116.9 219,111.1"/><line class="ax" x1="100" y1="214" x2="100" y2="13"/><polygon class="ah" points="100,8 102.9,15 97.1,15"/><text x="224" y="129" text-anchor="end">x</text><text x="109" y="14" text-anchor="start">y</text><circle class="s" cx="100" cy="114" r="84"/><line class="s w" x1="184" y1="114" x2="184" y2="24"/><line class="s d w" x1="164.3" y1="60" x2="184" y2="43.5"/><line class="s d w" x1="164.3" y1="114" x2="164.3" y2="60"/><line class="s d w" x1="100" y1="60" x2="164.3" y2="60"/><line class="a" x1="100" y1="114" x2="164.3" y2="60"/><line class="tha" x1="100" y1="114" x2="100" y2="60"/><line class="thp" x1="100" y1="114" x2="164.3" y2="114"/><line class="th" x1="184" y1="114" x2="184" y2="43.5"/><path class="s w" d="M124,114 A24,24 0 0 0 118.4,98.6"/><circle class="dot" cx="164.3" cy="60" r="3.4"/><text x="133" y="107" text-anchor="middle">α</text><text class="pn" x="132.2" y="131" text-anchor="middle">cos α</text><text class="ac" x="93" y="92" text-anchor="end">sin α</text><text x="191" y="83.8" text-anchor="start">tg α</text><text class="m" x="126" y="64" text-anchor="middle">1</text></svg></div><div class="fg"><svg class="fig" viewBox="0 0 260 222" width="260" height="222" role="img" aria-label="Znaki sinusa, cosinusa i tangensa w czterech cwiartkach ukladu wspolrzednych"><line class="ax" x1="6" y1="111" x2="249" y2="111"/><polygon class="ah" points="254,111 247,113.9 247,108.1"/><line class="ax" x1="130" y1="216" x2="130" y2="11"/><polygon class="ah" points="130,6 132.9,13 127.1,13"/><text x="252" y="126" text-anchor="end">x</text><text x="139" y="14" text-anchor="start">y</text><text x="166" y="36" text-anchor="start">sin</text><text class="b ac" x="210" y="36" text-anchor="start">+</text><text x="166" y="58" text-anchor="start">cos</text><text class="b ac" x="210" y="58" text-anchor="start">+</text><text x="166" y="80" text-anchor="start">tg</text><text class="b ac" x="210" y="80" text-anchor="start">+</text><text x="8" y="36" text-anchor="start">sin</text><text class="b ac" x="52" y="36" text-anchor="start">+</text><text x="8" y="58" text-anchor="start">cos</text><text class="b pn" x="52" y="58" text-anchor="start">−</text><text x="8" y="80" text-anchor="start">tg</text><text class="b pn" x="52" y="80" text-anchor="start">−</text><text x="8" y="150" text-anchor="start">sin</text><text class="b pn" x="52" y="150" text-anchor="start">−</text><text x="8" y="172" text-anchor="start">cos</text><text class="b pn" x="52" y="172" text-anchor="start">−</text><text x="8" y="194" text-anchor="start">tg</text><text class="b ac" x="52" y="194" text-anchor="start">+</text><text x="166" y="150" text-anchor="start">sin</text><text class="b pn" x="210" y="150" text-anchor="start">−</text><text x="166" y="172" text-anchor="start">cos</text><text class="b ac" x="210" y="172" text-anchor="start">+</text><text x="166" y="194" text-anchor="start">tg</text><text class="b pn" x="210" y="194" text-anchor="start">−</text><text class="m" x="138" y="103" text-anchor="start">I</text><text class="m" x="122" y="103" text-anchor="end">II</text><text class="m" x="122" y="129" text-anchor="end">III</text><text class="m" x="138" y="129" text-anchor="start">IV</text><text class="m" x="130" y="220" text-anchor="middle">ctg ma taki sam znak jak tg</text></svg></div></div>
+<p><b>Przykład.</b> \(60^\circ=\tfrac\pi3\), \(\tfrac{3\pi}4=135^\circ\). Łuk okręgu o promieniu \(6\) i kącie \(\tfrac\pi3\) ma długość \(2\pi\). Kąt \(150^\circ\) leży w II ćwiartce: \(\sin150^\circ=\tfrac12&gt;0\), \(\cos150^\circ=-\tfrac{\sqrt3}2&lt;0\).</p>
 </div>
 
 <h3>Wzory redukcyjne i tożsamości trygonometryczne</h3>
@@ -26,6 +28,7 @@
 \[\sin^2\alpha+\cos^2\alpha=1,\qquad\operatorname{tg}\alpha=\frac{\sin\alpha}{\cos\alpha},\qquad\operatorname{ctg}\alpha=\frac{\cos\alpha}{\sin\alpha},\qquad\operatorname{tg}\alpha\cdot\operatorname{ctg}\alpha=1,\]
 \[1+\operatorname{tg}^2\alpha=\frac1{\cos^2\alpha},\qquad1+\operatorname{ctg}^2\alpha=\frac1{\sin^2\alpha}\]
 <p>(dla kątów, dla których występujące wyrażenia mają sens: \(\cos\alpha\ne0\) dla tangensa, \(\sin\alpha\ne0\) dla cotangensa).</p>
+<p><b>Przykład.</b> Jeśli \(\alpha\) jest ostry i \(\sin\alpha=\tfrac35\), to \(\cos\alpha=\sqrt{1-\tfrac9{25}}=\tfrac45\) i \(\operatorname{tg}\alpha=\tfrac34\). Jeśli \(\operatorname{tg}\alpha=2\) (kąt ostry), to \(\cos^2\alpha=\tfrac1{1+4}=\tfrac15\).</p>
 </div>
 <div class="bx met"><span class="t">Obliczanie pozostałych funkcji kąta</span>
 <p>Gdy znamy jedną funkcję trygonometryczną kąta \(x\) i ćwiartkę, w której leży \(x\):</p>
@@ -62,16 +65,7 @@
 <div class="bx thm"><span class="t">Suma i różnica kątów</span>
 \[\sin(\alpha\pm\beta)=\sin\alpha\cos\beta\pm\cos\alpha\sin\beta,\qquad\cos(\alpha\pm\beta)=\cos\alpha\cos\beta\mp\sin\alpha\sin\beta,\]
 \[\operatorname{tg}(\alpha\pm\beta)=\frac{\operatorname{tg}\alpha\pm\operatorname{tg}\beta}{1\mp\operatorname{tg}\alpha\operatorname{tg}\beta}.\]
-</div>
-<div class="bx pf" data-pf="zr5"><span class="t">Dowód wzorów na sinus i cosinus sumy i różnicy kątów</span>
-<p><b>Krok 1: \(\cos(\alpha-\beta)\).</b> Punkty \(A=(\cos\alpha,\sin\alpha)\) i \(B=(\cos\beta,\sin\beta)\) leżą na okręgu jednostkowym. Ze wzoru na odległość
-\[|AB|^2=(\cos\alpha-\cos\beta)^2+(\sin\alpha-\sin\beta)^2=2-2(\cos\alpha\cos\beta+\sin\alpha\sin\beta).\]
-Obrót wokół początku układu o kąt \(-\beta\) nie zmienia odległości; przeprowadza \(B\) na \((1,0)\), a \(A\) na \((\cos(\alpha-\beta),\sin(\alpha-\beta))\). Zatem także
-\[|AB|^2=(\cos(\alpha-\beta)-1)^2+\sin^2(\alpha-\beta)=2-2\cos(\alpha-\beta).\]
-Porównanie obu wyrażeń daje \(\cos(\alpha-\beta)=\cos\alpha\cos\beta+\sin\alpha\sin\beta\).</p>
-<p><b>Krok 2: pozostałe wzory.</b> Zastępując \(\beta\) przez \(-\beta\) (przy czym \(\cos(-\beta)=\cos\beta\) i \(\sin(-\beta)=-\sin\beta\)) dostajemy \(\cos(\alpha+\beta)=\cos\alpha\cos\beta-\sin\alpha\sin\beta\). Ze wzoru redukcyjnego \(\sin x=\cos\left(\tfrac\pi2-x\right)\):
-\[\sin(\alpha+\beta)=\cos\Bigl(\bigl(\tfrac\pi2-\alpha\bigr)-\beta\Bigr)=\sin\alpha\cos\beta+\cos\alpha\sin\beta,\]
-a po zamianie \(\beta\) na \(-\beta\): \(\sin(\alpha-\beta)=\sin\alpha\cos\beta-\cos\alpha\sin\beta\). \(\blacksquare\)</p>
+<p><b>Przykład.</b> \(\sin75^\circ=\sin(45^\circ+30^\circ)=\tfrac{\sqrt2}2\cdot\tfrac{\sqrt3}2+\tfrac{\sqrt2}2\cdot\tfrac12=\dfrac{\sqrt6+\sqrt2}4\); \(\ \cos15^\circ=\cos(45^\circ-30^\circ)=\dfrac{\sqrt6+\sqrt2}4\).</p>
 </div>
 <div class="bx thm"><span class="t">Kąt podwojony</span>
 <div class="two">
@@ -85,6 +79,7 @@ a po zamianie \(\beta\) na \(-\beta\): \(\sin(\alpha-\beta)=\sin\alpha\cos\beta-
 \[\sin^2\alpha=\frac{1-\cos2\alpha}2,\quad\cos^2\alpha=\frac{1+\cos2\alpha}2\]
 </div>
 </div>
+<p><b>Przykład.</b> Jeśli \(\sin\alpha=\tfrac35\), \(\cos\alpha=\tfrac45\), to \(\sin2\alpha=\tfrac{24}{25}\), \(\cos2\alpha=\tfrac{16}{25}-\tfrac9{25}=\tfrac7{25}\). Obniżanie potęgi: \(\sin^215^\circ=\dfrac{1-\cos30^\circ}2=\dfrac{2-\sqrt3}4\).</p>
 </div>
 <details class="opt"><summary><span class="optb">Poza wymaganiami</span>Kąt potrojony</summary>
 <div class="opt-body">
@@ -136,6 +131,7 @@ a po zamianie \(\beta\) na \(-\beta\): \(\sin(\alpha-\beta)=\sin\alpha\cos\beta-
 <li>\(\operatorname{tg}x=a\): \(x=\alpha+k\pi\), gdzie \(\operatorname{tg}\alpha=a\). Dla \(|a|>1\) równania \(\sin x=a\), \(\cos x=a\) nie mają rozwiązań.</li>
 <li>\(\sin f=\sin g\iff f=g+2k\pi\) lub \(f=\pi-g+2k\pi\); \(\ \cos f=\cos g\iff f=\pm g+2k\pi\); \(\ \operatorname{tg}f=\operatorname{tg}g\iff f=g+k\pi\) (z dziedziną).</li>
 </ul>
+<p><b>Przykład.</b> \(\sin x=\tfrac12\Rightarrow x=\tfrac\pi6+2k\pi\) lub \(x=\tfrac{5\pi}6+2k\pi\); \(\ \cos x=-\tfrac{\sqrt2}2\Rightarrow x=\pm\tfrac{3\pi}4+2k\pi\); \(\ \operatorname{tg}x=1\Rightarrow x=\tfrac\pi4+k\pi\); \(\ \sin x=2\) – brak rozwiązań.</p>
 </div>
 <div class="bx met"><span class="t">Metody rozwiązywania</span>
 <ol>

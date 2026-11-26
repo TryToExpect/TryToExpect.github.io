@@ -16,6 +16,7 @@
 <li>\(P:\mathcal F\to[0,1]\) spełnia \(P(\Omega)=1\) i jest przeliczalnie addytywna: \(P\Bigl(\bigcup A_n\Bigr)=\sum P(A_n)\) dla parami rozłącznych \(A_n\) (aksjomaty Kołmogorowa).</li>
 </ul>
 <p class="use">Użyte w zad. 1, 2.</p>
+<p><b>Przykład.</b> Rzut monetą: \(\Omega=\{O,R\}\), \(\mathcal F\) – wszystkie podzbiory \(\Omega\), \(P(\{O\})=P(\{R\})=\tfrac12\).</p>
 </div>
 <div class="bx fact"><span class="t">Fakt 1.2 – własności prawdopodobieństwa</span>
 <ul>
@@ -25,6 +26,7 @@
 <li>ciągłość: dla wstępującego ciągu zdarzeń \(P\Bigl(\bigcup A_n\Bigr)=\lim P(A_n)\), dla zstępującego \(P\Bigl(\bigcap A_n\Bigr)=\lim P(A_n)\).</li>
 </ul>
 <p class="use">Użyte w zad. 1, 2.</p>
+<p><b>Przykład.</b> \(P(A)=0{,}5\), \(P(B)=0{,}4\), \(P(A\cap B)=0{,}2\): \(P(A\cup B)=0{,}7\), \(P(A')=0{,}5\).</p>
 </div>
 <div class="bx fact"><span class="t">Fakt 1.3 – model klasyczny i kombinatoryka</span>
 <p>Dla równoprawdopodobnych wyników \(P(A)=\dfrac{|A|}{|\Omega|}\).</p>
@@ -35,15 +37,18 @@
 <li>Liczba podziałów zbioru \(n\)-elementowego na \(k\) niepustych podzbiorów to liczba Stirlinga drugiego rodzaju \(S(n,k)\); liczba surjekcji zbioru \(n\)-elementowego na zbiór \(k\)-elementowy wynosi \(k!\,S(n,k)\).</li>
 </ul>
 <p class="use">Użyte w zad. 5, 6, 40.</p>
+<p><b>Przykład.</b> Trzy rzuty monetą: \(|\Omega|=2^3=8\), \(P(\text{dokładnie dwa orły})=\tfrac{\binom32}8=\tfrac38\). Wybór \(2\) kul z \(5\) bez zwracania i bez kolejności: \(\binom52=10\) sposobów.</p>
 </div>
 <div class="bx fact"><span class="t">Fakt 1.4 – model geometryczny</span>
 <p>Gdy punkt losujemy jednostajnie z obszaru \(\Omega\), to \(P(A)=\dfrac{|A|}{|\Omega|}\), gdzie \(|\cdot|\) jest długością, polem lub objętością. Dwa niezależne punkty jednostajne na odcinku to jeden punkt jednostajny w kwadracie.</p>
 <p class="use">Użyte w zad. 10.</p>
+<p><b>Przykład.</b> Punkt losujemy z kwadratu \([0,1]^2\): \(P(x+y\le1)=\tfrac12\) (pole trójkąta), \(P\)(punkt w kole wpisanym w kwadrat) \(=\tfrac\pi4\).</p>
 </div>
 <div class="bx fact"><span class="t">Fakt 1.5 – zasada włączeń i wyłączeń</span>
 \[P\Bigl(\bigcup_{i=1}^nA_i\Bigr)=\sum_{k=1}^n(-1)^{k+1}\sum_{|I|=k}P\Bigl(\bigcap_{i\in I}A_i\Bigr).\]
 <p>Typowe zastosowanie: prawdopodobieństwo, że w \(n\) losowaniach pojawi się każdy z \(m\) wyników.</p>
 <p class="use">Użyte w zad. 5.</p>
+<p><b>Przykład.</b> Dwie kostki: \(P(\text{co najmniej jedna szóstka})=\tfrac16+\tfrac16-\tfrac1{36}=\tfrac{11}{36}\).</p>
 </div>
 <div class="bx met"><span class="t">Metoda 1.6 – jak liczyć prawdopodobieństwa</span>
 <ul>
@@ -61,6 +66,7 @@
 \[P(A\mid B)=\frac{P(A\cap B)}{P(B)}\qquad(P(B)>0).\]
 <p>Wzór łańcuchowy: \(P(A_1\cap\dots\cap A_n)=P(A_1)\,P(A_2\mid A_1)\cdots P(A_n\mid A_1\cap\dots\cap A_{n-1})\). Jeśli \(A\subset B\), to \(P(A\mid B)=\dfrac{P(A)}{P(B)}\).</p>
 <p class="use">Użyte w zad. 3, 4, 21, 25, 32.</p>
+<p><b>Przykład.</b> Dwie karty z talii \(52\) kart bez zwracania: \(P(\text{dwa asy})=\tfrac4{52}\cdot\tfrac3{51}=\tfrac1{221}\) (wzór łańcuchowy).</p>
 </div>
 <div class="bx thm"><span class="t">Twierdzenie 2.2 – wzór na prawdopodobieństwo całkowite i wzór Bayesa</span>
 <p>Dla rozbicia \(\Omega=\bigsqcup B_i\) na zdarzenia o dodatnich prawdopodobieństwach:
@@ -69,17 +75,20 @@
 \[P\bigl((X,Y)\in A\bigr)=\int f_Y(y)\,P\bigl((X,y)\in A\bigr)\,dy;\]
 na przykład \(P(X>Y)=\displaystyle\int f_Y(y)\,P(X>y)\,dy\).</p>
 <p class="use">Użyte w zad. 4, 11, 21, 32.</p>
+<p><b>Przykład.</b> Choroba występuje u \(1\%\) osób, test wykrywa ją w \(99\%\) przypadków i daje \(5\%\) fałszywych alarmów. \(P(+)=0{,}0099+0{,}0495=0{,}0594\), więc \(P(\text{chory}\mid+)=\tfrac{0{,}0099}{0{,}0594}=\tfrac16\approx0{,}17\).</p>
 </div>
 <div class="bx def"><span class="t">Definicja 2.3 – niezależność zdarzeń</span>
 <p>Zdarzenia \(A_1,\dots,A_n\) są niezależne, gdy
 \[P\Bigl(\bigcap_{i\in I}A_i\Bigr)=\prod_{i\in I}P(A_i)\quad\text{dla każdego zbioru indeksów }I.\]
 Niezależność parami nie wystarcza. Jeśli zdarzenia są niezależne, to niezależne są też ich dopełnienia i zdarzenia wyznaczone przez rozłączne grupy zdarzeń.</p>
 <p class="use">Użyte w zad. 1, 2, 3, 5, 6.</p>
+<p><b>Przykład.</b> Dwa rzuty monetą: \(A\) – orzeł w pierwszym, \(B\) – orzeł w drugim, \(C\) – oba wyniki jednakowe. Zdarzenia są niezależne parami, ale \(P(A\cap B\cap C)=\tfrac14\ne\tfrac18\), więc nie są niezależne łącznie.</p>
 </div>
 <div class="bx fact"><span class="t">Fakt 2.4 – niezależność warunkowa</span>
 <p>Zdarzenia mogą być niezależne przy każdym ustalonym warunku (np. losowania z tej samej skrzyni przy znanej skrzyni), a mimo to zależne bez warunku. Wtedy
 \[P(A\cap B)=\sum_iP(A\mid B_i)\,P(B\mid B_i)\,P(B_i).\]</p>
 <p class="use">Użyte w zad. 32.</p>
+<p><b>Przykład.</b> Wybieramy losowo monetę symetryczną albo monetę z dwoma orłami i rzucamy nią dwa razy. Przy znanej monecie rzuty są niezależne, ale \(P(O_1)=P(O_2)=\tfrac34\) i \(P(O_1\cap O_2)=\tfrac12\cdot\tfrac14+\tfrac12\cdot1=\tfrac58\ne\tfrac9{16}\).</p>
 </div>
 <div class="bx thm"><span class="t">Twierdzenie 2.5 – lematy Borela–Cantellego</span>
 <ul>
@@ -87,6 +96,7 @@ Niezależność parami nie wystarcza. Jeśli zdarzenia są niezależne, to nieza
 <li>Jeśli zdarzenia \(A_n\) są niezależne i \(\sum P(A_n)=\infty\), to z prawdopodobieństwem \(1\) zachodzi nieskończenie wiele z nich.</li>
 </ul>
 <p class="use">Użyte w zad. 1, 2.</p>
+<p><b>Przykład.</b> Dla niezależnych \(A_n\) z \(P(A_n)=\tfrac1{n^2}\) (szereg zbieżny) zajdzie tylko skończenie wiele z nich, a dla \(P(A_n)=\tfrac1n\) (szereg rozbieżny) – z prawdopodobieństwem \(1\) nieskończenie wiele.</p>
 </div>
 <div class="bx fact"><span class="t">Fakt 2.6 – schemat Bernoulliego</span>
 <ul>
@@ -94,6 +104,7 @@ Niezależność parami nie wystarcza. Jeśli zdarzenia są niezależne, to nieza
 <li>W nieskończonym ciągu prób (przy \(0&lt;p&lt;1\)) każdy ustalony skończony wzorzec wyników pojawia się z prawdopodobieństwem \(1\) (nawet nieskończenie wiele razy).</li>
 </ul>
 <p class="use">Użyte w zad. 1, 3, 17, 24.</p>
+<p><b>Przykład.</b> \(10\) rzutów monetą: \(P(\text{dokładnie }5\text{ orłów})=\tfrac{\binom{10}5}{2^{10}}=\tfrac{252}{1024}\approx0{,}25\). Numer rzutu kostką, w którym pierwszy raz wypadnie szóstka: \(P(X=k)=\left(\tfrac56\right)^{k-1}\tfrac16\), \(\mathbb EX=6\).</p>
 </div>
 
 <h3>Zmienne losowe i ich rozkłady</h3>
@@ -105,11 +116,13 @@ Niezależność parami nie wystarcza. Jeśli zdarzenia są niezależne, to nieza
 </ul>
 <p>Każda funkcja o tych własnościach jest dystrybuantą pewnej zmiennej losowej. Dystrybuanta wyznacza rozkład.</p>
 <p class="use">Użyte w zad. 7, 8, 9, 10, 14, 29, 31.</p>
+<p><b>Przykład.</b> \(X=1\), gdy w rzucie monetą wypadł orzeł, i \(X=0\) w przeciwnym razie: \(F(t)=0\) dla \(t&lt;0\), \(F(t)=\tfrac12\) dla \(0\le t&lt;1\), \(F(t)=1\) dla \(t\ge1\).</p>
 </div>
 <div class="bx fact"><span class="t">Fakt 3.2 – prawdopodobieństwa z dystrybuanty</span>
 \[P(X=a)=F(a)-F(a^-),\qquad P(a&lt;X\le b)=F(b)-F(a),\qquad P(a&lt;X&lt;b)=F(b^-)-F(a).\]
 <p>Skoki dystrybuanty to atomy rozkładu; rozkład może być mieszany, czyli mieć atomy i część ciągłą. Dystrybuanta jest ciągła wtedy i tylko wtedy, gdy \(P(X=a)=0\) dla każdego \(a\).</p>
 <p class="use">Użyte w zad. 7, 8, 9, 36.</p>
+<p><b>Przykład.</b> \(X\sim\operatorname{Exp}(1)\), \(F(t)=1-e^{-t}\): \(P(1&lt;X\le2)=F(2)-F(1)=e^{-1}-e^{-2}\approx0{,}23\).</p>
 </div>
 <div class="bx def"><span class="t">Definicja 3.3 – rozkład dyskretny i ciągły, gęstość</span>
 <ul>
@@ -118,6 +131,7 @@ Niezależność parami nie wystarcza. Jeśli zdarzenia są niezależne, to nieza
 <li>Zmienna prawie na pewno stała, \(X=c\), ma rozkład jednopunktowy (dystrybuanta \(\mathbf 1_{[c,\infty)}\)).</li>
 </ul>
 <p class="use">Użyte w zad. 7, 8, 10, 12, 13, 14, 22, 23, 30.</p>
+<p><b>Przykład.</b> Gęstość \(f(x)=2x\) na \([0,1]\): \(F(x)=x^2\), więc \(P\!\left(X\le\tfrac12\right)=\tfrac14\).</p>
 </div>
 <div class="bx fact"><span class="t">Fakt 3.4 – najważniejsze rozkłady</span>
 <p>Poniżej \(q=1-p\).</p>
@@ -139,12 +153,14 @@ Niezależność parami nie wystarcza. Jeśli zdarzenia są niezależne, to nieza
 <li>Uwaga na konwencję: „rozkład wykładniczy z parametrem \(\lambda\)” zwykle oznacza intensywność (średnia \(\tfrac1\lambda\)), ale bywa też używany dla średniej. Rozkład \(\mathrm{Exp}(\lambda)\) to \(\Gamma\bigl(1,\tfrac1\lambda\bigr)\).</li>
 </ul>
 <p class="use">Użyte w zad. 3, 10, 13, 16, 17, 20, 21, 24, 25, 26, 28, 29, 31, 33, 35, 36, 37, 40, 41.</p>
+<p><b>Przykład.</b> \(X\sim B(10;\,0{,}3)\): \(\mathbb EX=3\), \(\operatorname{Var}X=2{,}1\). \(Y\sim\mathcal P(2)\): \(P(Y=0)=e^{-2}\approx0{,}135\).</p>
 </div>
 <div class="bx fact"><span class="t">Fakt 3.5 – brak pamięci</span>
 \[P(X>s+t\mid X>s)=P(X>t)\qquad(s,t\ge0).\]
 <p>Wśród rozkładów ciągłych własność tę ma tylko rozkład wykładniczy, a wśród rozkładów na \(\{1,2,\dots\}\) tylko geometryczny. Dla niezależnych \(X\sim\mathrm{Exp}(\lambda)\), \(Y\sim\mathrm{Exp}(\mu)\):
 \[P(X>Y)=\frac\mu{\lambda+\mu},\qquad\min(X,Y)\sim\mathrm{Exp}(\lambda+\mu).\]</p>
 <p class="use">Użyte w zad. 21.</p>
+<p><b>Przykład.</b> Czas życia żarówki \(X\sim\operatorname{Exp}(\lambda)\): jeśli świeci już \(100\) godzin, to prawdopodobieństwo, że wytrzyma kolejne \(50\), wynosi \(P(X&gt;50)=e^{-50\lambda}\) – tyle samo co dla nowej żarówki.</p>
 </div>
 <div class="bx fact"><span class="t">Fakt 3.6 – rozkład normalny</span>
 <ul>
@@ -153,6 +169,7 @@ Niezależność parami nie wystarcza. Jeśli zdarzenia są niezależne, to nieza
 <li>Momenty: \(\mathbb EZ^{2k+1}=0\), \(\mathbb EZ^2=1\), \(\mathbb EZ^4=3\) dla \(Z\sim N(0,1)\), więc \(\mathbb EX^4=\mu^4+6\mu^2\sigma^2+3\sigma^4\).</li>
 </ul>
 <p class="use">Użyte w zad. 11, 14, 15, 24, 34, 38.</p>
+<p><b>Przykład.</b> \(X\sim N(100,15^2)\): \(P(X\le130)=\Phi\!\left(\tfrac{130-100}{15}\right)=\Phi(2)\approx0{,}977\).</p>
 </div>
 <div class="bx thm"><span class="t">Twierdzenie 3.7 – transformacja przez dystrybuantę</span>
 <ul>
@@ -160,6 +177,7 @@ Niezależność parami nie wystarcza. Jeśli zdarzenia są niezależne, to nieza
 <li>Odwrotnie: jeśli \(U\) ma rozkład jednostajny na \([0,1]\), a \(F^{-1}(u)=\inf\{t:F(t)\ge u\}\), to \(F^{-1}(U)\) ma dystrybuantę \(F\) (metoda odwrotnej dystrybuanty w symulacjach).</li>
 </ul>
 <p class="use">Użyte w zad. 8, 9 (dowodzone tamże).</p>
+<p><b>Przykład.</b> Jeśli \(U\) ma rozkład jednostajny na \([0,1]\), to \(X=-\tfrac1\lambda\ln(1-U)\) ma rozkład \(\operatorname{Exp}(\lambda)\) (bo \(F^{-1}(u)=-\tfrac1\lambda\ln(1-u)\)).</p>
 </div>
 <div class="bx met"><span class="t">Metoda 3.8 – rozkład funkcji zmiennej losowej</span>
 <ul>
@@ -179,6 +197,7 @@ Niezależność parami nie wystarcza. Jeśli zdarzenia są niezależne, to nieza
 <li>\(P\bigl((X,Y)\in A\bigr)=\iint_Af\).</li>
 </ul>
 <p class="use">Użyte w zad. 18, 22.</p>
+<p><b>Przykład.</b> Rozkład łączny: \(P(0,0)=0{,}1\), \(P(0,1)=0{,}3\), \(P(1,0)=0{,}2\), \(P(1,1)=0{,}4\). Rozkłady brzegowe: \(P(X=1)=0{,}6\), \(P(Y=1)=0{,}7\).</p>
 </div>
 <div class="bx def"><span class="t">Definicja 4.2 – niezależność zmiennych losowych</span>
 <ul>
@@ -187,12 +206,14 @@ Niezależność parami nie wystarcza. Jeśli zdarzenia są niezależne, to nieza
 <li>Funkcje niezależnych zmiennych są niezależne.</li>
 </ul>
 <p class="use">Użyte w zad. 10, 11, 13, 18, 19, 20, 21, 22, 26, 29, 31, 39.</p>
+<p><b>Przykład.</b> Dla rozkładu z poprzedniej ramki \(P(X=1,Y=1)=0{,}4\ne0{,}6\cdot0{,}7=0{,}42\), więc \(X\) i \(Y\) są zależne.</p>
 </div>
 <div class="bx fact"><span class="t">Fakt 4.3 – gęstość sumy: splot</span>
 <p>Dla niezależnych \(X,Y\) z gęstościami
 \[f_{X+Y}(z)=\int f_X(x)\,f_Y(z-x)\,dx.\]
 Dla \(aX+bY\) najpierw wyznacz gęstości \(aX\) i \(bY\), a potem splot. Alternatywnie licz dystrybuantę jako pole części kwadratu (dla rozkładów jednostajnych).</p>
 <p class="use">Użyte w zad. 10, 13.</p>
+<p><b>Przykład.</b> \(X,Y\sim U(0,1)\) niezależne: \(f_{X+Y}(z)=z\) dla \(z\in[0,1]\) i \(2-z\) dla \(z\in[1,2]\) (gęstość „trójkątna”).</p>
 </div>
 <div class="bx fact"><span class="t">Fakt 4.4 – sumy niezależnych zmiennych o znanych rozkładach</span>
 <p>Dla niezależnych zmiennych:</p>
@@ -204,6 +225,7 @@ Dla \(aX+bY\) najpierw wyznacz gęstości \(aX\) i \(bY\), a potem splot. Altern
 <li>pod warunkiem \(X+Y=n\) dla niezależnych zmiennych Poissona zmienna \(X\) ma rozkład \(B\bigl(n,\tfrac\lambda{\lambda+\mu}\bigr)\).</li>
 </ul>
 <p class="use">Użyte w zad. 11, 20, 25.</p>
+<p><b>Przykład.</b> \(\mathcal P(2)+\mathcal P(3)=\mathcal P(5)\); \(\ N(1,4)+N(2,5)=N(3,9)\) (dla zmiennych niezależnych).</p>
 </div>
 <div class="bx fact"><span class="t">Fakt 4.5 – wektor gaussowski</span>
 <ul>
@@ -212,11 +234,13 @@ Dla \(aX+bY\) najpierw wyznacz gęstości \(aX\) i \(bY\), a potem splot. Altern
 <li>Uwaga: dwie zmienne normalne nieskorelowane, ale nie tworzące wektora gaussowskiego, mogą być zależne.</li>
 </ul>
 <p class="use">Użyte w zad. 39.</p>
+<p><b>Przykład.</b> \(X,Y\sim N(0,1)\) niezależne: wektor \((X+Y,\,X-Y)\) jest gaussowski i \(\operatorname{Cov}(X+Y,X-Y)=\operatorname{Var}X-\operatorname{Var}Y=0\), więc \(X+Y\) i \(X-Y\) są niezależne.</p>
 </div>
 <div class="bx fact"><span class="t">Fakt 4.6 – maksimum i minimum niezależnych zmiennych</span>
 <p>Dla niezależnych \(X_1,\dots,X_n\) o dystrybuantach \(F_i\):
 \[P(\max X_i\le t)=\prod F_i(t),\qquad P(\min X_i>t)=\prod\bigl(1-F_i(t)\bigr).\]</p>
 <p class="use">Użyte w zad. 31, 41.</p>
+<p><b>Przykład.</b> Trzy niezależne zmienne \(U(0,1)\): \(P(\max\le\tfrac12)=\tfrac18\). Minimum niezależnych \(\operatorname{Exp}(\lambda_1)\) i \(\operatorname{Exp}(\lambda_2)\) ma rozkład \(\operatorname{Exp}(\lambda_1+\lambda_2)\).</p>
 </div>
 
 <h3>Wartość oczekiwana, wariancja, momenty</h3>
@@ -224,6 +248,7 @@ Dla \(aX+bY\) najpierw wyznacz gęstości \(aX\) i \(bY\), a potem splot. Altern
 \[\mathbb EX=\sum x_iP(X=x_i)\quad\text{albo}\quad\mathbb EX=\int xf(x)\,dx,\]
 <p>o ile szereg (całka) jest zbieżny bezwzględnie. Dla funkcji: \(\mathbb Eg(X)=\sum g(x_i)P(X=x_i)\) albo \(\int g(x)f(x)\,dx\), a dla wektora \(\mathbb Eg(X,Y)=\iint gf\). Dla zmiennej mieszanej sumujemy część skokową i całkę z części ciągłej.</p>
 <p class="use">Użyte w zad. 7, 10, 12, 15, 16, 22, 26, 41.</p>
+<p><b>Przykład.</b> Rzut kostką: \(\mathbb EX=3{,}5\), \(\mathbb EX^2=\tfrac{1+4+\dots+36}6=\tfrac{91}6\).</p>
 </div>
 <div class="bx fact"><span class="t">Fakt 5.2 – własności wartości oczekiwanej</span>
 <ul>
@@ -232,12 +257,14 @@ Dla \(aX+bY\) najpierw wyznacz gęstości \(aX\) i \(bY\), a potem splot. Altern
 <li>Zmienne wskaźnikowe: \(\mathbb E\mathbf 1_A=P(A)\), więc liczba zdarzeń, które zaszły, ma wartość oczekiwaną \(\sum P(A_i)\), nawet gdy zdarzenia są zależne.</li>
 </ul>
 <p class="use">Użyte w zad. 5, 6, 15, 26, 29, 34, 35, 37, 41.</p>
+<p><b>Przykład.</b> Liczba orłów w \(10\) rzutach to suma \(10\) zmiennych wskaźnikowych, więc \(\mathbb EX=10\cdot\tfrac12=5\).</p>
 </div>
 <div class="bx fact"><span class="t">Fakt 5.3 – wartość oczekiwana przez ogon rozkładu</span>
 <p>Dla \(X\ge0\):
 \[\mathbb EX=\int_0^\infty P(X>t)\,dt=\int_0^\infty\bigl(1-F(t)\bigr)\,dt;\]
 dla \(X\) o wartościach w \(\{0,1,2,\dots\}\): \(\mathbb EX=\sum_{k\ge1}P(X\ge k)\).</p>
 <p class="use">Użyte w zad. 7.</p>
+<p><b>Przykład.</b> Rozkład geometryczny na \(\{1,2,\dots\}\): \(P(X\ge k)=q^{k-1}\), więc \(\mathbb EX=\sum_{k\ge1}q^{k-1}=\tfrac1p\).</p>
 </div>
 <div class="bx def"><span class="t">Definicja 5.4 – wariancja, kowariancja, korelacja</span>
 \[\operatorname{Var}X=\mathbb E(X-\mathbb EX)^2=\mathbb EX^2-(\mathbb EX)^2,\quad\operatorname{Cov}(X,Y)=\mathbb EXY-\mathbb EX\,\mathbb EY,\quad\rho(X,Y)=\frac{\operatorname{Cov}(X,Y)}{\sqrt{\operatorname{Var}X\,\operatorname{Var}Y}}.\]
@@ -248,6 +275,7 @@ dla \(X\) o wartościach w \(\{0,1,2,\dots\}\): \(\mathbb EX=\sum_{k\ge1}P(X\ge 
 <li>dla niezależnych zmiennych kowariancja jest zerowa, a wariancja sumy jest sumą wariancji.</li>
 </ul>
 <p class="use">Użyte w zad. 12, 15, 16, 17, 18, 19, 22, 23, 29, 34, 35, 37, 39, 41.</p>
+<p><b>Przykład.</b> Rzut kostką: \(\operatorname{Var}X=\tfrac{91}6-\tfrac{49}4=\tfrac{35}{12}\).</p>
 </div>
 <div class="bx thm"><span class="t">Twierdzenie 5.5 – o współczynniku korelacji</span>
 <ul>
@@ -257,12 +285,14 @@ dla \(X\) o wartościach w \(\{0,1,2,\dots\}\): \(\mathbb EX=\sum_{k\ge1}P(X\ge 
 <li>Zmienne niezależne są nieskorelowane, ale nie odwrotnie.</li>
 </ul>
 <p class="use">Użyte w zad. 19 (dowodzone tamże), 23.</p>
+<p><b>Przykład.</b> Jeśli \(Y=-2X+3\), to \(\rho(X,Y)=-1\).</p>
 </div>
 <div class="bx fact"><span class="t">Fakt 5.6 – warunkowa wartość oczekiwana</span>
 <p>\(\mathbb E(X\mid Z)\) to funkcja zmiennej \(Z\) dająca średnią \(X\) przy znanym \(Z\). Zachodzą wzory
 \[\mathbb EX=\mathbb E\bigl[\mathbb E(X\mid Z)\bigr],\qquad\operatorname{Var}X=\mathbb E\operatorname{Var}(X\mid Z)+\operatorname{Var}\mathbb E(X\mid Z).\]
 Dla \(Z\) dyskretnej: \(\mathbb EX=\sum_z\mathbb E(X\mid Z=z)\,P(Z=z)\).</p>
 <p class="use">Użyte w zad. 32.</p>
+<p><b>Przykład.</b> Rzucamy kostką, a potem tyle razy monetą, ile wypadło oczek (\(N\)). Liczba orłów \(X\): \(\mathbb E(X\mid N)=\tfrac N2\), więc \(\mathbb EX=\tfrac{3{,}5}2=1{,}75\).</p>
 </div>
 <div class="bx fact"><span class="t">Fakt 5.7 – funkcje tworzące i charakterystyczne</span>
 <ul>
@@ -271,6 +301,7 @@ Dla \(Z\) dyskretnej: \(\mathbb EX=\sum_z\mathbb E(X\mid Z=z)\,P(Z=z)\).</p>
 <li>Momenty: \(\mathbb EX^k=M_X^{(k)}(0)\).</li>
 </ul>
 <p class="use">Użyte w zad. 11, 16, 39.</p>
+<p><b>Przykład.</b> \(X\sim N(0,1)\): \(M_X(t)=e^{t^2/2}\); \(\ X\sim\mathcal P(\lambda)\): \(M_X(t)=e^{\lambda(e^t-1)}\).</p>
 </div>
 
 <h3>Nierówności i twierdzenia graniczne</h3>
@@ -281,6 +312,7 @@ Stąd (nierówność Czebyszewa)
 \[P(|X-\mathbb EX|\ge\varepsilon)\le\frac{\operatorname{Var}X}{\varepsilon^2}.\]
 Wnioski: zmienna o zerowej wariancji jest prawie na pewno stała, a zmienna \(X\ge0\) o zerowej wartości oczekiwanej jest prawie na pewno równa zeru, bo \(P\bigl(X\ge\tfrac1n\bigr)\le n\,\mathbb EX=0\) dla każdego \(n\).</p>
 <p class="use">Użyte w zad. 19, 23, 26.</p>
+<p><b>Przykład.</b> \(X\ge0\), \(\mathbb EX=2\): \(P(X\ge10)\le0{,}2\). Jeśli \(\operatorname{Var}X=4\), to \(P(|X-\mathbb EX|\ge4)\le\tfrac4{16}=\tfrac14\).</p>
 </div>
 <div class="bx thm"><span class="t">Twierdzenie 6.2 – nierówność Jensena dla wartości oczekiwanej</span>
 <p>Jeśli \(f\) jest wypukła, to
@@ -297,6 +329,7 @@ dla wklęsłej odwrotnie, a dla funkcji ściśle wypukłej (wklęsłej) i niesta
 </ul>
 <p>Zbieżność prawie na pewno pociąga zbieżność według prawdopodobieństwa, a ta według rozkładu; odwrotnie na ogół nie (wyjątek: zbieżność według rozkładu do stałej). Zbieżność średniokwadratowa pociąga zbieżność według prawdopodobieństwa (nierówność Czebyszewa).</p>
 <p class="use">Użyte w zad. 26, 27, 28, 30, 37.</p>
+<p><b>Przykład.</b> \(X_n=X+\tfrac1n\to X\) prawie na pewno; rozkład \(B\!\left(n,\tfrac\lambda n\right)\) dąży według rozkładu do \(\mathcal P(\lambda)\).</p>
 </div>
 <div class="bx thm"><span class="t">Twierdzenie 6.4 – prawa wielkich liczb</span>
 <ul>
@@ -305,12 +338,14 @@ dla wklęsłej odwrotnie, a dla funkcji ściśle wypukłej (wklęsłej) i niesta
 </ul>
 <p>Stosuje się też do \(g(X_i)\), np. do \(\ln|X_i|\) lub \(X_i^2\), oraz do ilorazów średnich (granica ilorazu to iloraz granic).</p>
 <p class="use">Użyte w zad. 26, 27, 28.</p>
+<p><b>Przykład.</b> Średnia liczba oczek w \(n\) rzutach kostką dąży do \(3{,}5\).</p>
 </div>
 <div class="bx thm"><span class="t">Twierdzenie 6.5 – centralne twierdzenie graniczne</span>
 <p>Dla niezależnych zmiennych o tym samym rozkładzie z wariancją \(0&lt;\sigma^2&lt;\infty\):
 \[P\Bigl(\frac{S_n-n\mu}{\sigma\sqrt n}\le x\Bigr)\to\Phi(x)\qquad(\text{zbieżność według rozkładu do }N(0,1)).\]
 Szczególny przypadek dla rozkładu dwumianowego to twierdzenie de Moivre’a–Laplace’a.</p>
 <p class="use">Użyte w zad. 24, 30.</p>
+<p><b>Przykład.</b> \(100\) rzutów monetą (\(\mu=\tfrac12\), \(\sigma=\tfrac12\)): \(P(S_{100}\le60)\approx\Phi\!\left(\tfrac{60-50}{5}\right)=\Phi(2)\approx0{,}977\).</p>
 </div>
 <div class="bx met"><span class="t">Metoda 6.6 – przybliżanie rozkładem normalnym</span>
 <ol>
@@ -326,6 +361,7 @@ Szczególny przypadek dla rozkładu dwumianowego to twierdzenie de Moivre’a–
 \[P\bigl(B(n,p_n)=k\bigr)\to e^{-\lambda}\frac{\lambda^k}{k!}.\]
 W praktyce stosujemy je dla dużego \(n\) i małego \(p\) z \(\lambda=np\).</p>
 <p class="use">Użyte w zad. 25.</p>
+<p><b>Przykład.</b> \(n=1000\), \(p=0{,}002\), \(\lambda=2\): \(P(\text{brak sukcesu})=0{,}998^{1000}\approx e^{-2}\approx0{,}135\).</p>
 </div>
 
 <h3>Próba i statystyki</h3>
@@ -336,12 +372,14 @@ W praktyce stosujemy je dla dużego \(n\) i małego \(p\) z \(\lambda=np\).</p>
 <li><b>Wariancja z próby</b> \(S^2=\dfrac1{n-1}\sum(X_i-\bar X)^2\) jest nieobciążonym estymatorem \(\sigma^2\); wersja z dzieleniem przez \(n\) jest obciążona.</li>
 </ul>
 <p class="use">Użyte w zad. 38, 39.</p>
+<p><b>Przykład.</b> Próba \(2,4,4,6\): \(\bar x=4\), \(s^2=\tfrac{4+0+0+4}{3}=\tfrac83\).</p>
 </div>
 <div class="bx fact"><span class="t">Fakt 7.2 – statystyki pozycyjne</span>
 <p>Dla próby z dystrybuantą \(F\):
 \[P(X_{k:n}\le x)=\sum_{i=k}^n\binom ni F(x)^i\bigl(1-F(x)\bigr)^{n-i},\]
 bo zdarzenie \(\{X_{k:n}\le x\}\) oznacza, że co najmniej \(k\) obserwacji jest \(\le x\). W szczególności \(F_{\max}=F^n\) i \(F_{\min}=1-(1-F)^n\). Dla \(U(0,\theta)\): \(\mathbb E\max X_i=\dfrac n{n+1}\theta\).</p>
 <p class="use">Użyte w zad. 31 (dowodzone tamże), 36, 41.</p>
+<p><b>Przykład.</b> Trzy obserwacje \(U(0,1)\): \(P(X_{3:3}\le x)=x^3\), a dla mediany \(P(X_{2:3}\le x)=3x^2(1-x)+x^3=3x^2-2x^3\).</p>
 </div>
 <div class="bx fact"><span class="t">Fakt 7.3 – dystrybuanta empiryczna</span>
 <p>\(\hat F_n(x)=\tfrac1n\#\{i:X_i\le x\}\) spełnia \(n\hat F_n(x)\sim B\bigl(n,F(x)\bigr)\), czyli
@@ -349,6 +387,7 @@ bo zdarzenie \(\{X_{k:n}\le x\}\) oznacza, że co najmniej \(k\) obserwacji jest
 \[\operatorname{Cov}\bigl(\hat F_n(x),\hat F_n(y)\bigr)=\frac{F(\min(x,y))-F(x)F(y)}n,\qquad\sqrt n\bigl(\hat F_n(x)-F(x)\bigr)\to N\bigl(0,F(x)(1-F(x))\bigr).\]
 Twierdzenie Gliwienki–Cantellego: \(\sup_x|\hat F_n(x)-F(x)|\to0\) prawie na pewno.</p>
 <p class="use">Użyte w zad. 29, 30, 31.</p>
+<p><b>Przykład.</b> Dane \(1,3,3,7\): \(\hat F_4(3)=\tfrac34\), \(\hat F_4(5)=\tfrac34\), \(\hat F_4(7)=1\).</p>
 </div>
 <div class="bx thm"><span class="t">Twierdzenie 7.4 – próba z rozkładu normalnego</span>
 <p>Dla próby z \(N(\mu,\sigma^2)\):</p>
@@ -358,6 +397,7 @@ Twierdzenie Gliwienki–Cantellego: \(\sup_x|\hat F_n(x)-F(x)|\to0\) prawie na p
 </ul>
 <p>Dla innych rozkładów \(\bar X\) i \(S^2\) są na ogół zależne.</p>
 <p class="use">Użyte w zad. 38, 39 (dowodzone tamże).</p>
+<p><b>Przykład.</b> Próba \(n=16\) z \(N(\mu,4^2)\): \(\bar X\sim N(\mu,1)\).</p>
 </div>
 
 <h3>Estymacja punktowa</h3>
@@ -369,12 +409,14 @@ Twierdzenie Gliwienki–Cantellego: \(\sup_x|\hat F_n(x)-F(x)|\to0\) prawie na p
 <li>Nieobciążony estymator postaci \(c\cdot T\) dostajemy, dobierając \(c\) z warunku \(\mathbb E(cT)=\theta\).</li>
 </ul>
 <p class="use">Użyte w zad. 29, 34, 35, 37, 41.</p>
+<p><b>Przykład.</b> \(\bar X\) jest nieobciążonym i zgodnym estymatorem \(\mu\). Dla \(U(0,\theta)\) estymator \(\max X_i\) jest obciążony: \(\mathbb E\max X_i=\tfrac n{n+1}\theta\).</p>
 </div>
 <div class="bx def"><span class="t">Definicja 8.2 – ryzyko i błąd średniokwadratowy</span>
 <p>Funkcja ryzyka (przy kwadratowej funkcji straty):
 \[R(\theta)=\mathbb E_\theta(\hat\theta-\theta)^2=\operatorname{Var}_\theta\hat\theta+\bigl(\mathbb E_\theta\hat\theta-\theta\bigr)^2.\]
 Z dwóch estymatorów żaden nie musi być lepszy dla wszystkich \(\theta\); wtedy porównuje się na przykład największe ryzyko. Z dwóch estymatorów nieobciążonych lepszy jest ten o mniejszej wariancji.</p>
 <p class="use">Użyte w zad. 35, 41.</p>
+<p><b>Przykład.</b> Estymator \(\bar X+1\) wartości oczekiwanej \(\mu\): obciążenie \(1\), błąd średniokwadratowy \(\tfrac{\sigma^2}n+1\).</p>
 </div>
 <div class="bx met"><span class="t">Metoda 8.3 – estymator największej wiarogodności</span>
 <ol>
@@ -397,12 +439,14 @@ Z dwóch estymatorów żaden nie musi być lepszy dla wszystkich \(\theta\); wte
 <li>Dla rozkładu normalnego ze znaną średnią \(0\): \(\hat\sigma^2=\tfrac1n\sum X_i^2\) ma \(\operatorname{Var}=\dfrac{2\sigma^4}n\).</li>
 </ul>
 <p class="use">Użyte w zad. 34, 41.</p>
+<p><b>Przykład.</b> Dla \(n=10\): \(\operatorname{Var}(2\bar X)=\tfrac{\theta^2}{30}\), a \(\operatorname{Var}\!\left(\tfrac{11}{10}\max X_i\right)=\tfrac{\theta^2}{120}\) – drugi estymator jest lepszy.</p>
 </div>
 
 <h3>Przedziały ufności</h3>
 <div class="bx def"><span class="t">Definicja 9.1 – przedział ufności</span>
 <p>Przedział \([L,U]\), którego końce są funkcjami próby, jest przedziałem ufności dla \(\theta\) na poziomie \(1-\alpha\), gdy \(P_\theta(L\le\theta\le U)\ge1-\alpha\) dla każdego \(\theta\).</p>
 <p class="use">Użyte w zad. 36, 38.</p>
+<p><b>Przykład.</b> Przedział ufności na poziomie \(0{,}95\) zawiera prawdziwe \(\theta\) w około \(95\%\) powtórzeń doświadczenia – to własność procedury, a nie jednego obliczonego przedziału.</p>
 </div>
 <div class="bx met"><span class="t">Metoda 9.2 – konstrukcja przez funkcję centralną</span>
 <ol>
@@ -421,17 +465,20 @@ Z dwóch estymatorów żaden nie musi być lepszy dla wszystkich \(\theta\); wte
 </ul>
 <p>Symbole \(t_{k,p}\) i \(\chi^2_{k,p}\) oznaczają kwantyle rzędu \(p\) rozkładów Studenta i \(\chi^2\) o \(k\) stopniach swobody.</p>
 <p class="use">Użyte w zad. 38.</p>
+<p><b>Przykład.</b> \(n=25\), \(\bar x=50\), \(\sigma=10\), \(\alpha=0{,}05\): \(50\pm1{,}96\cdot\tfrac{10}5=[46{,}08;\ 53{,}92]\).</p>
 </div>
 <div class="bx fact"><span class="t">Fakt 9.4 – przedział asymptotyczny dla prawdopodobieństwa sukcesu</span>
 <p>Dla dużego \(n\) i częstości \(\hat p\) (z centralnego twierdzenia granicznego):
 \[\hat p\pm z_{1-\alpha/2}\sqrt{\frac{\hat p(1-\hat p)}n}.\]</p>
 <p class="use">Poza rozwiązaniami (materiał standardowy).</p>
+<p><b>Przykład.</b> \(n=400\), \(\hat p=0{,}3\): \(0{,}3\pm1{,}96\sqrt{\tfrac{0{,}21}{400}}\approx0{,}3\pm0{,}045\), czyli \([0{,}255;\ 0{,}345]\).</p>
 </div>
 <div class="bx fact"><span class="t">Fakt 9.5 – przedział dla mediany</span>
 <p>Dla rozkładu ciągłego z medianą \(m\) liczba obserwacji \(\le m\) ma rozkład \(B\bigl(n,\tfrac12\bigr)\), więc
 \[P(X_{k:n}\le m\le X_{l:n})=\sum_{j=k}^{l-1}\binom nj2^{-n}.\]
 Wynik nie zależy od rozkładu (metoda nieparametryczna).</p>
 <p class="use">Użyte w zad. 36.</p>
+<p><b>Przykład.</b> \(n=10\), \(k=2\), \(l=9\): \(P=\sum_{j=2}^8\binom{10}j2^{-10}=\tfrac{1024-22}{1024}\approx0{,}979\).</p>
 </div>
 <h3>Testowanie hipotez</h3>
 <div class="bx def"><span class="t">Definicja 10.1 – test statystyczny</span>
@@ -443,6 +490,7 @@ Wynik nie zależy od rozkładu (metoda nieparametryczna).</p>
 <li><b>Wartość \(p\):</b> najmniejszy poziom istotności, przy którym dane prowadzą do odrzucenia \(H_0\).</li>
 </ul>
 <p class="use">Poza rozwiązaniami (materiał standardowy).</p>
+<p><b>Przykład.</b> \(H_0\): lek nie działa. Błąd I rodzaju to uznanie, że działa, gdy nie działa (prawdopodobieństwo co najwyżej \(\alpha\)); błąd II rodzaju – przeoczenie działającego leku.</p>
 </div>
 <div class="bx fact"><span class="t">Fakt 10.2 – testy dla średniej rozkładu normalnego</span>
 <p>\(H_0:\mu=\mu_0\). Statystyka testowa:</p>
@@ -452,10 +500,12 @@ Wynik nie zależy od rozkładu (metoda nieparametryczna).</p>
 </ul>
 <p>Dla alternatywy dwustronnej odrzucamy \(H_0\), gdy \(|Z|>z_{1-\alpha/2}\), dla jednostronnej \(\mu>\mu_0\), gdy \(Z>z_{1-\alpha}\). Przedział ufności i test są dualne: \(H_0\) odrzucamy dokładnie wtedy, gdy \(\mu_0\) nie należy do przedziału ufności.</p>
 <p class="use">Poza rozwiązaniami (materiał standardowy).</p>
+<p><b>Przykład.</b> \(n=25\), \(\bar x=52\), \(\sigma=5\), \(\mu_0=50\): \(Z=\tfrac{52-50}{5/5}=2&gt;1{,}96\), więc na poziomie \(0{,}05\) (test dwustronny) odrzucamy \(H_0\).</p>
 </div>
 <div class="bx thm"><span class="t">Twierdzenie 10.3 – lemat Neymana–Pearsona</span>
 <p>Dla prostych hipotez \(H_0:\theta=\theta_0\) i \(H_1:\theta=\theta_1\) najmocniejszy test na poziomie \(\alpha\) odrzuca \(H_0\), gdy iloraz wiarogodności \(\dfrac{L(\theta_1)}{L(\theta_0)}\) przekracza stałą dobraną tak, by prawdopodobieństwo błędu I rodzaju wynosiło \(\alpha\).</p>
 <p class="use">Poza rozwiązaniami (materiał standardowy).</p>
+<p><b>Przykład.</b> Próba z \(N(\mu,1)\), \(H_0:\mu=0\), \(H_1:\mu=1\): iloraz wiarogodności rośnie z \(\bar x\), więc test najmocniejszy odrzuca \(H_0\) dla \(\bar x&gt;\tfrac{1{,}645}{\sqrt n}\) (poziom \(0{,}05\)).</p>
 </div>
 
 <h3>Katalog przykładów i kontrprzykładów</h3>
@@ -496,20 +546,24 @@ Wynik nie zależy od rozkładu (metoda nieparametryczna).</p>
 <div class="bx thm"><span class="t">Twierdzenie 12.1 – wzór Newtona–Leibniza i całka niewłaściwa</span>
 <p>Jeśli \(F\) jest funkcją pierwotną funkcji ciągłej \(f\) na \([a,b]\), to \(\displaystyle\int_a^bf=F(b)-F(a)\). Całka niewłaściwa to \(\displaystyle\int_a^\infty f=\lim_{T\to\infty}\int_a^Tf\); jest zbieżna, gdy ta granica jest skończona.</p>
 <p class="use">Użyte w zad. 7, 10, 12, 22, 26, 41.</p>
+<p><b>Przykład.</b> \(\int_0^2x^2\,dx=\tfrac83\); \(\ \int_1^\infty\tfrac{dx}{x^2}=\lim_{b\to\infty}\left(1-\tfrac1b\right)=1\).</p>
 </div>
 <div class="bx thm"><span class="t">Twierdzenie 12.2 – całkowanie przez podstawienie</span>
 <p>Jeśli \(\varphi\) jest klasy \(C^1\), a \(f\) ciągła, to
 \[\int_a^bf(\varphi(t))\,\varphi'(t)\,dt=\int_{\varphi(a)}^{\varphi(b)}f(s)\,ds\]
 (także dla całek niewłaściwych).</p>
 <p class="use">Użyte w zad. 14.</p>
+<p><b>Przykład.</b> \(\int_0^12x\,e^{x^2}dx=\int_0^1e^s\,ds=e-1\) (podstawienie \(s=x^2\)).</p>
 </div>
 <div class="bx thm"><span class="t">Twierdzenie 12.3 – całkowanie przez części</span>
 \[\int_a^buv'\,dx=\bigl[uv\bigr]_a^b-\int_a^bu'v\,dx.\]
 <p class="use">Użyte w zad. 15, 26.</p>
+<p><b>Przykład.</b> \(\int_0^1xe^x\,dx=\bigl[xe^x\bigr]_0^1-\int_0^1e^x\,dx=e-(e-1)=1\).</p>
 </div>
 <div class="bx fact"><span class="t">Fakt 12.4 – reguła łańcuchowa</span>
 <p>\((g\circ r)'(y)=g'(r(y))\,r'(y)\); stosuje się ją do różniczkowania dystrybuanty zmiennej \(Y=g(X)\).</p>
 <p class="use">Użyte w zad. 14.</p>
+<p><b>Przykład.</b> \(\left(e^{x^2}\right)'=2xe^{x^2}\). Dla \(Y=X^2\), \(X\sim U(0,1)\): \(F_Y(y)=\sqrt y\), więc \(f_Y(y)=\tfrac1{2\sqrt y}\).</p>
 </div>
 <div class="bx cor"><span class="t">Wniosek 12.5 – znak pochodnej a ekstremum</span>
 <p>Jeśli \(f\) jest ciągła w \(c\), \(f'>0\) na lewo od \(c\) i \(f'&lt;0\) na prawo od \(c\), to \(f(c)\) jest wartością największą (analogicznie dla najmniejszej). W szczególności funkcja wklęsła (\(f''&lt;0\)) ma w punkcie, w którym \(f'=0\), maksimum.</p>
@@ -520,10 +574,12 @@ Wynik nie zależy od rozkładu (metoda nieparametryczna).</p>
 \[\sum_{n\ge0}q^n=\frac1{1-q},\qquad\sum_{k\ge1}kq^{k-1}=\frac1{(1-q)^2},\qquad\sum_{k\ge2}k(k-1)q^{k-2}=\frac2{(1-q)^3}\]
 (różniczkowanie wyraz po wyrazie).</p>
 <p class="use">Użyte w zad. 17.</p>
+<p><b>Przykład.</b> \(\sum_{k\ge1}k\left(\tfrac12\right)^{k-1}=\dfrac1{(1-\frac12)^2}=4\).</p>
 </div>
 <div class="bx fact"><span class="t">Fakt 12.7 – szereg wykładniczy</span>
 \[e^x=\sum_{k=0}^\infty\frac{x^k}{k!}\qquad\text{dla każdego }x\in\mathbb R.\]
 <p class="use">Użyte w zad. 16.</p>
+<p><b>Przykład.</b> \(\sum_{k\ge0}\tfrac{2^k}{k!}=e^2\); stąd \(\sum_ke^{-\lambda}\tfrac{\lambda^k}{k!}=1\) dla rozkładu Poissona.</p>
 </div>
 <div class="bx fact"><span class="t">Fakt 12.8 – szereg harmoniczny i iloczyn teleskopowy</span>
 <ul>
@@ -531,6 +587,7 @@ Wynik nie zależy od rozkładu (metoda nieparametryczna).</p>
 <li>\(\displaystyle\prod_{n=N+1}^M\frac n{n+1}=\frac{N+1}{M+1}\).</li>
 </ul>
 <p class="use">Użyte w zad. 2.</p>
+<p><b>Przykład.</b> \(\prod_{n=2}^9\tfrac n{n+1}=\tfrac23\cdot\tfrac34\cdots\tfrac9{10}=\tfrac2{10}=\tfrac15\).</p>
 </div>
 <div class="bx fact"><span class="t">Fakt 12.9 – granice ciągów</span>
 <ul>
@@ -539,10 +596,12 @@ Wynik nie zależy od rozkładu (metoda nieparametryczna).</p>
 <li>Przecięcie skończenie wielu zdarzeń o prawdopodobieństwie \(1\) ma prawdopodobieństwo \(1\), więc te same reguły działają dla zbieżności prawie na pewno.</li>
 </ul>
 <p class="use">Użyte w zad. 26 (ciąg monotoniczny), 28 (iloraz granic).</p>
+<p><b>Przykład.</b> \(\left(1+\tfrac1n\right)\cdot\tfrac{2n}{n+1}\to1\cdot2=2\).</p>
 </div>
 <div class="bx fact"><span class="t">Fakt 12.10 – wzór dwumianowy Newtona, współczynnik dwumianowy</span>
 \[(a+b)^n=\sum_{k=0}^n\binom nk a^kb^{n-k},\qquad\binom nk=\frac{n!}{k!(n-k)!},\]
 <p>gdzie \(\binom nk\) to liczba \(k\)-elementowych podzbiorów zbioru \(n\)-elementowego.</p>
 <p class="use">Użyte w zad. 3, 5, 6, 15, 25, 31, 36, 40.</p>
+<p><b>Przykład.</b> \((a+b)^3=a^3+3a^2b+3ab^2+b^3\); zbiór \(5\)-elementowy ma \(\binom52=10\) podzbiorów \(2\)-elementowych.</p>
 </div>
 `;

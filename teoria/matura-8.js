@@ -18,13 +18,15 @@
 <tr><td>prosta i płaszczyzna</td><td>prosta <b>leży</b> w płaszczyźnie, jest do niej <b>równoległa</b> albo ją <b>przecina</b> w jednym punkcie</td></tr>
 <tr><td>dwie płaszczyzny</td><td><b>równoległe</b> albo przecinają się wzdłuż <b>prostej</b> (jak dwie ściany bryły wzdłuż krawędzi)</td></tr>
 </tbody></table></div>
+<p><b>Przykład.</b> W sześcianie \(ABCDEFGH\) (\(E\) nad \(A\)) krawędzie \(AB\) i \(EF\) są równoległe, \(AB\) i \(BC\) się przecinają, a \(AB\) i \(CG\) są skośne.</p>
 </div>
 <div class="bx def"><span class="t">Prostopadłość</span>
 <ul>
 <li>Prosta jest <b>prostopadła do płaszczyzny</b>, gdy jest prostopadła do każdej prostej leżącej w tej płaszczyźnie.</li>
-<li><b>Wystarczą dwie proste:</b> jeśli prosta \(k\) jest prostopadła do dwóch <i>przecinających się</i> prostych płaszczyzny \(\pi\), to \(k\perp\pi\) (dowód niżej). Na tym opiera się większość dowodów prostopadłości w ostrosłupach i graniastosłupach.</li>
+<li><b>Wystarczą dwie proste:</b> jeśli prosta \(k\) jest prostopadła do dwóch <i>przecinających się</i> prostych płaszczyzny \(\pi\), to \(k\perp\pi\). Na tym opiera się większość dowodów prostopadłości w ostrosłupach i graniastosłupach.</li>
 <li><b>Odległość punktu od płaszczyzny</b> to długość odcinka prostopadłego do płaszczyzny, który łączy punkt z płaszczyzną. Jego koniec w płaszczyźnie to <b>rzut prostokątny</b> punktu. Wysokość bryły jest właśnie taką odległością.</li>
 </ul>
+<p><b>Przykład.</b> W sześcianie krawędź \(AE\) jest prostopadła do przecinających się krawędzi \(AB\) i \(AD\), więc \(AE\perp\) podstawa \(ABCD\), a zatem także \(AE\perp AC\).</p>
 </div>
 <div class="bx thm"><span class="t">Trzy rodzaje kątów</span>
 <ul>
@@ -40,30 +42,7 @@
 \[\ell\perp k\iff\ell\perp k'.\]</p>
 <p><b>Prościej:</b> prosta z płaszczyzny jest prostopadła do prostej \(k\) wtedy i tylko wtedy, gdy jest prostopadła do rzutu prostej \(k\) na tę płaszczyznę.</p>
 <p><b>Najczęstsze zastosowanie.</b> \(SO\) jest wysokością ostrosłupa, a punkt \(M\) leży na krawędzi podstawy \(AB\) i \(OM\perp AB\). Odcinek \(OM\) jest rzutem odcinka \(SM\) na podstawę, więc także \(SM\perp AB\). Zatem \(SM\) jest wysokością ściany \(ABS\), a <b>kąt \(SMO\) jest kątem nachylenia tej ściany do podstawy</b>.</p>
-</div>
-<div class="bx pf" data-pf="zr10"><span class="t">Dowód twierdzenia o prostej prostopadłej do płaszczyzny</span>
-<div class="wf"><div>
-<p><b>Twierdzenie.</b> Jeśli prosta \(k\) jest prostopadła do dwóch przecinających się prostych \(a\), \(b\) leżących w płaszczyźnie \(\pi\), to jest prostopadła do każdej prostej leżącej w \(\pi\), czyli do płaszczyzny \(\pi\).</p>
-<p><b>Dowód.</b> Prostopadłość prostych zależy tylko od ich kierunków, więc po równoległym przesunięciu możemy założyć, że \(k\), \(a\), \(b\) przechodzą przez wspólny punkt \(O\). Niech \(c\) będzie dowolną prostą w \(\pi\) przechodzącą przez \(O\). Na \(k\) wybierzmy punkty \(A\) i \(A'\) po przeciwnych stronach \(O\), tak by \(|OA|=|OA'|\). Poprowadźmy w \(\pi\) prostą \(\ell\), która przecina \(a\), \(b\), \(c\) w punktach \(P\), \(Q\), \(R\) (rysunek).</p>
-<ul>
-<li>W trójkącie \(APA'\) odcinek \(PO\) jest prostopadły do \(AA'\) i dzieli go na połowy, więc trójkąt jest równoramienny: \(|PA|=|PA'|\). Tak samo \(|QA|=|QA'|\).</li>
-<li>Trójkąty \(APQ\) i \(A'PQ\) są przystające (bbb: \(|PA|=|PA'|\), \(|QA|=|QA'|\), wspólny bok \(PQ\)), więc \(\angle APQ=\angle A'PQ\).</li>
-<li>Trójkąty \(APR\) i \(A'PR\) są więc przystające (bkb: \(|PA|=|PA'|\), wspólny bok \(PR\), równe kąty przy \(P\)), skąd \(|RA|=|RA'|\).</li>
-<li>W trójkącie równoramiennym \(ARA'\) odcinek \(RO\) jest środkową poprowadzoną do podstawy, więc jest też wysokością: \(RO\perp AA'\), czyli \(c\perp k\).</li>
-</ul>
-<p>Prosta \(c\) była dowolna, więc \(k\) jest prostopadła do każdej prostej płaszczyzny \(\pi\). \(\blacksquare\)</p>
-<p class="note">Jeśli \(R\) leży na przedłużeniu odcinka \(PQ\) poza \(P\), kąty \(APR\) i \(A'PR\) są uzupełnieniami równych kątów do \(180^\circ\), więc też są równe.</p>
-</div><div class="fg"><svg class="fig" viewBox="0 0 320 200" width="400" height="250" role="img" aria-label="Prosta k prostopadła do prostych a i b płaszczyzny π; punkty A i A′ leżą symetrycznie względem O, a punkty P, Q, R leżą na jednej prostej ℓ w płaszczyźnie π"><polygon class="f" points="20,150 250,150 320,66 90,66"/><polygon class="s" points="20,150 250,150 320,66 90,66"/><line class="s" x1="78" y1="108" x2="266.6" y2="108"/><line class="s" x1="143.4" y1="139.9" x2="198" y2="74.4"/><line class="s" x1="132" y1="119.8" x2="251.4" y2="82.8"/><line class="p" x1="266.2" y1="118.1" x2="182.2" y2="64.3"/><line class="a" x1="170" y1="33" x2="170" y2="108"/><line class="a d" x1="170" y1="108" x2="170" y2="183"/><line class="s d w" x1="170" y1="33" x2="250.5" y2="108"/><line class="s d w" x1="170" y1="183" x2="250.5" y2="108"/><line class="s d w" x1="170" y1="33" x2="198" y2="74.4"/><line class="s d w" x1="170" y1="183" x2="198" y2="74.4"/><line class="s d w" x1="170" y1="33" x2="224.2" y2="91.2"/><line class="s d w" x1="170" y1="183" x2="224.2" y2="91.2"/><path class="s w" d="M170,101 L177,101 L177,108"/><circle class="dot" cx="170" cy="33" r="2.6"/><circle class="dot" cx="170" cy="183" r="2.6"/><circle class="dot" cx="250.5" cy="108" r="2.6"/><circle class="dot" cx="198" cy="74.4" r="2.6"/><circle class="dot" cx="224.2" cy="91.2" r="2.6"/><circle class="dot" cx="170" cy="108" r="2.6"/><text x="163" y="37" text-anchor="end">A</text><text x="163" y="187" text-anchor="end">A′</text><text x="161" y="122" text-anchor="end">O</text><text x="257.5" y="122" text-anchor="start">P</text><text x="191" y="88.4" text-anchor="end">Q</text><text x="231.2" y="85.2" text-anchor="start">R</text><text class="ac" x="177" y="25" text-anchor="start">k</text><text class="b" x="270" y="112" text-anchor="start">a</text><text class="b" x="207" y="72.4" text-anchor="start">b</text><text class="b" x="257.4" y="84.8" text-anchor="start">c</text><text x="50" y="144.6" text-anchor="middle">π</text><text class="pn" x="274.2" y="122.1" text-anchor="start">ℓ</text></svg></div></div>
-</div>
-<div class="bx pf" data-pf="zr11"><span class="t">Dowód twierdzenia o trzech prostych prostopadłych</span>
-<div class="wf"><div>
-<p><b>Twierdzenie.</b> Niech prosta \(k\) przecina płaszczyznę \(\pi\) w punkcie \(P\) i nie jest do niej ani prostopadła, ani równoległa; niech \(k'\) będzie rzutem prostokątnym \(k\) na \(\pi\), a \(\ell\) – prostą leżącą w \(\pi\) i przechodzącą przez \(P\). Wtedy \(\ell\perp k\iff\ell\perp k'\).</p>
-<p><b>Dowód.</b> Wybierzmy na \(k\) punkt \(A\ne P\) i niech \(B\) będzie jego rzutem prostokątnym na \(\pi\). Wtedy \(B\in k'\) i \(AB\perp\pi\), więc \(AB\perp\ell\). Proste \(AB\), \(AP=k\) i \(BP=k'\) leżą w jednej płaszczyźnie \(\sigma\) (przechodzącej przez \(A\), \(B\), \(P\)).</p>
-<ul>
-<li>\((\Rightarrow)\) Jeśli \(\ell\perp k\), to \(\ell\) jest prostopadła do dwóch przecinających się prostych \(AB\) i \(AP\) płaszczyzny \(\sigma\) (prostopadłość zależy tylko od kierunku, więc możemy przesunąć \(\ell\) do punktu \(A\)). Z poprzedniego twierdzenia \(\ell\perp\sigma\), a stąd \(\ell\perp BP=k'\).</li>
-<li>\((\Leftarrow)\) Jeśli \(\ell\perp k'\), to \(\ell\) jest prostopadła do przecinających się prostych \(AB\) i \(BP\) płaszczyzny \(\sigma\), więc \(\ell\perp\sigma\) i \(\ell\perp AP=k\). \(\blacksquare\)</li>
-</ul>
-</div><div class="fg"><svg class="fig" viewBox="0 0 320 186" width="384" height="223" role="img" aria-label="Twierdzenie o trzech prostych prostopadłych: prosta k przecina płaszczyznę π w punkcie P, jej rzut prostokątny k′ to prosta PB, a prosta ℓ leży w π i przechodzi przez P"><polygon class="f" points="16,154 246,154 300,98 70,98"/><polygon class="s" points="16,154 246,154 300,98 70,98"/><line class="p" x1="53.5" y1="128.8" x2="251.5" y2="128.8"/><line class="s" x1="163.2" y1="154" x2="214.5" y2="100.8"/><line class="a" x1="187.5" y1="128.8" x2="75.5" y2="24.8"/><line class="s d w" x1="75.5" y1="24.8" x2="75.5" y2="128.8"/><path class="s w" d="M75.5,120.8 L83.5,120.8 L83.5,128.8"/><path class="s w" d="M195.5,128.8 L201.1,123 L193.1,123"/><circle class="dot" cx="187.5" cy="128.8" r="2.8"/><circle class="dot" cx="75.5" cy="24.8" r="2.8"/><circle class="dot" cx="75.5" cy="128.8" r="2.8"/><text x="191.5" y="143.8" text-anchor="start">P</text><text x="71.5" y="143.8" text-anchor="end">B</text><text x="67.5" y="28.8" text-anchor="end">A</text><text class="ac" x="139.5" y="72.8" text-anchor="start">k</text><text class="pn" x="255.5" y="132.8" text-anchor="start">k′</text><text class="b" x="220.5" y="102.8" text-anchor="start">ℓ</text><text x="40.9" y="150.3" text-anchor="middle">π</text></svg></div></div>
+<p><b>Przykład.</b> W sześcianie \(ABCDEFGH\) rzutem przekątnej \(EC\) na podstawę jest \(AC\). Prosta \(\ell\) przez \(C\) równoległa do \(BD\) jest prostopadła do \(AC\) (przekątne kwadratu), więc \(\ell\perp EC\), czyli \(BD\perp EC\).</p>
 </div>
 
 <h3>Graniastosłupy</h3>
@@ -72,6 +51,7 @@
 <li>\(V=P_p\cdot H\), \(\ P_c=2P_p+P_b\), gdzie \(P_p\) to pole podstawy, \(H\) – wysokość, a \(P_b\) – pole powierzchni bocznej (suma pól ścian bocznych).</li>
 <li><b>Graniastosłup prosty</b> ma krawędzie boczne prostopadłe do podstaw, więc jego ściany boczne są prostokątami, a \(P_b\) to obwód podstawy razy \(H\). <b>Graniastosłup prawidłowy</b> to graniastosłup prosty, którego podstawą jest wielokąt foremny.</li>
 </ul>
+<p><b>Przykład.</b> Graniastosłup prawidłowy trójkątny o krawędzi podstawy \(4\) i wysokości \(10\): \(P_p=4\sqrt3\), \(V=40\sqrt3\), \(P_b=3\cdot4\cdot10=120\), \(P_c=120+8\sqrt3\).</p>
 </div>
 <div class="bx thm"><span class="t">Prostopadłościan i sześcian</span>
 <ul>
@@ -79,6 +59,7 @@
 <li><b>Sześcian</b> o krawędzi \(a\): \(V=a^3\), \(\ P_c=6a^2\), przekątna ściany \(a\sqrt2\), przekątna bryły \(a\sqrt3\).</li>
 </ul>
 <p>Wzór na \(d\) to dwa razy twierdzenie Pitagorasa: najpierw przekątna podstawy \(\sqrt{a^2+b^2}\), potem trójkąt prostokątny z krawędzią \(c\).</p>
+<p><b>Przykład.</b> Prostopadłościan \(2\times3\times6\): \(V=36\), \(P_c=2(6+18+12)=72\), \(d=\sqrt{4+9+36}=7\). Sześcian o krawędzi \(5\): przekątna \(5\sqrt3\).</p>
 </div>
 <div class="fg"><svg class="fig" viewBox="0 0 244 186" width="244" height="186" role="img" aria-label="Prostopadłościan: przekątna bryły d, przekątna podstawy i kąt β nachylenia przekątnej bryły do podstawy"><polygon class="f" points="30,152 180,120 180,38"/><line class="s" x1="30" y1="152" x2="132" y2="152"/><line class="s" x1="132" y1="152" x2="180" y2="120"/><line class="s" x1="30" y1="152" x2="30" y2="70"/><line class="s" x1="132" y1="152" x2="132" y2="70"/><line class="s" x1="180" y1="120" x2="180" y2="38"/><line class="s" x1="30" y1="70" x2="132" y2="70"/><line class="s" x1="132" y1="70" x2="180" y2="38"/><line class="s" x1="180" y1="38" x2="78" y2="38"/><line class="s" x1="78" y1="38" x2="30" y2="70"/><line class="s d w" x1="78" y1="120" x2="30" y2="152"/><line class="s d w" x1="78" y1="120" x2="180" y2="120"/><line class="s d w" x1="78" y1="120" x2="78" y2="38"/><line class="a" x1="30" y1="152" x2="180" y2="38"/><line class="p d" x1="30" y1="152" x2="180" y2="120"/><path class="a" d="M65.2,144.5 A36,36 0 0 0 58.7,130.2"/><text x="24" y="166" text-anchor="end">A</text><text x="136" y="166" text-anchor="start">B</text><text x="187" y="124" text-anchor="start">C</text><text x="186" y="40" text-anchor="start">C′</text><text class="ac" x="80" y="168" text-anchor="middle">a</text><text class="ac" x="168" y="146" text-anchor="start">b</text><text class="ac" x="140" y="114" text-anchor="start">c</text><text class="ac" x="88" y="88" text-anchor="end">d</text><text class="ac" x="82" y="128" text-anchor="middle">β</text></svg></div>
 <p class="note">Kąt \(\beta\) nachylenia przekątnej bryły do podstawy leży w trójkącie prostokątnym \(ACC\prime\): \(\operatorname{tg}\beta=\dfrac{c}{\sqrt{a^2+b^2}}\).</p>
@@ -93,6 +74,7 @@
 <li><b>Wysokość</b> \(H\) to odcinek od wierzchołka \(S\) prostopadły do podstawy. Jego koniec \(O\) w płaszczyźnie podstawy to <b>spodek wysokości</b>.</li>
 <li><b>Ostrosłup prawidłowy</b> ma w podstawie wielokąt foremny, a spodek wysokości jest środkiem tego wielokąta. Wtedy wszystkie krawędzie boczne są równe, a ściany boczne są przystającymi trójkątami równoramiennymi.</li>
 </ul>
+<p><b>Przykład.</b> Ostrosłup o podstawie prostokąta \(3\times4\) i wysokości \(5\): \(V=\tfrac13\cdot12\cdot5=20\).</p>
 </div>
 <div class="bx thm"><span class="t">Ostrosłup prawidłowy: cztery trójkąty prostokątne</span>
 <div class="wf"><div>
@@ -105,6 +87,7 @@
 </ul>
 </div><div class="fg"><svg class="fig" viewBox="0 0 300 252" width="300" height="252" role="img" aria-label="Ostrosłup prawidłowy czworokątny ABCDS: O – środek podstawy, M – środek krawędzi AB; wysokość H, promień r okręgu wpisanego w podstawę (OM) i wysokość ściany bocznej h_s (SM) tworzą trójkąt SOM, a wysokość H, promień R okręgu opisanego (OA) i krawędź boczna b (SA) tworzą trójkąt SOA"><polygon class="f" points="149,93 149,193 115,218"/><line class="s" x1="40" y1="218" x2="190" y2="218"/><line class="s" x1="190" y1="218" x2="258" y2="168"/><line class="p" x1="149" y1="93" x2="40" y2="218"/><line class="s" x1="149" y1="93" x2="190" y2="218"/><line class="s" x1="149" y1="93" x2="258" y2="168"/><line class="s d w" x1="40" y1="218" x2="108" y2="168"/><line class="s d w" x1="108" y1="168" x2="258" y2="168"/><line class="s d w" x1="149" y1="93" x2="108" y2="168"/><line class="a d" x1="149" y1="93" x2="149" y2="193"/><line class="a d" x1="149" y1="193" x2="115" y2="218"/><line class="a" x1="149" y1="93" x2="115" y2="218"/><line class="p d" x1="149" y1="193" x2="40" y2="218"/><circle class="dot" cx="149" cy="193" r="2.6"/><text x="149" y="85" text-anchor="middle">S</text><text x="33" y="230" text-anchor="end">A</text><text x="196" y="232" text-anchor="start">B</text><text x="266" y="172" text-anchor="start">C</text><text x="101" y="164" text-anchor="end">D</text><text x="158" y="190" text-anchor="start">O</text><text x="108" y="234" text-anchor="end">M</text><text class="ac" x="156" y="149" text-anchor="start">H</text><text class="ac" x="141" y="213" text-anchor="end">r</text><text class="ac" x="117" y="186" text-anchor="end">h<tspan dy="3" font-size="10">s</tspan></text><text class="pn" x="91" y="150" text-anchor="end">b</text><text class="pn" x="96" y="200" text-anchor="middle">R</text></svg></div></div>
 <p class="note">Niebieskie odcinki \(H\), \(r\), \(h_s\) tworzą trójkąt \(SOM\) (zacieniowany), a czerwone \(R\), \(b\) razem z \(H\) – trójkąt \(SOA\).</p>
+<p><b>Przykład.</b> Ostrosłup prawidłowy trójkątny o krawędzi podstawy \(6\) i wysokości \(4\): \(r=\sqrt3\), \(R=2\sqrt3\), \(h_s=\sqrt{16+3}=\sqrt{19}\), \(b=\sqrt{16+12}=2\sqrt7\), \(\operatorname{tg}\beta=\tfrac4{\sqrt3}\).</p>
 </div>
 <div class="tw"><table>
 <thead><tr><th>Podstawa (bok \(a\))</th><th class="c">promień wpisanego \(r\)</th><th class="c">promień opisanego \(R\)</th><th class="c">pole</th></tr></thead>
@@ -133,7 +116,8 @@
 <li><b>Kula wpisana i kula opisana mają wspólny środek \(S\)</b> na wysokości \(DO\). Dzieli on tę wysokość w stosunku \(3:1\): \(|SO|=r_k=\dfrac H4=\dfrac{a\sqrt6}{12}\), \(|SD|=R_k=\dfrac{3H}4=\dfrac{a\sqrt6}4\).</li>
 </ul>
 </div><div class="fg"><svg class="fig" viewBox="0 0 256 246" width="256" height="246" role="img" aria-label="Przekrój czworościanu foremnego płaszczyzną DCM, gdzie M jest środkiem krawędzi AB: okrąg to przekrój kuli wpisanej, styczny do podstawy w punkcie O; jej środek S leży na wysokości DO, odcinek SO ma długość r_k (jedna czwarta wysokości), a odcinek SD długość R_k (trzy czwarte wysokości)"><polygon class="f" points="30,222 161.6,35.8 227.5,222"/><circle class="s f2" cx="161.6" cy="175.5" r="46.5"/><polygon class="s" points="30,222 161.6,35.8 227.5,222"/><line class="a d" x1="161.6" y1="35.8" x2="161.6" y2="222"/><path class="s w" d="M161.6,215 L168.6,215 L168.6,222"/><circle class="dot" cx="161.6" cy="175.5" r="2.4"/><circle class="dot" cx="161.6" cy="222" r="2.4"/><text x="161.6" y="27.8" text-anchor="middle">D</text><text x="24" y="236" text-anchor="end">C</text><text x="233.5" y="236" text-anchor="start">M</text><text x="161.6" y="238" text-anchor="middle">O</text><text x="169.6" y="180.5" text-anchor="start">S</text><text class="ac" x="153.6" y="110.6" text-anchor="end">R<tspan dy="3" font-size="10">k</tspan></text><text class="ac" x="153.6" y="203.7" text-anchor="end">r<tspan dy="3" font-size="10">k</tspan></text></svg></div></div>
-<p class="note">Skąd \(r_k=\tfrac H4\)? Kula wpisana dzieli czworościan na cztery ostrosłupy o wierzchołku w \(S\). Ich podstawami są ściany (każda o tym samym polu \(P\)), a wysokościami – promień \(r_k\). Stąd \(V=4\cdot\tfrac13P\,r_k\) i jednocześnie \(V=\tfrac13P\,H\), więc \(r_k=\tfrac H4\). Rysunek przedstawia przekrój płaszczyzną \(DCM\), gdzie \(M\) jest środkiem krawędzi \(AB\).</p>
+<p class="note">Rysunek: przekrój płaszczyzną \(DCM\), gdzie \(M\) jest środkiem krawędzi \(AB\).</p>
+<p><b>Przykład.</b> Dla \(a=6\): \(H=2\sqrt6\), \(V=\dfrac{216\sqrt2}{12}=18\sqrt2\), \(P_c=36\sqrt3\), \(r_k=\dfrac{\sqrt6}2\), \(R_k=\dfrac{3\sqrt6}2\).</p>
 </div>
 
 <h3>Bryły obrotowe: walec, stożek, kula</h3>
@@ -143,6 +127,7 @@
 <li><b>Stożek</b> (promień podstawy \(r\), wysokość \(H\), tworząca \(l\)): \(V=\tfrac13\pi r^2H\), \(\ P_b=\pi rl\), \(\ P_c=\pi r(r+l)\). Zawsze \(l^2=r^2+H^2\) (trójkąt prostokątny o bokach \(r\), \(H\), \(l\)).</li>
 <li><b>Kula</b> (promień \(R\)): \(V=\tfrac43\pi R^3\), \(\ P=4\pi R^2\).</li>
 </ul>
+<p><b>Przykład.</b> Walec \(r=3\), \(H=5\): \(V=45\pi\), \(P_c=2\pi\cdot3\cdot8=48\pi\). Kula \(R=3\): \(V=36\pi\), \(P=36\pi\).</p>
 </div>
 <div class="bx def"><span class="t">Przekrój osiowy i rozwinięcie</span>
 <ul>
@@ -151,6 +136,7 @@
 <li><b>Rozwinięcie powierzchni bocznej stożka</b> to wycinek koła o promieniu \(l\) i łuku długości \(2\pi r\). Kąt wycinka: \(\varphi=\dfrac r l\cdot360^\circ\).</li>
 <li><b>Kula:</b> przekrój osiowy to koło wielkie o promieniu \(R\). Przekrój płaszczyzną odległą o \(d\) od środka kuli to koło o promieniu \(\sqrt{R^2-d^2}\).</li>
 </ul>
+<p><b>Przykład.</b> Stożek \(r=6\), \(H=8\): tworząca \(l=10\), przekrój osiowy to trójkąt o bokach \(10,10,12\), kąt wycinka \(\varphi=\tfrac6{10}\cdot360^\circ=216^\circ\).</p>
 </div>
 <div class="fgs"><div class="fg"><svg class="fig" viewBox="0 0 176 152" width="176" height="152" role="img" aria-label="Przekrój osiowy stożka: promień podstawy r, wysokość H, tworząca l i kąt rozwarcia 2α"><polygon class="f" points="88,14 28,112 148,112"/><polygon class="s" points="88,14 28,112 148,112"/><line class="a d" x1="88" y1="14" x2="88" y2="112"/><path class="s w" d="M96,112 L96,104 L88,104"/><path class="a" d="M73,37.7 A28,28 0 0 0 103,37.7"/><circle class="dot" cx="88" cy="112" r="2.6"/><text class="ac" x="82" y="66" text-anchor="end">H</text><text class="ac" x="118" y="130" text-anchor="middle">r</text><text class="ac" x="132" y="58" text-anchor="start">l</text><text class="ac" x="88" y="56" text-anchor="middle">2α</text><text class="m" x="88" y="148" text-anchor="middle">przekrój osiowy</text></svg></div><div class="fg"><svg class="fig" viewBox="0 0 190 160" width="190" height="160" role="img" aria-label="Rozwinięcie powierzchni bocznej stożka: wycinek koła o promieniu l i łuku długości 2πr, kąt wycinka φ"><path class="s f2" d="M95,36 L11.3,8.8 A88,88 0 1 0 178.7,8.8 Z"/><path class="a" d="M77.9,30.4 A18,18 0 1 0 112.1,30.4"/><text class="ac" x="95" y="80" text-anchor="middle">φ</text><text class="ac" x="49.2" y="15.4" text-anchor="end">l</text><text class="ac" x="95" y="139" text-anchor="middle">łuk 2πr</text><text class="m" x="95" y="156" text-anchor="middle">wycinek koła</text></svg></div></div>
 <div class="bx thm"><span class="t">Stożek ścięty</span>
@@ -173,6 +159,7 @@
 <li><b>Ostrosłup prawidłowy:</b> \(r_k=\dfrac{rH}{r+h_s}\), gdzie \(r\) jest promieniem okręgu wpisanego w podstawę (środek kuli leży na wysokości, na dwusiecznej kąta \(SMO\) w trójkącie \(SOM\)); można też liczyć \(r_k=\dfrac{3V}{P_c}\). Kula opisana: \(R_k=\dfrac{b^2}{2H}\) (jej środek też leży na wysokości).</li>
 <li><b>Czworościan foremny</b> (krawędź \(a\)): \(r_k=\dfrac H4=\dfrac{a\sqrt6}{12}\), \(\ R_k=\dfrac{3H}4=\dfrac{a\sqrt6}4\).</li>
 </ul>
+<p><b>Przykład.</b> Walec \(r=3\), \(H=8\): \(R_k=\sqrt{9+16}=5\). Stożek \(r=3\), \(H=4\), \(l=5\): \(r_k=\tfrac{12}8=\tfrac32\), \(R_k=\tfrac{25}8\).</p>
 </div>
 <div class="bx fact"><span class="t">Objętość wielościanu z kulą wpisaną</span>
 <p>Jeśli kula o promieniu \(r_k\) jest styczna do wszystkich ścian wielościanu, to dzieli go na ostrosłupy o wierzchołku w jej środku i podstawach będących ścianami. Każdy z nich ma wysokość \(r_k\), więc
@@ -189,6 +176,7 @@ To najszybszy sposób na promień kuli wpisanej, gdy znasz \(V\) i \(P_c\).</p>
 <h3>Bryły podobne</h3>
 <div class="bx thm"><span class="t">Skala podobieństwa \(k\)</span>
 <p>Jeśli bryły są podobne w skali \(k\), to wszystkie <b>długości</b> (krawędzie, wysokości, promienie) mnożą się przez \(k\), <b>pola</b> powierzchni przez \(k^2\), a <b>objętości</b> przez \(k^3\).</p>
+<p><b>Przykład.</b> Ostrosłupy podobne w skali \(2\): wysokość \(3\) przechodzi w \(6\), pole powierzchni \(6\) w \(24\), objętość \(5\) w \(40\).</p>
 </div>
 <div class="bx fact"><span class="t">Płaszczyzna równoległa do podstawy</span>
 <div class="wf"><div>
@@ -210,6 +198,7 @@ gdzie \(h\) jest odległością płaszczyzny od wierzchołka, a \(H\) – wysoko
 <li>Płaszczyzna przechodząca przez wierzchołek ostrosłupa daje w przekroju trójkąt.</li>
 <li><b>Przekrój osiowy</b> bryły obrotowej: walec – prostokąt, stożek – trójkąt równoramienny, kula – koło wielkie.</li>
 </ul>
+<p><b>Przykład.</b> Sześcian ma \(6\) ścian, więc jego przekrój ma co najwyżej \(6\) boków (np. sześciokąt foremny); przekrój czworościanu ma co najwyżej \(4\) boki.</p>
 </div>
 <div class="bx met"><span class="t">Jak wyznaczyć przekrój wielościanu</span>
 <ol>

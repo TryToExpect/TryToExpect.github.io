@@ -1,6 +1,7 @@
 (window.THEORY ||= {})['matura-5'] = String.raw`<h3>Pojęcie ciągu</h3>
 <div class="bx def"><span class="t">Definicja</span>
 <p><b>Ciąg nieskończony</b> to funkcja \(a:\mathbb{N}_+\to\mathbb{R}\). Wartość tej funkcji dla liczby \(n\) zapisujemy \(a_n\) i nazywamy <b>\(n\)-tym wyrazem</b> ciągu; sam ciąg oznaczamy \((a_n)\). <b>Ciąg skończony</b> ma dziedzinę \(\{1,2,\dots,N\}\).</p>
+<p><b>Przykład.</b> \(a_n=\dfrac n{n+1}\): \(a_1=\tfrac12\), \(a_2=\tfrac23\), \(a_9=\tfrac9{10}\). Ciąg skończony \((2,4,6,8)\) ma dziedzinę \(\{1,2,3,4\}\).</p>
 </div>
 <p>Ciąg można zadać: <b>wzorem ogólnym</b> (np. \(a_n=\dfrac{2n-1}{n+1}\)), <b>rekurencyjnie</b> (np. \(a_1=1,\ a_{n+1}=2a_n+1\)) albo <b>opisowo</b> (np. „kolejne liczby pierwsze”).</p>
 
@@ -28,6 +29,7 @@
 <h3>Ciąg arytmetyczny</h3>
 <div class="bx def"><span class="t">Definicja</span>
 <p>Ciąg \((a_n)\) jest <b>arytmetyczny</b>, gdy różnica \(a_{n+1}-a_n=r\) jest stała (to <b>różnica ciągu</b>). Dla \(r>0\) ciąg jest rosnący, dla \(r<0\) malejący, dla \(r=0\) stały.</p>
+<p><b>Przykład.</b> \(a_n=3n+1\): \(a_{n+1}-a_n=3\), więc ciąg \(4,7,10,13,\dots\) jest arytmetyczny i rosnący (\(r=3\)). Ciąg \(a_n=n^2\) nie jest arytmetyczny: \(1,4,9\) mają różne różnice.</p>
 </div>
 <div class="bx thm"><span class="t">Wzory</span>
 <div class="two">
@@ -53,6 +55,7 @@
 <h3>Ciąg geometryczny</h3>
 <div class="bx def"><span class="t">Definicja</span>
 <p>Ciąg \((a_n)\) o wyrazach niezerowych jest <b>geometryczny</b>, gdy iloraz \(\dfrac{a_{n+1}}{a_n}=q\) jest stały (to <b>iloraz ciągu</b>), czyli \(a_{n+1}=a_n\cdot q\).</p>
+<p><b>Przykład.</b> \(a_n=5\cdot2^n\): \(\dfrac{a_{n+1}}{a_n}=2\), czyli ciąg \(10,20,40,\dots\) jest geometryczny. Ciąg \((1,-3,9,-27)\) ma iloraz \(q=-3\).</p>
 </div>
 <div class="bx thm"><span class="t">Wzory</span>
 <div class="two">
@@ -68,6 +71,7 @@
 <p><b>Własność symetrii.</b> Jeśli \(k+l=m+p\), to \(a_k\cdot a_l=a_m\cdot a_p\).</p>
 </div>
 </div>
+<p><b>Przykład.</b> \(a_1=3\), \(q=2\): \(a_5=3\cdot2^4=48\), \(S_5=3\cdot\dfrac{1-32}{1-2}=93\). Liczby \(4,x,9\) tworzą ciąg geometryczny, gdy \(x^2=36\), czyli \(x=\pm6\).</p>
 </div>
 <div class="tw"><table>
   <thead><tr><th>Monotoniczność</th><th class="c">\(q>1\)</th><th class="c">\(0&lt;q&lt;1\)</th><th class="c">\(q=1\)</th><th class="c">\(q<0\)</th></tr></thead>
@@ -83,14 +87,6 @@
 
 <div class="fgs"><div class="fg"><svg class="fig" viewBox="0 0 176 160" width="176" height="160" role="img" aria-label="Wyrazy ciagu arytmetycznego a_n=2n-1 leza na jednej prostej"><line class="ax" x1="6" y1="136" x2="167" y2="136"/><polygon class="ah" points="172,136 165,138.9 165,133.1"/><line class="ax" x1="12" y1="142" x2="12" y2="9"/><polygon class="ah" points="12,4 14.9,11 9.1,11"/><text x="170" y="151" text-anchor="end">n</text><text x="21" y="13" text-anchor="start">a</text><polyline class="gr d" points="25,134.1 31.3,128.6 37.6,123 43.9,117.5 50.2,112 56.5,106.4 62.8,100.9 69.1,95.4 75.4,89.8 81.7,84.3 88,78.8 94.3,73.2 100.6,67.7 106.9,62.2 113.2,56.6 119.5,51.1 125.8,45.6 132.1,40 138.4,34.5 144.7,29 151,23.4"/><circle class="dota" cx="33.7" cy="126.5" r="3.2"/><circle class="dota" cx="55.4" cy="107.4" r="3.2"/><circle class="dota" cx="77.1" cy="88.3" r="3.2"/><circle class="dota" cx="98.9" cy="69.2" r="3.2"/><circle class="dota" cx="120.6" cy="50.2" r="3.2"/><circle class="dota" cx="142.3" cy="31.1" r="3.2"/><text class="m" x="88" y="156" text-anchor="middle">arytmetyczny: aₙ = 2n − 1</text></svg></div><div class="fg"><svg class="fig" viewBox="0 0 176 160" width="176" height="160" role="img" aria-label="Wyrazy ciagu geometrycznego a_n=2^(n-1) leza na krzywej wykladniczej"><line class="ax" x1="6" y1="136" x2="167" y2="136"/><polygon class="ah" points="172,136 165,138.9 165,133.1"/><line class="ax" x1="12" y1="142" x2="12" y2="9"/><polygon class="ah" points="12,4 14.9,11 9.1,11"/><text x="170" y="151" text-anchor="end">n</text><text x="21" y="13" text-anchor="start">a</text><polyline class="gr d" points="25,133.3 26.3,133.2 27.5,133.1 28.8,133 30.1,132.8 31.3,132.7 32.6,132.6 33.8,132.4 35.1,132.3 36.4,132.1 37.6,132 38.9,131.8 40.1,131.7 41.4,131.5 42.7,131.3 43.9,131.1 45.2,130.9 46.4,130.7 47.7,130.5 49,130.2 50.2,130 51.5,129.8 52.7,129.5 54,129.2 55.3,129 56.5,128.7 57.8,128.4 59,128.1 60.3,127.7 61.6,127.4 62.8,127 64.1,126.7 65.3,126.3 66.6,125.9 67.8,125.5 69.1,125 70.4,124.6 71.6,124.1 72.9,123.6 74.1,123.1 75.4,122.6 76.7,122 77.9,121.5 79.2,120.9 80.4,120.3 81.7,119.6 83,118.9 84.2,118.2 85.5,117.5 86.7,116.7 88,116 89.3,115.1 90.5,114.3 91.8,113.4 93,112.5 94.3,111.5 95.6,110.5 96.8,109.4 98.1,108.4 99.3,107.2 100.6,106 101.9,104.8 103.1,103.5 104.4,102.2 105.6,100.8 106.9,99.4 108.2,97.9 109.4,96.3 110.7,94.7 111.9,93 113.2,91.2 114.4,89.4 115.7,87.5 117,85.5 118.2,83.4 119.5,81.2 120.7,79 122,76.7 123.3,74.2 124.5,71.7 125.8,69.1 127,66.3 128.3,63.4 129.6,60.5 130.8,57.4 132.1,54.1 133.3,50.8 134.6,47.3 135.9,43.7 137.1,39.9 138.4,35.9 139.6,31.8 140.9,27.5 142.2,23.1 143.4,18.5 144.7,13.6"/><circle class="dotp" cx="33.7" cy="132.5" r="3.2"/><circle class="dotp" cx="55.4" cy="128.9" r="3.2"/><circle class="dotp" cx="77.1" cy="121.8" r="3.2"/><circle class="dotp" cx="98.9" cy="107.7" r="3.2"/><circle class="dotp" cx="120.6" cy="79.3" r="3.2"/><circle class="dotp" cx="142.3" cy="22.6" r="3.2"/><text class="m" x="88" y="156" text-anchor="middle">geometryczny: aₙ = 2ⁿ⁻¹</text></svg></div></div>
 <p class="note">Wyrazy ciągu arytmetycznego leżą na jednej prostej (stały przyrost), a wyrazy ciągu geometrycznego na krzywej wykładniczej (stały iloraz).</p>
-<div class="bx pf" data-pf="zp5"><span class="t">Dowód wzorów na wyraz ogólny i sumę ciągu arytmetycznego i geometrycznego</span>
-<p><b>Ciąg arytmetyczny.</b> Z definicji \(a_{k+1}=a_k+r\), więc \(a_2=a_1+r\), \(a_3=a_1+2r\) i ogólnie \(a_n=a_1+(n-1)r\) (indukcyjnie: jeśli \(a_n=a_1+(n-1)r\), to \(a_{n+1}=a_n+r=a_1+nr\)). Sumę zapisujemy dwa razy – od początku i od końca:
-\[\begin{aligned}S_n&=a_1+a_2+\dots+a_n,\\S_n&=a_n+a_{n-1}+\dots+a_1.\end{aligned}\]
-Dla każdego \(k\) mamy \(a_k+a_{n+1-k}=a_1+(k-1)r+a_1+(n-k)r=2a_1+(n-1)r=a_1+a_n\). Dodając oba zapisy stronami, dostajemy \(n\) jednakowych składników: \(2S_n=n(a_1+a_n)\), czyli \(S_n=\dfrac{a_1+a_n}2\cdot n=\dfrac{2a_1+(n-1)r}2\cdot n\).</p>
-<p><b>Ciąg geometryczny.</b> Z \(a_{k+1}=a_kq\) mamy \(a_2=a_1q\), \(a_3=a_1q^2\), … czyli \(a_n=a_1q^{n-1}\). Dla sumy \(S_n=a_1+a_1q+\dots+a_1q^{n-1}\) pomnóżmy obie strony przez \(q\): \(qS_n=a_1q+a_1q^2+\dots+a_1q^n\). Po odjęciu stronami prawie wszystkie składniki się skracają:
-\[S_n-qS_n=a_1-a_1q^n,\qquad\text{czyli}\qquad S_n(1-q)=a_1(1-q^n).\]
-Dla \(q\ne1\) dostajemy \(S_n=a_1\dfrac{1-q^n}{1-q}\); dla \(q=1\) wszystkie wyrazy są równe \(a_1\) i \(S_n=na_1\). \(\blacksquare\)</p>
-</div>
 
 <h3>Procent składany i lokaty</h3>
 <p>Jeśli wielkość \(K_0\) w każdym okresie rośnie o \(p\%\) (odsetki doliczane są do kapitału), to kolejne wartości tworzą ciąg geometryczny o ilorazie \(q=1+\dfrac p{100}\).</p>
@@ -110,6 +106,7 @@ Dla \(q\ne1\) dostajemy \(S_n=a_1\dfrac{1-q^n}{1-q}\); dla \(q=1\) wszystkie wyr
 <div class="bx def"><span class="t">Definicja</span>
 <p>Liczba \(g\) jest <b>granicą ciągu</b> \((a_n)\), co zapisujemy \(\lim\limits_{n\to\infty}a_n=g\), gdy dla każdego \(\varepsilon>0\) istnieje takie \(N\), że dla wszystkich \(n>N\) zachodzi \(|a_n-g|<\varepsilon\). Ciąg mający granicę skończoną jest <b>zbieżny</b>, w przeciwnym razie – <b>rozbieżny</b>.</p>
 <p><b>Granica niewłaściwa:</b> \(\lim a_n=+\infty\), gdy dla każdego \(M\) prawie wszystkie wyrazy są większe od \(M\) (analogicznie \(-\infty\)).</p>
+<p><b>Przykład.</b> \(\lim\dfrac{2n+1}n=2\), bo \(\left|\dfrac{2n+1}n-2\right|=\dfrac1n&lt;\varepsilon\) dla \(n&gt;\tfrac1\varepsilon\). Ciąg \(a_n=(-1)^n\) jest rozbieżny, a \(\lim n^2=+\infty\).</p>
 </div>
 <p>Granica ciągu, jeśli istnieje, jest jedyna. Każdy ciąg zbieżny jest ograniczony (odwrotnie nie: ciąg \((-1)^n\) jest ograniczony, a nie ma granicy).</p>
 
@@ -117,6 +114,7 @@ Dla \(q\ne1\) dostajemy \(S_n=a_1\dfrac{1-q^n}{1-q}\); dla \(q=1\) wszystkie wyr
 <p>Jeśli \(\lim a_n=a\) i \(\lim b_n=b\) (skończone), to
 \[\lim(a_n\pm b_n)=a\pm b,\quad \lim(a_n\cdot b_n)=a\cdot b,\quad \lim\frac{a_n}{b_n}=\frac{a}{b}\ \ (b\ne0).\]</p>
 <p><b>Twierdzenie o trzech ciągach.</b> Jeśli \(a_n\le b_n\le c_n\) od pewnego miejsca oraz \(\lim a_n=\lim c_n=g\), to \(\lim b_n=g\).</p>
+<p><b>Przykład.</b> \(\lim\left(3+\dfrac1n\right)\cdot\dfrac{2n}{n+1}=3\cdot2=6\). Z trzech ciągów: \(-\tfrac1n\le\dfrac{\sin n}n\le\tfrac1n\), więc \(\lim\dfrac{\sin n}n=0\).</p>
 </div>
 
 <h4>Granice, które warto znać</h4>
@@ -147,13 +145,14 @@ Dla \(q\ne1\) dostajemy \(S_n=a_1\dfrac{1-q^n}{1-q}\); dla \(q=1\) wszystkie wyr
 <h3>Suma nieskończonego ciągu geometrycznego (szereg geometryczny)</h3>
 <div class="bx def"><span class="t">Szereg geometryczny</span>
 <p>Wyrażenie \(a_1+a_1q+a_1q^2+a_1q^3+\dots\) nazywamy <b>szeregiem geometrycznym</b>. Gdy ma ono sumę \(S\), mówimy, że szereg jest <b>zbieżny</b>, a \(S\) jest <b>sumą nieskończonego ciągu geometrycznego</b>. Np. szereg \(2+6+18+54+\dots\) nie jest zbieżny, bo \(q=3\notin(-1,1)\).</p>
+<p><b>Przykład.</b> \(3-1+\tfrac13-\tfrac19+\ldots\): \(q=-\tfrac13\in(-1,1)\), więc szereg jest zbieżny i \(S=\dfrac3{1+\frac13}=\dfrac94\).</p>
 </div>
 <div class="bx thm"><span class="t">Twierdzenie</span>
 <p>Suma wszystkich wyrazów nieskończonego ciągu geometrycznego \((a_n)\) istnieje i jest skończona wtedy i tylko wtedy, gdy \(|q|<1\) (lub \(a_1=0\)). Wynosi wtedy
 \[S=a_1+a_1q+a_1q^2+\dots=\frac{a_1}{1-q}.\]</p>
-<p><i>Skąd ten wzór:</i> \(S_n=a_1\dfrac{1-q^n}{1-q}\), a dla \(|q|<1\) mamy \(q^n\to0\), więc \(S=\lim S_n=\dfrac{a_1}{1-q}\).</p>
 <div class="fg"><svg class="fig" viewBox="0 0 344 160" width="344" height="160" role="img" aria-label="Sumy czesciowe szeregu 1 + 1/2 + 1/4 + ... zblizaja sie do 2"><line class="ax" x1="12" y1="116" x2="333" y2="116"/><polygon class="ah" points="338,116 331,118.9 331,113.1"/><text class="b" x="8" y="16" text-anchor="start">1 + 1/2 + 1/4 + 1/8 + … = 2</text><path class="a" d="M20.0,116 A75.0,75.0 0 0 1 170.0,116"/><path class="p" d="M170.0,116 A37.5,37.5 0 0 1 245.0,116"/><path class="a" d="M245.0,116 A18.8,18.8 0 0 1 282.5,116"/><path class="p" d="M282.5,116 A9.4,9.4 0 0 1 301.2,116"/><path class="a" d="M301.2,116 A4.7,4.7 0 0 1 310.6,116"/><circle class="dot" cx="20" cy="116" r="2.8"/><circle class="dot" cx="170" cy="116" r="2.8"/><circle class="dot" cx="245" cy="116" r="2.8"/><circle class="dot" cx="282.5" cy="116" r="2.8"/><circle class="dot" cx="301.2" cy="116" r="2.8"/><circle class="dot" cx="310.6" cy="116" r="2.8"/><line class="s" x1="320" y1="110" x2="320" y2="122"/><text class="m" x="20" y="136" text-anchor="middle">0</text><text class="m" x="170" y="136" text-anchor="middle">S₁ = 1</text><text class="m" x="245" y="136" text-anchor="middle">S₂ = 1,5</text><text class="m" x="284.5" y="150" text-anchor="middle">S₃ = 1,75</text><text class="b" x="322" y="136" text-anchor="middle">2</text><text class="m" x="95" y="37" text-anchor="middle">a₁ = 1</text><text class="m" x="207.5" y="74" text-anchor="middle">½</text></svg></div>
 <p class="note">Sumy częściowe \(S_n\) zbliżają się do \(\dfrac{a_1}{1-q}=\dfrac1{1-\frac12}=2\).</p>
+<p><b>Przykład.</b> \(0{,}(3)=0{,}3+0{,}03+0{,}003+\ldots=\dfrac{0{,}3}{1-0{,}1}=\dfrac13\). Szereg \(1+2+4+\ldots\) (\(q=2\)) nie ma sumy.</p>
 </div>
 <div class="bx warn"><span class="t">Uwaga: ciąg zbieżny a szereg zbieżny</span>
 <p>Ciąg geometryczny \(a_n=a_1q^{n-1}\) jest <b>zbieżny</b>, gdy \(|q|<1\) lub \(q=1\) (ciąg stały) albo \(a_1=0\). Natomiast <b>suma wyrazów</b> ma sens tylko dla \(|q|<1\). Przy stałym ciągu \(q=1\) wyrazy mają granicę \(a_1\), ale suma jest nieskończona.</p>

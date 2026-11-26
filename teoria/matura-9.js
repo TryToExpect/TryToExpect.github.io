@@ -6,6 +6,7 @@
 <li><b>Reguła dodawania:</b> jeśli zbiory możliwości są rozłączne, to liczby możliwości dodajemy. Dla dowolnych zbiorów: \(|A\cup B|=|A|+|B|-|A\cap B|\).</li>
 <li><b>Zdarzenie przeciwne</b> w zliczaniu: „co najmniej jeden” \(=\) wszystkie \(-\) „żaden”.</li>
 </ul>
+<p><b>Przykład.</b> Kod z jednej litery (\(26\)) i jednej cyfry (\(10\)): \(26\cdot10=260\) kodów. Wybór jednego dania z \(3\) zup lub \(4\) drugich dań: \(3+4=7\).</p>
 </div>
 <div class="bx def"><span class="t">Wzory kombinatoryczne</span>
 <div class="tw"><table>
@@ -17,18 +18,11 @@
 <tr><td><b>Wariacje z powtórzeniami</b> – \(k\)-wyrazowe ciągi o wyrazach z \(n\)-elementowego zbioru</td><td>\(W_n^k=n^k\)</td></tr>
 <tr><td><b>Kombinacje</b> – \(k\)-elementowe podzbiory \(n\)-elementowego zbioru</td><td>\(C_n^k=\dbinom nk=\dfrac{n!}{k!\,(n-k)!}\), \(\ 0\le k\le n\)</td></tr>
 </tbody></table></div>
+<p><b>Przykład.</b> Ustawienia \(4\) osób w kolejce: \(4!=24\); słowa z liter ANNA: \(\tfrac{4!}{2!\,2!}=6\); złoty i srebrny medal dla \(2\) z \(5\) zawodników: \(V_5^2=20\); kody z cyfr \(1,2\) długości \(3\): \(2^3=8\); wybór \(2\) osób z \(5\): \(\binom52=10\).</p>
 </div>
 <div class="bx thm"><span class="t">Własności symbolu Newtona</span>
 \[\binom nk=\binom n{n-k},\qquad\binom nk+\binom n{k+1}=\binom{n+1}{k+1},\qquad\sum_{k=0}^n\binom nk=2^n,\qquad\binom n0=\binom nn=1,\ \binom n1=n.\]
-</div>
-<div class="bx pf" data-pf="zr1"><span class="t">Dowód tożsamości \(\binom nk=\binom{n-1}{k-1}+\binom{n-1}k\) (dla \(1\le k\le n-1\))</span>
-<p>Niech \(X\) będzie zbiorem \(n\)-elementowym i niech \(x\) będzie jednym z jego elementów. Policzmy \(k\)-elementowe podzbiory zbioru \(X\) na dwa sposoby.</p>
-<ul>
-<li>Wszystkich takich podzbiorów jest \(\binom nk\).</li>
-<li>Te, które <b>zawierają</b> \(x\): pozostałe \(k-1\) elementów wybieramy spośród \(n-1\), więc jest ich \(\binom{n-1}{k-1}\). Te, które \(x\) <b>nie zawierają</b>: wszystkie \(k\) elementów wybieramy spośród \(n-1\), więc jest ich \(\binom{n-1}k\).</li>
-</ul>
-<p>Każdy podzbiór należy do dokładnie jednej z tych dwóch grup, więc po dodaniu dostajemy \(\binom nk=\binom{n-1}{k-1}+\binom{n-1}k\). \(\blacksquare\)</p>
-<p class="note">To jest reguła, którą widać w trójkącie Pascala: każda liczba jest sumą dwóch liczb stojących nad nią.</p>
+<p><b>Przykład.</b> \(\binom{10}8=\binom{10}2=45\); \(\ \binom41+\binom42=4+6=10=\binom52\); \(\ 1+4+6+4+1=16=2^4\).</p>
 </div>
 <div class="bx met"><span class="t">Typowe schematy</span>
 <ul>
@@ -53,15 +47,12 @@
 \[(a+b)^n=\sum_{k=0}^n\binom nk a^{n-k}b^k=a^n+n\,a^{n-1}b+\binom n2a^{n-2}b^2+\dots+b^n.\]
 <p>Wyraz ogólny: \(T_{k+1}=\binom nk a^{n-k}b^k\). Współczynniki to wiersze trójkąta Pascala: \(1;\ 1,1;\ 1,2,1;\ 1,3,3,1;\ 1,4,6,4,1;\dots\) Szczególnie: \((1+x)^n=\sum\binom nk x^k\), \(\ (a-b)^n\) – wyrazy o naprzemiennych znakach.</p>
 <div class="fg"><svg class="fig" viewBox="0 0 250 176" width="250" height="176" role="img" aria-label="Trojkat Pascala: kazda liczba jest suma dwoch liczb stojacych nad nia"><text class="m" x="8" y="22" text-anchor="start">n=0</text><text class="m" x="8" y="49" text-anchor="start">n=1</text><text class="m" x="8" y="76" text-anchor="start">n=2</text><text class="m" x="8" y="103" text-anchor="start">n=3</text><text class="m" x="8" y="130" text-anchor="start">n=4</text><text class="m" x="8" y="157" text-anchor="start">n=5</text><text class="b" x="134" y="27" text-anchor="middle">1</text><text class="b" x="116" y="54" text-anchor="middle">1</text><text class="b" x="152" y="54" text-anchor="middle">1</text><text class="b" x="98" y="81" text-anchor="middle">1</text><text class="b" x="134" y="81" text-anchor="middle">2</text><text class="b" x="170" y="81" text-anchor="middle">1</text><text class="b" x="80" y="108" text-anchor="middle">1</text><text class="b" x="116" y="108" text-anchor="middle">3</text><text class="b" x="152" y="108" text-anchor="middle">3</text><text class="b" x="188" y="108" text-anchor="middle">1</text><text class="b" x="62" y="135" text-anchor="middle">1</text><text class="b ac" x="98" y="135" text-anchor="middle">4</text><text class="b ac" x="134" y="135" text-anchor="middle">6</text><text class="b" x="170" y="135" text-anchor="middle">4</text><text class="b" x="206" y="135" text-anchor="middle">1</text><text class="b" x="44" y="162" text-anchor="middle">1</text><text class="b" x="80" y="162" text-anchor="middle">5</text><text class="b pn" x="116" y="162" text-anchor="middle">10</text><text class="b" x="152" y="162" text-anchor="middle">10</text><text class="b" x="188" y="162" text-anchor="middle">5</text><text class="b" x="224" y="162" text-anchor="middle">1</text><line class="a w" x1="104" y1="139" x2="110" y2="146"/><line class="a w" x1="128" y1="139" x2="122" y2="146"/><text class="m" x="134" y="172" text-anchor="middle">4 + 6 = 10</text></svg></div>
+<p><b>Przykład.</b> \((x+2)^4=x^4+8x^3+24x^2+32x+16\) (współczynniki \(1,4,6,4,1\) razy potęgi dwójki).</p>
 </div>
 <div class="bx thm"><span class="t">Zasada włączeń i wyłączeń dla dwóch zbiorów</span>
 <p>\(|A\cup B|=|A|+|B|-|A\cap B|\) (elementy wspólne zliczyliśmy dwa razy, więc raz je odejmujemy). To samo dla prawdopodobieństwa: \(P(A\cup B)=P(A)+P(B)-P(A\cap B)\).</p>
 <div class="fg"><svg class="fig" viewBox="0 0 250 156" width="250" height="156" role="img" aria-label="Diagram Venna dwoch zbiorow A i B z liczebnosciami trzech obszarow"><circle class="f" cx="95" cy="74" r="54"/><circle class="f3" cx="155" cy="74" r="54"/><path class="f2" d="M125,29.1 A54,54 0 0 1 125,118.9 A54,54 0 0 1 125,29.1 Z"/><circle class="s" cx="95" cy="74" r="54"/><circle class="s" cx="155" cy="74" r="54"/><text class="ac" x="64" y="24" text-anchor="middle">A</text><text class="pn" x="186" y="24" text-anchor="middle">B</text><text class="m" x="68" y="78" text-anchor="middle">|A∖B|</text><text class="m" x="125" y="78" text-anchor="middle">|A∩B|</text><text class="m" x="182" y="78" text-anchor="middle">|B∖A|</text><text class="m" x="125" y="146" text-anchor="middle">|A∪B| = |A| + |B| − |A∩B|</text></svg></div>
-</div>
-<div class="bx pf" data-pf="zr2a"><span class="t">Dowód wzoru dwumianowego Newtona</span>
-<p>\((a+b)^n=(a+b)(a+b)\cdots(a+b)\) (\(n\) nawiasów). Po wymnożeniu każdy składnik powstaje przez wybranie z każdego nawiasu albo \(a\), albo \(b\). Składnik \(a^{n-k}b^k\) otrzymamy, gdy \(b\) wybierzemy z dokładnie \(k\) nawiasów, a \(a\) z pozostałych \(n-k\). Nawiasy, z których bierzemy \(b\), można wybrać na \(\binom nk\) sposobów, więc wyraz \(a^{n-k}b^k\) pojawia się \(\binom nk\) razy. Po zsumowaniu dla \(k=0,1,\dots,n\):
-\[(a+b)^n=\sum_{k=0}^n\binom nk a^{n-k}b^k.\ \blacksquare\]</p>
-<p class="note">Wnioski: dla \(a=b=1\) dostajemy \(\sum_{k=0}^n\binom nk=2^n\), a dla \(a=1,\ b=-1\): \(\sum_{k=0}^n(-1)^k\binom nk=0\).</p>
+<p><b>Przykład.</b> Wśród liczb \(1,\dots,100\) podzielnych przez \(2\) lub przez \(3\) jest \(50+33-16=67\).</p>
 </div>
 <details class="opt"><summary><span class="optb">Poza wymaganiami</span>Zasada włączeń i wyłączeń dla trzech zbiorów</summary>
 <div class="opt-body">
@@ -76,6 +67,7 @@
 <div class="bx def"><span class="t">Podstawowe pojęcia</span>
 <p><b>Zdarzenia elementarne</b> tworzą przestrzeń \(\Omega\); <b>zdarzenie</b> to podzbiór \(A\subseteq\Omega\). Zdarzenie pewne \(\Omega\), niemożliwe \(\emptyset\), przeciwne \(A'=\Omega\setminus A\); zdarzenia \(A,B\) są rozłączne, gdy \(A\cap B=\emptyset\).</p>
 <p><b>Prawdopodobieństwo klasyczne</b> (zdarzenia elementarne równoprawdopodobne): \(P(A)=\dfrac{|A|}{|\Omega|}\).</p>
+<p><b>Przykład.</b> Rzut kostką: \(\Omega=\{1,\dots,6\}\), \(A\) – parzysta liczba oczek \(=\{2,4,6\}\), \(P(A)=\tfrac36=\tfrac12\), \(A'=\{1,3,5\}\).</p>
 </div>
 <div class="bx thm"><span class="t">Własności prawdopodobieństwa</span>
 <ul>
@@ -83,6 +75,7 @@
 <li>\(P(A')=1-P(A)\); \(\ P(A\cup B)=P(A)+P(B)-P(A\cap B)\); dla rozłącznych \(P(A\cup B)=P(A)+P(B)\).</li>
 <li>\(P(A\cup B)\le P(A)+P(B)\); \(\ P(A\cap B)\ge P(A)+P(B)-1\).</li>
 </ul>
+<p><b>Przykład.</b> \(P(A)=0{,}6\), \(P(B)=0{,}5\), \(P(A\cap B)=0{,}3\): \(P(A\cup B)=0{,}8\), \(P(A')=0{,}4\).</p>
 </div>
 <ul>
 <li>Przy wyborach <b>ze zwracaniem</b> używamy wariacji z powtórzeniami (\(|\Omega|=n^k\)), <b>bez zwracania</b> – wariacji bez powtórzeń lub kombinacji (gdy kolejność nie ma znaczenia, trzeba konsekwentnie liczyć \(\Omega\) i \(A\) w tym samym modelu).</li>
@@ -96,13 +89,16 @@
 <h3>Prawdopodobieństwo warunkowe, całkowite, wzór Bayesa</h3>
 <div class="bx def"><span class="t">Prawdopodobieństwo warunkowe</span>
 <p>\(P(A\mid B)=\dfrac{P(A\cap B)}{P(B)}\) dla \(P(B)>0\). Wzór na iloczyn: \(P(A\cap B)=P(B)\,P(A\mid B)\). W modelu klasycznym: \(P(A\mid B)=\dfrac{|A\cap B|}{|B|}\) (zawężamy \(\Omega\) do \(B\)).</p>
+<p><b>Przykład.</b> Rzut kostką: prawdopodobieństwo szóstki, gdy wiemy, że wypadła liczba parzysta: \(\dfrac{1/6}{1/2}=\dfrac13\).</p>
 </div>
 <div class="bx def"><span class="t">Niezależność</span>
 <p>Zdarzenia \(A,B\) są <b>niezależne</b>, gdy \(P(A\cap B)=P(A)\cdot P(B)\) (równoważnie \(P(A\mid B)=P(A)\)). Niezależność nie oznacza rozłączności: zdarzenia rozłączne o dodatnich prawdopodobieństwach są zależne.</p>
+<p><b>Przykład.</b> Dwa rzuty monetą: \(A\) – orzeł w pierwszym, \(B\) – orzeł w drugim. \(P(A\cap B)=\tfrac14=\tfrac12\cdot\tfrac12\), więc \(A\) i \(B\) są niezależne.</p>
 </div>
 <div class="bx thm"><span class="t">Wzór na prawdopodobieństwo całkowite i wzór Bayesa</span>
 <p>Jeśli zdarzenia \(B_1,\dots,B_n\) o dodatnich prawdopodobieństwach tworzą rozbicie \(\Omega\) (parami rozłączne, suma \(=\Omega\)), to
 \[P(A)=\sum_{i=1}^nP(A\mid B_i)\,P(B_i),\qquad P(B_j\mid A)=\frac{P(A\mid B_j)\,P(B_j)}{\sum_{i}P(A\mid B_i)\,P(B_i)}.\]</p>
+<p><b>Przykład.</b> Urna I: \(2\) białe i \(3\) czarne, urna II: \(4\) białe i \(1\) czarna; urnę wybieramy rzutem monetą. \(P(B)=\tfrac12\cdot\tfrac25+\tfrac12\cdot\tfrac45=\tfrac35\), a \(P(\text{urna I}\mid B)=\dfrac{1/5}{3/5}=\dfrac13\).</p>
 </div>
 <div class="bx met"><span class="t">Drzewo stochastyczne</span>
 <p>Prawdopodobieństwo ścieżki to iloczyn prawdopodobieństw na jej gałęziach; prawdopodobieństwo zdarzenia to suma po ścieżkach prowadzących do niego. Zadania „z jakiej urny/maszyny pochodził element, jeśli…” rozwiązujemy wzorem Bayesa.</p>
@@ -146,6 +142,7 @@ Zdarzenie „dokładnie \(k\) sukcesów w \(n\) próbach” zapisuje się też j
 <div class="opt-body">
 <div class="bx def"><span class="t">Zmienna losowa dyskretna</span>
 <p>Zmienna \(X\) przyjmuje wartości \(x_1,\dots,x_n\) z prawdopodobieństwami \(p_i\) (\(\sum p_i=1\)). <b>Wartość oczekiwana</b> \(EX=\sum x_ip_i\) (średnia wartość „w długim okresie”). Własności: \(E(aX+b)=aEX+b\), \(E(X+Y)=EX+EY\). <b>Wariancja</b> \(\operatorname{Var}X=E(X-EX)^2=EX^2-(EX)^2\). Dla schematu Bernoulliego (\(n\) prób, prawdopodobieństwo sukcesu \(p\), \(q=1-p\)): \(EX=np\), \(\operatorname{Var}X=npq\).</p>
+<p><b>Przykład.</b> Wygrana \(10\) zł z prawdopodobieństwem \(0{,}2\) i \(0\) zł z prawdopodobieństwem \(0{,}8\): \(EX=10\cdot0{,}2=2\) zł. Liczba oczek na kostce: \(EX=\tfrac{1+2+\dots+6}6=3{,}5\).</p>
 </div>
 <div class="bx def"><span class="t">Wariancja i odchylenie standardowe danych</span>
 <p>\(\sigma^2=\tfrac1n\sum(x_i-\bar x)^2=\overline{x^2}-\bar x^2\), \(\ \sigma=\sqrt{\sigma^2}\). Dodanie stałej do wszystkich danych nie zmienia \(\sigma\); pomnożenie przez \(a\) mnoży \(\sigma\) przez \(|a|\).</p>

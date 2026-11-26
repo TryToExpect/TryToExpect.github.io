@@ -5,6 +5,7 @@
 <li>\(a\ne0\): jedno rozwiązanie \(x=-\tfrac ba\). \(a=0,\ b=0\): równanie tożsamościowe (każde \(x\)). \(a=0,\ b\ne0\): równanie sprzeczne (brak rozwiązań).</li>
 <li>W nierównościach <b>mnożenie lub dzielenie przez liczbę ujemną zmienia zwrot</b> nierówności: \(-2x&lt;6\iff x>-3\).</li>
 </ul>
+<p><b>Przykład.</b> \(3x-6=0\Rightarrow x=2\); \(\ 0\cdot x=5\) – sprzeczne; \(\ -2x+4\le0\iff x\ge2\) (dzielimy przez \(-2\), więc zmieniamy zwrot).</p>
 </div>
 <div class="bx met"><span class="t">Układ dwóch równań liniowych</span>
 <p>\(\begin{cases}a_1x+b_1y=c_1\\a_2x+b_2y=c_2\end{cases}\). Metody: <b>podstawiania</b> (wyznacz jedną niewiadomą i wstaw), <b>przeciwnych współczynników</b> (dodaj równania pomnożone przez odpowiednie liczby), <b>wyznaczników</b>:
@@ -47,14 +48,12 @@ Gdy \(W\ne0\): jedno rozwiązanie \(x=\tfrac{W_x}W,\ y=\tfrac{W_y}W\) (proste pr
 <h3>Równanie i nierówność kwadratowa, wzory Viète’a</h3>
 <div class="bx thm"><span class="t">Równanie \(ax^2+bx+c=0\), \(a\ne0\)</span>
 <p>\(\Delta=b^2-4ac\). Gdy \(\Delta>0\): dwa pierwiastki \(x_{1,2}=\dfrac{-b\pm\sqrt\Delta}{2a}\); gdy \(\Delta=0\): jeden (podwójny) \(x_0=-\dfrac b{2a}\); gdy \(\Delta&lt;0\): brak pierwiastków rzeczywistych. Postać iloczynowa: \(a(x-x_1)(x-x_2)\).</p>
+<p><b>Przykład.</b> \(x^2-5x+6=0\): \(\Delta=1\), \(x_1=2\), \(x_2=3\), więc \(x^2-5x+6=(x-2)(x-3)\). \(x^2-6x+9=0\): \(\Delta=0\), \(x_0=3\). \(x^2+x+1=0\): \(\Delta=-3&lt;0\) – brak pierwiastków.</p>
 </div>
 <div class="bx thm"><span class="t">Wzory Viète’a (dla \(\Delta\ge0\))</span>
 \[x_1+x_2=-\frac ba,\qquad x_1x_2=\frac ca.\]
 <p>Przydatne przekształcenia: \(x_1^2+x_2^2=(x_1+x_2)^2-2x_1x_2\), \(\ x_1^3+x_2^3=(x_1+x_2)^3-3x_1x_2(x_1+x_2)\), \(\ |x_1-x_2|=\dfrac{\sqrt\Delta}{|a|}\), \(\ \dfrac1{x_1}+\dfrac1{x_2}=\dfrac{x_1+x_2}{x_1x_2}\).</p>
-</div>
-<div class="bx pf" data-pf="zr4"><span class="t">Dowód wzorów Viète’a</span>
-<p>Dla \(\Delta\ge0\) pierwiastki to \(x_1=\dfrac{-b-\sqrt\Delta}{2a}\) i \(x_2=\dfrac{-b+\sqrt\Delta}{2a}\). Wtedy
-\[x_1+x_2=\frac{-2b}{2a}=-\frac ba,\qquad x_1x_2=\frac{(-b)^2-(\sqrt\Delta)^2}{4a^2}=\frac{b^2-(b^2-4ac)}{4a^2}=\frac{4ac}{4a^2}=\frac ca.\ \blacksquare\]</p>
+<p><b>Przykład.</b> Dla \(x^2-5x+6=0\): \(x_1+x_2=5\), \(x_1x_2=6\) (pierwiastki \(2\) i \(3\)), więc \(x_1^2+x_2^2=25-12=13\) i \(\dfrac1{x_1}+\dfrac1{x_2}=\dfrac56\).</p>
 </div>
 <p class="note">Warunki na znaki i położenie pierwiastków (zadania z parametrem) są w dziale „Funkcja kwadratowa i zadania z parametrem”: <a href="#matura-13-teoria-4">sekcja 4</a>.</p>
 <p><b>Nierówność kwadratowa:</b> znajdź miejsca zerowe, naszkicuj parabolę (ramiona w górę dla \(a>0\)) i odczytaj przedziały: np. dla \(a>0\) i \(\Delta>0\): \(f(x)&lt;0\) na \((x_1,x_2)\), \(f(x)>0\) na \((-\infty,x_1)\cup(x_2,\infty)\).</p>

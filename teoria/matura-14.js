@@ -130,7 +130,4 @@
 <tr><td>ZR XIII.5</td><td>monotoniczność funkcji a pochodna</td><td class="c">1</td></tr>
 <tr><td>ZR XIII.6</td><td>zadania optymalizacyjne z pochodną</td><td class="c">4</td></tr>
 </tbody></table></div>
-
-<h3>Lista dowodów z podstawy programowej</h3>
-<p>Podstawa programowa wymienia 21 twierdzeń, których dowody uczeń powinien znać (10 w zakresie podstawowym i 11 w rozszerzonym). Wszystkie dowody są w teorii (ramki „z listy podstawy”), a spis z odnośnikami znajdziesz w dziale <a href="#matura-1-teoria-4">Wyrażenia algebraiczne i dowody, sekcja 4</a>.</p>
 `;
