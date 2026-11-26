@@ -107,6 +107,20 @@
 <p class="step"><b>Krok 2.</b> \(f'(x)=\dfrac{2(x-4)-(2x+1)}{(x-4)^2}=\dfrac{-9}{(x-4)^2}\), \(f'(7)=-1\). Styczna: \(y=-(x-7)+5=-x+12\).</p>`
   },
   {
+    id: 25,
+    group: "Styczna do wykresu funkcji",
+    src: "czerwiec 2025 · zad. 8",
+    pts: 4,
+    tags: ["styczna", "pierwiastek podwójny", "wzór wielomianu"],
+    req: ["ZR XIII.3", "ZR II.1"],
+    q: String.raw`<p>Wielomian \(f(x)=x^3+ax^2+bx+c\) ma miejsce zerowe \(-2\). Styczna do wykresu \(f\) w punkcie \(A\) o pierwszej współrzędnej \(-2\) przecina ten wykres w punkcie \(P=(1,9)\). Wyznacz wzór wielomianu \(f\).</p>`,
+    ans: String.raw`\(f(x)=x^3+3x^2+3x+2\)`,
+    sol: String.raw`<p class="step"><b>Pomysł.</b> Styczna dotyka wykresu w \(x=-2\), więc wielomian \(f(x)-(\text{styczna})\) ma w \(-2\) pierwiastek podwójny, a w \(1\) – pojedynczy.</p>
+<p class="step"><b>Krok 1.</b> \(A=(-2,0)\), \(P=(1,9)\), więc styczna to prosta \(AP\): \(y=3(x+2)\).</p>
+<p class="step"><b>Krok 2.</b> \(f(x)-3(x+2)\) ma współczynnik \(1\) przy \(x^3\), więc \(f(x)-3x-6=(x+2)^2(x-1)=x^3+3x^2-4\).</p>
+<p class="step"><b>Krok 3.</b> \(f(x)=x^3+3x^2+3x+2\). <i>Sprawdzenie:</i> \(f(-2)=0\), \(f(1)=9\), \(f'(-2)=12-12+3=3\) ✓.</p>`
+  },
+  {
     id: 7,
     group: "Zadania dwuczęściowe: najpierw wzór, potem optymalizacja",
     src: "maj 2023 · zad. 12.1",
@@ -261,6 +275,55 @@ więc drugi składnik jest równy \(1\cdot x^2=x^2\).</p>
 <p class="step"><b>Krok 3.</b> \(V(4)=\dfrac{\sqrt3}4(96-64)=8\sqrt3\).</p>`
   },
   {
+    id: 26,
+    group: "Zadania dwuczęściowe: najpierw wzór, potem optymalizacja",
+    src: "czerwiec 2025 · zad. 12.1",
+    pts: 2,
+    tags: ["graniastosłup prawidłowy trójkątny", "objętość jako funkcja"],
+    req: ["ZP X.5"],
+    q: String.raw`<p>Rozważamy wszystkie graniastosłupy prawidłowe trójkątne o polu powierzchni całkowitej \(24\sqrt3\). Wykaż, że objętość \(V\) graniastosłupa w zależności od długości \(a\) krawędzi podstawy wyraża się wzorem \(V(a)=6a-\tfrac18a^3\).</p>`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> \(P_c=2\cdot\dfrac{a^2\sqrt3}4+3ah=24\sqrt3\Rightarrow h=\dfrac{\sqrt3\,(48-a^2)}{6a}\).</p>
+<p class="step"><b>Krok 2.</b> \(V=\dfrac{a^2\sqrt3}4\cdot\dfrac{\sqrt3\,(48-a^2)}{6a}=\dfrac{a(48-a^2)}8=6a-\tfrac18a^3\). \(\blacksquare\)</p>`
+  },
+  {
+    id: 27,
+    group: "Zadania dwuczęściowe: najpierw wzór, potem optymalizacja",
+    src: "czerwiec 2025 · zad. 12.2",
+    pts: 4,
+    tags: ["największa objętość", "pochodna wielomianu"],
+    req: ["ZR XIII.6"],
+    q: String.raw`<p>Objętość graniastosłupa z zadania 12.1 wyraża się wzorem \(V(a)=6a-\tfrac18a^3\) dla \(a\in(0,4\sqrt3)\). Wyznacz długość krawędzi podstawy graniastosłupa o największej objętości i oblicz tę objętość.</p>`,
+    ans: String.raw`\(a=4\), \(V_{\max}=16\)`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> \(V'(a)=6-\tfrac38a^2=\tfrac38(16-a^2)\).</p>
+<p class="step"><b>Krok 2.</b> Na \((0,4\sqrt3)\): \(V'&gt;0\) dla \(a&lt;4\), \(V'&lt;0\) dla \(a&gt;4\) – maksimum w \(a=4\).</p>
+<p class="step"><b>Krok 3.</b> \(V(4)=24-8=16\).</p>`
+  },
+  {
+    id: 29,
+    group: "Zadania dwuczęściowe: najpierw wzór, potem optymalizacja",
+    src: "czerwiec 2026 · zad. 13.1",
+    pts: 2,
+    tags: ["prosta przez punkt", "pole trójkąta jako funkcja"],
+    req: ["ZP IX.2"],
+    q: String.raw`<p>Rozważamy wszystkie trójkąty prostokątne \(ABC\), w których \(C=(0,0)\), \(B\) leży na dodatniej półosi \(Oy\), \(A\) – na dodatniej półosi \(Ox\), a bok \(AB\) jest zawarty w prostej przechodzącej przez punkt \(K=(1,2)\).</p>
+<p>Wykaż, że pole \(P\) trójkąta \(ABC\) w zależności od współczynnika kierunkowego \(a\) prostej \(AB\) wyraża się wzorem \(P(a)=\dfrac{-a^2+4a-4}{2a}\).</p>`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> Prosta: \(y=a(x-1)+2\) (\(a&lt;0\), bo przecina obie dodatnie półosie). \(B=(0,2-a)\), a z \(y=0\): \(A=\left(1-\tfrac2a,0\right)\).</p>
+<p class="step"><b>Krok 2.</b> \(P=\tfrac12\left(1-\tfrac2a\right)(2-a)=\tfrac12\cdot\dfrac{a-2}a\cdot(2-a)=\dfrac{-(a-2)^2}{2a}=\dfrac{-a^2+4a-4}{2a}\). \(\blacksquare\)</p>`
+  },
+  {
+    id: 30,
+    group: "Zadania dwuczęściowe: najpierw wzór, potem optymalizacja",
+    src: "czerwiec 2026 · zad. 13.2",
+    pts: 4,
+    tags: ["najmniejsze pole", "pochodna"],
+    req: ["ZR XIII.6"],
+    q: String.raw`<p>Pole trójkąta \(ABC\) z zadania 13.1 wyraża się wzorem \(P(a)=\dfrac{-a^2+4a-4}{2a}\) dla \(a&lt;0\). Wyznacz równanie prostej zawierającej przeciwprostokątną \(AB\) trójkąta o najmniejszym polu.</p>`,
+    ans: String.raw`\(y=-2x+4\)`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> \(P(a)=-\tfrac a2+2-\tfrac2a\), więc \(P'(a)=-\tfrac12+\tfrac2{a^2}=\dfrac{4-a^2}{2a^2}\).</p>
+<p class="step"><b>Krok 2.</b> Dla \(a&lt;-2\): \(P'&lt;0\); dla \(-2&lt;a&lt;0\): \(P'&gt;0\). Minimum w \(a=-2\) (wtedy \(P=4\)).</p>
+<p class="step"><b>Krok 3.</b> Prosta: \(y=-2(x-1)+2=-2x+4\).</p>`
+  },
+  {
     id: 11,
     group: "Własność Darboux",
     label: "autorskie",
@@ -340,5 +403,18 @@ więc drugi składnik jest równy \(1\cdot x^2=x^2\).</p>
     ans: String.raw`<b>C</b> \((3)\)`,
     sol: String.raw`<p class="step"><b>Pomysł.</b> Najpierw skracamy: \(x^3-8=(x-2)(x^2+2x+4)\), więc \(f(x)=x^2+2x+4\) dla \(x\ne2\).</p>
 <p class="step">\(f'(x)=2x+2\), więc \(f'\!\left(\tfrac12\right)=1+2=3\). Odpowiedź <b>C</b>.</p>`
+  },
+  {
+    id: 28,
+    group: "Pochodna funkcji",
+    src: "czerwiec 2026 · zad. 3",
+    pts: 3,
+    tags: ["pochodna ilorazu", "równanie trzeciego stopnia"],
+    req: ["ZR XIII.4"],
+    q: String.raw`<p>Funkcja \(f\) jest określona wzorem \(f(x)=\dfrac{ax^2+x}{x-1}\) dla \(x\ne1\). Wyznacz wszystkie wartości \(a\), dla których pochodna funkcji \(f\) w punkcie \(x=a\) jest równa \(\left(-\tfrac12a\right)\).</p>`,
+    ans: String.raw`\(a=2\)`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> \(f'(x)=\dfrac{(2ax+1)(x-1)-(ax^2+x)}{(x-1)^2}=\dfrac{ax^2-2ax-1}{(x-1)^2}\).</p>
+<p class="step"><b>Krok 2.</b> Dla \(x=a\ne1\): \(\dfrac{a^3-2a^2-1}{(a-1)^2}=-\dfrac a2\Rightarrow2a^3-4a^2-2=-a^3+2a^2-a\Rightarrow3a^3-6a^2+a-2=0\).</p>
+<p class="step"><b>Krok 3.</b> Grupujemy: \(3a^2(a-2)+(a-2)=(a-2)(3a^2+1)=0\), więc \(a=2\).</p>`
   }
 ];

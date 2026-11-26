@@ -200,6 +200,17 @@ Lewą stronę rozkładamy: \(x^3+y^3-x^2y-xy^2=x^2(x-y)-y^2(x-y)=(x-y)(x^2-y^2)=
 <p class="step"><b>Krok 3.</b> \((a-2)^2\ge0\) i \(a+4&gt;0\), więc iloczyn jest nieujemny. \(\blacksquare\) (Równość dla \(a=2\).)</p>`
   },
   {
+    id: 19,
+    group: "Dowody algebraiczne",
+    src: "czerwiec 2026 · zad. 4",
+    pts: 3,
+    tags: ["nierówność", "suma kwadratów", "dowód"],
+    req: ["ZP II.1"],
+    q: String.raw`<p>Wykaż, że dla dowolnych liczb rzeczywistych \(x\) i \(y\) prawdziwa jest nierówność \(xy+x+y\le x^2+y^2+1\).</p>`,
+    sol: String.raw`<p class="step"><b>Pomysł.</b> Mnożymy przez \(2\) i zapisujemy różnicę jako sumę kwadratów.</p>
+<p class="step">\(2(x^2+y^2+1)-2(xy+x+y)=(x^2-2xy+y^2)+(x^2-2x+1)+(y^2-2y+1)=(x-y)^2+(x-1)^2+(y-1)^2\ge0\). \(\blacksquare\)</p>`
+  },
+  {
     id: 15,
     group: "Dowody o podzielności",
     label: "autorskie",

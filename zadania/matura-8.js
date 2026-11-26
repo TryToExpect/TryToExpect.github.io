@@ -133,6 +133,37 @@ Stąd \(2h^2=44\), \(h=\sqrt{22}\).</p>`
 <p class="step"><b>Krok 3.</b> \(P_c=2\cdot\dfrac{a^2\sqrt3}4+3\cdot a\cdot a\sqrt2=\dfrac{\sqrt3}2a^2+3\sqrt2a^2\).</p>`
   },
   {
+    id: 14,
+    group: "Przekroje i kąty w ostrosłupach i sześcianie",
+    src: "czerwiec 2025 · zad. 10",
+    pts: 5,
+    tags: ["ostrosłup prawidłowy trójkątny", "płaszczyzna prostopadła do krawędzi", "pole powierzchni"],
+    req: ["ZR X.2", "ZP X.5"],
+    q: String.raw`<p>Dany jest ostrosłup prawidłowy trójkątny \(ABCD\) o podstawie \(ABC\). Płaszczyzna zawierająca krawędź \(AB\) i prostopadła do krawędzi bocznej \(CD\) przecina tę krawędź w punkcie \(E\), przy czym \(\dfrac{|CE|}{|DE|}=\dfrac3{11}\). Oblicz stosunek pola powierzchni całkowitej tego ostrosłupa do pola podstawy \(ABC\).</p>`,
+    ans: String.raw`\(6\)`,
+    sol: String.raw`<p class="step"><b>Pomysł.</b> \(AE\perp CD\), więc \(E\) jest spodkiem wysokości trójkąta \(ACD\) poprowadzonej z \(A\). Z tego dostaniemy stosunek krawędzi bocznej \(b\) do krawędzi podstawy \(a\).</p>
+<p class="step"><b>Krok 1.</b> W trójkącie równoramiennym \(ACD\) (\(|AD|=|CD|=b\), \(|AC|=a\)): \(\cos\angle ACD=\dfrac a{2b}\), więc \(|CE|=a\cos\angle ACD=\dfrac{a^2}{2b}\), \(|DE|=b-\dfrac{a^2}{2b}\).</p>
+<p class="step"><b>Krok 2.</b> \(\dfrac{a^2}{2b^2-a^2}=\dfrac3{11}\Rightarrow14a^2=6b^2\Rightarrow b^2=\tfrac73a^2\).</p>
+<p class="step"><b>Krok 3.</b> Wysokość ściany bocznej: \(h_s=\sqrt{b^2-\tfrac{a^2}4}=\sqrt{\tfrac{25}{12}}\,a=\dfrac{5a}{2\sqrt3}\), więc \(P_b=3\cdot\tfrac12a\cdot\dfrac{5a}{2\sqrt3}=\dfrac{5\sqrt3}4a^2=5\cdot P_p\).</p>
+<p class="step"><b>Krok 4.</b> \(\dfrac{P_c}{P_p}=\dfrac{P_p+5P_p}{P_p}=6\).</p>`
+  },
+  {
+    id: 15,
+    group: "Przekroje i kąty w ostrosłupach i sześcianie",
+    src: "czerwiec 2026 · zad. 12",
+    pts: 5,
+    tags: ["ostrosłup prawidłowy czworokątny", "przekrój", "płaszczyzny prostopadłe", "trapez"],
+    req: ["ZR X.2", "ZP X.2"],
+    q: String.raw`<p>Ostrosłup prawidłowy czworokątny \(ABCDS\) o podstawie \(ABCD\) ma objętość \(36\sqrt3\). Płaszczyzna \(\gamma\) jest prostopadła do ściany bocznej \(CDS\), przechodzi przez środek \(K\) krawędzi \(AD\) i środek \(L\) krawędzi \(BC\), przecina krawędzie \(CS\) i \(DS\) w punktach \(M\) i \(N\) oraz tworzy z płaszczyzną podstawy kąt \(30^\circ\). Przekrój \(KLMN\) jest trapezem równoramiennym. Oblicz jego pole.</p>`,
+    ans: String.raw`\(\dfrac{63\sqrt3}8\)`,
+    sol: String.raw`<div class="fig-wrap" data-sf="1"><svg class="fig" viewBox="0 0 250 215" width="250" height="215" role="img" aria-label="Przekrój ostrosłupa płaszczyzną symetrii PQS (P, Q – środki krawędzi AB i CD, O – środek podstawy); ślad płaszczyzny γ to odcinek OX nachylony do podstawy pod kątem 30 stopni i prostopadły do odcinka QS"><polygon class="f" points="30,190 210,190 120,34.1"/><polygon class="s" points="30,190 210,190 120,34.1"/><line class="s d w" x1="120" y1="190" x2="120" y2="34.1"/><line class="a" x1="120" y1="190" x2="187.5" y2="151"/><path class="p" d="M148,190 A28,28 0 0 0 144.2,176"/><path class="s w" d="M181.4,154.5 L184.9,160.6 L191,157.1"/><circle class="dot" cx="120" cy="190" r="2.4"/><circle class="dot" cx="187.5" cy="151" r="2.4"/><text x="24" y="204" text-anchor="end">P</text><text x="216" y="204" text-anchor="start">Q</text><text x="120" y="26" text-anchor="middle">S</text><text x="120" y="207" text-anchor="middle">O</text><text x="194" y="147" text-anchor="start">X</text><text class="pn" x="156" y="186" text-anchor="start">30°</text></svg></div>
+<p class="step"><b>Pomysł.</b> Rozważmy przekrój płaszczyzną symetrii \(PQS\) (\(P\), \(Q\) – środki \(AB\) i \(CD\), \(O\) – środek podstawy). Prosta \(KL\) przechodzi przez \(O\) i jest prostopadła do tej płaszczyzny, więc \(\gamma\) widać w niej jako odcinek \(OX\) (\(X\in QS\)), a ścianę \(CDS\) – jako odcinek \(QS\).</p>
+<p class="step"><b>Krok 1: kąt ściany.</b> \(\gamma\perp CDS\), więc \(OX\perp QS\). W trójkącie \(OXQ\) kąt przy \(O\) ma \(30^\circ\), przy \(X\) – \(90^\circ\), więc \(\angle SQO=60^\circ\) i \(H=\tfrac a2\operatorname{tg}60^\circ=\tfrac{a\sqrt3}2\).</p>
+<p class="step"><b>Krok 2: krawędź.</b> \(V=\tfrac13a^2\cdot\tfrac{a\sqrt3}2=\tfrac{a^3\sqrt3}6=36\sqrt3\Rightarrow a=6\). Wtedy \(|OQ|=3\), \(|QS|=6\), \(|OX|=3\sin60^\circ=\tfrac{3\sqrt3}2\), \(|QX|=3\cos60^\circ=\tfrac32\).</p>
+<p class="step"><b>Krok 3: podstawy trapezu.</b> \(|KL|=6\); \(MN\parallel CD\) przechodzi przez \(X\), więc \(\dfrac{|MN|}{|CD|}=\dfrac{|SX|}{|SQ|}=\dfrac{9/2}6=\dfrac34\), \(|MN|=\tfrac92\). Wysokość trapezu to \(|OX|\).</p>
+<p class="step"><b>Krok 4.</b> \(P=\dfrac{6+\frac92}2\cdot\dfrac{3\sqrt3}2=\dfrac{63\sqrt3}8\).</p>`
+  },
+  {
     id: 8,
     group: "Bryły podobne i obrotowe",
     label: "autorskie",

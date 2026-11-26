@@ -41,6 +41,32 @@
 <p class="step"><b>Krok 2.</b> \(n!=12\cdot6\,(n-2)!\Rightarrow n(n-1)=72\Rightarrow n=9\).</p>`
   },
   {
+    id: 18,
+    group: "Kombinatoryka",
+    src: "czerwiec 2025 · zad. 3",
+    pts: 3,
+    tags: ["liczby sześciocyfrowe", "iloczyn cyfr", "zdarzenie przeciwne"],
+    req: ["ZP XI.2", "ZR XI.2"],
+    q: String.raw`<p>Rozważamy wszystkie liczby naturalne sześciocyfrowe, w których iloczyn cyfr jest liczbą parzystą mniejszą od \(5\). Oblicz, ile jest takich liczb.</p>`,
+    ans: String.raw`\(368\,586\)`,
+    sol: String.raw`<p class="step"><b>Pomysł.</b> Parzyste iloczyny mniejsze od \(5\) to \(0\), \(2\) i \(4\).</p>
+<p class="step"><b>Iloczyn \(0\)</b> – w zapisie jest zero. Wszystkich liczb sześciocyfrowych jest \(9\cdot10^5=900\,000\), bez zera \(9^6=531\,441\), więc z zerem: \(368\,559\).</p>
+<p class="step"><b>Iloczyn \(2\)</b> – jedna dwójka i pięć jedynek: \(6\) liczb. <b>Iloczyn \(4\)</b> – jedna czwórka i pięć jedynek (\(6\)) albo dwie dwójki i cztery jedynki (\(\binom62=15\)): \(21\) liczb.</p>
+<p class="step">Razem \(368\,559+6+21=368\,586\).</p>`
+  },
+  {
+    id: 19,
+    group: "Kombinatoryka",
+    src: "czerwiec 2026 · zad. 2",
+    pts: 3,
+    tags: ["kody", "wybór miejsc", "symbol Newtona"],
+    req: ["ZR XI.1", "ZR XI.2"],
+    q: String.raw`<p>Rozważamy wszystkie dziewięciocyfrowe kody, w których: na pierwszym miejscu jest cyfra \(2\); cyfra \(4\) występuje dokładnie trzy razy; cyfra \(8\) – dokładnie dwa razy; pozostałe cyfry są parami różnymi liczbami nieparzystymi. Oblicz liczbę wszystkich takich kodów.</p>`,
+    ans: String.raw`\(33\,600\)`,
+    sol: String.raw`<p class="step">Pierwsze miejsce jest ustalone; na \(8\) pozostałych wybieramy miejsca dla czwórek: \(\binom83=56\), potem dla ósemek: \(\binom52=10\). Na trzech wolnych miejscach stawiamy różne cyfry nieparzyste: \(5\cdot4\cdot3=60\).</p>
+<p class="step">Razem \(56\cdot10\cdot60=33\,600\).</p>`
+  },
+  {
     id: 2,
     group: "Prawdopodobieństwo klasyczne",
     src: "maj 2026 · zad. 2",
@@ -154,6 +180,18 @@ b) Wylosowano kulę białą. Oblicz prawdopodobieństwo, że pochodzi z pierwsze
 <p class="step"><b>Krok 3.</b> \(P=\dfrac8{120}=\dfrac1{15}\).</p>`
   },
   {
+    id: 20,
+    group: "Prawdopodobieństwo warunkowe",
+    src: "czerwiec 2026 · zad. 6",
+    pts: 4,
+    tags: ["wzór Bayesa", "prawdopodobieństwo całkowite"],
+    req: ["ZR XII.1"],
+    q: String.raw`<p>Chleb w supermarkecie pochodzi z trzech piekarni \(\mathcal P_1,\mathcal P_2,\mathcal P_3\) w stosunku \(2:3:4\). Chleb razowy stanowi \(10\%\) dostaw z \(\mathcal P_1\), \(12\%\) z \(\mathcal P_2\) i \(15\%\) z \(\mathcal P_3\). Oblicz prawdopodobieństwo, że losowo wybrany bochenek pochodzi z piekarni \(\mathcal P_1\), jeśli wiadomo, że jest razowy.</p>`,
+    ans: String.raw`\(\dfrac5{29}\)`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> \(P(\mathcal P_1)=\tfrac29\), \(P(\mathcal P_2)=\tfrac39\), \(P(\mathcal P_3)=\tfrac49\). Prawdopodobieństwo całkowite: \(P(R)=\dfrac{2\cdot0{,}10+3\cdot0{,}12+4\cdot0{,}15}9=\dfrac{1{,}16}9\).</p>
+<p class="step"><b>Krok 2.</b> Wzór Bayesa: \(P(\mathcal P_1\mid R)=\dfrac{0{,}2/9}{1{,}16/9}=\dfrac{20}{116}=\dfrac5{29}\).</p>`
+  },
+  {
     id: 5,
     group: "Schemat Bernoulliego",
     src: "maj 2023 · zad. 2",
@@ -192,6 +230,18 @@ b) Wylosowano kulę białą. Oblicz prawdopodobieństwo, że pochodzi z pierwsze
     ans: String.raw`\(P(A)\approx0{,}97\)`,
     sol: String.raw`<p class="step">Schemat Bernoulliego: \(n=7\), \(p=0{,}1\), \(q=0{,}9\); sumujemy \(k=0,1,2\):
 \[P(A)=0{,}9^7+7\cdot0{,}1\cdot0{,}9^6+21\cdot0{,}01\cdot0{,}9^5\approx0{,}4783+0{,}3720+0{,}1240=0{,}9743\approx0{,}97.\]</p>`
+  },
+  {
+    id: 17,
+    group: "Schemat Bernoulliego",
+    src: "czerwiec 2025 · zad. 1",
+    pts: 3,
+    tags: ["schemat Bernoulliego", "co najwyżej jeden sukces"],
+    req: ["ZR XII.2"],
+    q: String.raw`<p>Prawdopodobieństwo uszkodzenia pralki podczas transportu do klienta jest równe \(0{,}02\). Oblicz prawdopodobieństwo, że spośród \(10\) pralek wysłanych dziesięciu klientom co najwyżej jedna ulegnie uszkodzeniu. Wynik podaj w zaokrągleniu do części tysięcznych.</p>`,
+    ans: String.raw`\(P(A)\approx0{,}984\)`,
+    sol: String.raw`<p class="step">Schemat Bernoulliego, \(n=10\), \(p=0{,}02\):
+\[P(A)=0{,}98^{10}+10\cdot0{,}02\cdot0{,}98^9\approx0{,}81707+0{,}16675=0{,}98382\approx0{,}984.\]</p>`
   },
   {
     id: 7,

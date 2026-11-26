@@ -105,6 +105,33 @@
 <p class="step"><b>Krok 3.</b> \(a=1\), \(c=9\). Sprawdzenie: \((1,3,9)\) i \((2,6,10)\) ✓.</p>`
   },
   {
+    id: 17,
+    group: "Ciąg arytmetyczny i geometryczny",
+    src: "czerwiec 2025 · zad. 9",
+    pts: 5,
+    tags: ["ciąg arytmetyczny", "szereg geometryczny"],
+    req: ["ZP VI.5", "ZR VI.2"],
+    q: String.raw`<p>Ciąg \((a_n)\) jest arytmetyczny i rosnący, \(a_6=15\) oraz \(a_{15}=a_3\cdot(a_8-6)\). Ciąg \((b_n)\) jest geometryczny i \(b_1=a_{11}\), \(b_2=a_6\). Oblicz sumę wszystkich wyrazów ciągu \((b_n)\).</p>`,
+    ans: String.raw`\(\dfrac{245}4\)`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> Liczymy od \(a_6\): \(a_{15}=15+9r\), \(a_3=15-3r\), \(a_8=15+2r\). Równanie: \(15+9r=(15-3r)(9+2r)\Rightarrow r^2+r-20=0\Rightarrow r=4\) (ciąg rosnący).</p>
+<p class="step"><b>Krok 2.</b> \(b_1=a_{11}=35\), \(b_2=15\), więc \(q=\tfrac37\in(-1,1)\) – suma istnieje.</p>
+<p class="step"><b>Krok 3.</b> \(S=\dfrac{35}{1-\frac37}=\dfrac{245}4\).</p>`
+  },
+  {
+    id: 19,
+    group: "Ciąg arytmetyczny i geometryczny",
+    src: "czerwiec 2026 · zad. 8",
+    pts: 4,
+    tags: ["ciąg geometryczny", "ciąg arytmetyczny", "układ równań"],
+    req: ["ZP VI.5", "ZP VI.6"],
+    q: String.raw`<p>Ciąg \((x,y,z)\) jest geometryczny. Jeżeli trzeci wyraz pomniejszymy o \(4\), otrzymamy ciąg arytmetyczny. Jeżeli drugi i trzeci wyraz tego ciągu arytmetycznego pomniejszymy o \(1\), otrzymamy nowy ciąg geometryczny. Oblicz \(x\), \(y\), \(z\).</p>`,
+    ans: String.raw`\((1,3,9)\) lub \(\left(\tfrac19,\tfrac79,\tfrac{49}9\right)\)`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> Warunki: \(y^2=xz\); \(2y=x+z-4\); \((y-1)^2=x(z-5)\).</p>
+<p class="step"><b>Krok 2.</b> Odejmujemy pierwsze i trzecie: \(y^2-(y-1)^2=5x\Rightarrow x=\dfrac{2y-1}5\). Z drugiego \(z=2y+4-x=\dfrac{8y+21}5\).</p>
+<p class="step"><b>Krok 3.</b> \(y^2=xz\Rightarrow25y^2=(2y-1)(8y+21)\Rightarrow9y^2-34y+21=0\Rightarrow y=3\) lub \(y=\tfrac79\).</p>
+<p class="step"><b>Krok 4.</b> \(y=3\): \((1,3,9)\); \(y=\tfrac79\): \(\left(\tfrac19,\tfrac79,\tfrac{49}9\right)\). Oba spełniają warunki (np. \(\left(\tfrac19,-\tfrac29,\tfrac49\right)\) ma iloraz \(-2\)).</p>`
+  },
+  {
     id: 5,
     group: "Granica ciągu",
     src: "maj 2021 · zad. 5",
@@ -276,5 +303,18 @@
     sol: String.raw`<p class="step"><b>Krok 1.</b> \(a_1(1+q^2)=\tfrac52a_1q\); \(a_1\ne0\) (inaczej suma byłaby \(0\)), więc \(2q^2-5q+2=0\), \(q=2\) lub \(q=\tfrac12\).</p>
 <p class="step"><b>Krok 2.</b> Wyrazy nieparzyste tworzą szereg o ilorazie \(q^2\), który ma sumę tylko dla \(|q|&lt;1\): \(q=\tfrac12\).</p>
 <p class="step"><b>Krok 3.</b> \(\dfrac{a_1}{1-\frac14}=16\Rightarrow a_1=12\), więc \(a_n=12\cdot\left(\tfrac12\right)^{n-1}\).</p>`
+  },
+  {
+    id: 18,
+    group: "Szereg geometryczny",
+    src: "czerwiec 2026 · zad. 7",
+    pts: 4,
+    tags: ["szereg geometryczny", "suma sześcianów"],
+    req: ["ZR VI.2"],
+    q: String.raw`<p>Suma wszystkich wyrazów nieskończonego ciągu geometrycznego \((a_n)\) jest równa \(14\), a suma sześcianów wszystkich jego wyrazów jest równa \(392\). Wyznacz wzór ogólny na \(n\)-ty wyraz ciągu \((a_n)\).</p>`,
+    ans: String.raw`\(a_n=7\cdot\left(\tfrac12\right)^{n-1}\)`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> Sześciany tworzą ciąg geometryczny o ilorazie \(q^3\): \(\dfrac{a_1}{1-q}=14\), \(\dfrac{a_1^3}{1-q^3}=392\), \(|q|&lt;1\).</p>
+<p class="step"><b>Krok 2.</b> Dzielimy drugie równanie przez sześcian pierwszego: \(\dfrac{(1-q)^3}{1-q^3}=\dfrac{392}{2744}=\dfrac17\), czyli \(\dfrac{(1-q)^2}{1+q+q^2}=\dfrac17\Rightarrow2q^2-5q+2=0\Rightarrow q=\tfrac12\) (\(q=2\) odpada).</p>
+<p class="step"><b>Krok 3.</b> \(a_1=14\cdot\tfrac12=7\), więc \(a_n=7\cdot\left(\tfrac12\right)^{n-1}\).</p>`
   }
 ];

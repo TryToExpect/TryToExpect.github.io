@@ -91,6 +91,31 @@
 <p class="step">\(a-b=2025-2=2023\).</p>`
   },
   {
+    id: 14,
+    group: "Logarytmy i potęgi",
+    src: "czerwiec 2025 · zad. 2",
+    pts: 3,
+    tags: ["zamiana podstawy logarytmu", "dowód"],
+    req: ["ZP I.9", "ZR I.1"],
+    q: String.raw`<p>Wykaż, że jeżeli \(a=\log_214\) oraz \(b=\log_{\sqrt2}27\), to \(\log_754=\dfrac{b+2}{2a-2}\).</p>`,
+    sol: String.raw`<p class="step"><b>Pomysł.</b> Wszystko zapisujemy logarytmami o podstawie \(2\).</p>
+<p class="step"><b>Krok 1.</b> \(a=\log_2(2\cdot7)=1+\log_27\), więc \(\log_27=a-1\). \(b=\dfrac{\log_227}{\log_2\sqrt2}=2\cdot3\log_23=6\log_23\).</p>
+<p class="step"><b>Krok 2.</b> \(\log_754=\dfrac{\log_2(2\cdot27)}{\log_27}=\dfrac{1+3\log_23}{a-1}=\dfrac{1+\frac b2}{a-1}=\dfrac{b+2}{2a-2}\). \(\blacksquare\)</p>`
+  },
+  {
+    id: 15,
+    group: "Logarytmy i potęgi",
+    src: "czerwiec 2026 · zad. 1",
+    pts: 2,
+    tags: ["potęga o wykładniku logarytmicznym", "iloczyn logarytmów"],
+    req: ["ZP I.9", "ZR I.1"],
+    q: String.raw`<p>Dane są liczby \(a=16^{\frac12\log_436-2\log_43}\) oraz \(b=\log_29\cdot\log_35\cdot\log_58\). Oblicz wartość ilorazu \(\dfrac a{2b}\). Wynik zapisz w postaci \(3^k\), gdzie \(k\in\mathbb Z\).</p>`,
+    ans: String.raw`\(\dfrac a{2b}=3^{-3}\)`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> Wykładnik: \(\log_46-\log_49=\log_4\tfrac23\), więc \(a=\left(4^{\log_4\frac23}\right)^2=\tfrac49\).</p>
+<p class="step"><b>Krok 2.</b> Z zamiany podstawy: \(b=\dfrac{\log9}{\log2}\cdot\dfrac{\log5}{\log3}\cdot\dfrac{\log8}{\log5}=\dfrac{2\log3\cdot3\log2}{\log2\cdot\log3}=6\).</p>
+<p class="step"><b>Krok 3.</b> \(\dfrac a{2b}=\dfrac{4/9}{12}=\dfrac1{27}=3^{-3}\).</p>`
+  },
+  {
     id: 6,
     group: "Procenty i procent składany",
     label: "autorskie",

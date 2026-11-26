@@ -193,6 +193,31 @@ Zatem \(\cos x=-1\) lub \(\sin x=-\tfrac12\).</p>
 <p class="step"><b>Krok 2.</b> \(\sin5x=0\Rightarrow x=\tfrac{k\pi}5\); \(\cos x=-\tfrac{\sqrt3}2\Rightarrow x=\pm\tfrac{5\pi}6+2k\pi\), \(k\in\mathbb Z\).</p>`
   },
   {
+    id: 15,
+    group: "Równania trygonometryczne",
+    src: "czerwiec 2025 · zad. 6",
+    pts: 4,
+    tags: ["suma cosinusów", "równanie iloczynowe", "cos²"],
+    req: ["ZR VII.5", "ZR VII.6"],
+    q: String.raw`<p>Rozwiąż równanie \(\cos(2x)+2\cos^2(3x)+\cos(4x)=0\) w przedziale \([0,\pi]\).</p>`,
+    ans: String.raw`\(x\in\left\{\tfrac\pi6,\tfrac\pi4,\tfrac\pi2,\tfrac{3\pi}4,\tfrac{5\pi}6\right\}\)`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> \(\cos2x+\cos4x=2\cos3x\cos x\), więc lewa strona to \(2\cos3x\,(\cos x+\cos3x)=2\cos3x\cdot2\cos2x\cos x\).</p>
+<p class="step"><b>Krok 2.</b> Równanie: \(\cos x\cdot\cos2x\cdot\cos3x=0\). W \([0,\pi]\): \(\cos x=0\Rightarrow x=\tfrac\pi2\); \(\cos2x=0\Rightarrow x=\tfrac\pi4,\tfrac{3\pi}4\); \(\cos3x=0\Rightarrow x=\tfrac\pi6,\tfrac\pi2,\tfrac{5\pi}6\).</p>`
+  },
+  {
+    id: 16,
+    group: "Równania trygonometryczne",
+    src: "czerwiec 2026 · zad. 10",
+    pts: 4,
+    tags: ["równanie trygonometryczne", "rozkład na czynniki"],
+    req: ["ZR VII.5", "ZR VII.6"],
+    q: String.raw`<p>Rozwiąż równanie \(\sin x+\sin(2x)-\cos x=\dfrac12\).</p>`,
+    ans: String.raw`\(x=\tfrac\pi6+2k\pi\), \(x=\tfrac{5\pi}6+2k\pi\), \(x=\pm\tfrac{2\pi}3+2k\pi\), \(k\in\mathbb Z\)`,
+    sol: String.raw`<p class="step"><b>Pomysł.</b> Po pomnożeniu przez \(2\) i rozpisaniu \(\sin2x=2\sin x\cos x\) wyrażenie rozkłada się na czynniki.</p>
+<p class="step"><b>Krok 1.</b> \(2\sin x+4\sin x\cos x-2\cos x-1=2\sin x(1+2\cos x)-(1+2\cos x)=(2\sin x-1)(1+2\cos x)=0\).</p>
+<p class="step"><b>Krok 2.</b> \(\sin x=\tfrac12\Rightarrow x=\tfrac\pi6+2k\pi\) lub \(x=\tfrac{5\pi}6+2k\pi\); \(\cos x=-\tfrac12\Rightarrow x=\pm\tfrac{2\pi}3+2k\pi\).</p>`
+  },
+  {
     id: 7,
     group: "Zadania z parametrem",
     tags: ["równanie z parametrem", "iloczyn równy zero", "nierówność trygonometryczna", "liczba rozwiązań"],

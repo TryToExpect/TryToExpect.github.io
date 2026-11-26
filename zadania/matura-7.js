@@ -100,6 +100,20 @@ b) Wyznacz równanie drugiej stycznej do tego okręgu, równoległej do prostej 
 <p class="step"><b>b) Druga styczna.</b> Ma równanie \(3x-4y+C=0\) i leży w odległości \(3\) od \(S\): \(\dfrac{|2+C|}5=3\), czyli \(C=13\) (to prosta \(k\)) lub \(C=-17\). Druga styczna: \(3x-4y-17=0\).</p>`
   },
   {
+    id: 14,
+    group: "Styczne do okręgu",
+    src: "czerwiec 2025 · zad. 11",
+    pts: 6,
+    tags: ["równoległobok", "okrąg styczny do dwóch prostych", "dwusieczna kąta"],
+    req: ["ZR IX.4", "ZP IX.4"],
+    q: String.raw`<p>Dany jest równoległobok \(ABCD\) o wierzchołkach \(A=(-8,-1)\), \(D=(-13,9)\) i środku symetrii \(M=\left(-\tfrac92,1\right)\). Okrąg \(\mathcal O\) przechodzi przez początek układu współrzędnych i jest styczny do prostych zawierających boki \(AB\) i \(BC\). Druga współrzędna środka okręgu jest ujemna. Wyznacz równanie okręgu \(\mathcal O\).</p>`,
+    ans: String.raw`\((x+1)^2+(y+2)^2=5\)`,
+    sol: String.raw`<p class="step"><b>Krok 1: wierzchołki i proste.</b> \(C=2M-A=(-1,3)\), \(B=2M-D=(4,-7)\). Prosta \(AB\): \(x+2y+10=0\); prosta \(BC\): \(2x+y-1=0\).</p>
+<p class="step"><b>Krok 2: środek na dwusiecznej.</b> Środek \(S=(p,q)\) leży po tej samej stronie obu prostych co punkt \((0,0)\) okręgu, czyli \(p+2q+10&gt;0\) i \(2p+q-1&lt;0\). Równe odległości: \(p+2q+10=-(2p+q-1)\Rightarrow q=-p-3\), a promień \(r=\dfrac{p+2q+10}{\sqrt5}=\dfrac{4-p}{\sqrt5}\).</p>
+<p class="step"><b>Krok 3: okrąg przez \((0,0)\).</b> \(r^2=p^2+q^2\): \(\dfrac{(4-p)^2}5=p^2+(p+3)^2\Rightarrow9p^2+38p+29=0\Rightarrow p=-1\) lub \(p=-\tfrac{29}9\).</p>
+<p class="step"><b>Krok 4.</b> Dla \(p=-\tfrac{29}9\) jest \(q=\tfrac29&gt;0\) – odpada. Dla \(p=-1\): \(S=(-1,-2)\), \(r=\sqrt5\). Okrąg: \((x+1)^2+(y+2)^2=5\).</p>`
+  },
+  {
     id: 4,
     group: "Parabola, prosta i okrąg",
     src: "maj 2023 · zad. 13",

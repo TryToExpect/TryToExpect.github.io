@@ -117,6 +117,33 @@
 <p class="step"><b>Krok 4.</b> \(\dfrac{-3+2\sqrt{42}}3\approx3{,}32&gt;\tfrac{13}4\) odpada. Zostają \(m=1\) i \(m=\dfrac{-3-2\sqrt{42}}3\approx-5{,}32\).</p>`
   },
   {
+    id: 22,
+    group: "Wzory Viète’a",
+    src: "czerwiec 2025 · zad. 5",
+    pts: 4,
+    tags: ["równanie kwadratowe z parametrem", "rozkład trójmianu"],
+    req: ["ZR III.3", "ZR III.5"],
+    q: String.raw`<p>Wyznacz wszystkie wartości parametru \(m\), dla których równanie \(x^2+2mx+2m-1=0\) ma dwa różne rozwiązania rzeczywiste \(x_1\), \(x_2\) spełniające warunek \(m\left(x_1^2+x_2^2\right)=3m\cdot x_1\cdot x_2+2\).</p>`,
+    ans: String.raw`\(m=2\)`,
+    sol: String.raw`<p class="step"><b>Pomysł.</b> \(x=-1\) jest zawsze pierwiastkiem: \(x^2+2mx+2m-1=(x+1)(x+2m-1)\). Pierwiastki to \(-1\) i \(1-2m\).</p>
+<p class="step"><b>Krok 1.</b> Różne pierwiastki: \(1-2m\ne-1\iff m\ne1\).</p>
+<p class="step"><b>Krok 2.</b> \(x_1^2+x_2^2=1+(1-2m)^2=4m^2-4m+2\), \(x_1x_2=2m-1\). Warunek: \(m(4m^2-4m+2)=3m(2m-1)+2\iff4m^3-10m^2+5m-2=0\).</p>
+<p class="step"><b>Krok 3.</b> \(m=2\) jest pierwiastkiem: \((m-2)(4m^2-2m+1)=0\), a drugi czynnik ma \(\Delta&lt;0\). Zatem \(m=2\) (i \(2\ne1\)).</p>`
+  },
+  {
+    id: 23,
+    group: "Wzory Viète’a",
+    src: "czerwiec 2026 · zad. 11",
+    pts: 5,
+    tags: ["równanie kwadratowe z parametrem", "czwarte potęgi pierwiastków"],
+    req: ["ZR III.3", "ZR III.5"],
+    q: String.raw`<p>Wyznacz wszystkie wartości parametru \(m\), dla których równanie \(x^2+mx+m=0\) ma dwa różne rozwiązania rzeczywiste \(x_1\), \(x_2\) spełniające warunek \(x_1^4+x_2^4+4x_1^3x_2^3\ge3\).</p>`,
+    ans: String.raw`\(m\in(-\infty,-1]\cup(4,+\infty)\)`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> \(\Delta=m^2-4m&gt;0\iff m\in(-\infty,0)\cup(4,+\infty)\).</p>
+<p class="step"><b>Krok 2.</b> Z Viète’a \(x_1+x_2=-m\), \(x_1x_2=m\): \(x_1^2+x_2^2=m^2-2m\), \(x_1^4+x_2^4=(m^2-2m)^2-2m^2\). Warunek: \((m^2-2m)^2-2m^2+4m^3\ge3\iff m^4+2m^2-3\ge0\iff(m^2+3)(m^2-1)\ge0\iff|m|\ge1\).</p>
+<p class="step"><b>Krok 3.</b> Część wspólna: \(m\in(-\infty,-1]\cup(4,+\infty)\).</p>`
+  },
+  {
     id: 4,
     group: "Funkcja kwadratowa – zadania z parametrem",
     src: "maj 2026 · zad. 10",

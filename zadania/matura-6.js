@@ -265,6 +265,33 @@ Zatem \(3x^2+3x-90=0\), czyli \(x^2+x-30=0\), \((x-5)(x+6)=0\). Długość jest 
 <p class="note"><b>Sprawdzenie:</b> \(|AB|^2+|AD|^2=|BC|^2+|CD|^2=64=|BD|^2\) ✓.</p>`
   },
   {
+    id: 22,
+    group: "Czworokąty",
+    src: "czerwiec 2025 · zad. 7",
+    pts: 4,
+    tags: ["czworokąt wpisany w okrąg", "twierdzenie cosinusów", "twierdzenie sinusów"],
+    req: ["ZR VIII.1", "ZR VII.7"],
+    q: String.raw`<p>Na czworokącie wypukłym \(ABCD\) o bokach \(|AB|=3\), \(|BC|=3\), \(|CD|=5\), \(|DA|=8\) opisano okrąg. Oblicz promień tego okręgu.</p>`,
+    ans: String.raw`\(R=\dfrac{7\sqrt3}3\)`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> Czworokąt jest wpisany w okrąg, więc \(\angle B+\angle D=180^\circ\) i \(\cos D=-\cos B\). Twierdzenie cosinusów dla przekątnej \(AC\) w trójkątach \(ABC\) i \(ACD\):
+\[18-18\cos B=89+80\cos B\Rightarrow\cos B=-\tfrac{71}{98}.\]</p>
+<p class="step"><b>Krok 2.</b> \(|AC|^2=18\left(1+\tfrac{71}{98}\right)=\tfrac{9\cdot169}{49}\), \(|AC|=\tfrac{39}7\); \(\sin B=\sqrt{1-\tfrac{5041}{9604}}=\tfrac{39\sqrt3}{98}\).</p>
+<p class="step"><b>Krok 3.</b> Okrąg jest opisany też na trójkącie \(ABC\): \(R=\dfrac{|AC|}{2\sin B}=\dfrac{39/7}{78\sqrt3/98}=\dfrac7{\sqrt3}=\dfrac{7\sqrt3}3\).</p>`
+  },
+  {
+    id: 24,
+    group: "Czworokąty",
+    src: "czerwiec 2026 · zad. 9",
+    pts: 4,
+    tags: ["czworokąt wpisany w okrąg", "kąt prosty", "obwód"],
+    req: ["ZR VIII.1"],
+    q: String.raw`<p>Pole czworokąta \(ABCD\) wpisanego w okrąg jest równe \(18\). Boki \(AB\) i \(BC\) są prostopadłe, \(|AB|=4\), \(|BC|=7\). Oblicz obwód tego czworokąta.</p>`,
+    ans: String.raw`\(20\)`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> Kąt \(B\) jest prosty, więc \(AC\) jest średnicą i kąt \(D\) też jest prosty. \(|AC|^2=16+49=65\).</p>
+<p class="step"><b>Krok 2.</b> \(P_{ABC}=14\), więc \(P_{ACD}=4=\tfrac12cd\), gdzie \(c=|CD|\), \(d=|AD|\): \(cd=8\) i \(c^2+d^2=65\).</p>
+<p class="step"><b>Krok 3.</b> \((c+d)^2=65+16=81\), \(c+d=9\). Obwód: \(4+7+9=20\).</p>`
+  },
+  {
     id: 11,
     group: "Dowody geometryczne",
     label: "autorskie",
@@ -330,6 +357,33 @@ Zatem \(3x^2+3x-90=0\), czyli \(x^2+x-30=0\), \((x-5)(x+6)=0\). Długość jest 
     sol: String.raw`<p class="step"><b>Krok 1.</b> W czworokąt opisany na okręgu sumy przeciwległych boków są równe: \(2c=a+b\), więc ramię \(c=\tfrac{a+b}2\).</p>
 <p class="step"><b>Krok 2.</b> Wysokość: \(h^2=c^2-\left(\tfrac{a-b}2\right)^2=\tfrac{(a+b)^2-(a-b)^2}4=ab\), czyli \(h=\sqrt{ab}\).</p>
 <p class="step"><b>Krok 3.</b> \(P=\tfrac{a+b}2\cdot\sqrt{ab}\). Ponieważ \(a\ne b\), mamy \(\tfrac{a+b}2&gt;\sqrt{ab}\) (bo \(\left(\sqrt a-\sqrt b\right)^2&gt;0\)), więc \(P&gt;\sqrt{ab}\cdot\sqrt{ab}=ab\). \(\blacksquare\)</p>`
+  },
+  {
+    id: 21,
+    group: "Dowody geometryczne",
+    src: "czerwiec 2025 · zad. 4",
+    pts: 3,
+    tags: ["prostokąt", "trapez prostokątny", "stosunek pól", "dowód"],
+    req: ["ZP VIII.8", "ZP VIII.11"],
+    q: String.raw`<p>Dany jest prostokąt \(ABCD\), w którym \(|AB|=2\cdot|AD|\). Na bokach \(AB\), \(BC\), \(CD\), \(DA\) obrano punkty – odpowiednio – \(K\), \(L\), \(M\), \(N\). Czworokąt \(KLMN\) jest trapezem prostokątnym (zobacz rysunek), a jego wysokość \(LM\) jest równoległa do przekątnej \(BD\).</p>
+<p>Wykaż, że stosunek pola trójkąta \(MDN\) do pola trójkąta \(KBL\) jest równy \(16\).</p>`,
+    fig: String.raw`<svg class="fig" viewBox="0 0 340 210" width="340" height="210" role="img" aria-label="Prostokąt ABCD, w którym AB jest dwa razy dłuższy od AD; trapez prostokątny KLMN z wierzchołkami na bokach prostokąta, którego wysokość LM jest równoległa do przekątnej BD; zacieniowane trójkąty MDN i KBL"><polygon class="f2" points="91.6,40 30,40 30,163.2"/><polygon class="f2" points="294.6,180 310,180 310,149.2"/><polygon class="s" points="30,180 310,180 310,40 30,40"/><line class="s d w" x1="310" y1="180" x2="30" y2="40"/><polygon class="a" points="294.6,180 310,149.2 91.6,40 30,163.2"/><text x="24" y="196" text-anchor="end">A</text><text x="316" y="196" text-anchor="start">B</text><text x="316" y="38" text-anchor="start">C</text><text x="24" y="38" text-anchor="end">D</text><text x="290" y="198" text-anchor="middle">K</text><text x="318" y="152" text-anchor="start">L</text><text x="92" y="32" text-anchor="middle">M</text><text x="22" y="166" text-anchor="end">N</text></svg>`,
+    sol: String.raw`<p class="step"><b>Krok 1: \(|DM|=2|BL|\).</b> \(LM\parallel BD\), więc trójkąty \(LCM\) i \(BCD\) są podobne: \(\dfrac{|CM|}{|CL|}=\dfrac{|CD|}{|CB|}=2\). Stąd \(|DM|=|CD|-|CM|=2|CB|-2|CL|=2|BL|\).</p>
+<p class="step"><b>Krok 2: kształt trójkątów.</b> Podstawy trapezu \(KL\) i \(NM\) są prostopadłe do \(LM\), czyli do \(BD\). Kąt \(ABD\) ma tangens \(\tfrac{|AD|}{|AB|}=\tfrac12\), więc prosta prostopadła do \(BD\) tworzy z bokiem \(AB\) (i z \(CD\)) kąt o tangensie \(2\). W trójkątach prostokątnych \(KBL\) i \(MDN\) daje to \(|BL|=2|BK|\) oraz \(|DN|=2|DM|\).</p>
+<p class="step"><b>Krok 3.</b> Niech \(|BL|=t\). Wtedy \(|BK|=\tfrac t2\), \(|DM|=2t\), \(|DN|=4t\) i
+\[\frac{P_{MDN}}{P_{KBL}}=\frac{\frac12\cdot2t\cdot4t}{\frac12\cdot\frac t2\cdot t}=\frac{4t^2}{\frac{t^2}4}=16.\ \blacksquare\]</p>`
+  },
+  {
+    id: 23,
+    group: "Dowody geometryczne",
+    src: "czerwiec 2026 · zad. 5",
+    pts: 3,
+    tags: ["trójkąt równoramienny", "czworokąt wpisany w okrąg", "kąty wpisane", "dowód"],
+    req: ["ZR VIII.1", "ZP VIII.11"],
+    q: String.raw`<p>Odcinek \(CD\) jest wysokością trójkąta równoramiennego \(ABC\), w którym \(|AC|=|BC|\). Prosta \(p\) jest prostopadła do boku \(BC\) i przecina go w punkcie \(L\). Ta prosta przecina wysokość \(CD\) w punkcie \(K\) oraz bok \(AC\) w punkcie różnym od \(A\). Wykaż, że \(|\angle CAK|=|\angle KDL|\).</p>`,
+    sol: String.raw`<p class="step"><b>Krok 1: symetria.</b> \(CD\) jest osią symetrii trójkąta, a \(K\) leży na niej, więc \(\angle CAK=\angle CBK\).</p>
+<p class="step"><b>Krok 2: okrąg.</b> \(\angle KDB=90^\circ\) i \(\angle KLB=90^\circ\), więc punkty \(D\) i \(L\) leżą na okręgu o średnicy \(KB\). Czworokąt \(KLBD\) jest wpisany w okrąg.</p>
+<p class="step"><b>Krok 3.</b> Kąty wpisane \(KDL\) i \(KBL\) opierają się na tym samym łuku \(KL\), więc są równe. Zatem \(\angle KDL=\angle KBL=\angle CBK=\angle CAK\). \(\blacksquare\)</p>`
   },
   {
     id: 13,
