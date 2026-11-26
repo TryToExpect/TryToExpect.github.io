@@ -159,6 +159,19 @@ Ponieważ \(t>0\), dzielimy przez \(t\) i dostajemy \(t=\sqrt3\). Wtedy \(y=9-3=
 <p class="note"><b>Sprawdzenie:</b> \(|AB|=2\sqrt3\) oraz \(|AC|=\sqrt{(\sqrt3)^2+3^2}=\sqrt{12}=2\sqrt3\), więc boki są równe. Do rysunku: \(\sqrt3\approx1{,}73\), czyli \(A\approx(1{,}27;\,6)\), \(B\approx(4{,}73;\,6)\).</p>`
   },
   {
+    id: 16,
+    group: "Parabola, prosta i okrąg",
+    src: "próbna grudzień 2022 · zad. 12",
+    pts: 6,
+    tags: ["styczna do paraboli", "odległość punktu od prostej", "pole trójkąta"],
+    req: ["ZP IX.2", "ZR XIII.3"],
+    q: String.raw`<p>Prosta \(k\): \(x+y-9=0\) przecina parabolę \(y=\tfrac14x^2-\tfrac32x+\tfrac14\) w punktach \(A\) (pierwsza współrzędna dodatnia) i \(B\) (ujemna). Prosta \(l\) jest równoległa do \(k\) i styczna do paraboli w punkcie \(C\). Oblicz odległość punktu \(C\) od prostej \(k\) oraz pole trójkąta \(ABC\).</p>`,
+    ans: String.raw`odległość \(\dfrac{9\sqrt2}2\), pole \(54\)`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> \(\tfrac14x^2-\tfrac32x+\tfrac14=9-x\Rightarrow x^2-2x-35=0\Rightarrow x=7\) lub \(x=-5\): \(A=(7,2)\), \(B=(-5,14)\).</p>
+<p class="step"><b>Krok 2.</b> Styczna ma współczynnik \(-1\): \(y'=\tfrac12x-\tfrac32=-1\Rightarrow x=1\), \(C=(1,-1)\).</p>
+<p class="step"><b>Krok 3.</b> \(d=\dfrac{|1-1-9|}{\sqrt2}=\dfrac{9\sqrt2}2\), \(|AB|=\sqrt{144+144}=12\sqrt2\), \(P=\tfrac12\cdot12\sqrt2\cdot\dfrac{9\sqrt2}2=54\).</p>`
+  },
+  {
     id: 6,
     group: "Wektory i równoległobok",
     label: "autorskie",
@@ -216,6 +229,18 @@ c) Wykaż, że \(ABCD\) jest rombem.</p>`,
     sol: String.raw`<p class="step"><b>Pomysł.</b> Środek \(S=(1,2)\) leży na prostej \(AB\): \(4-6+2=0\). Zatem \(AB\) jest średnicą, \(|AB|=10\), a kąt \(ACB\) jest prosty.</p>
 <p class="step"><b>Krok 1.</b> \(|AD|=8\), \(|DB|=2\). W trójkącie prostokątnym wysokość z wierzchołka kąta prostego: \(|CD|^2=|AD|\cdot|DB|=16\), \(|CD|=4\).</p>
 <p class="step"><b>Krok 2.</b> \(P=\tfrac12\cdot10\cdot4=20\).</p>`
+  },
+  {
+    id: 15,
+    group: "Okrąg opisany na trójkącie",
+    src: "próbna grudzień 2024 · zad. 7",
+    pts: 4,
+    tags: ["symetralna odcinka", "prosta i okrąg"],
+    req: ["ZR IX.1", "ZP IX.2"],
+    q: String.raw`<p>Dane są okrąg \((x+1)^2+(y-3)^2=50\) i punkty \(A=(6,4)\), \(B=(-6,8)\). Punkt \(C\) leży na tym okręgu i \(|AC|=|BC|\). Oblicz współrzędne punktu \(C\). Rozważ wszystkie przypadki.</p>`,
+    ans: String.raw`\(C=\left(-1+\sqrt5,\ 3+3\sqrt5\right)\) lub \(C=\left(-1-\sqrt5,\ 3-3\sqrt5\right)\)`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> \(C\) leży na symetralnej \(AB\): środek \(AB\) to \((0,6)\), \(\overrightarrow{AB}=[-12,4]\), więc \(-12x+4(y-6)=0\), czyli \(y=3x+6\).</p>
+<p class="step"><b>Krok 2.</b> Podstawiamy: \((x+1)^2+(3x+3)^2=50\Rightarrow10(x+1)^2=50\Rightarrow x=-1\pm\sqrt5\), a \(y=3x+6=3\pm3\sqrt5\).</p>`
   },
   {
     id: 9,

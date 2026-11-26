@@ -192,6 +192,18 @@ b) Wylosowano kulę białą. Oblicz prawdopodobieństwo, że pochodzi z pierwsze
 <p class="step"><b>Krok 2.</b> Wzór Bayesa: \(P(\mathcal P_1\mid R)=\dfrac{0{,}2/9}{1{,}16/9}=\dfrac{20}{116}=\dfrac5{29}\).</p>`
   },
   {
+    id: 21,
+    group: "Prawdopodobieństwo warunkowe",
+    src: "próbna grudzień 2024 · zad. 5",
+    pts: 3,
+    tags: ["wzór Bayesa", "prawdopodobieństwo całkowite"],
+    req: ["ZR XII.1"],
+    q: String.raw`<p>W pewnej społeczności \(35\%\) osób ma wyższe wykształcenie. Językiem niemieckim dobrze włada \(70\%\) osób z wyższym wykształceniem i \(40\%\) osób bez niego. Wybieramy losowo jedną osobę. Oblicz prawdopodobieństwo, że ma ona wyższe wykształcenie, jeśli wiadomo, że dobrze włada niemieckim. Wynik zaokrąglij do części setnych.</p>`,
+    ans: String.raw`\(\approx0{,}49\)`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> \(P(N)=0{,}35\cdot0{,}7+0{,}65\cdot0{,}4=0{,}245+0{,}26=0{,}505\).</p>
+<p class="step"><b>Krok 2.</b> \(P(W\mid N)=\dfrac{0{,}245}{0{,}505}\approx0{,}485\approx0{,}49\).</p>`
+  },
+  {
     id: 5,
     group: "Schemat Bernoulliego",
     src: "maj 2023 · zad. 2",
@@ -242,6 +254,18 @@ b) Wylosowano kulę białą. Oblicz prawdopodobieństwo, że pochodzi z pierwsze
     ans: String.raw`\(P(A)\approx0{,}984\)`,
     sol: String.raw`<p class="step">Schemat Bernoulliego, \(n=10\), \(p=0{,}02\):
 \[P(A)=0{,}98^{10}+10\cdot0{,}02\cdot0{,}98^9\approx0{,}81707+0{,}16675=0{,}98382\approx0{,}984.\]</p>`
+  },
+  {
+    id: 22,
+    group: "Schemat Bernoulliego",
+    src: "próbna grudzień 2022 · zad. 4",
+    pts: 3,
+    tags: ["schemat Bernoulliego", "co najwyżej dwa sukcesy"],
+    req: ["ZR XII.2"],
+    q: String.raw`<p>Prawdopodobieństwo, że torebka herbaty napełniona przez maszynę ma niedowagę, jest równe \(0{,}1\). Do kontroli wybrano losowo \(20\) torebek. Oblicz prawdopodobieństwo, że znajdą się wśród nich co najwyżej dwie torebki z niedowagą. Wynik zaokrąglij do części setnych.</p>`,
+    ans: String.raw`\(\approx0{,}68\)`,
+    sol: String.raw`<p class="step">Schemat Bernoulliego, \(n=20\), \(p=0{,}1\):
+\[P=0{,}9^{20}+20\cdot0{,}1\cdot0{,}9^{19}+190\cdot0{,}01\cdot0{,}9^{18}\approx0{,}1216+0{,}2702+0{,}2852\approx0{,}68.\]</p>`
   },
   {
     id: 7,

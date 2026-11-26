@@ -132,6 +132,19 @@
 <p class="step"><b>Krok 4.</b> \(y=3\): \((1,3,9)\); \(y=\tfrac79\): \(\left(\tfrac19,\tfrac79,\tfrac{49}9\right)\). Oba spełniają warunki (np. \(\left(\tfrac19,-\tfrac29,\tfrac49\right)\) ma iloraz \(-2\)).</p>`
   },
   {
+    id: 21,
+    group: "Ciąg arytmetyczny i geometryczny",
+    src: "próbna grudzień 2024 · zad. 10",
+    pts: 5,
+    tags: ["ciąg arytmetyczny", "ciąg geometryczny"],
+    req: ["ZP VI.5", "ZP VI.6"],
+    q: String.raw`<p>Malejący ciąg arytmetyczny \((a_n)\) spełnia warunek \(a_3+a_5=10\). Ciąg \(\left(2a_1+4,\ a_4-1,\ -\tfrac18a_7\right)\) jest geometryczny. Oblicz wyrazy tego ciągu geometrycznego.</p>`,
+    ans: String.raw`\(\left(32,\ 4,\ \tfrac12\right)\)`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> \(a_3+a_5=2a_4=10\), więc \(a_4=5\), \(a_1=5-3r\), \(a_7=5+3r\).</p>
+<p class="step"><b>Krok 2.</b> Wyrazy: \(14-6r,\ 4,\ -\tfrac{5+3r}8\). Warunek \(4^2=(14-6r)\cdot\left(-\tfrac{5+3r}8\right)\Rightarrow3r^2-2r-33=0\Rightarrow r=-3\) lub \(r=\tfrac{11}3\).</p>
+<p class="step"><b>Krok 3.</b> Ciąg jest malejący: \(r=-3\). Wtedy ciąg geometryczny to \(\left(32,4,\tfrac12\right)\) (iloraz \(\tfrac18\)).</p>`
+  },
+  {
     id: 5,
     group: "Granica ciągu",
     src: "maj 2021 · zad. 5",
@@ -201,6 +214,18 @@
 <p class="step"><b>Granica</b> (dzielimy licznik i mianownik przez \(n^3\)):
     \[\lim\frac{\frac{1}{6}\left(1+\frac3n+\frac2{n^2}\right)}{\frac12-\frac4{n^2}+\frac7{n^3}}=\frac{1/6}{1/2}=\frac13 .\]</p>
 <p class="note"><b>Uwaga:</b> to samo wynika z reguły „stopnie równe → iloraz współczynników przy najwyższej potędze”: \(\tfrac16\) przy \(n^3\) w liczniku i \(\tfrac12\) w mianowniku.</p>`
+  },
+  {
+    id: 20,
+    group: "Granica ciągu",
+    src: "próbna grudzień 2024 · zad. 8",
+    pts: 4,
+    tags: ["granica ciągu", "suma liczb nieparzystych", "symbol Newtona"],
+    req: ["ZR VI.1"],
+    q: String.raw`<p>Oblicz granicę \(\displaystyle\lim_{n\to+\infty}\frac{1+3+5+7+\ldots+(2n+1)}{\binom n2}\), gdzie w liczniku jest suma kolejnych liczb nieparzystych.</p>`,
+    ans: String.raw`\(2\)`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> Licznik to suma \(n+1\) wyrazów ciągu arytmetycznego: \(\dfrac{1+(2n+1)}2\cdot(n+1)=(n+1)^2\). Mianownik: \(\binom n2=\dfrac{n(n-1)}2\).</p>
+<p class="step"><b>Krok 2.</b> \(\displaystyle\lim\frac{2(n+1)^2}{n(n-1)}=\lim\frac{2\left(1+\frac1n\right)^2}{1-\frac1n}=2\).</p>`
   },
   {
     id: 9,

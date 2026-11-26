@@ -218,6 +218,32 @@ Zatem \(\cos x=-1\) lub \(\sin x=-\tfrac12\).</p>
 <p class="step"><b>Krok 2.</b> \(\sin x=\tfrac12\Rightarrow x=\tfrac\pi6+2k\pi\) lub \(x=\tfrac{5\pi}6+2k\pi\); \(\cos x=-\tfrac12\Rightarrow x=\pm\tfrac{2\pi}3+2k\pi\).</p>`
   },
   {
+    id: 17,
+    group: "Równania trygonometryczne",
+    src: "próbna grudzień 2024 · zad. 9",
+    pts: 4,
+    tags: ["sin⁴ + cos⁴", "sinus podwojonego kąta", "podstawienie"],
+    req: ["ZR VII.5", "ZR VII.6"],
+    q: String.raw`<p>Rozwiąż równanie \(\sin^4x=\sin x\cdot\cos x-\cos^4x\) w zbiorze \([-\pi,2\pi]\).</p>`,
+    ans: String.raw`\(x\in\left\{-\tfrac{3\pi}4,\ \tfrac\pi4,\ \tfrac{5\pi}4\right\}\)`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> \(\sin^4x+\cos^4x=(\sin^2x+\cos^2x)^2-2\sin^2x\cos^2x=1-\tfrac12\sin^22x\), a \(\sin x\cos x=\tfrac12\sin2x\).</p>
+<p class="step"><b>Krok 2.</b> Dla \(t=\sin2x\): \(1-\tfrac12t^2=\tfrac12t\Rightarrow t^2+t-2=0\Rightarrow t=1\) (\(t=-2\) odpada).</p>
+<p class="step"><b>Krok 3.</b> \(\sin2x=1\Rightarrow x=\tfrac\pi4+k\pi\); w \([-\pi,2\pi]\): \(-\tfrac{3\pi}4,\ \tfrac\pi4,\ \tfrac{5\pi}4\).</p>`
+  },
+  {
+    id: 18,
+    group: "Równania trygonometryczne",
+    src: "próbna grudzień 2022 · zad. 5",
+    pts: 4,
+    tags: ["równanie trygonometryczne", "grupowanie wyrazów", "tangens"],
+    req: ["ZR VII.6"],
+    q: String.raw`<p>Rozwiąż równanie \(6\sin x+2\sqrt3\cos x+3\operatorname{tg}x+\sqrt3=0\).</p>`,
+    ans: String.raw`\(x=-\tfrac\pi6+k\pi\) lub \(x=\pm\tfrac{2\pi}3+2k\pi\), \(k\in\mathbb Z\)`,
+    sol: String.raw`<p class="step"><b>Pomysł.</b> \(6\sin x=3\operatorname{tg}x\cdot2\cos x\), więc wyrazy dają się pogrupować (\(\cos x\ne0\)).</p>
+<p class="step"><b>Krok 1.</b> \(3\operatorname{tg}x(2\cos x+1)+\sqrt3(2\cos x+1)=(2\cos x+1)(3\operatorname{tg}x+\sqrt3)=0\).</p>
+<p class="step"><b>Krok 2.</b> \(\cos x=-\tfrac12\Rightarrow x=\pm\tfrac{2\pi}3+2k\pi\); \(\operatorname{tg}x=-\tfrac{\sqrt3}3\Rightarrow x=-\tfrac\pi6+k\pi\).</p>`
+  },
+  {
     id: 7,
     group: "Zadania z parametrem",
     tags: ["równanie z parametrem", "iloczyn równy zero", "nierówność trygonometryczna", "liczba rozwiązań"],

@@ -211,6 +211,18 @@ Lewą stronę rozkładamy: \(x^3+y^3-x^2y-xy^2=x^2(x-y)-y^2(x-y)=(x-y)(x^2-y^2)=
 <p class="step">\(2(x^2+y^2+1)-2(xy+x+y)=(x^2-2xy+y^2)+(x^2-2x+1)+(y^2-2y+1)=(x-y)^2+(x-1)^2+(y-1)^2\ge0\). \(\blacksquare\)</p>`
   },
   {
+    id: 20,
+    group: "Dowody algebraiczne",
+    src: "próbna grudzień 2022 · zad. 3",
+    pts: 3,
+    tags: ["nierówność", "wzory skróconego mnożenia", "dowód"],
+    req: ["ZR II.5"],
+    q: String.raw`<p>Wykaż, że dla dowolnych liczb rzeczywistych \(x\), \(y\) spełniających warunek \(x+y\ge1\) prawdziwa jest nierówność \(x^3+2xy+y^3\ge x^2+xy(x+y)+y^2\).</p>`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> \(x^3+y^3-xy(x+y)=(x+y)(x^2-xy+y^2)-xy(x+y)=(x+y)(x-y)^2\).</p>
+<p class="step"><b>Krok 2.</b> Różnica stron: \((x+y)(x-y)^2-(x^2-2xy+y^2)=(x-y)^2(x+y-1)\).</p>
+<p class="step"><b>Krok 3.</b> \((x-y)^2\ge0\) i \(x+y-1\ge0\), więc różnica jest nieujemna. \(\blacksquare\)</p>`
+  },
+  {
     id: 15,
     group: "Dowody o podzielności",
     label: "autorskie",

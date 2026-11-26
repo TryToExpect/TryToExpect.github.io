@@ -130,6 +130,20 @@
 <p class="note"><b>Sprawdzenie:</b> \(\left|-\tfrac83-3\right|=\tfrac{17}3\) i \(2\cdot\left(-\tfrac83\right)+11=\tfrac{17}3\).</p>`
   },
   {
+    id: 19,
+    group: "Wartość bezwzględna",
+    src: "próbna grudzień 2024 · zad. 6",
+    pts: 4,
+    tags: ["równanie z wartością bezwzględną", "przypadki"],
+    req: ["ZR III.4"],
+    q: String.raw`<p>Rozwiąż równanie \(|4x-8|+|x-2|=|2-x|+|x+2|+4\).</p>`,
+    ans: String.raw`\(x=\tfrac25\) lub \(x=\tfrac{14}3\)`,
+    sol: String.raw`<p class="step"><b>Pomysł.</b> \(|x-2|=|2-x|\), więc te wyrazy się skracają, a \(|4x-8|=4|x-2|\). Zostaje \(4|x-2|=|x+2|+4\).</p>
+<p class="step"><b>Dla \(x\ge2\):</b> \(4x-8=x+6\Rightarrow x=\tfrac{14}3\) ✓.</p>
+<p class="step"><b>Dla \(-2\le x&lt;2\):</b> \(8-4x=x+6\Rightarrow x=\tfrac25\) ✓.</p>
+<p class="step"><b>Dla \(x&lt;-2\):</b> \(8-4x=-x+2\Rightarrow x=2\) – poza przedziałem.</p>`
+  },
+  {
     id: 10,
     group: "Równania i nierówności wymierne",
     label: "autorskie",
@@ -171,5 +185,19 @@
     sol: String.raw`<p class="step"><b>Dziedzina:</b> \(x\ne-\tfrac12\), \(x\ne-\tfrac32\).</p>
 <p class="step"><b>Krok 1.</b> Przenosimy na jedną stronę: \(\dfrac{(3x+1)(2x+3)-(3x+4)(2x+1)}{(2x+1)(2x+3)}\le0\). W liczniku \((6x^2+11x+3)-(6x^2+11x+4)=-1\).</p>
 <p class="step"><b>Krok 2.</b> \(\dfrac{-1}{(2x+1)(2x+3)}\le0\iff(2x+1)(2x+3)&gt;0\iff x&lt;-\tfrac32\ \text{lub}\ x&gt;-\tfrac12\).</p>`
+  },
+  {
+    id: 20,
+    group: "Równania i nierówności wymierne",
+    src: "próbna grudzień 2022 · zad. 8",
+    pts: 5,
+    tags: ["nierówność wymierna", "dziedzina", "metoda siatki znaków"],
+    req: ["ZR III.2"],
+    q: String.raw`<p>Rozwiąż nierówność \(\dfrac{x-1}{x^2-4}-\dfrac1{2-x}\ge\dfrac3{2+x}+2\).</p>`,
+    ans: String.raw`\(x\in[-3,-2)\cup\left(2,\tfrac52\right]\)`,
+    sol: String.raw`<p class="step"><b>Dziedzina:</b> \(x\ne\pm2\).</p>
+<p class="step"><b>Krok 1.</b> \(-\dfrac1{2-x}=\dfrac{x+2}{x^2-4}\), więc lewa strona to \(\dfrac{2x+1}{x^2-4}\); prawa to \(\dfrac{2x+7}{x+2}=\dfrac{(2x+7)(x-2)}{x^2-4}\).</p>
+<p class="step"><b>Krok 2.</b> \(\dfrac{2x+1-(2x^2+3x-14)}{x^2-4}\ge0\iff\dfrac{-(2x-5)(x+3)}{(x-2)(x+2)}\ge0\iff\dfrac{(2x-5)(x+3)}{(x-2)(x+2)}\le0\).</p>
+<p class="step"><b>Krok 3.</b> Punkty krytyczne \(-3,-2,2,\tfrac52\); znak ujemny lub zero na \([-3,-2)\) i \(\left(2,\tfrac52\right]\).</p>`
   }
 ];

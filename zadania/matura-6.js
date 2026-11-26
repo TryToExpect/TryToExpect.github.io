@@ -148,6 +148,21 @@ Czyli \(b^2=a^2+ac\), to znaczy \(|AC|^2=|BC|^2+|AB|\cdot|BC|\). \(\blacksquare\
 <p class="step"><b>Krok 3.</b> Twierdzenie cosinusów dla \(x=|AC|\): \(48=36+x^2-2\cdot6x\cdot\left(-\tfrac12\right)\Rightarrow x^2+6x-12=0\Rightarrow x=-3+\sqrt{21}\) (dodatnie rozwiązanie).</p>`
   },
   {
+    id: 26,
+    group: "Trójkąty",
+    src: "próbna grudzień 2024 · zad. 12",
+    pts: 5,
+    tags: ["twierdzenie sinusów", "wysokość trójkąta", "tangens"],
+    req: ["ZR VII.7", "ZR VII.5", "ZP VIII.12"],
+    q: String.raw`<p>W trójkącie ostrokątnym \(ABC\) kąt \(BAC\) jest dwa razy większy od kąta \(ABC\). Punkt \(D\) jest środkiem boku \(AB\). Niech \(\alpha=|\angle ABC|\), \(\beta=|\angle ADC|\) (zobacz rysunek). Oblicz \(\dfrac{\operatorname{tg}\beta}{\sin(2\alpha)}\).</p>`,
+    fig: String.raw`<svg class="fig" viewBox="0 0 300 200" width="300" height="200" role="img" aria-label="Trójkąt ostrokątny ABC, w którym kąt przy A ma miarę 2α, a kąt przy B miarę α; D jest środkiem boku AB, β to kąt ADC"><polygon class="s" points="30,170 270,170 78.7,36.1"/><line class="a" x1="150" y1="170" x2="78.7" y2="36.1"/><path class="p" d="M52,170 A22,22 0 0 0 37.5,149.3"/><path class="p" d="M248,170 A22,22 0 0 1 252,157.4"/><path class="p" d="M128,170 A22,22 0 0 1 139.7,150.6"/><circle class="dot" cx="150" cy="170" r="2.4"/><text x="22" y="184" text-anchor="end">A</text><text x="278" y="184" text-anchor="start">B</text><text x="76" y="28" text-anchor="middle">C</text><text x="150" y="188" text-anchor="middle">D</text><text class="pn" x="58" y="160" text-anchor="start">2α</text><text class="pn" x="236" y="163" text-anchor="end">α</text><text class="pn" x="124" y="157" text-anchor="end">β</text></svg>`,
+    ans: String.raw`\(2\)`,
+    sol: String.raw`<p class="step"><b>Pomysł.</b> Opuśćmy wysokość \(CE\) na \(AB\). Wtedy \(\operatorname{tg}\beta=\dfrac{|CE|}{|ED|}\), więc trzeba znaleźć \(|ED|\).</p>
+<p class="step"><b>Krok 1.</b> Niech \(a=|BC|\), \(b=|AC|\). \(|CE|=b\sin2\alpha\), \(|AE|=b\cos2\alpha\), \(|EB|=a\cos\alpha\), więc \(|ED|=\tfrac12|AB|-|AE|=\tfrac12(a\cos\alpha-b\cos2\alpha)\).</p>
+<p class="step"><b>Krok 2.</b> Z twierdzenia sinusów \(a=2R\sin2\alpha\), \(b=2R\sin\alpha\): \(a\cos\alpha-b\cos2\alpha=2R(\sin2\alpha\cos\alpha-\sin\alpha\cos2\alpha)=2R\sin\alpha=b\). Zatem \(|ED|=\tfrac b2\).</p>
+<p class="step"><b>Krok 3.</b> \(\operatorname{tg}\beta=\dfrac{b\sin2\alpha}{b/2}=2\sin2\alpha\), więc \(\dfrac{\operatorname{tg}\beta}{\sin2\alpha}=2\).</p>`
+  },
+  {
     id: 5,
     group: "Czworokąty",
     src: "maj 2025 · zad. 7",
@@ -292,6 +307,20 @@ Zatem \(3x^2+3x-90=0\), czyli \(x^2+x-30=0\), \((x-5)(x+6)=0\). Długość jest 
 <p class="step"><b>Krok 3.</b> \((c+d)^2=65+16=81\), \(c+d=9\). Obwód: \(4+7+9=20\).</p>`
   },
   {
+    id: 28,
+    group: "Czworokąty",
+    src: "próbna grudzień 2022 · zad. 11",
+    pts: 5,
+    tags: ["trapez wpisany w okrąg", "twierdzenie sinusów", "pole i obwód"],
+    req: ["ZR VII.7", "ZR VIII.1"],
+    q: String.raw`<p>W trapezie \(ABCD\) o podstawach \(AB\) i \(CD\) (\(|AB|&gt;|CD|\)) ramię \(BC\) ma długość \(6\). Na trapezie opisano okrąg o promieniu \(R=5\). Kąty \(BAC\) i \(ABC\) spełniają warunek \(\dfrac{\sin|\angle BAC|}{\sin|\angle ABC|}=\dfrac58\). Oblicz pole i obwód trapezu.</p>`,
+    ans: String.raw`\(P=\dfrac{27\,648}{625}\), obwód \(27{,}36\)`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> Trapez wpisany w okrąg jest równoramienny. W trójkącie \(ABC\) (ten sam okrąg): \(\sin\angle BAC=\tfrac{6}{10}=\tfrac35\), więc \(\sin\angle ABC=\tfrac{24}{25}\); kąty ostre, więc \(\cos\angle BAC=\tfrac45\), \(\cos\angle ABC=\tfrac7{25}\).</p>
+<p class="step"><b>Krok 2.</b> \(|AB|=2R\sin\angle ACB=10\sin(\angle BAC+\angle ABC)=10\left(\tfrac35\cdot\tfrac7{25}+\tfrac45\cdot\tfrac{24}{25}\right)=\tfrac{234}{25}\).</p>
+<p class="step"><b>Krok 3.</b> Wysokość \(h=6\cdot\tfrac{24}{25}=\tfrac{144}{25}\), rzut ramienia \(6\cdot\tfrac7{25}=\tfrac{42}{25}\), więc \(|CD|=\tfrac{234}{25}-\tfrac{84}{25}=6\).</p>
+<p class="step"><b>Krok 4.</b> \(P=\dfrac{\frac{234}{25}+6}2\cdot\dfrac{144}{25}=\dfrac{192}{25}\cdot\dfrac{144}{25}=\dfrac{27\,648}{625}\), obwód \(\tfrac{234}{25}+6+6+6=27{,}36\).</p>`
+  },
+  {
     id: 11,
     group: "Dowody geometryczne",
     label: "autorskie",
@@ -384,6 +413,30 @@ Zatem \(3x^2+3x-90=0\), czyli \(x^2+x-30=0\), \((x-5)(x+6)=0\). Długość jest 
     sol: String.raw`<p class="step"><b>Krok 1: symetria.</b> \(CD\) jest osią symetrii trójkąta, a \(K\) leży na niej, więc \(\angle CAK=\angle CBK\).</p>
 <p class="step"><b>Krok 2: okrąg.</b> \(\angle KDB=90^\circ\) i \(\angle KLB=90^\circ\), więc punkty \(D\) i \(L\) leżą na okręgu o średnicy \(KB\). Czworokąt \(KLBD\) jest wpisany w okrąg.</p>
 <p class="step"><b>Krok 3.</b> Kąty wpisane \(KDL\) i \(KBL\) opierają się na tym samym łuku \(KL\), więc są równe. Zatem \(\angle KDL=\angle KBL=\angle CBK=\angle CAK\). \(\blacksquare\)</p>`
+  },
+  {
+    id: 25,
+    group: "Dowody geometryczne",
+    src: "próbna grudzień 2024 · zad. 2",
+    pts: 2,
+    tags: ["odcinki stycznych", "potęga punktu", "trójkąt równoramienny", "dowód"],
+    req: ["ZP VIII.11"],
+    q: String.raw`<p>Okrąg \(\mathcal O\) jest styczny do boków \(AC\) i \(BC\) trójkąta \(ABC\) oraz przecina bok \(AB\) w punktach \(M\) i \(N\), przy czym \(0&lt;|AM|&lt;|AN|&lt;|AB|\). Wykaż, że jeśli \(|AM|=|BN|\), to trójkąt \(ABC\) jest równoramienny.</p>`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> Niech \(P\in AC\) i \(Q\in BC\) będą punktami styczności. Z twierdzenia o siecznej i stycznej: \(|AP|^2=|AM|\cdot|AN|\) oraz \(|BQ|^2=|BN|\cdot|BM|\).</p>
+<p class="step"><b>Krok 2.</b> Dla \(|AM|=|BN|=x\) i \(|MN|=y\): \(|AN|=|BM|=x+y\), więc \(|AP|^2=|BQ|^2=x(x+y)\) i \(|AP|=|BQ|\).</p>
+<p class="step"><b>Krok 3.</b> Odcinki stycznych z \(C\) są równe: \(|CP|=|CQ|\). Zatem \(|AC|=|AP|+|PC|=|BQ|+|QC|=|BC|\). \(\blacksquare\)</p>`
+  },
+  {
+    id: 27,
+    group: "Dowody geometryczne",
+    src: "próbna grudzień 2022 · zad. 6",
+    pts: 4,
+    tags: ["dwusieczne", "czworokąt wpisany w okrąg", "trójkąt równoboczny", "dowód"],
+    req: ["ZR VIII.1", "ZP VIII.11"],
+    q: String.raw`<p>W trójkącie \(ABC\) poprowadzono dwusieczne kątów, przecinające boki \(BC\), \(AC\), \(AB\) w punktach \(K\), \(L\), \(M\). Punkt \(P\) jest punktem przecięcia dwusiecznych. Na czworokątach \(CLPK\) oraz \(BKPM\) można opisać okrąg. Udowodnij, że trójkąt \(ABC\) jest równoboczny.</p>`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> Kąt \(LPK\) jest wierzchołkowy z kątem \(APB\), a w trójkącie \(APB\): \(\angle APB=180^\circ-\tfrac\alpha2-\tfrac\beta2=90^\circ+\tfrac\gamma2\).</p>
+<p class="step"><b>Krok 2.</b> W czworokącie wpisanym \(CLPK\) kąty przy \(P\) i \(C\) dają \(180^\circ\): \(90^\circ+\tfrac\gamma2+\gamma=180^\circ\), więc \(\gamma=60^\circ\).</p>
+<p class="step"><b>Krok 3.</b> Tak samo w \(BKPM\): \(\angle KPM=\angle APC=90^\circ+\tfrac\beta2\), więc \(\beta=60^\circ\). Zatem też \(\alpha=60^\circ\) – trójkąt jest równoboczny. \(\blacksquare\)</p>`
   },
   {
     id: 13,

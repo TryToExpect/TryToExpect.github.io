@@ -116,6 +116,29 @@
 <p class="step"><b>Krok 3.</b> \(\dfrac a{2b}=\dfrac{4/9}{12}=\dfrac1{27}=3^{-3}\).</p>`
   },
   {
+    id: 16,
+    group: "Logarytmy i potęgi",
+    src: "próbna grudzień 2024 · zad. 4",
+    pts: 3,
+    tags: ["zamiana podstawy logarytmu", "dowód"],
+    req: ["ZP I.9", "ZR I.1"],
+    q: String.raw`<p>Wykaż, że \(\dfrac1{\log_235+1}+\dfrac1{\log_7140-\log_72}+\dfrac1{\log_57+\log_52+1}=1\).</p>`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> Każdy mianownik to logarytm liczby \(70\): \(\log_235+1=\log_270\), \(\log_7140-\log_72=\log_770\), \(\log_57+\log_52+1=\log_570\).</p>
+<p class="step"><b>Krok 2.</b> \(\dfrac1{\log_a70}=\log_{70}a\), więc suma to \(\log_{70}2+\log_{70}7+\log_{70}5=\log_{70}70=1\). \(\blacksquare\)</p>`
+  },
+  {
+    id: 17,
+    group: "Logarytmy i potęgi",
+    src: "próbna grudzień 2022 · zad. 1",
+    pts: 2,
+    tags: ["zamiana podstawy logarytmu", "logarytm potęgi"],
+    req: ["ZP I.9", "ZR I.1"],
+    q: String.raw`<p>Oblicz \(\dfrac{\log_35\cdot\log_{25}27}{\log_7\sqrt[6]{49}}\).</p>`,
+    ans: String.raw`\(\dfrac92\)`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> \(\log_{25}27=\dfrac{\log_327}{\log_325}=\dfrac3{2\log_35}\), więc licznik to \(\tfrac32\).</p>
+<p class="step"><b>Krok 2.</b> \(\sqrt[6]{49}=7^{\frac26}=7^{\frac13}\), więc mianownik to \(\tfrac13\). Wynik: \(\tfrac32:\tfrac13=\tfrac92\).</p>`
+  },
+  {
     id: 6,
     group: "Procenty i procent składany",
     label: "autorskie",

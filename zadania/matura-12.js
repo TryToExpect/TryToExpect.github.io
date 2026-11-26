@@ -70,6 +70,19 @@ Zatem \(T(15)=60\cdot\dfrac{3\sqrt3}8+20=\dfrac{45\sqrt3}2+20\approx38{,}97+20=5
 <p class="step"><b>Krok 3.</b> \(0{,}05t=6\Rightarrow t=120\) s.</p>`
   },
   {
+    id: 11,
+    group: "Funkcja wykładnicza w zastosowaniach",
+    src: "próbna grudzień 2024 · zad. 1",
+    pts: 2,
+    tags: ["funkcja wykładnicza", "kondensator"],
+    req: ["ZP V.14"],
+    q: String.raw`<p>Ładunek zgromadzony w kondensatorze (w milikulombach) opisuje zależność \(Q(t)=Q_0\cdot\beta^{-t}\) dla \(t\ge0\), gdzie \(Q_0\) – ładunek w chwili \(t=0\), \(\beta\) – stała dodatnia, \(t\) – czas w sekundach. W chwili \(t=4\) s ładunek był równy \(2\), a w chwili \(t=6\) s – \(18\) milikulombów. Oblicz ładunek w chwili \(t=5\) s.</p>`,
+    ans: String.raw`\(6\) milikulombów`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> \(\dfrac{Q(6)}{Q(4)}=\beta^{-2}=9\), więc \(\beta=\tfrac13\) (\(\beta&gt;0\)).</p>
+<p class="step"><b>Krok 2.</b> \(Q(5)=Q(4)\cdot\beta^{-1}=2\cdot3=6\).</p>
+<p class="note">Szybciej: wartości w chwilach \(4,5,6\) tworzą ciąg geometryczny, więc \(Q(5)=\sqrt{2\cdot18}=6\).</p>`
+  },
+  {
     id: 4,
     group: "Równania i nierówności wykładnicze",
     label: "autorskie",

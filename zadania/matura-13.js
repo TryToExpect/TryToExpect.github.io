@@ -45,6 +45,19 @@
 <p class="step"><b>Odpowiedź.</b> Pole czworokąta \(PQRS\) jest najmniejsze dla \(x=4\) i wynosi \(28\).</p>`
   },
   {
+    id: 25,
+    group: "Największa i najmniejsza wartość",
+    src: "próbna grudzień 2022 · zad. 2.1",
+    pts: 2,
+    tags: ["wartość bezwzględna funkcji kwadratowej", "zbiór wartości"],
+    req: ["ZP V.10", "ZR V.1"],
+    q: String.raw`<p>Funkcja \(g\) jest określona wzorem \(g(x)=\left|-\tfrac14x^2+3x-5\right|\) dla \(x\in\mathbb R\) (fragment wykresu na rysunku). Wyznacz zbiór wszystkich wartości, jakie funkcja \(g\) przyjmuje w przedziale \([9,11]\).</p>`,
+    fig: String.raw`<svg class="fig" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="Wykres funkcji g(x) = |−x²/4 + 3x − 5|: dotyka osi Ox w punktach x = 2 i x = 10, ma lokalne maksimum 4 dla x = 6 i przecina oś Oy w punkcie 5"><line class="ax" x1="10" y1="170" x2="308" y2="170"/><path class="ah" d="M308,170 l-7,-3.5 v7 z"/><line class="ax" x1="40" y1="195" x2="40" y2="20"/><path class="ah" d="M40,14 l-3.5,7 h7 z"/><polyline class="a" points="20,46.3 22,51.5 24,56.6 26,61.7 28,66.6 30,71.6 32,76.4 34,81.2 36,85.9 38,90.5 40,95 42,99.5 44,103.9 46,108.2 48,112.4 50,116.6 52,120.7 54,124.7 56,128.6 58,132.5 60,136.3 62,140 64,143.6 66,147.2 68,150.7 70,154.1 72,157.4 74,160.7 76,163.9 78,167 80,170 82,167 84,164.1 86,161.3 88,158.6 90,155.9 92,153.3 94,150.8 96,148.4 98,146 100,143.7 102,141.5 104,139.4 106,137.3 108,135.3 110,133.4 112,131.6 114,129.8 116,128.1 118,126.5 120,125 122,123.5 124,122.1 126,120.8 128,119.6 130,118.4 132,117.4 134,116.3 136,115.4 138,114.5 140,113.8 142,113 144,112.4 146,111.8 148,111.4 150,110.9 152,110.6 154,110.3 156,110.2 158,110 160,110 162,110 164,110.2 166,110.3 168,110.6 170,110.9 172,111.4 174,111.8 176,112.4 178,113 180,113.7 182,114.5 184,115.4 186,116.3 188,117.3 190,118.4 192,119.6 194,120.8 196,122.1 198,123.5 200,125 202,126.5 204,128.1 206,129.8 208,131.6 210,133.4 212,135.3 214,137.3 216,139.4 218,141.5 220,143.7 222,146 224,148.4 226,150.8 228,153.3 230,155.9 232,158.6 234,161.3 236,164.1 238,167 240,170 242,167 244,163.9 246,160.7 248,157.4 250,154.1 252,150.7 254,147.2 256,143.6 258,140 260,136.3 262,132.5 264,128.6 266,124.7 268,120.7 270,116.6 272,112.4 274,108.2 276,103.9 278,99.5 280,95 282,90.5 284,85.9 286,81.2 288,76.4"/><line class="gr" x1="160" y1="170" x2="160" y2="110"/><circle class="dot" cx="80" cy="170" r="2.4"/><circle class="dot" cx="240" cy="170" r="2.4"/><circle class="dot" cx="40" cy="95" r="2.4"/><circle class="dot" cx="160" cy="110" r="2.4"/><text class="m" x="80" y="185" text-anchor="middle">2</text><text class="m" x="160" y="185" text-anchor="middle">6</text><text class="m" x="240" y="185" text-anchor="middle">10</text><text class="m" x="34" y="99" text-anchor="end">5</text><text class="m" x="160" y="102" text-anchor="middle">4</text><text x="300" y="186" text-anchor="end">x</text><text x="48" y="22" text-anchor="start">y</text><text class="ac" x="270" y="60" text-anchor="end">y = g(x)</text></svg>`,
+    ans: String.raw`\(\left[0,\tfrac94\right]\)`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> \(-\tfrac14x^2+3x-5=-\tfrac14(x-2)(x-10)\): miejsca zerowe \(2\) i \(10\), wierzchołek w \(x=6\).</p>
+<p class="step"><b>Krok 2.</b> W \([9,11]\) funkcja \(g\) maleje do \(g(10)=0\), a potem rośnie: \(g(9)=\tfrac74\), \(g(11)=\left|-\tfrac{121}4+28\right|=\tfrac94\). Zbiór wartości: \(\left[0,\tfrac94\right]\).</p>`
+  },
+  {
     id: 15,
     group: "Wzory Viète’a",
     label: "autorskie",
@@ -142,6 +155,32 @@
     sol: String.raw`<p class="step"><b>Krok 1.</b> \(\Delta=m^2-4m&gt;0\iff m\in(-\infty,0)\cup(4,+\infty)\).</p>
 <p class="step"><b>Krok 2.</b> Z Viète’a \(x_1+x_2=-m\), \(x_1x_2=m\): \(x_1^2+x_2^2=m^2-2m\), \(x_1^4+x_2^4=(m^2-2m)^2-2m^2\). Warunek: \((m^2-2m)^2-2m^2+4m^3\ge3\iff m^4+2m^2-3\ge0\iff(m^2+3)(m^2-1)\ge0\iff|m|\ge1\).</p>
 <p class="step"><b>Krok 3.</b> Część wspólna: \(m\in(-\infty,-1]\cup(4,+\infty)\).</p>`
+  },
+  {
+    id: 24,
+    group: "Wzory Viète’a",
+    src: "próbna grudzień 2024 · zad. 11",
+    pts: 5,
+    tags: ["funkcja kwadratowa z parametrem", "różnica kwadratów pierwiastków"],
+    req: ["ZR III.3", "ZR III.5"],
+    q: String.raw`<p>Funkcja \(f(x)=x^2-3x-m^2+m+3\). Wyznacz wszystkie wartości parametru \(m\), dla których \(f\) ma dwa różne miejsca zerowe \(x_1\), \(x_2\) spełniające warunek \(\left|x_1^2-x_2^2\right|\le12\).</p>`,
+    ans: String.raw`\(m\in\left[\tfrac{1-2\sqrt5}2,-\tfrac12\right)\cup\left(\tfrac32,\tfrac{1+2\sqrt5}2\right]\)`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> \(\Delta=9+4m^2-4m-12=4m^2-4m-3&gt;0\iff m&lt;-\tfrac12\ \text{lub}\ m&gt;\tfrac32\).</p>
+<p class="step"><b>Krok 2.</b> \(\left|x_1^2-x_2^2\right|=|x_1+x_2|\cdot|x_1-x_2|=3\sqrt\Delta\le12\iff\Delta\le16\iff4m^2-4m-19\le0\iff m\in\left[\tfrac{1-2\sqrt5}2,\tfrac{1+2\sqrt5}2\right]\).</p>
+<p class="step"><b>Krok 3.</b> Część wspólna z krokiem 1 daje odpowiedź (\(\tfrac{1\pm2\sqrt5}2\approx-1{,}74\) i \(2{,}74\)).</p>`
+  },
+  {
+    id: 27,
+    group: "Wzory Viète’a",
+    src: "próbna grudzień 2022 · zad. 9",
+    pts: 5,
+    tags: ["równanie kwadratowe z parametrem", "suma sześcianów pierwiastków"],
+    req: ["ZR III.3", "ZR III.5"],
+    q: String.raw`<p>Wyznacz wszystkie wartości parametru \(m\), dla których równanie \(x^2-(m-4)x+m^2-7m+12=0\) ma dwa różne rozwiązania rzeczywiste \(x_1\), \(x_2\) spełniające warunek \(x_1^3+x_2^3&lt;5x_1^2x_2+5x_1x_2^2\).</p>`,
+    ans: String.raw`\(m\in\left(\tfrac{20}7,4\right)\)`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> \(\Delta=(m-4)^2-4(m^2-7m+12)=-3m^2+20m-32&gt;0\iff m\in\left(\tfrac83,4\right)\).</p>
+<p class="step"><b>Krok 2.</b> \(s=x_1+x_2=m-4\), \(p=x_1x_2=(m-3)(m-4)\). Warunek: \(s^3-3ps&lt;5ps\iff s(s^2-8p)&lt;0\).</p>
+<p class="step"><b>Krok 3.</b> Na \(\left(\tfrac83,4\right)\) jest \(s&lt;0\), więc potrzeba \(s^2-8p=(m-4)(20-7m)&gt;0\). Ponieważ \(m-4&lt;0\), musi być \(20-7m&lt;0\), czyli \(m&gt;\tfrac{20}7\). Odpowiedź: \(m\in\left(\tfrac{20}7,4\right)\).</p>`
   },
   {
     id: 4,
@@ -316,5 +355,18 @@ z parametrem \(m\). Wyznacz wszystkie wartości \(m\), dla których to równanie
 </ul>
 <p class="step"><b>Odpowiedź.</b> \(m\in(-\infty,1]\cup\{2\}\cup[3,\infty)\).</p>
 <p class="note">Warunek \(f(0)\cdot f(2)&lt;0\) dałby tylko \(m&lt;1\) lub \(m>3\) i pominąłby przypadki, w których pierwiastek leży dokładnie na końcu przedziału lub jest podwójny.</p>`
+  },
+  {
+    id: 26,
+    group: "Funkcja kwadratowa – zadania z parametrem",
+    src: "próbna grudzień 2022 · zad. 2.2",
+    pts: 2,
+    tags: ["liczba rozwiązań", "wykres z wartością bezwzględną"],
+    req: ["ZR III.5", "ZR V.1"],
+    q: String.raw`<p>Dla funkcji \(g(x)=\left|-\tfrac14x^2+3x-5\right|\) z zadania 2.1 wyznacz wszystkie wartości parametru \(m\), dla których równanie \(g(x)=|m|\) ma dokładnie dwa rozwiązania dodatnie.</p>`,
+    ans: String.raw`\(m\in(-5,-4)\cup\{0\}\cup(4,5)\)`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> Dla \(x&gt;0\): \(g\) maleje od \(5\) (w \(x\to0\)) do \(0\) w \(x=2\), rośnie do \(4\) w \(x=6\), maleje do \(0\) w \(x=10\) i dalej rośnie nieograniczenie (rysunek).</p>
+<p class="step"><b>Krok 2.</b> Prosta \(y=c\) przecina tę część wykresu w dwóch punktach dla \(c=0\) (\(x=2\), \(x=10\)) oraz dla \(4&lt;c&lt;5\). Dla \(0&lt;c&lt;4\) są cztery punkty, dla \(c=4\) trzy, dla \(c\ge5\) jeden.</p>
+<p class="step"><b>Krok 3.</b> \(|m|=0\) lub \(4&lt;|m|&lt;5\), czyli \(m\in(-5,-4)\cup\{0\}\cup(4,5)\).</p>`
   }
 ];

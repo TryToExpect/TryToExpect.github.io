@@ -324,6 +324,31 @@ więc drugi składnik jest równy \(1\cdot x^2=x^2\).</p>
 <p class="step"><b>Krok 3.</b> Prosta: \(y=-2(x-1)+2=-2x+4\).</p>`
   },
   {
+    id: 31,
+    group: "Zadania dwuczęściowe: najpierw wzór, potem optymalizacja",
+    src: "próbna grudzień 2024 · zad. 13.1",
+    pts: 2,
+    tags: ["funkcja wymierna", "pole czworokąta"],
+    req: ["ZP V.2"],
+    q: String.raw`<p>Funkcja \(f(x)=\dfrac{12x-84}{x-8}\) jest określona dla \(x\in(-\infty,8)\). Rozważamy czworokąty \(OBCD\), w których \(O=(0,0)\), \(B\) i \(D\) są punktami przecięcia wykresu \(f\) z osiami \(Ox\) i \(Oy\), a \(C\) ma obie współrzędne dodatnie i leży na wykresie \(f\).</p>
+<p>Wykaż, że pole czworokąta \(OBCD\) w zależności od pierwszej współrzędnej \(x\) punktu \(C\) wyraża się wzorem \(P(x)=\dfrac{21}4\cdot\dfrac{x^2-56}{x-8}\).</p>`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> \(f(x)=0\Rightarrow x=7\), więc \(B=(7,0)\); \(f(0)=\tfrac{84}8=\tfrac{21}2\), więc \(D=\left(0,\tfrac{21}2\right)\).</p>
+<p class="step"><b>Krok 2.</b> Przekątna \(OC\) dzieli czworokąt na trójkąty \(OBC\) i \(OCD\): \(P=\tfrac12\cdot7\cdot f(x)+\tfrac12\cdot\tfrac{21}2\cdot x=\dfrac{21}4\cdot\dfrac{8x-56}{x-8}+\dfrac{21}4\cdot\dfrac{x^2-8x}{x-8}=\dfrac{21}4\cdot\dfrac{x^2-56}{x-8}\). \(\blacksquare\)</p>`
+  },
+  {
+    id: 32,
+    group: "Zadania dwuczęściowe: najpierw wzór, potem optymalizacja",
+    src: "próbna grudzień 2024 · zad. 13.2",
+    pts: 4,
+    tags: ["największe pole", "pochodna funkcji wymiernej"],
+    req: ["ZR XIII.6"],
+    q: String.raw`<p>Pole czworokąta \(OBCD\) z zadania 13.1 wyraża się wzorem \(P(x)=\dfrac{21}4\cdot\dfrac{x^2-56}{x-8}\) dla \(x\in(0,7)\). Oblicz współrzędne wierzchołka \(C\), dla których pole jest największe.</p>`,
+    ans: String.raw`\(C=\left(8-2\sqrt2,\ 12-3\sqrt2\right)\)`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> \(P'(x)=\dfrac{21}4\cdot\dfrac{2x(x-8)-(x^2-56)}{(x-8)^2}=\dfrac{21}4\cdot\dfrac{x^2-16x+56}{(x-8)^2}\). Licznik zeruje się w \(x=8\pm2\sqrt2\); w \((0,7)\) leży tylko \(8-2\sqrt2\approx5{,}17\).</p>
+<p class="step"><b>Krok 2.</b> \(P'&gt;0\) na lewo od tego punktu i \(P'&lt;0\) na prawo – maksimum w \(x=8-2\sqrt2\).</p>
+<p class="step"><b>Krok 3.</b> \(f(x)=12+\dfrac{12}{x-8}=12-\dfrac{12}{2\sqrt2}=12-3\sqrt2\).</p>`
+  },
+  {
     id: 11,
     group: "Własność Darboux",
     label: "autorskie",
@@ -391,6 +416,19 @@ więc drugi składnik jest równy \(1\cdot x^2=x^2\).</p>
     ans: String.raw`a) \(V(h)=2h(d^2-h^2)\), \(h\in(0,d)\); b) \(h=\dfrac{d\sqrt3}3\)`,
     sol: String.raw`<p class="step"><b>a)</b> Rzut wierzchołka \(E\) na dolną podstawę to wierzchołek \(A\), więc \(d^2=h^2+|OA|^2=h^2+\tfrac{a^2}2\), gdzie \(a\) – krawędź podstawy. Stąd \(a^2=2(d^2-h^2)\) i \(V=a^2h=2h(d^2-h^2)\), \(h\in(0,d)\).</p>
 <p class="step"><b>b)</b> \(V'(h)=2d^2-6h^2\), zero w \(h=\tfrac d{\sqrt3}\); \(V'&gt;0\) dla mniejszych \(h\), \(V'&lt;0\) dla większych – maksimum w \(h=\dfrac{d\sqrt3}3\).</p>`
+  },
+  {
+    id: 33,
+    group: "Zadania optymalizacyjne",
+    src: "próbna grudzień 2022 · zad. 7",
+    pts: 4,
+    tags: ["koszt przeciętny", "pochodna funkcji wymiernej"],
+    req: ["ZR XIII.6"],
+    q: String.raw`<p>Olejarnia wytwarza dziennie \((480+x)\) litrów oleju, gdzie \(x\in[0,50]\). Przeciętny koszt (w zł) wytworzenia jednego litra jest równy \(K(x)=\dfrac{22x^2-621{,}5x+23\,430}{480+x}\). Oblicz, ile litrów oleju dziennie powinna wytworzyć olejarnia, aby przeciętny koszt był najmniejszy, i oblicz ten koszt.</p>`,
+    ans: String.raw`\(495\) litrów, koszt \(38{,}50\) zł`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> \(K'(x)=\dfrac{(44x-621{,}5)(480+x)-(22x^2-621{,}5x+23\,430)}{(480+x)^2}=\dfrac{22x^2+21\,120x-321\,750}{(480+x)^2}=\dfrac{22(x-15)(x+975)}{(480+x)^2}\).</p>
+<p class="step"><b>Krok 2.</b> Na \([0,50]\): \(K'&lt;0\) dla \(x&lt;15\), \(K'&gt;0\) dla \(x&gt;15\) – minimum w \(x=15\), czyli przy produkcji \(495\) litrów.</p>
+<p class="step"><b>Krok 3.</b> \(K(15)=\dfrac{4950-9322{,}5+23\,430}{495}=\dfrac{19\,057{,}5}{495}=38{,}5\) zł.</p>`
   },
   {
     id: 15,

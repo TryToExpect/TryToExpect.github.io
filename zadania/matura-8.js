@@ -164,6 +164,21 @@ Stąd \(2h^2=44\), \(h=\sqrt{22}\).</p>`
 <p class="step"><b>Krok 4.</b> \(P=\dfrac{6+\frac92}2\cdot\dfrac{3\sqrt3}2=\dfrac{63\sqrt3}8\).</p>`
   },
   {
+    id: 17,
+    group: "Przekroje i kąty w ostrosłupach i sześcianie",
+    src: "próbna grudzień 2022 · zad. 10",
+    pts: 5,
+    tags: ["ostrosłup prawidłowy czworokątny", "przekrój", "płaszczyzny prostopadłe", "trapez"],
+    req: ["ZR X.2", "ZP X.2"],
+    q: String.raw`<p>Dany jest ostrosłup prawidłowy czworokątny \(ABCDS\) o krawędzi podstawy \(a\). Ściana boczna jest nachylona do podstawy pod kątem \(\alpha\) takim, że \(\cos\alpha=\dfrac{\sqrt{10}}{10}\). Przez krawędź \(BC\) poprowadzono płaszczyznę \(\pi\) prostopadłą do ściany bocznej \(SAD\). Sporządź rysunek, zaznacz przekrój, nazwij figurę i oblicz jej pole.</p>`,
+    ans: String.raw`trapez równoramienny \(BCEF\), pole \(\dfrac{27\sqrt{10}}{100}a^2\)`,
+    sol: String.raw`<div class="fig-wrap" data-sf="1"><svg class="fig" viewBox="0 0 280 250" width="280" height="250" role="img" aria-label="Ostrosłup prawidłowy czworokątny ABCDS; płaszczyzna π przechodzi przez krawędź BC i jest prostopadła do ściany SAD; przekrojem jest trapez równoramienny BCEF, gdzie E leży na SD, a F na SA"><polygon class="f2" points="180,230 240,185 108,155.5 60,191.5"/><line class="s" x1="40" y1="230" x2="180" y2="230"/><line class="s" x1="180" y1="230" x2="240" y2="185"/><line class="s d w" x1="240" y1="185" x2="100" y2="185"/><line class="s d w" x1="100" y1="185" x2="40" y2="230"/><line class="s" x1="140" y1="37.5" x2="40" y2="230"/><line class="s" x1="140" y1="37.5" x2="180" y2="230"/><line class="s" x1="140" y1="37.5" x2="240" y2="185"/><line class="s d w" x1="140" y1="37.5" x2="100" y2="185"/><polygon class="a" points="180,230 240,185 108,155.5 60,191.5"/><circle class="dot" cx="108" cy="155.5" r="2.2"/><circle class="dot" cx="60" cy="191.5" r="2.2"/><text x="32" y="242" text-anchor="end">A</text><text x="186" y="244" text-anchor="start">B</text><text x="248" y="190" text-anchor="start">C</text><text x="92" y="190" text-anchor="end">D</text><text x="140" y="29" text-anchor="middle">S</text><text x="102" y="150" text-anchor="end">E</text><text x="52" y="190" text-anchor="end">F</text></svg></div>
+<p class="step"><b>Pomysł.</b> \(\pi\) zawiera \(BC\parallel AD\), więc przecina ścianę \(SAD\) wzdłuż odcinka \(EF\parallel AD\): przekrój to trapez równoramienny \(BCEF\). Liczymy w przekroju \(SMN\) (\(M\), \(N\) – środki \(AD\) i \(BC\)), gdzie \(\pi\) widać jako odcinek \(NX\perp SM\).</p>
+<p class="step"><b>Krok 1.</b> \(\sin\alpha=\tfrac3{\sqrt{10}}\), \(|SM|=\dfrac{a/2}{\cos\alpha}=\dfrac{a\sqrt{10}}2\). W trójkącie \(MNX\) (\(|MN|=a\)): wysokość trapezu \(|NX|=a\sin\alpha=\dfrac{3a}{\sqrt{10}}\), \(|MX|=a\cos\alpha=\dfrac a{\sqrt{10}}\).</p>
+<p class="step"><b>Krok 2.</b> \(|SX|=\dfrac{a\sqrt{10}}2-\dfrac a{\sqrt{10}}=\dfrac{4a}{\sqrt{10}}\), więc \(\dfrac{|EF|}{|AD|}=\dfrac{|SX|}{|SM|}=\dfrac45\), \(|EF|=\tfrac45a\).</p>
+<p class="step"><b>Krok 3.</b> \(P=\dfrac{a+\frac45a}2\cdot\dfrac{3a}{\sqrt{10}}=\dfrac{27a^2}{10\sqrt{10}}=\dfrac{27\sqrt{10}}{100}a^2\).</p>`
+  },
+  {
     id: 8,
     group: "Bryły podobne i obrotowe",
     label: "autorskie",
@@ -197,6 +212,18 @@ Stąd \(2h^2=44\), \(h=\sqrt{22}\).</p>`
 <p class="step"><b>Krok 4: odległość.</b> Skoro \(r=\tfrac H4<\tfrac H3\), punkt \(S\) leży poniżej \(\pi\) i
 \[|SP|=|OP|-|OS|=\frac{2\sqrt6}3-\frac{\sqrt6}2=\frac{4\sqrt6-3\sqrt6}6=\frac{\sqrt6}6.\]</p>
 <p class="note"><b>Sprawdzenie:</b> ogólnie \(|SP|=\tfrac H3-\tfrac H4=\tfrac H{12}=\tfrac{2\sqrt6}{12}=\tfrac{\sqrt6}6\). Na rysunku okrąg dotyka boku \(DM\) dokładnie na prostej \(\pi\): kula dotyka ściany w jej środku ciężkości, a ten leży na wysokości \(\tfrac13H\), tak samo jak \(\pi\).</p>`
+  },
+  {
+    id: 16,
+    group: "Bryły podobne i obrotowe",
+    src: "próbna grudzień 2024 · zad. 3",
+    pts: 3,
+    tags: ["walec", "pole powierzchni", "objętość"],
+    req: ["ZP X.5"],
+    q: String.raw`<p>Iloczyn długości średnicy podstawy walca i wysokości walca jest równy \(12\sqrt3\). Pole powierzchni całkowitej walca jest równe \(12\pi(\sqrt3+1)\). Oblicz objętość walca.</p>`,
+    ans: String.raw`\(V=18\sqrt2\,\pi\)`,
+    sol: String.raw`<p class="step"><b>Krok 1.</b> \(2r\cdot H=12\sqrt3\), więc \(2\pi rH=12\sqrt3\,\pi\). Z pola: \(2\pi r^2+12\sqrt3\,\pi=12\sqrt3\,\pi+12\pi\), czyli \(r^2=6\), \(r=\sqrt6\).</p>
+<p class="step"><b>Krok 2.</b> \(H=\dfrac{6\sqrt3}{\sqrt6}=3\sqrt2\), więc \(V=\pi\cdot6\cdot3\sqrt2=18\sqrt2\,\pi\).</p>`
   },
   {
     id: 9,
